@@ -1,10 +1,10 @@
 @font-face{
     font-family: RobotoSlab-Regular;
-    src: url('../fonts/RobotoSlab-Regular.ttf');
+    src: url('assets/fonts/RobotoSlab-Regular.ttf');
 }
 @font-face{
     font-family: RobotoSlab-Light;
-    src: url('../fonts/RobotoSlab-Light.ttf');
+    src: url('assets/fonts/RobotoSlab-Light.ttf');
 }
 *{
     margin: 0;
@@ -23,26 +23,19 @@ img{
 .robotoSR{font-family: RobotoSlab-Regular;}
 .robotoSL{font-family: RobotoSlab-Light;}
 .fs25{font-size: 25px;}
-.white{color: #fff;}
-.ls2{letter-spacing: 2px;}
+.fs20{font-size: 20px;}
+.fs18{font-size: 18px;}
 
-body{
-    height: 100vh;
-    background-image: url('../images/back14.jpg');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
+.green33{color: #017533;}
+.white{color: #fff;}
+
+.ls2{letter-spacing: 2px;}
+.ls1{letter-spacing: 1px;}
 nav{
     width: 100%;
     height: 70px;
-    margin-top: 2   0px;
     display: flex;
-    justify-content: space-around;
     position: fixed;
-}
-nav img{
-    width: 15%;
 }
 #main-section{
     width: 90%;
@@ -53,21 +46,12 @@ nav img{
     width: 35%;
     margin: 0 auto;
     text-align: center;
-    margin-top: 10%;
-}
-.login-form input, button{
-    width: 100%;
-    height: 40px;
-    margin-bottom: 15px;
-    outline: 0px;
-    padding-left: 10px;
-}
-.login-form input{
-    background: rgba(255, 255, 255, 0.5);
-    color: #fff;
-    letter-spacing: 1px;
-    font-size: 15px;
-    font-weight: bold;
+    padding: 50px;
+    box-shadow: 0px 0px 15px 10px #ff3366;
+    position: absolute;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
 }
 .login-form input::-webkit-input-placeholder{
     color: #fff;
@@ -80,14 +64,6 @@ nav img{
     font-weight: bold;
     padding-left: 10px;
     font-family: RobotoSlab-Light;
-}
-.login-form input:focus{
-    border: solid 2px #ff3366;
-    background: rgba(255, 255, 255, 0.7);
-    color: #ff3366;
-    
-    transition: all 500ms ease;
-    
 }
 .login-form button{
     background: #ff3366;
@@ -103,4 +79,29 @@ nav img{
 }
 .c-login-title{
     margin-bottom: 50px;
+}
+
+/* FOOTER SECCTION */
+footer{
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    padding: 10px;
+    background: rgba(111, 112, 111, 1)
+}
+.c-logos{
+    width: 90%;
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-around;
+}
+.c-logos img{
+    width: 150px;
+    height: 50px;   
+}
+.c-direccion{
+    width: 70%;
+    margin:  0 auto;
+    text-align: center;
+    padding: 10px 0px;
 }
