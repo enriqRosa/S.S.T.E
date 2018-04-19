@@ -28,19 +28,25 @@
                 <span>Image 06</span></li>
         </ul>
         <main id="main-section">
-            <form action="" method="post" class="login-form">
-                <div class="c-login-title">
-                    <span class="fs25 white ls2 robotoSR">Iniciar Sesión</span>
-                </div>
-                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                    <input class="mdl-textfield__input" type="text" id="tb-user">
-                    <label class="mdl-textfield__label" for="tb-user">Usuario</label>
-                </div>
-                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                    <input class="mdl-textfield__input" type="text" id="tb-password">
-                    <label class="mdl-textfield__label" for="tb-password">Contraseña</label>
-                </div>
-            </form>
+            <div class="c-imagen">
+                
+            </div>
+            <div class="c-formulario">
+                <form action="" class="login-form">
+                    <div class="c-login-title">
+                        <span class="fs25 white ls2 robotoSR">Iniciar Sesión</span>
+                    </div>
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        <input class="mdl-textfield__input" type="text" id="tb-user">
+                        <label class="mdl-textfield__label" for="tb-user">Usuario</label>
+                    </div>
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        <input class="mdl-textfield__input" type="password" id="tb-password">
+                        <label class="mdl-textfield__label" for="tb-password">Contraseña</label>
+                    </div>
+                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Iniciar sesión</button>
+                </form>
+            </div>
         </main>
         <!-- INICIO DE LIBRERIAS -->
 
