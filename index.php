@@ -71,12 +71,26 @@
             <div class="c-logos">
                 <img src="assets/images/sep-logo.png" alt="">
                 <img src="assets/images/edomex-logo.png" alt="">
-                <img src="assets/images/tescha-logo.png" alt="">
+                <img src="assets/images/logo-tescha.png" alt="">
             </div>
-            <div class="c-direccion">
-                <span class="robotoSR fs18 white">Carretera Federal México Cuautla s/n, La
-                    Candelaria Tlapala, 56641 Chalco de Díaz Covarrubias, Méx.</span>
+            <div class="info-right">
+                <div class="c-correo">
+                     <span class="robotoSR fs18 white">teschalco@hotmail.com  |  depto.controlescolar@tesch.edu.mx</span>                
+                <div class="c-correo">
+                    <span class="robotoSR fs18 white">(0155) 59823503,59823504,59820848</span>
                 </div>
+                </div>            
+                <div class="c-direccion">
+                    <span class="robotoSR fs18 white">Carretera Federal México Cuautla s/n, La
+                    Candelaria Tlapala,</span>                
+                <div class="c-direccion">
+                    <span class="robotoSR fs18 white">Chalco de Díaz Covarrubias, Méx.</span>
+                </div>
+                </div>
+            </div>
+            <div class="c-copyright">
+                <span class="robotoSR fs18 black">Tescha - ALGUNOS DERECHOS RESERVADOS 2018</span>
+            </div>
             </footer>
         <!-- INICIO DE LIBRERIAS -->
         <script src="assets/libs/mdl/material.js"></script>

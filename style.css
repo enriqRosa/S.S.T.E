@@ -33,7 +33,7 @@ img {
     font-size: 20px;
 }
 .fs18 {
-    font-size: 18px;
+    font-size: 12px;
 }
 
 .green33 {
@@ -42,7 +42,9 @@ img {
 .white {
     color: #fff;
 }
-
+.black{
+    color: #000000;
+}
 .ls2 {
     letter-spacing: 2px;
 }
@@ -78,7 +80,7 @@ nav {
     margin: 0 auto;
     text-align: center;
     padding: 30px;
-    box-shadow: 0 0 15px 10px #ff3366;
+    box-shadow: 0 0 15px 10px #75a3a3;
     background-color: rgba(0, 0, 0, 0.5);
 }
 .c-login-title {
@@ -95,7 +97,7 @@ nav {
 .form-option label{
     font-size: 20px;
     color: #fff;
-    border: solid 2px #ff3366;
+    border: solid 2px #75a3a3;
     width: 40%;
     padding: 10px 0px;
     cursor: pointer;
@@ -103,7 +105,7 @@ nav {
 }
 .form-option input[type="radio"]:checked + label{
     background: #fff;
-    color: #ff3366;
+    color: #75a3a3;
     border: 0px;
     transition: all 500ms ease;
 }
@@ -114,25 +116,46 @@ nav {
 footer {
     width: 100%;
     bottom: 0;
-    padding: 10px;
-    background: rgba(111, 112, 111, 1);
+    /*padding: 10px;*/
+    /*background: rgba(111, 112, 111, 1);*/
+    background:#2f4f4f;
     position: absolute;
 }
 .c-logos {
-    width: 90%;
+    width: 50%;
+    /*background-color:  	#F0FFF0;*/
+    padding: 3px;
     display: flex;
     margin: 0 auto;
     justify-content: space-around;
 }
 .c-logos img {
-    width: 150px;
-    height: 50px;
+    width: 120px;
+    height: 40px;
 }
-.c-direccion {
-    width: 70%;
+.info-right{
+    display: flex;
+    width: 60%;
+   /* background-color: #fff;*/
+    margin: auto;
+}
+.c-correo {
+     width: 60%;
     margin: 0 auto;
     text-align: center;
-    padding: 10px 0;
+    padding: 2px 0;
+}
+.c-direccion{
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 2px 0;
+    /*background-color:#E6E6FA;*/
+}
+.c-copyright{
+      width: 100%;
+    text-align: center;
+    background-color:#D3D3D3;
 }
 
 .mdl-textfield{
@@ -145,11 +168,11 @@ footer {
     min-width: 50%!important;
 }
 .mdl-textfield__label {
-    color: #ff3366!important;
+    color: #75a3a3!important;
     font-size: 20px!important;
 }
 .mdl-textfield__label::after {
-    background-color: #ff3366!important;
+    background-color: #75a3a3!important;
 }
 .mdl-textfield--floating-label.has-placeholder .mdl-textfield__label,
 .mdl-textfield--floating-label.is-dirty .mdl-textfield__label,
@@ -158,13 +181,13 @@ footer {
     color: #fff!important;
 }
 .mdl-button--raised{
-    background-color: #ff3366!important;
+    background-color: #75a3a3!important;
     color: #fff!important;
     width: 100%!important;
 }
 .mdl-button:hover{
     background-color: #fff!important;
-    color: #ff3366!important;
+    color: #75a3a3!important;
 }
 
 .c-inputs div:nth-child(3n) {
