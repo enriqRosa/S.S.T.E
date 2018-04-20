@@ -1,12 +1,12 @@
-@font-face{
+@font-face {
     font-family: RobotoSlab-Regular;
-    src: url('assets/fonts/RobotoSlab-Regular.ttf');
+    src: url("assets/fonts/RobotoSlab-Regular.ttf");
 }
-@font-face{
+@font-face {
     font-family: RobotoSlab-Light;
-    src: url('assets/fonts/RobotoSlab-Light.ttf');
+    src: url("assets/fonts/RobotoSlab-Light.ttf");
 }
-*{
+* {
     margin: 0;
     padding: 0;
     border: 0;
@@ -14,93 +14,160 @@
     list-style: none;
     box-sizing: border-box;
 }
-img{
+img {
     max-width: 100%;
     height: auto;
     width: 100%;
 }
 
-.robotoSR{font-family: RobotoSlab-Regular;}
-.robotoSL{font-family: RobotoSlab-Light;}
-.fs25{font-size: 25px;}
-.fs20{font-size: 20px;}
-.fs18{font-size: 18px;}
+.robotoSR {
+    font-family: RobotoSlab-Regular;
+}
+.robotoSL {
+    font-family: RobotoSlab-Light;
+}
+.fs25 {
+    font-size: 25px;
+}
+.fs20 {
+    font-size: 20px;
+}
+.fs18 {
+    font-size: 18px;
+}
 
-.green33{color: #017533;}
-.white{color: #fff;}
+.green33 {
+    color: #017533;
+}
+.white {
+    color: #fff;
+}
 
-.ls2{letter-spacing: 2px;}
-.ls1{letter-spacing: 1px;}
-nav{
+.ls2 {
+    letter-spacing: 2px;
+}
+.ls1 {
+    letter-spacing: 1px;
+}
+nav {
     width: 100%;
     height: 70px;
     display: flex;
     position: fixed;
 }
-#main-section{
+#main-section {
     width: 90%;
-    left: 0px;
-    right: 0px;
-    margin: 0 auto;
-    padding-top: 80px;
-    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0px auto;
+    position: relative;
     display: flex;
+    padding-top: 50px;
 
 }
-.c-formulario,
-.c-imagen{
-    width: 50%;
-    margin: 2px;
+.c-formulario {
+    margin: 0 auto;
 }
-.c-imagen{
-    border-right: solid 2px #fff;
+.form-option {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0px;
 }
-.login-form{
-    width: 75%;
+.main-form {
+    width: 600px;
     margin: 0 auto;
     text-align: center;
     padding: 30px;
-    box-shadow: 0px 0px 15px 10px #ff3366;
-    background-color: rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 15px 10px #ff3366;
+    background-color: rgba(0, 0, 0, 0.5);
 }
-.c-login-title{
-    margin-bottom: 50px;
+.c-login-title {
+    margin: 10px 0px;
+}
+.c-inputs{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.form-option input[type="radio"]{
+    display: none;
+}
+.form-option label{
+    font-size: 20px;
+    color: #fff;
+    border: solid 2px #ff3366;
+    width: 40%;
+    padding: 10px 0px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.form-option input[type="radio"]:checked + label{
+    background: #fff;
+    color: #ff3366;
+    border: 0px;
+    transition: all 500ms ease;
 }
 
+
+
 /* FOOTER SECCTION */
-footer{
+footer {
     width: 100%;
-    position: absolute;
-    bottom: 0px;
+    bottom: 0;
     padding: 10px;
-    background: rgba(111, 112, 111, 1)
+    background: rgba(111, 112, 111, 1);
+    position: absolute;
 }
-.c-logos{
+.c-logos {
     width: 90%;
     display: flex;
     margin: 0 auto;
     justify-content: space-around;
 }
-.c-logos img{
+.c-logos img {
     width: 150px;
-    height: 50px;   
+    height: 50px;
 }
-.c-direccion{
+.c-direccion {
     width: 70%;
-    margin:  0 auto;
+    margin: 0 auto;
     text-align: center;
-    padding: 10px 0px;
+    padding: 10px 0;
 }
 
-
-.mdl-textfield__input{
+.mdl-textfield{
+    width: 45%!important;
+}
+.mdl-textfield__input {
     border-bottom: 2px solid #fff!important;
     color: #fff!important;
+    border-radius: 2px;
+    min-width: 50%!important;
 }
-.mdl-textfield__label{
-    color: #fff!important;
+.mdl-textfield__label {
+    color: #ff3366!important;
     font-size: 20px!important;
 }
 .mdl-textfield__label::after {
     background-color: #ff3366!important;
+}
+.mdl-textfield--floating-label.has-placeholder .mdl-textfield__label,
+.mdl-textfield--floating-label.is-dirty .mdl-textfield__label,
+.mdl-textfield--floating-label.is-focused .mdl-textfield__label {
+    top: 0px!important;
+    color: #fff!important;
+}
+.mdl-button--raised{
+    background-color: #ff3366!important;
+    color: #fff!important;
+    width: 100%!important;
+}
+.mdl-button:hover{
+    background-color: #fff!important;
+    color: #ff3366!important;
+}
+
+.c-inputs div:nth-child(3n) {
+
+    width: 95% !important;
 }
