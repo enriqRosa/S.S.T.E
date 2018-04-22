@@ -1,11 +1,20 @@
-@font-face {
+/*@font-face {
     font-family: RobotoSlab-Regular;
     src: url("assets/fonts/RobotoSlab-Regular.ttf");
 }
 @font-face {
     font-family: RobotoSlab-Light;
     src: url("assets/fonts/RobotoSlab-Light.ttf");
+}*/
+@font-face {
+    font-family: CrimsonText-Regular;
+    src: url("assets/fonts/CrimsonText-Regular.ttf");
 }
+@font-face {
+    font-family: CrimsonText-SemiBoldItalic;
+    src: url("assets/fonts/CrimsonText-SemiBoldItalic.ttf");
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -20,12 +29,13 @@ img {
     width: 100%;
 }
 
-.robotoSR {
-    font-family: RobotoSlab-Regular;
+.Crimson-Regular {
+    font-family: CrimsonText-Regular;
 }
-.robotoSL {
-    font-family: RobotoSlab-Light;
+.Crimson-SemiBoldItalic {
+    font-family: CrimsonText-SemiBoldItalic;
 }
+
 .fs25 {
     font-size: 25px;
 }
@@ -33,7 +43,10 @@ img {
     font-size: 20px;
 }
 .fs18 {
-    font-size: 12px;
+    font-size: 16px;
+}
+.fs12{
+    font-size: 14px;
 }
 
 .green33 {
@@ -80,7 +93,7 @@ nav {
     margin: 0 auto;
     text-align: center;
     padding: 30px;
-    box-shadow: 0 0 15px 10px #75a3a3;
+    box-shadow: 0 0 15px 10px  #5F9EA0;
     background-color: rgba(0, 0, 0, 0.5);
 }
 .c-login-title {
@@ -118,12 +131,12 @@ footer {
     bottom: 0;
     /*padding: 10px;*/
     /*background: rgba(111, 112, 111, 1);*/
-    background:#2f4f4f;
+    background:#242121;
     position: absolute;
 }
 .c-logos {
-    width: 50%;
-    /*background-color:  	#F0FFF0;*/
+    width: 60%;
+    /*background-color:#F0FFF0;*/
     padding: 3px;
     display: flex;
     margin: 0 auto;
@@ -135,9 +148,11 @@ footer {
 }
 .info-right{
     display: flex;
-    width: 60%;
-   /* background-color: #fff;*/
+    width: 100%;
+   /* background-color: #F9AFB9;*/
     margin: auto;
+    margin-top:10px;
+    margin-bottom:10px;
 }
 .c-correo {
      width: 60%;
@@ -150,12 +165,13 @@ footer {
     margin: 0 auto;
     text-align: center;
     padding: 2px 0;
-    /*background-color:#E6E6FA;*/
+   /* background-color:#F9AFF0;*/
 }
 .c-copyright{
       width: 100%;
     text-align: center;
-    background-color:#D3D3D3;
+    background-color: 	#696969;
+    padding: 5px;
 }
 
 .mdl-textfield{
