@@ -1,0 +1,41 @@
+{
+    
+    "editor.minimap.enabled": true,
+    "workbench.sideBar.location": "left",
+    "editor.renderWhitespace": "all",
+    "editor.renderControlCharacters": true,
+    "files.autoSave": "afterDelay",
+    "editor.multiCursorModifier": "alt",
+    "git.enableSmartCommit": true,
+    "window.zoomLevel": 0,
+    "workbench.iconTheme": "vscode-icons",
+    "editor.quickSuggestions": {
+        "other": true,
+        "comments": true,
+        "strings": true
+    },
+    "editor.tabCompletion": true,
+    "window.menuBarVisibility": "toggle",
+    "workbench.colorTheme": "Monokai Dimmed",
+    "editor.wordWrap": "on",
+    "auto-close-tag.excludedTags": [
+        "area",
+        "base",
+        "br",
+        "col",
+        "command",
+        "embed",
+        "hr",
+        "input",
+        "keygen",
+        "param",
+        "source",
+        "track",
+        "wbr"
+    ],
+    "git.autofetch": true,
+    "git.promptToSaveFilesBeforeCommit": true,
+    "auto-close-tag.fullMode": true,
+    "auto-close-tag.SublimeText3Mode": true
+
+}

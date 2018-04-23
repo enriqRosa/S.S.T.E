@@ -24,21 +24,21 @@
         <main id="main-section">    
             <div class="c-formulario" id="vue-main-form">
                 <form action="" class="main-form">
-                <div class="form-option">
+                <!--<div class="form-option">
                 <input type="radio" name="rb-form-option" id="rb-registro" v-model="formType" :value="true">
                 <label for="rb-registro">Crear cuenta</label>
                 <input type="radio" name="rb-form-option" id="rb-inicio" v-model="formType" :value="false">
                 <label for="rb-inicio" >Iniciar sesión</label>
 
-                </div>
+                </div>-->
                     <div class="c-login-title">
-                        <span class="fs25 white ls2 Crimson-Regular">{{ formTitle }}</span>
+                        <span class="fs25 white ls2 Crimson-Regular">Iniciar Sesión</span>
                     </div>
-                   <div class ="image">
+                   <div class ="logo_sste">
                         <img src="assets/images/logo.png">
                     </div>
                     <div class="c-inputs">
-                        <template v-if="formType">
+                        <!--<template v-if="formType">
                             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                                 <input class="mdl-textfield__input" type="text" id="tb-name" required>
                                 <label class="mdl-textfield__label" for="tb-name">Nombre</label>
@@ -47,7 +47,7 @@
                                 <input class="mdl-textfield__input" type="text" id="tb-apellidos" required>
                                 <label class="mdl-textfield__label" for="tb-apellidos">Apellidos</label>
                             </div>
-                        </template>
+                        </template>-->
                         <template>
                             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                                 <input class="mdl-textfield__input" type="email" id="tb-mail" required>
@@ -57,21 +57,20 @@
                                 <input class="mdl-textfield__input" type="password" id="tb-password-1" required>
                                 <label class="mdl-textfield__label Crimson-Regular fs20 ls2" for="tb-password-1">Contraseña</label>
                             </div>
-                            <template v-if="formType">
+                            <!--<template v-if="formType">
                                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                                     <input class="mdl-textfield__input" type="password" id="tb-password-2" required>
                                     <label class="mdl-textfield__label" for="tb-password-2">Repetir contraseña</label>
                                 </div>
-                            </template>
+                            </template>-->
                         </template>
-                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">{{ formTitle }}</button>
+                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Login</button>
                     </div>
                 </form>
                 <!-- <div><pre>{{ $data }}</pre></div> -->
             </div>
         </main>
-        <footer>
-            
+        <footer>            
             <div class="info-right">
                 <div class="c-correo">
                      <span class="Crimson-Regular fs18 white ls1">
