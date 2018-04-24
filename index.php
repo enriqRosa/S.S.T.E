@@ -38,17 +38,6 @@
                         <img src="assets/images/logo.png">
                     </div>
                     <div class="c-inputs">
-                        <!--<template v-if="formType">
-                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                <input class="mdl-textfield__input" type="text" id="tb-name" required>
-                                <label class="mdl-textfield__label" for="tb-name">Nombre</label>
-                            </div>
-                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                <input class="mdl-textfield__input" type="text" id="tb-apellidos" required>
-                                <label class="mdl-textfield__label" for="tb-apellidos">Apellidos</label>
-                            </div>
-                        </template>-->
-                        <template>
                             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                                 <input class="mdl-textfield__input" type="email" id="tb-mail" required>
                                 <label class="mdl-textfield__label Crimson-Regular fs20 ls2" for="tb-mail">Email</label>
@@ -57,17 +46,9 @@
                                 <input class="mdl-textfield__input" type="password" id="tb-password-1" required>
                                 <label class="mdl-textfield__label Crimson-Regular fs20 ls2" for="tb-password-1">Contraseña</label>
                             </div>
-                            <!--<template v-if="formType">
-                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                    <input class="mdl-textfield__input" type="password" id="tb-password-2" required>
-                                    <label class="mdl-textfield__label" for="tb-password-2">Repetir contraseña</label>
-                                </div>
-                            </template>-->
-                        </template>
                         <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Login</button>
                     </div>
                 </form>
-                <!-- <div><pre>{{ $data }}</pre></div> -->
             </div>
         </main>
         <footer>            
