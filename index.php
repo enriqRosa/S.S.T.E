@@ -73,12 +73,12 @@
         <footer>            
             <div class="info-right">
                 <div class="c-correo">
-                     <span class="Crimson-Regular fs18 white ls1">
+                     <span class="Crimson-Regular fs15 grey ls1">
                      <a href="">teschalco@hotmail.com </a> 
                      <span>|</span>
                      <a href="">depto.controlescolar@tesch.edu.mx</a></span>                
                 <div class="c-correo">
-                    <span class="Crimson-Regular fs18 white">(0155) 59823503, 59823504, 59820848</span>
+                    <span class="Crimson-Regular fs15 grey">(0155) 59823503, 59823504, 59820848</span>
                 </div>
                 </div>
                 <div class="c-logos">
@@ -87,15 +87,15 @@
                     <img src="assets/images/tesch_logo.png" alt="">
                 </div>            
                 <div class="c-direccion">
-                    <span class="Crimson-Regular fs18 white ls1">Carretera Federal México Cuautla s/n, La
+                    <span class="Crimson-Regular fs15 grey ls1">Carretera Federal México Cuautla s/n, La
                     Candelaria Tlapala,</span>                
                 <div class="c-direccion">
-                    <span class="Crimson-Regular fs18 white ls1">Chalco de Díaz Covarrubias, Méx.</span>
+                    <span class="Crimson-Regular fs15 grey ls1">Chalco de Díaz Covarrubias, Méx.</span>
                 </div>
                 </div>
             </div>
             <div class="c-copyright">
-                <span class="Crimson-SemiBoldItalic fs12 black ls2">Tescha - Algunos derechos reservados &copy 2018</span>
+                <span class="Crimson-SemiBoldItalic fs14 black ls2">Tescha - Algunos derechos reservados &copy 2018</span>
             </div>
             </footer>
         <!-- INICIO DE LIBRERIAS -->
