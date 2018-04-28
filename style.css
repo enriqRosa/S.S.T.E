@@ -1,12 +1,32 @@
 @font-face {
-    font-family: CrimsonText-Regular;
-    src: url("assets/fonts/CrimsonText-Regular.ttf");
+    font-family: Tajawal-Regular;
+    src: url("assets/fonts/Tajawal-Regular.ttf");
 }
 @font-face {
-    font-family: CrimsonText-SemiBoldItalic;
-    src: url("assets/fonts/CrimsonText-SemiBoldItalic.ttf");
+    font-family: Tajawal-Light;
+    src: url("assets/fonts/Tajawal-Light.ttf");
 }
-
+@font-face {
+    font-family: Tajawal-Bold;
+    src: url("assets/fonts/Tajawal-Bold.ttf");
+}
+@font-face {
+    font-family: Tajawal-Medium;
+    src: url("assets/fonts/Tajawal-Medium.ttf");
+}
+.Tajawal-Regular {
+    font-family: Tajawal-Regular;
+}
+.Tajawal-Light{
+    font-family:Tajawal-Light;
+}
+.Tajawal-Bold{
+    font-family:Tajawal-Bold;
+}
+}
+.Tajawal-Medium{
+    font-family:Tajawal-Medium;
+}
 * {
     margin: 0;
     padding: 0;
@@ -19,20 +39,6 @@ img {
     max-width: 100%;
     height: auto;
     width: 100%;
-}
-
-.Crimson-Regular {
-    font-family: CrimsonText-Regular;
-}
-.Crimson-SemiBoldItalic {
-    font-family: CrimsonText-SemiBoldItalic;
-}
-
-.fs25 {
-    font-size: 25px;
-}
-.fs20 {
-    font-size: 20px;
 }
 .fs15 {
     font-size: 15px;
@@ -52,24 +58,14 @@ img {
 .grey {
     color: #CFD8DC;
 }
-.black{
-    color: #000000;
+.white{
+    color: #fff;
 }
 .ls2 {
     letter-spacing: 2px;
 }
 .ls1 {
     letter-spacing: 1px;
-}
-nav {
-    width: 100%;
-    height: 70px;
-    display: flex;
-    position: fixed;
-}
-.logo_sste img{
-    width: 80%;
-    height:80%;
 }
 #main-section {
     width: 90%;
@@ -78,7 +74,7 @@ nav {
     margin: 0px auto;
     position: relative;
     display: flex;
-    padding-top: 100px;
+    padding-top: 150px;
 }
 .c-formulario {
     margin: 0 auto;
@@ -92,8 +88,8 @@ nav {
     width: 600px;
     margin: 0 auto;
     text-align: center;
-    padding: 30px;
-    box-shadow: 0 0 10px 10px  #00E5FF;
+    padding: 60px;
+    box-shadow: 0 0 0px 5px #B0BEC5;
     background-color: rgba(0, 0, 0, 0.5);
 }
 .c-login-title {
@@ -118,15 +114,12 @@ nav {
 footer {
     width: 100%;
     bottom: 0;
-    /*padding: 10px;*/    
-   /* background-color: #000000;*/
-    /*background:#242121;*/
     background: #1b2631;
     position: absolute;
 }
 .c-logos {
-    width: 60%;
-    padding: 3px;
+    width: 40%;
+    padding: 17px;
     display: flex;
     margin: 0 auto;
     justify-content: space-around;
@@ -137,30 +130,24 @@ footer {
 }
 .info-right{
     display: flex;
-    width: 100%;
     margin: auto;
-    padding: 8px;
+    padding: 6px;
 }
-.c-correo {
-     width: 60%;
-    margin: 0 auto;
-    text-align: center;
+.c-correo {     
+    margin: 0 auto;   
     padding: 2px 0;
 }
 .c-direccion{
-    width: 60%;
     margin: 0 auto;
-    text-align: center;
+    text-align: right;
     padding: 2px 0;
-   /*background-color:#F9AFF0;*/
 }
 .c-copyright{
       width: 100%;
     text-align: center;
-    background-color: #a6acaf ;
-    padding: 3px;
+    padding: 4px;
+    background-color: #a6acaf ;    
 }
-
 .mdl-textfield{
     width: 45%!important;
 }

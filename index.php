@@ -24,18 +24,8 @@
         <main id="main-section">    
             <div class="c-formulario" id="vue-main-form">
                 <form action="" class="main-form">
-                <!--<div class="form-option">
-                <input type="radio" name="rb-form-option" id="rb-registro" v-model="formType" :value="true">
-                <label for="rb-registro">Crear cuenta</label>
-                <input type="radio" name="rb-form-option" id="rb-inicio" v-model="formType" :value="false">
-                <label for="rb-inicio" >Iniciar sesión</label>
-
-                </div>-->
                     <div class="c-login-title">
-                        <span class="fs25 white ls2 Crimson-Regular">Iniciar Sesión</span>
-                    </div>
-                   <div class ="logo_sste">
-                        <img src="assets/images/logo.png">
+                        <span class="fs25 white ls2 Crimson-Regular white">Iniciar Sesión</span>
                     </div>
                     <div class="c-inputs">
                             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
@@ -54,13 +44,15 @@
         <footer>            
             <div class="info-right">
                 <div class="c-correo">
-                     <span class="Crimson-Regular fs15 grey ls1">
-                     <a href="">teschalco@hotmail.com </a> 
-                     <span>|</span>
-                     <a href="">depto.controlescolar@tesch.edu.mx</a></span>                
-                <div class="c-correo">
-                    <span class="Crimson-Regular fs15 grey">(0155) 59823503, 59823504, 59820848</span>
-                </div>
+                    <span class="Tajawal-Light fs14 grey ls1">
+                    <a href="">teschalco@hotmail.com </a>                                       
+                        <div class="c-correo">
+                            <span class="Tajawal-Light fs14 grey ls1">
+                            <a href="">depto.controlescolar@tesch.edu.mx</a></span>  
+                                <div class="c-correo">
+                                    <span class="Tajawal-Light fs14 grey ls1">(0155) 59823503, 59820848 y 59821907</span>  
+                                </div>             
+                        </div>             
                 </div>
                 <div class="c-logos">
                     <img src="assets/images/sep-logo.png" alt="">
@@ -68,20 +60,22 @@
                     <img src="assets/images/tesch_logo.png" alt="">
                 </div>            
                 <div class="c-direccion">
-                    <span class="Crimson-Regular fs15 grey ls1">Carretera Federal México Cuautla s/n, La
-                    Candelaria Tlapala,</span>                
+                    <span class="Tajawal-Light fs14 grey ls1">Carretera Federal México Cuautla s/n,</span>  
                 <div class="c-direccion">
-                    <span class="Crimson-Regular fs15 grey ls1">Chalco de Díaz Covarrubias, Méx.</span>
+                    <span class="Tajawal-Light fs14 grey ls1"> La Candelaria Tlapala Chalco de Díaz Covarrubias, </span>
+                </div>              
+                <div class="c-direccion">
+                    <span class="Tajawal-Light fs14 grey ls1"> Estado de Méx.</span>
                 </div>
                 </div>
             </div>
             <div class="c-copyright">
-                <span class="Crimson-SemiBoldItalic fs14 black ls2">Tescha - Algunos derechos reservados &copy 2018</span>
+                <span class="Tajawal-Bold fs14 ls2">Tescha - Algunos derechos reservados &copy 2018</span>
             </div>
             </footer>
         <!-- INICIO DE LIBRERIAS -->
         <script src="assets/libs/mdl/material.js"></script>
         <script src="assets/libs/vue/vue.js"></script>
-        <script src="assets/js/process-form.js"></script>
+        <script src="assets/js/process-form.js"></script>        
     </body>
 </html>
