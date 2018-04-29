@@ -25,16 +25,16 @@
             <div class="c-formulario" id="vue-main-form">
                 <form action="" class="main-form">
                     <div class="c-login-title">
-                        <span class="fs25 white ls2 Crimson-Regular white">Iniciar Sesión</span>
+                        <span class="fs25 white ls2 Tajawal-Medium white">Iniciar Sesión</span>
                     </div>
                     <div class="c-inputs">
                             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                                 <input class="mdl-textfield__input" type="email" id="tb-mail" required>
-                                <label class="mdl-textfield__label Crimson-Regular fs20 ls2" for="tb-mail">Email</label>
+                                <label class="mdl-textfield__label Tajawal-Regular fs20 ls2" for="tb-mail">Email</label>
                             </div>
                             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                                 <input class="mdl-textfield__input" type="password" id="tb-password-1" required>
-                                <label class="mdl-textfield__label Crimson-Regular fs20 ls2" for="tb-password-1">Contraseña</label>
+                                <label class="mdl-textfield__label Tajawal-Regular fs20 ls2" for="tb-password-1">Contraseña</label>
                             </div>
                         <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Login</button>
                     </div>
