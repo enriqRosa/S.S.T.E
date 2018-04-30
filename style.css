@@ -45,6 +45,9 @@ img {
 .fs15 {
     font-size: 15px;
 }
+.fs25{
+    font-size: 25px;
+}
 .fs14{
     font-size: 14px;
 }
@@ -90,8 +93,8 @@ img {
     width: 600px;
     margin: 0 auto;
     text-align: center;
-    padding: 40px;
-    box-shadow: 0 0 0px 5px #B0BEC5;
+    padding: 60px;
+    box-shadow: 0 0 0px 5px #E0E0E0;
     background-color: rgba(0, 0, 0, 0.5);
 }
 .c-login-title span{
@@ -106,7 +109,7 @@ img {
 .form-option label{
     font-size: 20px;
     color: #fff;
-    border: solid 2px #75a3a3;
+    border: solid 2px #E0E0E0;
     width: 40%;
     padding: 10px 0px;
     cursor: pointer;
@@ -117,7 +120,7 @@ img {
 footer {
     width: 100%;
     bottom: 0;
-    background: #1b2631;
+    background: #24292e;
     position: absolute;
 }
 .c-logos {
@@ -168,11 +171,11 @@ footer {
     min-width: 50%!important;
 }
 .mdl-textfield__label {
-    color: #75a3a3!important;
+    color: #E0E0E0!important;
     font-size: 20px!important;
 }
 .mdl-textfield__label::after {
-    background-color: #75a3a3!important;
+    background-color: #E0E0E0!important;
 }
 .mdl-textfield--floating-label.has-placeholder .mdl-textfield__label,
 .mdl-textfield--floating-label.is-dirty .mdl-textfield__label,
@@ -181,14 +184,14 @@ footer {
     color: #fff!important;
 }
 .mdl-button--raised{
-    background-color: #75a3a3!important;
+    background-color: #9E9E9E!important;
     color: #fff!important;
     width: 100%!important;
     margin-top: 20px!important;
 }
 .mdl-button:hover{
-    background-color: #fff!important;
-    color: #75a3a3!important;
+    background-color: #757575!important;
+    color: #E0E0E0!important;
 }
 
 .c-inputs div:nth-child(3n) {
