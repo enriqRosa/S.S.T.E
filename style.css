@@ -23,7 +23,6 @@
 .Tajawal-Bold{
     font-family:Tajawal-Bold;
 }
-}
 .Tajawal-Medium{
     font-family:Tajawal-Medium;
 }
@@ -39,6 +38,9 @@ img {
     max-width: 100%;
     height: auto;
     width: 100%;
+}
+.fs25 {
+    font-size: 25px;
 }
 .fs15 {
     font-size: 15px;
@@ -88,12 +90,13 @@ img {
     width: 600px;
     margin: 0 auto;
     text-align: center;
-    padding: 60px;
+    padding: 40px;
     box-shadow: 0 0 0px 5px #B0BEC5;
     background-color: rgba(0, 0, 0, 0.5);
 }
-.c-login-title {
-    margin: 10px 0px;
+.c-login-title span{
+    color: #fff;
+    font-size: 100px;
 }
 .c-inputs{
     display: flex;
@@ -118,11 +121,15 @@ footer {
     position: absolute;
 }
 .c-logos {
-    width: 40%;
-    padding: 17px;
+    width: 30%;
     display: flex;
     margin: 0 auto;
     justify-content: space-around;
+    align-items: center;
+}
+.c-correo,
+.c-direccion{
+    width: 20%;
 }
 .c-logos img {
     width: 120px;
@@ -130,24 +137,27 @@ footer {
 }
 .info-right{
     display: flex;
-    margin: auto;
-    padding: 6px;
+    padding: 10px 0px;
 }
 .c-correo {     
     margin: 0 auto;   
-    padding: 2px 0;
+}
+.c-correo a{
+    color: #fff;
 }
 .c-direccion{
     margin: 0 auto;
     text-align: right;
-    padding: 2px 0;
 }
 .c-copyright{
-      width: 100%;
+    width: 100%;
     text-align: center;
-    padding: 4px;
-    background-color: #a6acaf ;    
+    background-color: #a6acaf ;  
+    padding: 5px 0px; 
 }
+
+
+
 .mdl-textfield{
     width: 45%!important;
 }
@@ -174,6 +184,7 @@ footer {
     background-color: #75a3a3!important;
     color: #fff!important;
     width: 100%!important;
+    margin-top: 20px!important;
 }
 .mdl-button:hover{
     background-color: #fff!important;
