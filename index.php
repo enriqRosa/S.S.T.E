@@ -25,10 +25,10 @@
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                             <input
                                 class="mdl-textfield__input"
-                                type="email"
-                                id="tb-mail"
+                                type="text"
+                                id="tb-user"
                                 required="required">
-                            <label class="mdl-textfield__label fs20 ls2" for="tb-mail">Email</label>
+                            <label class="mdl-textfield__label fs20 ls2" for="tb-mail">Usuario</label>
                         </div>
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                             <input

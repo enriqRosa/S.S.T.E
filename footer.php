@@ -19,12 +19,10 @@
                     <img src="assets/images/tesch_logo.png" alt="">
                 </div>
                 <div class="c-direccion">
+                    <span class="text-dir fs16 ls1 grey tajawalB"><i class="fa fa-map-marker"></i>Dirección:</span>
                     <span class="tajawalL fs14 grey ls1">Carretera Federal México Cuautla s/n,</span>
-                    <span class="tajawalL fs14 grey ls1">
-                            La Candelaria Tlapala Chalco de Díaz Covarrubias,
-                    </span>
-                    <span class="tajawalL fs14 grey ls1">
-                            Estado de Méx.</span>
+                    <span class="tajawalL fs14 grey ls1">La Candelaria Tlapala Chalco de Díaz Covarrubias,</span>
+                    <span class="tajawalL fs14 grey ls1">Estado de Méx.</span>
                 </div>
             </div>
             <div class="c-copyright">

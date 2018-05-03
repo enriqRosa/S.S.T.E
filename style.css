@@ -123,24 +123,13 @@ footer {
     background: #24292e;
     position: absolute;
 }
-.c-logos {
-    width: 30%;
+.info-right{
     display: flex;
-    margin: 0 auto;
-    justify-content: space-around;
-    align-items: center;
+    padding: 5px 0px;
 }
 .c-correo,
 .c-direccion{
     width: 25%;
-}
-.c-logos img {
-    width: 120px;
-    height: 40px;
-}
-.info-right{
-    display: flex;
-    padding: 10px 0px;
 }
 .c-correo {     
     margin: 0 auto;   
@@ -148,35 +137,50 @@ footer {
 .c-correo a{
     color: #fff;
 }
-.c-direccion{
-    margin: 0 auto;
-    text-align: right;
+.footer-mail li i{
+    margin-right: 5px;
 }
-.c-copyright{
-    width: 100%;
-    text-align: center;
-    background-color: #a6acaf ;  
-    padding: 5px 0px; 
-}
-
 .footer-tel{
     display: flex;
-    margin-top: 10px;
+    margin-top: 6px;
     align-items: center;
 }
 .footer-tel li:nth-child(n+1){
     margin-left: 10px; 
 }
-
 .text-tel{
     display: flex;
     align-items: center;
 }
-.text-tel i{
+.text-tel i,.text-dir i{
     margin-right: 5px;
 }
-.footer-mail li i{
-    margin-right: 5px;
+.c-logos {
+    width: 30%;
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-around;
+    align-items: center;
+}
+.c-logos img {
+    width: 120px;
+    height: 40px;
+}
+.c-direccion{
+    margin: 0 auto;
+    text-align: right;
+    align-items: right;
+}
+.text-dir{
+    display: flex;
+    align-items: center;
+    margin-left: 245px;
+}
+.c-copyright{
+    width: 100%;
+    text-align: center;
+    background-color: #a6acaf ;  
+    padding: 2px 0px; 
 }
 
 
