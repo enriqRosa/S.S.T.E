@@ -189,8 +189,7 @@ footer {
 .footer-mail li i{
     margin-right: 5px;
 }
-.footer-tel{
-}
+
 .c-direccion {
     margin: 0 auto;
     text-align: right;
@@ -228,15 +227,9 @@ footer {
     width: 120px;
     height: 40px;
 }
-.c-direccion{
-    margin: 0 auto;
-    text-align: right;
-    align-items: right;
-}
 .text-dir{
     display: flex;
-    align-items: center;
-    margin-left: 245px;
+    justify-content: end;
 }
 .c-copyright{
     width: 100%;
