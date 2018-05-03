@@ -14,17 +14,17 @@
     font-family: Tajawal-Medium;
     src: url("assets/fonts/Tajawal-Medium.ttf");
 }
-.tajawalR{
+.tajawalR {
     font-family: Tajawal-Regular;
 }
-.tajawalL{
-    font-family:Tajawal-Light;
+.tajawalL {
+    font-family: Tajawal-Light;
 }
-.tajawalB{
-    font-family:Tajawal-Bold;
+.tajawalB {
+    font-family: Tajawal-Bold;
 }
-.tajawalM{
-    font-family:Tajawal-Medium;
+.tajawalM {
+    font-family: Tajawal-Medium;
 }
 * {
     margin: 0;
@@ -33,6 +33,44 @@
     text-decoration: none;
     list-style: none;
     box-sizing: border-box;
+	outline: none;
+}
+a,
+aside,
+body,
+div,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+html,
+iframe,
+img,
+label,
+li,
+object,
+ol,
+p,
+pre,
+span,
+tbody,
+td,
+th,
+tr,
+ul {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    box-sizing: border-box;
+    
 }
 img {
     max-width: 100%;
@@ -45,16 +83,16 @@ img {
 .fs15 {
     font-size: 15px;
 }
-.fs25{
+.fs25 {
     font-size: 25px;
 }
-.fs14{
+.fs14 {
     font-size: 14px;
 }
 .fs16 {
     font-size: 16px;
 }
-.fs12{
+.fs12 {
     font-size: 12px;
 }
 .green33 {
@@ -63,7 +101,7 @@ img {
 .grey {
     color: #CFD8DC;
 }
-.white{
+.white {
     color: #fff;
 }
 .ls2 {
@@ -76,7 +114,7 @@ img {
     width: 90%;
     left: 0;
     right: 0;
-    margin: 0px auto;
+    margin: 0 auto;
     position: relative;
     display: flex;
     padding-top: 100px;
@@ -87,31 +125,31 @@ img {
 .form-option {
     display: flex;
     justify-content: space-around;
-    padding: 10px 0px;
+    padding: 10px 0;
 }
 .main-form {
     width: 600px;
     margin: 0 auto;
     text-align: center;
     padding: 50px;
-    box-shadow: 0 0 0px 5px #E0E0E0;
+    box-shadow: 0 0 0 5px #E0E0E0;
     background-color: rgba(0, 0, 0, 0.5);
 }
-.c-login-title span{
+.c-login-title span {
     color: #fff;
     font-size: 100px;
 }
-.c-inputs{
+.c-inputs {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
 }
-.form-option label{
+.form-option label {
     font-size: 20px;
     color: #fff;
     border: solid 2px #E0E0E0;
     width: 40%;
-    padding: 10px 0px;
+    padding: 10px 0;
     cursor: pointer;
     border-radius: 5px;
 }
@@ -128,25 +166,49 @@ footer {
     padding: 5px 0px;
 }
 .c-correo,
-.c-direccion{
+.c-direccion {
     width: 25%;
 }
 .c-correo {     
     margin: 0 auto;   
 }
-.c-correo a{
+.c-logos img {
+    width: 120px;
+    height: 40px;
+}
+.info-right {
+    display: flex;
+    padding: 10px 0;
+}
+.c-correo {
+    margin: 0 auto;
+}
+.c-correo a {
     color: #fff;
 }
 .footer-mail li i{
     margin-right: 5px;
 }
 .footer-tel{
+}
+.c-direccion {
+    margin: 0 auto;
+    text-align: right;
+}
+.c-copyright {
+    width: 100%;
+    text-align: center;
+    background-color: #a6acaf;
+    padding: 5px 0;
+}
+
+.footer-tel {
     display: flex;
     margin-top: 6px;
     align-items: center;
 }
-.footer-tel li:nth-child(n+1){
-    margin-left: 10px; 
+.footer-tel li:nth-child(n+1) {
+    margin-left: 10px;
 }
 .text-tel{
     display: flex;
@@ -183,9 +245,18 @@ footer {
     padding: 2px 0px; 
 }
 
+.text-tel {
+    display: flex;
+    align-items: center;
+}
+.text-tel i {
+    margin-right: 5px;
+}
+.footer-mail li i {
+    margin-right: 5px;
+}
 
-
-.mdl-textfield{
+.mdl-textfield {
     width: 45%!important;
 }
 .mdl-textfield__input {
@@ -207,13 +278,13 @@ footer {
     top: 0px!important;
     color: #fff!important;
 }
-.mdl-button--raised{
+.mdl-button--raised {
     background-color: #9E9E9E!important;
     color: #fff!important;
     width: 100%!important;
     margin-top: 20px!important;
 }
-.mdl-button:hover{
+.mdl-button:hover {
     background-color: #757575!important;
     color: #E0E0E0!important;
 }
