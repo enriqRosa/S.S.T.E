@@ -1,0 +1,103 @@
+body{
+    background: #F5F5F5;
+}
+nav{
+    width: 100%;
+    background: #24292e;
+}
+nav ul{
+    display: flex;
+    justify-content: end;
+    list-style: none;   
+}
+nav ul a{
+    color: #fff;
+    padding: 15px; 
+}
+nav ul a:hover{
+    color: #4DB6AC;
+}
+/*---------SECCION USUARIO----------*/
+.informacion{
+    width: 75%;
+    margin: 0 auto;
+    box-shadow: 0 0 10px 5px #E0E0E0;
+    margin-top:60px;
+    margin-bottom:100px;
+    padding: 50px;
+}
+.user-circle i{
+    font-size: 100px;
+    color: #607D8B;
+}
+hr{
+    width:500px;
+    height: 2px;
+    background-image: linear-gradient(to right,rgba(0,0,0,0),rgba(0,0,0,75),rgba(0,0,0,0));
+    margin: auto;
+    margin-top:30px;
+    
+}
+hr.line2{
+     border: 0; 
+     height: 0; 
+     border-top: 1px solid rgba(0, 0, 0, 0.3); 
+     width:900px;
+}
+.usuario
+,.user-circle{
+    display: flex;
+    justify-content: center;
+    margin-top:20px;
+}
+.grupo i{
+    font-size: 50px;
+    color: #006064;
+    margin-right: 5px;
+}
+.grupo{
+    display:flex; 
+    justify-content: space-between;
+    margin-top:40px;
+    margin-top: 0 auto;
+}
+.info-1{
+    width:25%;       
+}
+.c-inputs-2{
+    display: flex;
+    justify-content: space-between;
+}
+.mdl-textfield__input {
+    border-bottom: 2px solid #006064 !important;
+    border-radius: 2px;
+    color: #006064!important;
+    min-width: 20%!important;
+    
+}
+.mdl-textfield {
+    width: 25%!important;
+}
+.modal-pass{
+    margin-top: 30px;
+    display: flex;
+    justify-content:center;
+}
+.mdl-button--raised {
+    color: #fff!important;
+    width: 50%!important;  
+}
+.mdl-button:hover {
+    background-color: #006064!important;
+    color: #E0E0E0!important;
+}
+/*********************FOOTER*******************/
+footer2 {
+    width: 100%;
+    bottom: 0;   
+}
+.info-right {
+    display: flex;
+    padding: 10px 0;
+    background-color: #24292e;
+}
