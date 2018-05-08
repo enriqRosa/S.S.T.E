@@ -16,7 +16,7 @@
     <li>
         <span>Image 06</span></li>
 </ul>
-<main id="main-section">
+<div id="main-section">
     <div class="c-formulario">
         <form action="" class="main-form">
             <div class="c-login-title">
@@ -46,7 +46,8 @@
             </div>
         </form>
     </div>
-</main>
+</div>
+<!-- Commit para branch-->
 
 
 
