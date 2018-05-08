@@ -30,9 +30,12 @@
             </div>
         </footer>
         <!-- INICIO DE LIBRERIAS -->
-        <script src="libs/mdl/material.js"></script>
-        <script src="libs/vue/vue.js"></script>
-        <script src="js/process-form.js"></script>
-
+        <script src="assets/libs/mdl/material.js"></script>
+        <script src="assets/libs/vue/vue.js"></script>
+        <script src="assets/js/process-form.js"></script>
     </body>
 </html>
+<?php
+    }else {
+        header("location: main.php");
+?>
