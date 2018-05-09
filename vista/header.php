@@ -7,6 +7,7 @@
 
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="css/bgr.css">
+        <link rel="stylesheet" href="css/principal.css">
         <link rel="stylesheet" href="libs/mdl/material.css">
         <link rel="stylesheet" href="libs/fontawesome/css/fa-solid.css">
         <link rel="stylesheet" href="libs/fontawesome/css/fontawesome.css">

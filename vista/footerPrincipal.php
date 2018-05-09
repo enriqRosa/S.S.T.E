@@ -1,4 +1,4 @@
-<footer2>
+<footer>
             <div class="info-right">
                 <div class="c-correo">
                 <ol class="tajawalL fs14 grey ls1 footer-mail">
@@ -28,7 +28,7 @@
             <div class="c-copyright">
                 <span class="tajawalR fs14 ls1">&copy 2018 Sistema de Seguimiento de Tutorías Individuales - All rights reserved</span>
             </div>
-        </footer2>
+        </footer>
         <!-- INICIO DE LIBRERIAS -->
         <script src="libs/mdl/material.js"></script>
         <script src="libs/vue/vue.js"></script>

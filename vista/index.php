@@ -57,4 +57,4 @@
 
 
 
-<?php include 'footer.php' ?>
+<?php include 'footerPrincipal.php' ?>
