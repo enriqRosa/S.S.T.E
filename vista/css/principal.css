@@ -9,11 +9,23 @@ nav{
     justify-content: end;
     padding: 7px;
 }
+.menu-right a{
+    color: rgb(0,105,92);
+}
+/*---------ICONS-------------*/
 .fa-bars{
     margin-left: 5px;
 }
+.fa-quote-left,
+.fa-quote-right{
+    font-size: 10px;
+    color: #37474F;
+}
 .fa-key,
-.fa-edit{
+.fa-edit,
+.fa-user-plus,
+.fa-eye,
+.fa-sign-out-alt{
     margin-right: 5px;
 }
 /*-----------MAIN-----------*/
@@ -25,14 +37,26 @@ nav{
     margin-bottom:100px;
     padding: 50px;
 }
+.informacion2{
+    width: 75%;
+    margin: 0 auto;
+    box-shadow: 0 0 10px 5px #B2DFDB;
+    margin-top:60px;
+    margin-bottom:100px;
+    padding: 50px;
+}
 .user-circle i{
     font-size: 100px;
     color: #607D8B;
 }
+.user-circle-admin i{
+    font-size: 100px;
+    color: #26A69A;
+}
 hr{
     width:500px;
     height: 2px;
-    background-image: linear-gradient(to right,rgba(0,0,0,0),rgba(0,0,0,75),rgba(0,0,0,0));
+    background-image: linear-gradient(to right,rgba(0,0,0,0),rgba(0,0,0,24),rgba(0,0,0,0));
     margin: auto;
     margin-top:30px;
 }
@@ -43,10 +67,11 @@ hr.line2{
      width:900px;
 }
 .usuario
-,.user-circle{
+,.user-circle,
+.user-circle-admin{
     display: flex;
     justify-content: center;
-    margin-top:20px;
+    margin-top:40px;
 }
 .grupo{
     display:flex; 
@@ -62,7 +87,7 @@ hr.line2{
 }
 .grupo i{
     font-size: 50px;
-    color: #006064;
+    color: #546E7A;
     margin-right: 5px;
 }
 .info-1{
@@ -77,7 +102,7 @@ hr.line2{
     justify-content: space-evenly;
 }
 .mdl-textfield__input {
-    border-bottom: 2px solid #006064 !important;
+    border-bottom: 2px solid #37474F !important;
     border-radius: 2px;
     color: #006064!important;
     min-width: 20%!important;
@@ -86,7 +111,7 @@ hr.line2{
     width: 25%!important;
 }
 .mdl-button:hover {
-    background-color: #006064!important;
+    background-color: #546E7A !important;
     color: #E0E0E0!important;
 }
 .modals{

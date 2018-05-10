@@ -7,8 +7,8 @@
     </button>
     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
         for="demo-menu-lower-right">
-        <li class="mdl-menu__item mdl-menu__outline tajawalB"><a href="">Verificación de Seguimiento</a></li>
-        <li class="mdl-menu__item mdl-menu__outline tajawalB"><a href="index.php">Cerrar Sesión</a></li>
+        <li class="mdl-menu__item mdl-menu__outline tajawalB"><i class="fas fa-eye mdl-color-text--teal-800 "></i><a href="">Verificación de Seguimiento</a></li>
+        <li class="mdl-menu__item mdl-menu__outline tajawalB"><i class="fas fa-sign-out-alt mdl-color-text--teal-800 "></i><a href="index.php">Cerrar Sesión</a></li>
     </ul>
 </nav>
 <main class="informacion">
@@ -91,9 +91,9 @@
         </div>
         <hr class="line2">
         <div class="modals">
-            <button class="mdl-button mdl-js-button mdl-color--blue-grey-600 mdl-js-ripple-effect mdl-color-text--blue-grey-100">
+            <button class="mdl-button mdl-js-button mdl-color--blue-grey-800 mdl-js-ripple-effect mdl-color-text--blue-grey-100">
             <i class="fas fa-key"></i>Cambiar Contraseña</button>
-            <button class="mdl-button mdl-js-button mdl-color--blue-grey-600 mdl-js-ripple-effect mdl-color-text--blue-grey-100">
+            <button class="mdl-button mdl-js-button mdl-color--blue-grey-800 mdl-js-ripple-effect mdl-color-text--blue-grey-100">
             <i class="fas fa-edit"></i>Editar Información</button>
         </div>
 </main>
