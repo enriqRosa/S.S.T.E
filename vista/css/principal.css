@@ -25,7 +25,8 @@ nav{
 .fa-edit,
 .fa-user-plus,
 .fa-eye,
-.fa-sign-out-alt{
+.fa-sign-out-alt,
+.fa-file-alt{
     margin-right: 5px;
 }
 /*-----------MAIN-----------*/
@@ -45,6 +46,15 @@ nav{
     margin-bottom:100px;
     padding: 50px;
 }
+.informacion3{
+    width: 75%;
+    margin: 0 auto;
+    box-shadow: 0 0 10px 5px #C5CAE9;
+    margin-top:60px;
+    margin-bottom:100px;
+    padding: 50px;
+}
+/*-------ICONOS DE LOS USUARIOS-------*/
 .user-circle i{
     font-size: 100px;
     color: #607D8B;
@@ -53,6 +63,11 @@ nav{
     font-size: 100px;
     color: #26A69A;
 }
+.user-circle-tutor i{
+    font-size: 100px;
+    color: #3949AB;
+}
+/*------------------------------------*/
 hr{
     width:500px;
     height: 2px;
@@ -68,7 +83,8 @@ hr.line2{
 }
 .usuario
 ,.user-circle,
-.user-circle-admin{
+.user-circle-admin,
+.user-circle-tutor{
     display: flex;
     justify-content: center;
     margin-top:40px;
@@ -88,10 +104,14 @@ hr.line2{
 .grupo i{
     font-size: 50px;
     color: #546E7A;
-    margin-right: 5px;
 }
 .info-1{
     width:25%;       
+}
+.info-1_1 i{
+    width:25%; 
+    font-size: 50px;
+    color: #5C6BC0;
 }
 .c-inputs-2{
     display: flex;
