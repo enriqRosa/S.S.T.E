@@ -9,6 +9,13 @@ nav{
     justify-content: end;
     padding: 7px;
 }
+.fa-bars{
+    margin-left: 5px;
+}
+.fa-key,
+.fa-edit{
+    margin-right: 5px;
+}
 /*-----------MAIN-----------*/
 .informacion{
     width: 75%;

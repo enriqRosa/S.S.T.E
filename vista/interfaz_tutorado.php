@@ -3,7 +3,7 @@
 <nav class="menu-right">
     <button id="demo-menu-lower-right"
         class="mdl-button mdl-js-button  mdl-js-ripple-effect ">
-        <i class="material-icons mdl-color-text--blue-grey-200">Menú</i>
+        <i class="material-icons mdl-color-text--blue-grey-200">Menú<i class="fas fa-bars"></i></i>
     </button>
     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
         for="demo-menu-lower-right">
@@ -91,8 +91,10 @@
         </div>
         <hr class="line2">
         <div class="modals">
-            <button class="mdl-button mdl-js-button mdl-color--blue-grey-600 mdl-js-ripple-effect mdl-color-text--blue-grey-100">Cambiar Contraseña</button>
-            <button class="mdl-button mdl-js-button mdl-color--blue-grey-600 mdl-js-ripple-effect mdl-color-text--blue-grey-100">Editar Información</button>
+            <button class="mdl-button mdl-js-button mdl-color--blue-grey-600 mdl-js-ripple-effect mdl-color-text--blue-grey-100">
+            <i class="fas fa-key"></i>Cambiar Contraseña</button>
+            <button class="mdl-button mdl-js-button mdl-color--blue-grey-600 mdl-js-ripple-effect mdl-color-text--blue-grey-100">
+            <i class="fas fa-edit"></i>Editar Información</button>
         </div>
 </main>
 
