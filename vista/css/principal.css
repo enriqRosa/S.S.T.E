@@ -56,15 +56,15 @@ nav{
 }
 /*-------ICONOS DE LOS USUARIOS-------*/
 .user-circle i{
-    font-size: 100px;
+    font-size: 130px;
     color: #607D8B;
 }
 .user-circle-admin i{
-    font-size: 100px;
+    font-size: 130px;
     color: #26A69A;
 }
 .user-circle-tutor i{
-    font-size: 100px;
+    font-size: 130px;
     color: #3949AB;
 }
 /*------------------------------------*/
