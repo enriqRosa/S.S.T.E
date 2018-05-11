@@ -9,7 +9,7 @@ class conexion {
     private static $bd = "sstebd";
 
     public static function conectar() {
-        return mysqli_connect(conexion::$host, conexion::$post, conexion::$user, conexion::$pwd, conexion::$bd);
+        return mysqli_connect(conexion::$host, conexion::$port, conexion::$user, conexion::$pwd, conexion::$bd);
     }
 
 }

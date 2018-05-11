@@ -1,5 +1,5 @@
 <?php
 class ruta {
-    const ruta = "/SSTE";
+    const ruta = "/S.S.T.E";
 }
 ?>

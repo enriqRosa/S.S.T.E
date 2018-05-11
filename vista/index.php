@@ -15,6 +15,7 @@
         <link rel="stylesheet" href="assets/libs/fontawesome/css/fa-solid.css">
         <link rel="stylesheet" href="assets/libs/fontawesome/css/fontawesome.css">
         <link rel="icon" href="favicon.png" sizes="16x16" type="image/png">
+        
 
         <title>S.S.T.E</title>
     </head>
@@ -110,11 +111,13 @@
         </footer>
         <!-- INICIO DE LIBRERIAS -->
         <script src="assets/libs/mdl/material.js"></script>
-        <script src="assets/libs/vue/vue.js"></script>
-        <script src="assets/js/process-form.js"></script>
+        <script src="assets/libs/jQuery/jQuery-3-3-1.min.js"></script>
+        <script src="assets/js/login.js"></script>
+        
     </body>
 </html>
 <?php
     }else {
         header("location: main.php");
+    }
 ?>
