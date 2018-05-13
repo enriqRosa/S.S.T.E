@@ -6,12 +6,11 @@
         <i class="material-icons mdl-color-text--blue-grey-200">Menú<i class="fas fa-bars"></i></i>
     </button>
     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="demo-menu-lower-right">
-        <li class="mdl-menu__item mdl-menu__outline  tajawalB"><i class="fas fa-user-plus mdl-color-text--teal-800 "></i><a href="">Gestión de Tutores</a></li>
-        <li class="mdl-menu__item mdl-menu__outline  tajawalB"><i class="fas fa-user-plus mdl-color-text--teal-800 "></i><a href="">Gestión de Tutorados</a></li>
-        <li class="mdl-menu__item mdl-menu__outline  tajawalB"><i class="fas fa-user-plus mdl-color-text--teal-800 "></i><a href="">Gestión de Coordinadores</a></li>
-        <li class="mdl-menu__item mdl-menu__outline  tajawalB"><a href="">Asignación Tuores/Tutorados</a></li>
-        <li class="mdl-menu__item mdl-menu__outline  tajawalB"><i class="fas fa-eye mdl-color-text--teal-800 "></i><a href="">Verificación de Seguimiento</a></li>
-        <li class="mdl-menu__item mdl-menu__outline  tajawalB"><i class="fas fa-sign-out-alt mdl-color-text--teal-800 "></i><a href="index.php">Cerrar Sesión</a></li>
+        <a href="gestion_tutores.php"><li class="mdl-menu__item tajawalB mdl-color-text--teal-800"><i class="fas fa-user-plus"></i>Gestión de Tutores</li></a>
+        <a href=""><li class="mdl-menu__item tajawalB mdl-color-text--teal-800"><i class="fas fa-user-plus"></i>Gestión de Coordinadores</li></a>
+        <a href=""><li class="mdl-menu__item tajawalB mdl-color-text--teal-800"><i class="fas fa-user-plus"></i>Asignacion Tutores/Tutorados</li></a>
+        <a href=""><li class="mdl-menu__item tajawalB mdl-color-text--teal-800"><i class="fas fa-eye"></i>Verificación de Seguimiento</li></a>
+        <a href="index.php"><li class="mdl-menu__item tajawalB mdl-color-text--teal-800"><i class="fas fa-sign-out-alt"></i>Cerrar Sesión</li></a>
     </ul>
 </nav>
 <main class="informacion2">
