@@ -6,9 +6,9 @@
         <i class="material-icons mdl-color-text--blue-grey-200">Menú<i class="fas fa-bars"></i></i>
     </button>
     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="demo-menu-lower-right">
-        <li class="mdl-menu__item mdl-menu__outline tajawalB"><i class="fas fa-file-alt mdl-color-text--teal-800 "></i><a href="">Registro</a></li>
-        <li class="mdl-menu__item mdl-menu__outline tajawalB"><i class="fas fa-eye mdl-color-text--teal-800 "></i><a href="">Verificación de Seguimiento</a></li>
-        <li class="mdl-menu__item mdl-menu__outline tajawalB"><i class="fas fa-sign-out-alt mdl-color-text--teal-800 "></i><a href="index.php">Cerrar Sesión</a></li>
+        <a href=""><li class="mdl-menu__item tajawalB mdl-color-text--teal-800"><i class="fas fa-file-alt"></i>Registro</li></a>
+        <a href="verificacion_seguimiento.php"><li class="mdl-menu__item tajawalB mdl-color-text--teal-800"><i class="fas fa-eye"></i>Verificación de Seguimiento</li></a>
+        <a href="index.php"><li class="mdl-menu__item tajawalB mdl-color-text--teal-800"><i class="fas fa-sign-out-alt"></i>Cerrar Sesión</li></a>
     </ul>
 </nav>
 <main class="informacion3">

@@ -41,6 +41,7 @@
                     <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14">Correo</td>
                     <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14">Telefono</td>
                     <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14">Status</td>
+                    <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14">Editar</td>
                 </tr>
             </thead>
     </table>
