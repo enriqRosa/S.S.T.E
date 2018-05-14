@@ -7,6 +7,3 @@ $.post("../controlador/password_controlador.php", datos, function(data){
     $('#Principal').html(data);
 });
 }
-function modal(){
-    alert ("AQUI VA EL MODAL");
-}
