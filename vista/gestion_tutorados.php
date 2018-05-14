@@ -17,17 +17,17 @@
         <a href="index.php"><li class="mdl-menu__item tajawalB mdl-color-text--teal-800"><i class="fas fa-sign-out-alt"></i>Cerrar Sesión</li></a>
     </ul>
 </nav>
-<main class="informacion2">
+<main class="informacion2_2">
     <div class="user-circle-admin">
         <i class="fas fa-user-plus"></i>
     </div>
     <div class="usuario">
-        <span class="text-dir fs25 ls2 tajawalR">Registro de Tutores</span>
+        <span class="text-dir fs25 ls2 tajawalR">Registro de Tutorados</span>
     </div>
     <hr class="line2">
     <div class="modals">
             <button class="mdl-button mdl-js-button mdl-color--teal-700 mdl-js-ripple-effect mdl-color-text--blue-grey-100">
-            <i class="fas fa-user"></i>Registrar nuevo Tutor</button>
+            <i class="fas fa-user"></i>Registrar Alumno</button>
     </div>
     <div class="table">
         <table class="mdl-data-table mdl-js-data-table  mdl-shadow--2dp">
@@ -38,6 +38,9 @@
                     <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14">Apellido Paterno</td>
                     <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14">Apellido Materno</td>
                     <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14">Nombre</td>
+                    <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14">Carrera</td>
+                    <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14">Grupo</td>
+                    <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14">Semestre</td>
                     <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14">Correo</td>
                     <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14">Telefono</td>
                     <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14">Status</td>
