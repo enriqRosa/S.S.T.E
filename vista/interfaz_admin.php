@@ -46,9 +46,11 @@
         </div>
         <hr class="line2">
         <div class="modals">
-            <button class="mdl-button mdl-js-button mdl-color--teal-700 mdl-js-ripple-effect mdl-color-text--blue-grey-100">
+            <button class="mdl-button mdl-js-button mdl-color--teal-700 mdl-js-ripple-effect mdl-color-text--blue-grey-100"
+            onclick="btn_cambiar_pass()">
             <i class="fas fa-key"></i>Cambiar Contraseña</button>
         </div>
+        <div id="Principal"></div> 
 </main>
 
 <?php include 'footer.php' ?>
