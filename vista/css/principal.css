@@ -16,6 +16,7 @@ nav{
 .menu-right a{
     color: rgb(0,105,92);
 }
+
 /*---------ICONS-------------*/
 .fa-bars,
 .fa-home{
@@ -31,7 +32,8 @@ nav{
 .fa-user-plus,
 .fa-eye,
 .fa-sign-out-alt,
-.fa-file-alt{
+.fa-file-alt,
+.fa-user{
     margin-right: 5px;
 }
 /*-----------MAIN-----------*/
@@ -155,6 +157,11 @@ hr.line2{
     margin-top: 40px;
     display: flex;
     justify-content:space-evenly;
+}
+.table{
+    display: flex;
+    justify-content:center;
+    margin-top: 40px;
 }
 /*---------FOOTER-----------*/
 .info-right { 

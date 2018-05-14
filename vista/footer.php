@@ -26,7 +26,7 @@
                 </div>
             </div>
             <div class="c-copyright">
-                <span class="tajawalR fs14 ls1">&copy 2018 Sistema de Seguimiento de Tutorías Individuales - All rights reserved</span>
+                <span class="tajawalR fs14 ls1 ">&copy 2018 Sistema de Seguimiento de Tutorías Individuales - All rights reserved</span>
             </div>
         </footer2>
         <!-- INICIO DE LIBRERIAS -->

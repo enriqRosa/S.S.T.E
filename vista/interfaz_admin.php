@@ -43,7 +43,6 @@
                 <input class="mdl-textfield__input" type="text" disabled >
             </div>
         </div>
-        
         <hr class="line2">
         <div class="modals">
             <button class="mdl-button mdl-js-button mdl-color--teal-700 mdl-js-ripple-effect mdl-color-text--blue-grey-100">
@@ -52,3 +51,8 @@
 </main>
 
 <?php include 'footer.php' ?>
+
+
+
+
+
