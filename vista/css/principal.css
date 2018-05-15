@@ -19,7 +19,7 @@ nav{
 
 /*---------ICONS-------------*/
 .fa-bars,
-.fa-home{
+.fa-home,{
     margin-left: 5px;
 }
 .fa-quote-left,
@@ -33,7 +33,9 @@ nav{
 .fa-eye,
 .fa-sign-out-alt,
 .fa-file-alt,
-.fa-user{
+.fa-user,
+.fa-check,
+.fa-times{
     margin-right: 5px;
 }
 /*-----------MAIN-----------*/
@@ -80,7 +82,8 @@ nav{
 /*-------ICONOS DE LOS USUARIOS-------*/
 .user-circle,
 .user-circle-admin,
-.user-circle-tutor{
+.user-circle-tutor,
+.user-circle-pass{
     text-align: center;
     margin: 0 auto;    
 }
@@ -104,6 +107,11 @@ nav{
     padding: 40px 130px;    
     margin-top: -180px;
     background: #F5F5F5;
+}
+.user-circle-pass i{
+    font-size: 70px;
+    color: #455A64;    
+    margin-top: 30px;
 }
 /*------------------------------------*/
 hr{
@@ -156,13 +164,17 @@ hr.line2{
     display: flex;
     justify-content: space-evenly;
 }
-.mdl-textfield__input {
+.c-inputs-2 .mdl-textfield__input {
     border-bottom: 2px solid #37474F !important;
     border-radius: 2px;
-    color: #006064!important;
+    color: #fff!important;
     min-width: 20%!important;
 }
-.mdl-textfield {
+.c-inputs-2 .mdl-textfield__label{
+    min-width: 20%!important;
+    color: #EEEEEE!important;
+}
+.c-inputs-2 .mdl-textfield {
     width: 25%!important;
 }
 .mdl-button:hover {
@@ -174,6 +186,9 @@ hr.line2{
     display: flex;
     justify-content:space-evenly;
 }
+.modals .mdl-textfield{
+    width: 100%!important;
+}
 .table{
     display: flex;
     justify-content:center;
@@ -182,4 +197,16 @@ hr.line2{
 /*---------FOOTER-----------*/
 .info-right { 
     background-color: #24292e;
+}
+/*otros*/
+.mdl-dialog__title{
+    display: flex;
+    justify-content: center;
+    padding: 24px; 
+}
+.mdl-dialog__actions{
+    display: flex;
+    justify-content: space-between;
+    padding: 24px 24px;
+    
 }
