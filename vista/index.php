@@ -121,9 +121,7 @@
 
 <?php include 'footerPrincipal.php' ?>
 =======
-            <div class="c-copyright">
-                <span class="tajawalR fs14 ls1">Tescha - Algunos derechos reservados &copy 2018</span>
-            </div>
+            
         </footer>
         <!-- INICIO DE LIBRERIAS -->
         <script src="assets/libs/mdl/material.js"></script>
