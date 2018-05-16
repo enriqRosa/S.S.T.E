@@ -1,18 +1,18 @@
 @font-face {
     font-family: Tajawal-Regular;
-    src: url("fonts/Tajawal-Regular.ttf");
+    src: url("assets/fonts/Tajawal-Regular.ttf");
 }
 @font-face {
     font-family: Tajawal-Light;
-    src: url("fonts/Tajawal-Light.ttf");
+    src: url("assets/fonts/Tajawal-Light.ttf");
 }
 @font-face {
     font-family: Tajawal-Bold;
-    src: url("fonts/Tajawal-Bold.ttf");
+    src: url("assets/fonts/Tajawal-Bold.ttf");
 }
 @font-face {
     font-family: Tajawal-Medium;
-    src: url("fonts/Tajawal-Medium.ttf");
+    src: url("assets/fonts/Tajawal-Medium.ttf");
 }
 .tajawalR {
     font-family: Tajawal-Regular;
