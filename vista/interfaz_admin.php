@@ -50,7 +50,7 @@
                 class="mdl-button mdl-js-button mdl-color--teal-700 mdl-js-ripple-effect mdl-color-text--blue-grey-100"
                 onclick="btn_cambiar_pass()"><i class="fas fa-key"></i>Cambiar Contraseña
             </button>
-            <dialog class="mdl-dialog mdl-color--brown-200">
+            <dialog class="mdl-dialog mdl-color--white">
                 <span class="mdl-dialog__title fs25 tajawalL ls1">Modificar Contraseña</span>
                 <div class="user-circle-pass">
                     <i class="fas fa-unlock-alt"></i>
