@@ -1,9 +1,9 @@
 function btn_cambiar_pass(){
-//alert("entrando");
+alert("entrando");
 var datos="action=cambiar_password";
-//alert(datos);
+alert(datos);
 $.post("../controlador/password_controlador.php", datos, function(data){
-//alert(data);
+alert(data);
     $('#Principal').html(data);
 });
 }

@@ -13,7 +13,7 @@
         <link rel="stylesheet" href="assets/libs/fontawesome/css/fontawesome.css">
         <link rel="stylesheet" href="assets/libs/pollyfill/dialog-polyfill.css">
         <script type="text/javascript" src="assets/libs/pollyfill/dialog-polyfill.js"></script>
-        <script type="text/javascript" src="assets/libs/vue/modales.js"></script>
+        
         <script type="text/javascript" src="componentesjq/jquery.min.js"></script>
         <script type="text/javascript" src="assets/js/btn_pass.js"></script>
         <link rel=icon href=favicon.png sizes="16x16" type="image/png">
