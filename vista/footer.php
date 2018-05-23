@@ -14,9 +14,9 @@
                 </ol>
                 </div>
                 <div class="c-logos">
-                    <img src="images/sep-logo.png" alt="">
-                    <img src="images/edomex-logo.png" alt="">
-                    <img src="images/tesch_logo.png" alt="">
+                    <img src="assets/images/sep-logo.png" alt="">
+                    <img src="assets/images/edomex-logo.png" alt="">
+                    <img src="assets/images/tesch_logo.png" alt="">
                 </div>
                 <div class="c-direccion">
                     <span class="text-dir fs16 ls1 grey tajawalB"><i class="fa fa-map-marker"></i>Dirección:</span>
@@ -30,9 +30,9 @@
             </div>
         </footer2>
         <!-- INICIO DE LIBRERIAS -->
-        <script src="libs/mdl/material.js"></script>
-        <script src="libs/vue/vue.js"></script>
-        <script src="js/process-form.js"></script>
+        <script src="assets/libs/mdl/material.js"></script>
+        <script src="assets/libs/vue/vue.js"></script>
+        <script src="assets/js/process-form.js"></script>
 
     </body>
     <!-- Incorporando MVC en branch para Rosa -->
