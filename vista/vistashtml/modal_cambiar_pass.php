@@ -45,7 +45,7 @@ function funcion_vista_password($datos){
             "use strict";
             var dialogButton = document.querySelector(".dialog-button");
             var dialog = document.querySelector("#dialog");
-            if (! dialog.showModal) {
+            if (!dialog.showModal) {
               dialogPolyfill.registerDialog(dialog);
             }
             dialogButton.addEventListener("click", function() {
