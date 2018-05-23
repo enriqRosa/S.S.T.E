@@ -35,5 +35,4 @@
         <script src="js/process-form.js"></script>
 
     </body>
-    <!-- Incorporando MVC en branch para Rosa -->
 </html>
