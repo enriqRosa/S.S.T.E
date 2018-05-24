@@ -3,7 +3,7 @@
 class vista_password{
 function funcion_vista_password($datos){
     $cad='
-    <body>
+    
     <div class="c-agenda-quirofano fancy">
             <div class="agendar-quirofano">
                 <div class="close-fancy">X</div>
@@ -26,22 +26,22 @@ function funcion_vista_password($datos){
 
 
         <script>
-        $( document ).ready(function() {
-        //--------------------Vntanas Modales---------------------------------------
-            
-            $(".btn-agendar").on("click", function(){
-                $(".c-agenda-quirofano").addClass("visible");
-                $("body").addClass("scrollNO");
-            
-            })
-            $(".close-fancy").on("click", function(){
-                $(this).closest(".c-agenda-quirofano").removeClass("visible");  
-                $("body").removeClass("scrollNO");
-            });
+    $( document ).ready(function() {
+    //--------------------Vntanas Modales---------------------------------------
+        
+        $(".btn-agendar").on("click", function(){
+            $(".c-agenda-quirofano").addClass("visible");
+            $("body").addClass("scrollNO");
         
         })
-        </script>
-        </body>
+        $(".close-fancy").on("click", function(){
+            $(this).closest(".c-agenda-quirofano").removeClass("visible");  
+            $("body").removeClass("scrollNO");
+        });
+    
+    })
+    </script>
+        
 
         ';
 	return $cad;

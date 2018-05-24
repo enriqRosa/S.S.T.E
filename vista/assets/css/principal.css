@@ -260,6 +260,13 @@ hr.line2{
                 background: rgba(0, 0, 0, 0.5);
                /* overflow-y: scroll;*/
             }
+            .fancy {
+                /*opacity: 0;*/
+                pointer-events: none;
+                -webkit-transition: 0.5s ease-in;
+                -moz-transition: 0.5s ease-in;
+                transition: 0.5s ease-in;
+            }
             .visible {
                 opacity: 1!important;
                 pointer-events: all!important;
@@ -303,13 +310,7 @@ hr.line2{
                 padding: 20px 0;
                 /*overflow-y: scroll;*/
             }
-           .fancy {
-               /* opacity: 0;*/
-                pointer-events: none;
-                -webkit-transition: 0.5s ease-in;
-                -moz-transition: 0.5s ease-in;
-                transition: 0.5s ease-in;
-            }
+           
 /*---------FOOTER-----------*/
 .info-right { 
     background-color: #24292e;
