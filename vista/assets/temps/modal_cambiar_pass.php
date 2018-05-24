@@ -3,7 +3,7 @@
 class vista_password{
 function funcion_vista_password($datos){
     $cad='
-    <dialog id="dialog" class="mdl-dialog mdl-color--white">
+    <dialog class="mdl-dialog mdl-color--white">
                 <span class="mdl-dialog__title fs25 tajawalL ls1">Modificar Contraseña</span>
                 <div class="user-circle-pass">
                     <i class="fas fa-unlock-alt"></i>

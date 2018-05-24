@@ -7,7 +7,7 @@
 
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="assets/css/bgr.css">
-        <link rel="stylesheet" href="assets/css/principal.css">
+        <link rel="stylesheet" href="vista/assets/css/principal.css">
         <link rel="stylesheet" href="assets/libs/mdl/material.css">
         <link rel="stylesheet" href="assets/libs/fontawesome/css/fa-solid.css">
         <link rel="stylesheet" href="assets/libs/fontawesome/css/fontawesome.css">       
