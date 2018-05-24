@@ -1,5 +1,5 @@
-<?php include '../header.php'?>
-<link rel="stylesheet" href="../css/principal.css">
+
+<?php include '../../header.php'?>
 
 <nav class="menu-right">
     <button id="demo-menu-lower-right"
@@ -57,7 +57,7 @@
         <div id="Principal"></div> 
 </main>
 
-<?php include 'C:\xampp\htdocs\S.S.T.E\vista\footerPrincipal.php' ?>
+<?php include '../../footerPrincipal.php' ?>
 
 
 
