@@ -1,6 +1,6 @@
 
 <?php include '../../header.php'?>
-<script type="text/javascript" src="assets/js/btn_pass.js"></script>
+<script type="text/javascript" src="../js/btn_pass.js"></script>
 
 <nav class="menu-right">
     <button id="demo-menu-lower-right"

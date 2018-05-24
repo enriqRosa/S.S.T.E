@@ -1,5 +1,6 @@
 <?php
-require_once $_SERVER['DOCUMENT_ROOT'].ruta::ruta."/vista/vistashtml/modal_cambiar_pass.php";
+require_once $_SERVER['DOCUMENT_ROOT'].ruta::ruta."/vista/assets/temps/modal_cambiar_pass.php";
+
 
 class modal_password{
 private $vista;//declaración de variable

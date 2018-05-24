@@ -9,8 +9,8 @@
         <link rel="stylesheet" href="../libs/mdl/material.css">
         <link rel="stylesheet" href="../libs/fontawesome/css/fa-solid.css">
         <link rel="stylesheet" href="../libs/fontawesome/css/fontawesome.css">
-        <script src="../libs/mdl/material.js"></script>            
-        <script type="text/javascript" src="componentesjq/jquery.min.js"></script>
+        <script type="text/javascript" src="../libs/mdl/material.js"></script>            
+        <script type="text/javascript" src="../componentesjq/jquery.min.js"></script>
         <link rel=icon href=favicon.png sizes="16x16" type="image/png">
 
         <title>S.S.T.E</title>
