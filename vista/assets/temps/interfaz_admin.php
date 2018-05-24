@@ -1,5 +1,5 @@
-<?php include '../../header.php'?>
-
+<?php include '../header.php'?>
+<link rel="stylesheet" href="../css/principal.css">
 
 <nav class="menu-right">
     <button id="demo-menu-lower-right"
