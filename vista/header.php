@@ -16,7 +16,7 @@
 
         <title>S.S.T.E</title>
     </head>
-    <nav class="menu-right">
+    <!--<nav class="menu-right">
         <ul class="home">
             <li class="tajawalB material-icons"><a href="interfaz_admin.php" class="mdl-color-text--blue-grey-200"><i class="fas fa-home"></i></a></li>
         </ul>
@@ -32,4 +32,4 @@
             <a href=""><li class="mdl-menu__item tajawalB mdl-color-text--teal-800"><i class="fas fa-eye"></i>Verificación de Seguimiento</li></a>
             <a href="index.php"><li class="mdl-menu__item tajawalB mdl-color-text--teal-800"><i class="fas fa-sign-out-alt"></i>Cerrar Sesión</li></a>
         </ul>
-    </nav>
+    </nav>-->

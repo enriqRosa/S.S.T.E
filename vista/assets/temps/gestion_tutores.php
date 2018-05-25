@@ -1,4 +1,6 @@
 <?php include '../../header.php' ?>
+<link rel="stylesheet" href="../../style.css">
+
 
 <nav class="menu-right">
     <ul class="home">
