@@ -1,16 +1,16 @@
+$( document ).ready(function() {
+  //--------------------Ventanas Modales---------------------------------------
+  console.log("Modal LISTA");    
 
-        (function() {
-    'use strict';
-    var dialogButton = document.querySelector('.dialog-button');
-    var dialog = document.querySelector('#dialog');
-    if (! dialog.showModal) {
-      dialogPolyfill.registerDialog(dialog);
-    }
-    dialogButton.addEventListener('click', function() {
-       dialog.showModal();
-    });
-    dialog.querySelector('button:not([disabled])')
-    .addEventListener('click', function() {
-      dialog.close();
-    });
-  }());
+
+      $('.btn-pass').on('click', function(){
+          $('.pass-modal').addClass('visible');
+          $('body').addClass('scrollNO');
+          console.log("Abrir Modal");
+      })
+      $('.close-fancy').on('click', function(){
+          $(this).closest('.pass-modal').removeClass('visible');  
+          $('body').removeClass('scrollNO');
+      });
+  
+  })

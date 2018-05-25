@@ -101,29 +101,8 @@
                     <span class="tajawalL fs14 grey ls1">Estado de Méx.</span>
                 </div>
             </div>
-<<<<<<< HEAD
-        </form>
-    </div>
-</div>
-<!-- Commit para branch-->
-
-
-
-
-
-
-
-
-
-<?php include 'footerPrincipal.php' ?>
-=======
             
         </footer>
-        <!-- INICIO DE LIBRERIAS -->
-        <script src="assets/libs/mdl/material.js"></script>
-        <script src="assets/libs/jQuery/jQuery-3-3-1.min.js"></script>
-        <script src="assets/js/login.js"></script>
-        
     </body>
 </html>
 <?php
@@ -131,4 +110,3 @@
         header("location: main.php");
     }
 ?>
->>>>>>> master
