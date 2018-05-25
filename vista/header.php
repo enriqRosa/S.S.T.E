@@ -11,7 +11,8 @@
         <link rel="stylesheet" href="../libs/fontawesome/css/fontawesome.css">
         <script type="text/javascript" src="../libs/mdl/material.js"></script>  
         <script type="text/javascript" src="../componentesjq/jquery.min.js"></script>
-        <script type="text/javascript" src="../libs/jQuery/jQuery-3-3-1.min.js"></script>          
+        <script type="text/javascript" src="../libs/jQuery/jQuery-3-3-1.min.js"></script> 
+        
         <link rel=icon href=favicon.png sizes="16x16" type="image/png">
 
         <title>S.S.T.E</title>

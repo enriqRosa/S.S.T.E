@@ -201,7 +201,6 @@ hr.line2{
 .c-inputs-2{
     display: flex;
     justify-content: space-between;
-    background:red;
 }
 .c-inputs-3{
     display: flex;
@@ -245,13 +244,21 @@ hr.line2{
 .modals .mdl-textfield{
     width: 100%!important;
 }
+.modales{
+    margin-top: 40px;
+    display: flex;
+    justify-content:space-evenly;
+}
+.modales .mdl-textfield{
+    width: 100%!important;
+}
 .table{
     display: flex;
     justify-content:center;
     margin-top: 40px;
 }
 /*---------MODALES----------*/
-.c-agenda-quirofano {
+.modales {
                 position: fixed;
                 width: 100%;
                 height: 100%;
@@ -261,13 +268,7 @@ hr.line2{
                 background: rgba(0, 0, 0, 0.5);
                /* overflow-y: scroll;*/
             }
-            .fancy {
-                /*opacity: 0;*/
-                pointer-events: none;
-                -webkit-transition: 0.5s ease-in;
-                -moz-transition: 0.5s ease-in;
-                transition: 0.5s ease-in;
-            }
+           
             .visible {
                 opacity: 1!important;
                 pointer-events: all!important;
@@ -293,9 +294,9 @@ hr.line2{
             .close-fancy img {
                 width: 20px;
             }
-            .agendar-quirofano {
-                width: 95%;
-                height: 95%;
+            .modal-info {
+                width: 0 auto;
+                height: 0 auto;
                 max-width: 600px;
                 max-height: 600px;
                 margin: 0 auto;
