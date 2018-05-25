@@ -24,10 +24,7 @@
     </nav>
 
 
-<div class="pass-modal fancy">
-    <div class="close-fancy">X</div>
-   
-</div>
+
 
 
 <main class="informacion2">

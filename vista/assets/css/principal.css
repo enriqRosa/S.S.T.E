@@ -269,7 +269,7 @@ hr.line2{
     overflow-y: scroll;
 }
 .fancy {
-    opacity: 0;
+    opacity: 1;
     pointer-events: none;
     -webkit-transition: 0.5s ease-in;
     -moz-transition: 0.5s ease-in;
