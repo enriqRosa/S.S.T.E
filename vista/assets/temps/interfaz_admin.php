@@ -23,10 +23,6 @@
         </ul>
     </nav>
 
-
-
-
-
 <main class="informacion2">
     <div class="user-circle-admin">
         <i class="fas fa-user-circle"></i>
@@ -60,8 +56,20 @@
         <hr class="line2">
         <div class="modals">  
            <button 
-                class="mdl-button mdl-js-button mdl-color--teal-700 mdl-js-ripple-effect mdl-color-text--blue-grey-100 btn-pass" onclick="btn_cambiar_pass()"><i class="fas fa-key"></i>Cambiar Contraseña
+                class="mdl-button mdl-js-button mdl-color--teal-700 mdl-js-ripple-effect mdl-color-text--blue-grey-100 btn-pass"><i class="fas fa-key"></i>Cambiar Contraseña
             </button>       
         </div>
         <div id="Principal"></div> 
 </main>
+<div class="pass-modal fancy ">
+    <div class="modal-info">
+        <div class="warning">
+            <i class="fas fa-exclamation-triangle"></i>
+        </div>
+        <span>Esta apunto de cambiar su contraseña<span>¿Desea continuar?</span>
+        <div class="modals">
+            <button class="close-fancy mdl-button mdl-js-button mdl-color--teal-700 mdl-js-ripple-effect mdl-color-text--blue-grey-100">Cancelar</button>
+            <button class="mdl-button mdl-js-button mdl-color--teal-700 mdl-js-ripple-effect mdl-color-text--blue-grey-100">Aceptar</button>
+        </div>
+    </div>  
+</div>
