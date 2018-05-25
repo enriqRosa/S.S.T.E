@@ -201,6 +201,7 @@ hr.line2{
 .c-inputs-2{
     display: flex;
     justify-content: space-between;
+    background:red;
 }
 .c-inputs-3{
     display: flex;
