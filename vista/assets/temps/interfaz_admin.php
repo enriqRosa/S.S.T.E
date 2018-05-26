@@ -1,9 +1,7 @@
-
 <?php include_once '../../header.php'; ?>
 <link rel="stylesheet" href="../../style.css">
 <script src="../js/modals.js"></script>
-
-
+<script type="text/javascript" src="../js/btn_pass.js"></script>
 
 <nav class="menu-right">
         <ul class="home">
