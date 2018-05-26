@@ -88,9 +88,9 @@ nav{
     padding: 50px;
 }
 .informacion5{
-    width: 75%;
+    width: 85%;
     margin: 0 auto;
-    box-shadow: 0 0 12px 7px #BBDEFB;
+    box-shadow: 0 0 12px 7px #F8BBD0;
     margin-top:120px;
     margin-bottom:100px;
     padding: 50px;
@@ -102,6 +102,7 @@ nav{
 .user-circle-pass,
 .user-circle-institucional,
 .user-circle-academico,
+.c-user-icon,
 .warning{
     text-align: center;
     margin: 0 auto;    
@@ -141,8 +142,15 @@ nav{
 }
 .user-circle-academico i{
     font-size: 130px;
-    color: #1976D2;
+    color: #D81B60;
     padding: 40px 130px;    
+    margin-top: -180px;
+    background: #F5F5F5;
+}
+.c-user-icon i{
+    padding: 40px 35px; 
+    font-size: 100px;
+    color: #D81B60;        
     margin-top: -180px;
     background: #F5F5F5;
 }
@@ -201,7 +209,7 @@ hr.line2{
 .info-1_3 i{
     width:25%; 
     font-size: 50px;
-    color: #1976D2;
+    color: #D81B60;
 }
 .c-inputs-2{
     display: flex;

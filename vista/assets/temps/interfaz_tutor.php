@@ -15,7 +15,7 @@
 </nav>
 <main class="informacion3">
     <div class="user-circle-tutor">
-    <i class="fas fa-users"></i>
+        <i class="fas fa-users"></i>
     </div>
     <div class="usuario">
         <span class="text-dir fs25 ls2 tajawalR"><i class="fas fa-quote-left"></i>Bienvenido (a)<i class="fas fa-quote-right"></i></span>
