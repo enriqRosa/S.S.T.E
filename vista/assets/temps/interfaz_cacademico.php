@@ -1,4 +1,6 @@
 <?php include '../../header.php' ?>
+<link rel="stylesheet" href="../../style.css">
+<script src="../js/modals.js"></script>
 
 <nav class="menu-right">
     <button id="demo-menu-lower-right"
@@ -63,8 +65,9 @@
     </div>
     <hr class="line2">
     <div class="modals">
-        <button class="mdl-button mdl-js-button mdl-color--blue-700 mdl-js-ripple-effect mdl-color-text--blue-grey-100">
+        <button class="mdl-button mdl-js-button mdl-color--blue-700 mdl-js-ripple-effect mdl-color-text--blue-grey-100 btn-pass">
         <i class="fas fa-key"></i>Cambiar Contraseña</button>
     </div>
 </main>
+<?php include_once 'modal_contraseña.php'?>
 
