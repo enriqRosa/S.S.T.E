@@ -3,9 +3,6 @@
 <script src="../js/modals.js"></script>
 
 <nav class="menu-right">
-        <ul class="home">
-            <li class="tajawalB material-icons"><a href="interfaz_admin.php" class="mdl-color-text--blue-grey-200"><i class="fas fa-home"></i></a></li>
-        </ul>
         <button id="demo-menu-lower-right"
             class="mdl-button mdl-js-button  mdl-js-ripple-effect ">
             <i class="material-icons mdl-color-text--blue-grey-200"><i class="fas fa-bars"></i></i>

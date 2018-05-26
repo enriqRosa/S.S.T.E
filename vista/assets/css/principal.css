@@ -260,7 +260,6 @@ hr.line2{
      left: 0;
      z-index: 100000;
      background: rgba(0, 0, 0, 0.5);
-    
 }
 .fancy {
     opacity: 0;
@@ -301,13 +300,34 @@ hr.line2{
     -moz-transform: translate(-50%,-50%);
     transform: translate(-50%,-50%);
     padding: 30px 30px;               
-}     
+}  
+.modal-info-2 {
+    width: 40%;
+    height: 80%;
+    max-width: 600px;
+    max-height: 600px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 20px;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    padding: 30px 30px; 
+    overflow-y: scroll;              
+}        
 .c-inputs-4 .mdl-textfield {
     width: 90%!important;
     padding: 5px 0!important;
 }
 .c-inputs-4 {
-    margin-top:10px;    
+    margin-top:10px; 
+    display: flex;
+    justify-content: space-around;   
+    align-items: center;
 }
 .c-inputs-4 .mdl-textfield__input {
      border: solid 2px #B0BEC5!important;
@@ -334,21 +354,29 @@ hr.line2{
         top: 5px!important;
         color: #00788B!important;
         font-size: 12px!important;
-    }
-
+}
+.form-icons i{
+    font-size: 30px;
+    color: #607D8B;
+}
+.modal-info-2 div:nth-child(3){
+    display: flex;
+    justify-content: end;
+}
+.modal-info-2 div:nth-child(4){
+    display: flex;
+    justify-content: end;
+}
+.modal-info-2 div:nth-child(9){
+   display: flex;
+   justify-content: space-around;
+}
+.modal-info-2 .modals{
+    margin-bottom: 40px;
+}
 /*---------FOOTER-----------*/
 .info-right { 
     background-color: #24292e;
 }
-/*otros*/
-.mdl-dialog__title{
-    display: flex;
-    justify-content: center;
-    padding: 24px; 
-}
-.mdl-dialog__actions{
-    display: flex;
-    justify-content: space-between;
-    padding: 24px 24px;
-    
-}
+
+
