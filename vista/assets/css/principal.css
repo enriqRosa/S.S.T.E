@@ -301,7 +301,8 @@ hr.line2{
     transform: translate(-50%,-50%);
     padding: 30px 30px;               
 }  
-.modal-info-2 {
+.modal-info-2,
+.modal-info-3 {
     width: 40%;
     height: 80%;
     max-width: 600px;
@@ -319,61 +320,63 @@ hr.line2{
     padding: 30px 30px; 
     overflow-y: scroll;              
 }        
-.c-inputs-4 .mdl-textfield {
+.c-inputs-4 .mdl-textfield{
     width: 90%!important;
     padding: 5px 0!important;
 }
-.c-inputs-4 {
+.c-inputs-4{
     margin-top:10px; 
     display: flex;
     justify-content: space-around;   
     align-items: center;
 }
 .c-inputs-4 .mdl-textfield__input {
-     border: solid 2px #B0BEC5!important;
-        background-color: #ECEFF1!important;
-        border-radius: 15px;
-        height: 45px;
-        padding: 0!important;
-        color: #707070!important;
-        font-size: 16px!important;
-        text-indent: 15px;
+    border: solid 2px #B0BEC5!important;
+    background-color: #ECEFF1!important;
+    border-radius: 15px;
+    height: 45px;
+    padding: 0!important;
+    color: #707070!important;
+    font-size: 16px!important;
+    text-indent: 15px;
 }
 .c-inputs-4 .mdl-textfield__label{
     color: #9EADB1!important;
-        font-size: 16px!important;
-        left: 15px!important;
-        top: 15px!important;
+    font-size: 16px!important;
+    left: 15px!important;
+    top: 15px!important;
 }
-.c-inputs-4 .mdl-textfield__label::after {
+.c-inputs-4 .mdl-textfield__label::after{
     background-color: transparent!important;
 }
 .c-inputs-4 .mdl-textfield--floating-label.is-focused .mdl-textfield__label,
-    .mdl-textfield--floating-label.is-dirty .mdl-textfield__label,
-    .mdl-textfield--floating-label.has-placeholder .mdl-textfield__label{
-        top: 5px!important;
-        color: #00788B!important;
-        font-size: 12px!important;
+.mdl-textfield--floating-label.is-dirty .mdl-textfield__label,
+.mdl-textfield--floating-label.has-placeholder .mdl-textfield__label{
+    top: 5px!important;
+    color: #00788B!important;
+    font-size: 12px!important;
 }
 .form-icons i{
     font-size: 30px;
     color: #607D8B;
 }
-.modal-info-2 div:nth-child(3){
-    display: flex;
-    justify-content: end;
-}
+.modal-info-2 div:nth-child(3),
 .modal-info-2 div:nth-child(4){
     display: flex;
     justify-content: end;
 }
-.modal-info-2 div:nth-child(9){
-   display: flex;
-   justify-content: space-around;
-}
-.modal-info-2 .modals{
+.modal-info-2 .modals,
+.modal-info-3 .modals{
     margin-bottom: 40px;
 }
+.modal-info-3 div:nth-child(3),
+.modal-info-3 div:nth-child(4),
+.modal-info-3 div:nth-child(5),
+.modal-info-3 div:nth-child(7){
+    display: flex;
+    justify-content: end;
+}
+
 /*---------FOOTER-----------*/
 .info-right { 
     background-color: #24292e;
