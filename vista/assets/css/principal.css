@@ -88,10 +88,18 @@ nav{
     padding: 50px;
 }
 .informacion5{
-    width: 85%;
+    width: 75%;
     margin: 0 auto;
-    box-shadow: 0 0 12px 7px #F8BBD0;
+    box-shadow: 0 0 12px 7px #FFCCBC;
     margin-top:120px;
+    margin-bottom:100px;
+    padding: 50px;
+}
+.informacion5_2{
+    width: 80%;
+    margin: 0 auto;
+    box-shadow: 0 0 12px 7px #FFCCBC;
+    margin-top:70px;
     margin-bottom:100px;
     padding: 50px;
 }
@@ -142,17 +150,24 @@ nav{
 }
 .user-circle-academico i{
     font-size: 130px;
-    color: #D81B60;
+    color: #E64A19;
     padding: 40px 130px;    
     margin-top: -180px;
     background: #F5F5F5;
+    
+}
+.c-user-icon{
+
+    display:flex;
+    justify-content:space-evenly;
 }
 .c-user-icon i{
-    padding: 40px 35px; 
+    padding: 0px 35px; 
     font-size: 100px;
-    color: #D81B60;        
-    margin-top: -180px;
-    background: #F5F5F5;
+    color: #E64A19;        
+   
+   
+    
 }
 .warning i{
     font-size: 60px;
@@ -209,7 +224,7 @@ hr.line2{
 .info-1_3 i{
     width:25%; 
     font-size: 50px;
-    color: #D81B60;
+    color: #E64A19;
 }
 .c-inputs-2{
     display: flex;
@@ -387,28 +402,19 @@ hr.line2{
     font-size: 30px;
     color: #607D8B;
 }
-.modal-info-2 div:nth-child(3),
-.modal-info-2 div:nth-child(4){
-    display: flex;
-    justify-content: end;
-}
 .modal-info-2 .modals,
 .modal-info-3 .modals{
     margin-bottom: 40px;
-}
-.modal-info-3 div:nth-child(3),
-.modal-info-3 div:nth-child(4),
-.modal-info-3 div:nth-child(5),
-.modal-info-3 div:nth-child(7){
-    display: flex;
-    justify-content: end;
 }
 .editar-status .c-inputs-4 {
     margin-top:30px;
 }
 /*---------FOOTER-----------*/
-.info-right { 
-    background-color: #24292e;
+
+footer {
+    width: 100%;
+    background: #24292e;
+    
 }
 
 

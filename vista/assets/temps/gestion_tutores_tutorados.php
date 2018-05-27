@@ -19,7 +19,7 @@
         <a href="index.php"><li class="mdl-menu__item tajawalB mdl-color-text--teal-800"><i class="fas fa-sign-out-alt"></i>Cerrar Sesión</li></a>
     </ul>
 </nav>
-<main class="informacion5">
+<main class="informacion5_2">
     <div class="c-user-icon">
         <i class="fas fa-users"></i>
         <i class="fas fa-arrows-alt-h"></i>
@@ -47,3 +47,4 @@
             </thead>
     </table>
 </main>
+

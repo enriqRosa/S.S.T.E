@@ -73,18 +73,21 @@
                     </div>
                 </div>
                 <div class="c-inputs-4">
+                    <div class="form-icons"><i class="fas fa-user"></i></div>
                     <div class="mdl-textfield mdl-js-textfield">
                         <input class="mdl-textfield__input" type="password">
                             <label class="mdl-textfield__label tajawalL" required="text">Apellido Paterno</label>
                     </div>
                 </div>
                 <div class="c-inputs-4">
+                    <div class="form-icons"><i class="fas fa-user"></i></div>
                     <div class="mdl-textfield mdl-js-textfield">
                         <input class="mdl-textfield__input" type="password">
                             <label class="mdl-textfield__label tajawalL" required="text">Apellido Materno</label>
                     </div>
                 </div>
                 <div class="c-inputs-4">
+                    <div class="form-icons"><i class="fas fa-briefcase"></i></div>
                     <div class="mdl-textfield mdl-js-textfield">
                         <input class="mdl-textfield__input" type="password">
                             <label class="mdl-textfield__label tajawalL" required="text">Carrera</label>
@@ -98,6 +101,7 @@
                     </div>
                 </div>
                 <div class="c-inputs-4">
+                    <div class="form-icons"><i class="fas fa-book"></i></div>
                     <div class="mdl-textfield mdl-js-textfield">
                         <input class="mdl-textfield__input" type="password">
                             <label class="mdl-textfield__label tajawalL" required="text">Semestre</label>
@@ -128,7 +132,7 @@
                     <div class="status">
                         <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-2">
                             <input type="radio" id="option-2" class="mdl-radio__button" name="options" value="2">
-                            <span class="mdl-radio__label">Inactivo</span>
+                            <span class="mdl-radio__label tajawalL ls2">Inactivo</span>
                         </label>
                     </div>
                 </div>

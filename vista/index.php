@@ -89,9 +89,9 @@
                     </ol>
                 </div>
                 <div class="c-logos">
-                    <img src="images/sep-logo.png" alt="">
-                    <img src="images/edomex-logo.png" alt="">
-                    <img src="images/tesch_logo.png" alt="">
+                    <img src="assets/images/sep-logo.png" alt="">
+                    <img src="assets/images/edomex-logo.png" alt="">
+                    <img src="assets/images/tesch_logo.png" alt="">
                 </div>
                 <div class="c-direccion">
                     <span class="text-dir fs16 ls1 grey tajawalB">
@@ -105,6 +105,7 @@
         </footer>
     </body>
 </html>
+<script src="assets/libs/mdl/material.js"></script>
 <?php
     }else {
         header("location: main.php");

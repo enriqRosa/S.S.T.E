@@ -14,9 +14,9 @@
                 </ol>
                 </div>
                 <div class="c-logos">
-                    <img src="assets/images/sep-logo.png" alt="">
-                    <img src="assets/images/edomex-logo.png" alt="">
-                    <img src="assets/images/tesch_logo.png" alt="">
+                    <img src="../images/sep-logo.png" alt="">
+                    <img src="../images/edomex-logo.png" alt="">
+                    <img src="../images/tesch_logo.png" alt="">
                 </div>
                 <div class="c-direccion">
                     <span class="text-dir fs16 ls1 grey tajawalB"><i class="fa fa-map-marker"></i>Dirección:</span>
@@ -26,7 +26,7 @@
                 </div>
             </div>
             <div class="c-copyright">
-                <span class="tajawalR fs14 ls1">&copy 2018 Sistema de Seguimiento de Tutorías Individuales - All rights reserved</span>
+                <span class="tajawalR fs14 ls1">&copy 2018 Sistema de Seguimiento de Tutorías Especiales - All rights reserved</span>
             </div>
         </footer>
         <!-- INICIO DE LIBRERIAS -->

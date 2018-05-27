@@ -70,28 +70,30 @@
                     </div>
                 </div>
                 <div class="c-inputs-4">
+                    <div class="form-icons"><i class="fas fa-user"></i></div>
                     <div class="mdl-textfield mdl-js-textfield">
-                        <input class="mdl-textfield__input" type="password">
+                        <input class="mdl-textfield__input" type="text">
                             <label class="mdl-textfield__label tajawalL" required="text">Apellido Paterno</label>
                     </div>
                 </div>
                 <div class="c-inputs-4">
+                    <div class="form-icons"><i class="fas fa-user"></i></div>
                     <div class="mdl-textfield mdl-js-textfield">
-                        <input class="mdl-textfield__input" type="password">
+                        <input class="mdl-textfield__input" type="text">
                             <label class="mdl-textfield__label tajawalL" required="text">Apellido Materno</label>
                     </div>
                 </div>
                 <div class="c-inputs-4">
                     <div class="form-icons"><i class="fas fa-envelope"></i></div>
                     <div class="mdl-textfield mdl-js-textfield">
-                        <input class="mdl-textfield__input" type="password">
+                        <input class="mdl-textfield__input" type="text">
                             <label class="mdl-textfield__label tajawalL" required="text">Correo</label>
                     </div>
                 </div>
                 <div class="c-inputs-4">
                     <div class="form-icons"><i class="fas fa-mobile-alt"></i></div>
                     <div class="mdl-textfield mdl-js-textfield">
-                        <input class="mdl-textfield__input" type="password">
+                        <input class="mdl-textfield__input" type="text">
                             <label class="mdl-textfield__label tajawalL" required="text">Telefono</label>
                     </div>
                 </div>
@@ -151,28 +153,30 @@
                     </div>
                 </div>
                 <div class="c-inputs-4">
+                <div class="form-icons"><i class="fas fa-user"></i></div>
                     <div class="mdl-textfield mdl-js-textfield">
-                        <input class="mdl-textfield__input" type="password">
+                        <input class="mdl-textfield__input" type="text">
                             <label class="mdl-textfield__label tajawalL" required="text">Apellido Paterno</label>
                     </div>
                 </div>
                 <div class="c-inputs-4">
+                    <div class="form-icons"><i class="fas fa-user"></i></div>
                     <div class="mdl-textfield mdl-js-textfield">
-                        <input class="mdl-textfield__input" type="password">
+                        <input class="mdl-textfield__input" type="text">
                             <label class="mdl-textfield__label tajawalL" required="text">Apellido Materno</label>
                     </div>
                 </div>
                 <div class="c-inputs-4">
                     <div class="form-icons"><i class="fas fa-envelope"></i></div>
                     <div class="mdl-textfield mdl-js-textfield">
-                        <input class="mdl-textfield__input" type="password">
+                        <input class="mdl-textfield__input" type="text">
                             <label class="mdl-textfield__label tajawalL" required="text">Correo</label>
                     </div>
                 </div>
                 <div class="c-inputs-4">
                     <div class="form-icons"><i class="fas fa-mobile-alt"></i></div>
                     <div class="mdl-textfield mdl-js-textfield">
-                        <input class="mdl-textfield__input" type="password">
+                        <input class="mdl-textfield__input" type="text">
                             <label class="mdl-textfield__label tajawalL" required="text">Telefono</label>
                     </div>
                 </div>

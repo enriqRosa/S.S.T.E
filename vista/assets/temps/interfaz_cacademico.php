@@ -65,7 +65,7 @@
     </div>
     <hr class="line2">
     <div class="modals">
-        <button class="mdl-button mdl-js-button mdl-color--pink-700 mdl-js-ripple-effect mdl-color-text--blue-grey-100 btn-pass">
+        <button class="mdl-button mdl-js-button mdl-color--orange-900 mdl-js-ripple-effect mdl-color-text--blue-grey-100 btn-pass">
         <i class="fas fa-key"></i>Cambiar Contraseña</button>
     </div>
 </main>
