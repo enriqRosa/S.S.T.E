@@ -16,12 +16,12 @@ $( document ).ready(function() {
   $( document ).ready(function() {
   console.log("Modal LISTA");    
       $('.btn-editar').on('click', function(){
-          $('.pass-modal').addClass('visible');
+          $('.editar-modal').addClass('visible');
           $('body').addClass('scrollNO');
           console.log("Abrir Modal");
       })
       $('.close-fancy').on('click', function(){
-          $(this).closest('.pass-modal').removeClass('visible');  
+          $(this).closest('.editar-modal').removeClass('visible');  
           $('body').removeClass('scrollNO');
       });
   
