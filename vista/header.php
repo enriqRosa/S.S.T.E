@@ -10,6 +10,7 @@
         <link rel="stylesheet" href="../libs/fontawesome/css/fa-solid.css">
         <link rel="stylesheet" href="../libs/fontawesome/css/fontawesome.css">
         <script src="../libs/mdl/material.js"></script>  
+        <script src="../libs/getmdl/getmdl-select.js"></script>  
         <script src="../libs/jQuery/jQuery-3-3-1.min.js"></script> 
         
         <link rel=icon href=favicon.png sizes="16x16" type="image/png">

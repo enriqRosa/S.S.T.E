@@ -139,9 +139,9 @@ img {
 /*--------------------------- FOOTER SECTION -------------------------*/
 footer {
     width: 100%;
-    bottom: 0;
+    /*bottom: 0;*/
     background: #24292e;
-    position: absolute;
+    /*position: absolute;*/
 }
 .info-right{
     display: flex;

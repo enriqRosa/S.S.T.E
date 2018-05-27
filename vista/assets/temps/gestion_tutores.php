@@ -114,23 +114,23 @@
                 <div class="c-inputs-4">
                     <span class="fs19 ls2 tajawalR">Status</span>
                     <div class="status">
-                        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-3">
-                            <input type="radio" id="option-3" class="mdl-radio__button" name="options" value="1">
-                            <span class="mdl-radio__label">Activo</span>
+                        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-1">
+                            <input type="radio" id="option-1" class="mdl-radio__button" name="options" value="1">
+                            <span class="mdl-radio__label tajawalR ls2">Activo</span>
                         </label>
                     </div>
                     <div class="status">
-                        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-4">
-                            <input type="radio" id="option-4" class="mdl-radio__button" name="options" value="2">
-                            <span class="mdl-radio__label">Inactivo</span>
+                        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-2">
+                            <input type="radio" id="option-2" class="mdl-radio__button" name="options" value="2">
+                            <span class="mdl-radio__label tajawalR ls2">Inactivo</span>
                         </label>
                     </div>
                 </div>
-                <div class="modals">
-                    <button class="close-fancy mdl-button mdl-js-button mdl-color--red-A200 mdl-js-ripple-effect mdl-color-text--blue-grey-100">Cancelar</button>
-                    <button class="mdl-button mdl-js-button mdl-color--teal-700 mdl-js-ripple-effect mdl-color-text--blue-grey-100">Aceptar</button>
-                </div>
             </form>
+            <div class="modals">
+                <button class="close-fancy mdl-button mdl-js-button mdl-color--red-A200 mdl-js-ripple-effect mdl-color-text--blue-grey-100">Cancelar</button>
+                <button class="mdl-button mdl-js-button mdl-color--teal-700 mdl-js-ripple-effect mdl-color-text--blue-grey-100">Aceptar</button>
+            </div>            
     </div>  
 </div>
 <!--MODAL PARA EDITAR EL TUTOR-->
@@ -197,22 +197,22 @@
                 <div class="c-inputs-4">
                     <span class="fs19 ls2 tajawalR">Status</span>
                     <div class="status">
-                        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-1">
-                            <input type="radio" id="option-1" class="mdl-radio__button" name="options" value="1">
-                            <span class="mdl-radio__label">Activo</span>
+                        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-3">
+                            <input type="radio" id="option-3" class="mdl-radio__button" name="options" value="1">
+                            <span class="mdl-radio__label tajawalR ls2">Activo</span>
                         </label>
                     </div>
                     <div class="status">
-                        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-2">
-                            <input type="radio" id="option-2" class="mdl-radio__button" name="options" value="2">
-                            <span class="mdl-radio__label">Inactivo</span>
+                        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-4">
+                            <input type="radio" id="option-4" class="mdl-radio__button" name="options" value="2">
+                            <span class="mdl-radio__label tajawalR ls2">Inactivo</span>
                         </label>
                     </div>
                 </div>
-                <div class="modals">
-                    <button class="close-fancy mdl-button mdl-js-button mdl-color--red-A200 mdl-js-ripple-effect mdl-color-text--blue-grey-100">Cancelar</button>
-                    <button class="mdl-button mdl-js-button mdl-color--teal-700 mdl-js-ripple-effect mdl-color-text--blue-grey-100">Aceptar</button>
-                </div>
             </form>
+            <div class="modals">
+                <button class="close-fancy mdl-button mdl-js-button mdl-color--red-A200 mdl-js-ripple-effect mdl-color-text--blue-grey-100">Cancelar</button>
+                <button class="mdl-button mdl-js-button mdl-color--teal-700 mdl-js-ripple-effect mdl-color-text--blue-grey-100">Aceptar</button>
+            </div>            
     </div>  
 </div>

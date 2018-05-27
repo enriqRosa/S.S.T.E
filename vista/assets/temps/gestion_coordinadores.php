@@ -71,21 +71,23 @@
                     </div>
                 </div>
                 <div class="c-inputs-4">
+                    <div class="form-icons"><i class="fas fa-user"></i></div>
                     <div class="mdl-textfield mdl-js-textfield">
-                        <input class="mdl-textfield__input" type="password">
+                        <input class="mdl-textfield__input" type="text">
                             <label class="mdl-textfield__label tajawalL" required="text">Apellido Paterno</label>
                     </div>
                 </div>
                 <div class="c-inputs-4">
+                    <div class="form-icons"><i class="fas fa-user"></i></div>
                     <div class="mdl-textfield mdl-js-textfield">
-                        <input class="mdl-textfield__input" type="password">
+                        <input class="mdl-textfield__input" type="text">
                             <label class="mdl-textfield__label tajawalL" required="text">Apellido Materno</label>
                     </div>
                 </div>
                 <div class="c-inputs-4">
                     <div class="form-icons"><i class="fas fa-envelope"></i></div>
                     <div class="mdl-textfield mdl-js-textfield">
-                        <input class="mdl-textfield__input" type="password">
+                        <input class="mdl-textfield__input" type="text">
                             <label class="mdl-textfield__label tajawalL" required="text">Correo</label>
                     </div>
                 </div>
@@ -110,26 +112,51 @@
                             <label class="mdl-textfield__label tajawalL" required="text">Confirmar contraseña</label>
                     </div>
                 </div>
+
+
+ 
+    <div class="c-dropdown-list">
+    
+      <!-- Select with floating label -->
+    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select">
+        <input type="text" value="" class="mdl-textfield__input" id="sample3" readonly>
+        <input type="hidden" value="" name="sample3">
+        <label for="sample3" class="mdl-textfield__label">Country</label>
+        <ul for="sample3" class="mdl-menu mdl-menu--bottom-left mdl-js-menu">
+            <li class="mdl-menu__item" data-val="DEU">Germany</li>
+            <li class="mdl-menu__item" data-val="BLR">Belarus</li>
+            <li class="mdl-menu__item" data-val="RUS">Russia</li>
+        </ul>
+    </div>
+                                            
+    
+    
+    
+                                            
+                                            
+</div>
+
+
                 <div class="c-inputs-4">
                     <span class="fs19 ls2 tajawalR">Status</span>
                     <div class="status">
                         <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-1">
                             <input type="radio" id="option-1" class="mdl-radio__button" name="options" value="1">
-                            <span class="mdl-radio__label">Activo</span>
+                            <span class="mdl-radio__label tajawalR ls2">Activo</span>
                         </label>
                     </div>
                     <div class="status">
                         <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-2">
                             <input type="radio" id="option-2" class="mdl-radio__button" name="options" value="2">
-                            <span class="mdl-radio__label">Inactivo</span>
+                            <span class="mdl-radio__label tajawalR ls2">Inactivo</span>
                         </label>
                     </div>
                 </div>
-                <div class="modals">
-                    <button class="close-fancy mdl-button mdl-js-button mdl-color--red-A200 mdl-js-ripple-effect mdl-color-text--blue-grey-100">Cancelar</button>
-                    <button class="mdl-button mdl-js-button mdl-color--teal-700 mdl-js-ripple-effect mdl-color-text--blue-grey-100">Aceptar</button>
-                </div>
             </form>
+            <div class="modals">
+                <button class="close-fancy mdl-button mdl-js-button mdl-color--red-A200 mdl-js-ripple-effect mdl-color-text--blue-grey-100">Cancelar</button>
+                <button class="mdl-button mdl-js-button mdl-color--teal-700 mdl-js-ripple-effect mdl-color-text--blue-grey-100">Aceptar</button>
+            </div>
     </div>  
 </div>
 <!--MODAL PARA EDITAR EL COORDINADOR-->
@@ -152,12 +179,14 @@
                     </div>
                 </div>
                 <div class="c-inputs-4">
+                    <div class="form-icons"><i class="fas fa-user"></i></div>
                     <div class="mdl-textfield mdl-js-textfield">
                         <input class="mdl-textfield__input" type="password">
                             <label class="mdl-textfield__label tajawalL" required="text">Apellido Paterno</label>
                     </div>
                 </div>
                 <div class="c-inputs-4">
+                    <div class="form-icons"><i class="fas fa-user"></i></div>
                     <div class="mdl-textfield mdl-js-textfield">
                         <input class="mdl-textfield__input" type="password">
                             <label class="mdl-textfield__label tajawalL" required="text">Apellido Materno</label>
@@ -194,23 +223,23 @@
                 <div class="c-inputs-4">
                     <span class="fs19 ls2 tajawalR">Status</span>
                     <div class="status">
-                        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-1">
-                            <input type="radio" id="option-1" class="mdl-radio__button" name="options" value="1">
-                            <span class="mdl-radio__label">Activo</span>
+                        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-3">
+                            <input type="radio" id="option-3" class="mdl-radio__button" name="options" value="1">
+                            <span class="mdl-radio__label tajawalR ls2">Activo</span>
                         </label>
                     </div>
                     <div class="status">
-                        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-2">
-                            <input type="radio" id="option-2" class="mdl-radio__button" name="options" value="2">
-                            <span class="mdl-radio__label">Inactivo</span>
+                        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-4">
+                            <input type="radio" id="option-4" class="mdl-radio__button" name="options" value="2">
+                            <span class="mdl-radio__label tajawalR ls2">Inactivo</span>
                         </label>
                     </div>
                 </div>
-                <div class="modals">
-                    <button class="close-fancy mdl-button mdl-js-button mdl-color--red-A200 mdl-js-ripple-effect mdl-color-text--blue-grey-100">Cancelar</button>
-                    <button class="mdl-button mdl-js-button mdl-color--teal-700 mdl-js-ripple-effect mdl-color-text--blue-grey-100">Aceptar</button>
-                </div>
             </form>
+            <div class="modals">
+                <button class="close-fancy mdl-button mdl-js-button mdl-color--red-A200 mdl-js-ripple-effect mdl-color-text--blue-grey-100">Cancelar</button>
+                <button class="mdl-button mdl-js-button mdl-color--teal-700 mdl-js-ripple-effect mdl-color-text--blue-grey-100">Aceptar</button>
+            </div>
     </div>  
 </div>
-
+<?php include_once '../../footerPrincipal.php'?>
