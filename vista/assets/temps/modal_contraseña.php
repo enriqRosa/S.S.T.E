@@ -1,4 +1,4 @@
-<div class="pass-modal fancy ">
+<div class="pass-modal fancy">
     <div class="modal-info">
         <span class="mdl-dialog__title fs25 tajawalL ls1">Modificar Contraseña</span>
             <form>

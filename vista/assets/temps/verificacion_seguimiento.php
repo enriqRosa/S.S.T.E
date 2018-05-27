@@ -1,4 +1,6 @@
 <?php include '../../header.php' ?>
+<link rel="stylesheet" href="../../style.css">
+<script src="../js/modals.js"></script>
 
 <nav class="menu-right">
     <ul class="home">
