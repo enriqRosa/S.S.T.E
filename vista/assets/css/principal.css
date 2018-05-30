@@ -39,6 +39,10 @@ nav{
     margin-right: 5px;
 }
 /*-----------MAIN-----------*/
+.admin,
+.tutor{
+    width: 60%;
+}
 .informacion{
     width: 75%;
     margin: 0 auto;
@@ -58,8 +62,42 @@ nav{
     justify-content: center;
     align-items:center;
 }
-.admin{
-    width: 60%;
+.tutor_principal{
+    width: 100%;
+    height: 45vh;
+    background-image: url('../images/tutor.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display:flex;
+    justify-content: center;
+}
+.tutor-info{
+    width: 80%;
+    margin: 0 auto;
+      box-shadow: 0 0 12px 7px #E0E0E0;
+    margin-top:60px;
+    margin-bottom:50px;
+    padding: 10px 50px 30px;
+}
+.tutor-modalBtn{
+     width: 100%;
+    height: 25vh;
+    background-image: url('../images/tutor-btn.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+}
+.tutor-modalBtn:hover>.item{
+    background: rgba(0, 0, 0, 0.7);
+    content: '';
+    height: 100%;
+    transition: all 500ms ease-in;
+    display: flex;
+    align-items: center;
 }
 .informacion2{
     width: 80%;
@@ -69,8 +107,6 @@ nav{
     margin-bottom:100px;
     padding: 50px;
 }
-
-
 .informacion2_2{
     width: 95%;
     margin: 0 auto;
@@ -146,11 +182,9 @@ nav{
     margin-top: -180px;
 }
 .user-circle-tutor i{
-    font-size: 130px;
-    color: #3949AB;
-    padding: 40px 130px;    
-    margin-top: -180px;
-    background: #F5F5F5;
+    font-size: 80px;
+    color: #fff;
+    padding:20px;     
 }
 .user-circle-pass i{
     font-size: 70px;
@@ -201,14 +235,17 @@ hr.line2{
 .usuario{
     display: flex;
     justify-content: center;
-
 }
-
+.usuario-tutor{
+    margin-top:10px;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
 .grupo{
     display:flex; 
     justify-content: space-between;
     margin-top:40px;
-    margin-top: 0 auto;
 }
 .grupo-2{
     display:flex; 
@@ -221,7 +258,8 @@ hr.line2{
     color: #546E7A;
 }
 .info-1{
-    width:25%;       
+    width:20%;    
+
 }
 .info-1_1 i{
     width:25%; 
@@ -245,6 +283,13 @@ hr.line2{
 .c-inputs-3{
     display: flex;
     justify-content: space-evenly;
+}
+.tutor-info .c-inputs-2{
+    display:flex;
+    justify-content:space-between;
+}
+.tutor-info .c-inputs-2 .mdl-textfield {
+    width: 20%!important;
 }
 .c-inputs-2 .mdl-textfield__input {
     border-bottom: 2px solid #B0BEC5 !important;
