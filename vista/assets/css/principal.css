@@ -47,6 +47,20 @@ nav{
     margin-bottom:100px;
     padding: 50px;
 }
+.admin_pricipal{
+     width: 100%;
+    height: 92vh;
+    background-image: url('../images/admin.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+}
+.admin{
+    width: 60%;
+}
 .informacion2{
     width: 80%;
     margin: 0 auto;
@@ -55,6 +69,8 @@ nav{
     margin-bottom:100px;
     padding: 50px;
 }
+
+
 .informacion2_2{
     width: 95%;
     margin: 0 auto;
@@ -115,19 +131,19 @@ nav{
     text-align: center;
     margin: 0 auto;    
 }
-.user-circle i{
-    font-size: 130px;
-    color: #607D8B;
-    background: #F5F5F5;
-    padding: 40px 130px;    
-    margin-top: -180px;
-}
 .user-circle-admin i{
     font-size: 130px;
     color: #26A69A;
     padding: 40px 130px;    
     margin-top: -180px;
     background: #F5F5F5;
+}
+.user-circle i{
+    font-size: 130px;
+    color: #607D8B;
+    background: #F5F5F5;
+    padding: 40px 130px;    
+    margin-top: -180px;
 }
 .user-circle-tutor i{
     font-size: 130px;
@@ -185,8 +201,9 @@ hr.line2{
 .usuario{
     display: flex;
     justify-content: center;
-    margin-top:40px;
+
 }
+
 .grupo{
     display:flex; 
     justify-content: space-between;

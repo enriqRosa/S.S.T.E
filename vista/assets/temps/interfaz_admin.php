@@ -16,24 +16,23 @@
             <a href="index.php"><li class="mdl-menu__item tajawalB mdl-color-text--teal-800"><i class="fas fa-sign-out-alt"></i>Cerrar Sesión</li></a>
         </ul>
     </nav>
-
-<main class="informacion2">
-    <div class="user-circle-admin">
-        <i class="fas fa-user-circle"></i>
-    </div>
-    <div class="usuario">
-        <span class="text-dir fs25 ls2 tajawalR"><i class="fas fa-quote-left"></i>Bienvenido<i class="fas fa-quote-right"></i></span>
-    </div>
-    <hr>
-    <div class="grupo">
+<main class="admin_pricipal">    
+    <section class="admin">
+        <div class="usuario">
+            <span class="text-dir fs50 ls2 tajawalR white"></i>Bienvenido</i></span><br>
+        </div>
+        <div class="usuario">
+            <span class="text-dir fs50 ls2 tajawalR white"><i class="fas fa-quote-left white"></i>Administrador<i class="fas fa-quote-right white"></i></span>
+        </div>            
+        <div class="grupo">
             <div class="info-1">
-                <span class="fs15 ls2 tajawalR">Apellido Paterno:</span>          
+                <span class="fs15 ls2 tajawalR white">Apellido Paterno:</span>          
             </div>
             <div class="info-1">
-                <span class="fs15 ls2 tajawalR">Apellido Materno:</span>          
+                <span class="fs15 ls2 tajawalR white">Apellido Materno:</span>          
             </div>
             <div class="info-1">
-                <span class="fs15 ls2 tajawalR">Nombre(s):</span>          
+                <span class="fs15 ls2 tajawalR white">Nombre(s):</span>          
             </div>
         </div>
         <div class="c-inputs-2">
@@ -47,12 +46,12 @@
                 <input class="mdl-textfield__input" type="text" disabled >
             </div>
         </div>
-        <hr class="line2">
-        <div class="modals">  
-           <button 
-                class="mdl-button mdl-js-button mdl-color--teal-700 mdl-js-ripple-effect mdl-color-text--blue-grey-100 btn-pass"><i class="fas fa-key"></i>Cambiar Contraseña
-            </button>       
-        </div>
-        <div id="Principal"></div> 
+            <div class="modals">  
+                <button 
+                    class="mdl-button mdl-js-button mdl-color--teal-700 mdl-js-ripple-effect mdl-color-text--blue-grey-100 btn-pass"><i class="fas fa-key"></i>Cambiar Contraseña
+                 </button>       
+            </div>
+    </section>
+    <div id="Principal"></div> 
 </main>
 <?php include_once 'modal_contraseña.php'; ?>
