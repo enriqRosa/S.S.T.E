@@ -13,14 +13,20 @@
         <a href="index.php"><li class="mdl-menu__item tajawalB mdl-color-text--teal-800"><i class="fas fa-sign-out-alt"></i>Cerrar Sesión</li></a>
     </ul>
 </nav>
-<main class="informacion5">
+<section class="academico_principal">
+    <div class="academico">
     <div class="user-circle-academico">
         <i class="fas fa-user-circle"></i>
     </div>
-    <div class="usuario">
-        <span class="text-dir fs25 ls2 tajawalR"><i class="fas fa-quote-left"></i>Bienvenido (a)<i class="fas fa-quote-right"></i></span>
+    <div class="usuario-academico">
+        <span class="text-dir fs40 ls2 tajawalR white">Bienvenido (a)</i></span>
     </div>
-    <hr>
+    <div class="usuario-academico">
+        <span class="text-dir fs40 ls2 tajawalR white"><i class="fas fa-quote-left white"></i>Coordinador (a) Acádemico<i class="fas fa-quote-right white"></i></span>
+    </div>
+    </div>
+</section>
+<section class="academico-info">
     <div class="grupo">
         <div class="info-1_3">
             <i class="fas fa-id-card"></i>          
@@ -41,19 +47,6 @@
         <div class="info-1">
             <span class="fs15 ls2 tajawalR">Nombre(s):</span>          
         </div>
-    </div>
-    <div class="c-inputs-2">
-        <div class="mdl-textfield mdl-js-textfield ">
-            <input class="mdl-textfield__input" type="text"disabled >
-        </div>
-        <div class="mdl-textfield mdl-js-textfield">
-            <input class="mdl-textfield__input" type="text" disabled >
-        </div>
-        <div class="mdl-textfield mdl-js-textfield">
-            <input class="mdl-textfield__input" type="text" disabled >
-        </div>
-    </div>
-    <div class="grupo">
         <div class="info-1">
             <span class="fs15 ls2 tajawalR">Correo:</span>          
         </div>
@@ -62,12 +55,24 @@
         <div class="mdl-textfield mdl-js-textfield ">
             <input class="mdl-textfield__input" type="text"disabled >
         </div>
+        <div class="mdl-textfield mdl-js-textfield">
+            <input class="mdl-textfield__input" type="text" disabled >
+        </div>
+        <div class="mdl-textfield mdl-js-textfield">
+            <input class="mdl-textfield__input" type="text" disabled >
+        </div>
+        <div class="mdl-textfield mdl-js-textfield ">
+            <input class="mdl-textfield__input" type="text"disabled >
+        </div>
     </div>
-    <hr class="line2">
+</section>
+<section class="academico-modalBtn">
+<div class="item">
     <div class="modals">
-        <button class="mdl-button mdl-js-button mdl-color--orange-900 mdl-js-ripple-effect mdl-color-text--blue-grey-100 btn-pass">
+        <button class="mdl-button mdl-js-button mdl-color--black mdl-js-ripple-effect mdl-color-text--blue-grey-100 btn-pass">
         <i class="fas fa-key"></i>Cambiar Contraseña</button>
     </div>
-</main>
+</div>
+</section>
 <?php include_once 'modal_contraseña.php'?>
 

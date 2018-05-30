@@ -22,7 +22,7 @@
             <span class="text-dir fs40 ls2 tajawalR white"></i>Bienvenido (a)</i></span><br>
         </div>
         <div class="usuario-tutor">
-            <span class="text-dir fs40 ls2 tajawalR white"><i class="fas fa-quote-left white"></i>Coordinador (a)<i class="fas fa-quote-right white"></i></span>
+            <span class="text-dir fs40 ls2 tajawalR white"><i class="fas fa-quote-left white"></i>Tutor (a)<i class="fas fa-quote-right white"></i></span>
         </div>    
     </div>
 </section>
