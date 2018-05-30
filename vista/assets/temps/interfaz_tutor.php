@@ -67,12 +67,11 @@
         </div>   
 </section>   
 <section class="tutor-modalBtn">
-<div class="item">
         <div class="modals">
             <button class="mdl-button mdl-js-button mdl-color--indigo-700 mdl-js-ripple-effect mdl-color-text--blue-grey-100 btn-pass">
             <i class="fas fa-key"></i>Cambiar Contraseña</button>
         </div>
-</div>
+
 </section>
 <?php include_once 'modal_contraseña.php'?>
 

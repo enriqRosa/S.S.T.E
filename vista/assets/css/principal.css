@@ -42,7 +42,8 @@ nav{
 .admin,
 .tutor,
 .academico,
-.institucional{
+.institucional,
+.tutorado{
     width: 60%;
 }
 .info{
@@ -72,6 +73,15 @@ nav{
     justify-content: center;
     align-items:center;
 }
+.tutorado_principal{
+    width: 100%;
+    height: 40vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display:flex;
+    justify-content: center;
+}
 .tutor_principal,
 .institucional_principal,
 .academico_principal{
@@ -92,6 +102,9 @@ nav{
 .academico_principal{
     background-image: url('../images/academico.jpg');
 }
+.tutorado_principal{
+     background-image: url('../images/tutorado.jpg');
+}
 .tutor-modalBtn,
 .institucional-modalBtn,
 .academico-modalBtn{
@@ -109,21 +122,18 @@ nav{
 }
 .institucional-modalBtn{  
     background-image: url('../images/institucional-btn.jpg');
+    padding: 25px 0px 60px;
 }
 .academico-modalBtn{   
     background-image: url('../images/academico-btn.jpg');
+    padding: 25px 0px 60px;
 }
-.tutor-modalBtn:hover>.item,
-.academico-modalBtn:hover>.item,
-.institucional-modalBtn:hover>.item{
-    background: rgba(0, 0, 0, 0.7);
-    content: '';
-    height: 100%;
-    transition: all 500ms ease-in;
-    display: flex;
-    align-items: center;
+.tutorado-modalBtn{
+    background:#adb8cc;
+    width: 100%;
+    padding: 25px 0px 60px;
+    align-items:center;
 }
-
 .informacion2{
     width: 80%;
     margin: 0 auto;
@@ -156,7 +166,6 @@ nav{
     margin-bottom:100px;
     padding: 50px;
 }
-
 .informacion5_2{
     width: 80%;
     margin: 0 auto;
@@ -185,11 +194,9 @@ nav{
     background: #F5F5F5;
 }
 .user-circle i{
-    font-size: 130px;
-    color: #607D8B;
-    background: #F5F5F5;
-    padding: 40px 130px;    
-    margin-top: -180px;
+    font-size: 80px;
+    color: #ECEFF1;
+    padding: 40px;    
 }
 .user-circle-tutor i{
     font-size: 80px;

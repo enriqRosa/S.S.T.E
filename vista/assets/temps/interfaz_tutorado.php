@@ -13,14 +13,17 @@
         <a href="index.php"><li class="mdl-menu__item tajawalB mdl-color-text--teal-800"><i class="fas fa-sign-out-alt"></i>Cerrar Sesión</li></a>
     </ul>
 </nav>
-<main class="informacion">
+<section class="tutorado_principal">
+<div class="tutorado">
     <div class="user-circle">
         <i class="fas fa-user"></i>
     </div>
     <div class="usuario">
-        <span class="text-dir fs25 ls2 tajawalR">Datos del Alumno</span>
+        <span class="text-dir fs40 ls2 tajawalR white">Bienvenido (a)</i></span>
     </div>
-    <hr>
+</div>
+</section>
+<section class="info">
     <div class="grupo">
         <div class="info-1">
             <i class="fas fa-id-card"></i>          
@@ -91,14 +94,15 @@
                 <input class="mdl-textfield__input" type="text"disabled >
             </div>
         </div>
-        <hr class="line2">
+      </section>
+      <section class="tutorado-modalBtn">
         <div class="modals">
             <button class="mdl-button mdl-js-button mdl-color--blue-grey-800 mdl-js-ripple-effect mdl-color-text--blue-grey-100 btn-pass">
             <i class="fas fa-key"></i>Cambiar Contraseña</button>
             <button class="mdl-button mdl-js-button mdl-color--blue-grey-800 mdl-js-ripple-effect mdl-color-text--blue-grey-100 btn-editar">
             <i class="fas fa-edit"></i>Editar Información</button>
         </div>
-</main>
+</section>
 <!--MODAL PARA CAMBIAR CONTRASEÑA-->
 <?php include_once 'modal_contraseña.php'?>
 <!--MODAL PARA REGISTRAR CAMPOS FALTANTES DEL ALUMNO-->
