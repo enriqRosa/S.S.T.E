@@ -18,15 +18,15 @@
     <div class="user-circle-academico">
         <i class="fas fa-user-circle"></i>
     </div>
-    <div class="usuario-academico">
+    <div class="usuario">
         <span class="text-dir fs40 ls2 tajawalR white">Bienvenido (a)</i></span>
     </div>
-    <div class="usuario-academico">
+    <div class="usuario">
         <span class="text-dir fs40 ls2 tajawalR white"><i class="fas fa-quote-left white"></i>Coordinador (a) Acádemico<i class="fas fa-quote-right white"></i></span>
     </div>
     </div>
 </section>
-<section class="academico-info">
+<section class="info">
     <div class="grupo">
         <div class="info-1_3">
             <i class="fas fa-id-card"></i>          

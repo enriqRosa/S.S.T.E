@@ -41,8 +41,17 @@ nav{
 /*-----------MAIN-----------*/
 .admin,
 .tutor,
-.academico{
+.academico,
+.institucional{
     width: 60%;
+}
+.info{
+    width: 80%;
+    margin: 0 auto;
+    box-shadow: 0 0 12px 7px #E0E0E0;
+    margin-top:60px;
+    margin-bottom:50px;
+    padding: 10px 50px 30px;
 }
 .informacion{
     width: 75%;
@@ -63,41 +72,31 @@ nav{
     justify-content: center;
     align-items:center;
 }
-.tutor_principal{
+.tutor_principal,
+.institucional_principal,
+.academico_principal{
     width: 100%;
     height: 45vh;
-    background-image: url('../images/tutor.jpg');
     background-size: cover;
     background-position: center;
     position: relative;
     display:flex;
     justify-content: center;
 }
-.tutor-info,
-.academico-info{
-    width: 80%;
-    margin: 0 auto;
-    box-shadow: 0 0 12px 7px #E0E0E0;
-    margin-top:60px;
-    margin-bottom:50px;
-    padding: 10px 50px 30px;
+.tutor_principal{    
+    background-image: url('../images/tutor.jpg');    
 }
-.tutor-modalBtn{
-    width: 100%;
-    height: 25vh;
-    background-image: url('../images/tutor-btn.jpg');
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    display:flex;
-    justify-content: center;
-    align-items:center;
+.institucional_principal{
+    background-image: url('../images/institucional.jpg');
 }
+.academico_principal{
+    background-image: url('../images/academico.jpg');
+}
+.tutor-modalBtn,
+.institucional-modalBtn,
 .academico-modalBtn{
     width: 100%;
     height: 25vh;
-    
-    background-image: url('../images/academico-btn.jpg');
     background-size: cover;
     background-position: center;
     position: relative;
@@ -105,8 +104,18 @@ nav{
     justify-content: center;
     align-items:center;
 }
+.tutor-modalBtn{
+    background-image: url('../images/tutor-btn.jpg');
+}
+.institucional-modalBtn{  
+    background-image: url('../images/institucional-btn.jpg');
+}
+.academico-modalBtn{   
+    background-image: url('../images/academico-btn.jpg');
+}
 .tutor-modalBtn:hover>.item,
-.academico-modalBtn:hover>.item{
+.academico-modalBtn:hover>.item,
+.institucional-modalBtn:hover>.item{
     background: rgba(0, 0, 0, 0.7);
     content: '';
     height: 100%;
@@ -147,24 +156,7 @@ nav{
     margin-bottom:100px;
     padding: 50px;
 }
-.informacion4{
-    width: 75%;
-    margin: 0 auto;
-    box-shadow: 0 0 12px 7px #ffcdd2;
-    margin-top:120px;
-    margin-bottom:100px;
-    padding: 50px;
-}
-.academico_principal{
-    width: 100%;
-    height: 45vh;
-    background-image: url('../images/academico.jpg');
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    display:flex;
-    justify-content: center;
-}
+
 .informacion5_2{
     width: 80%;
     margin: 0 auto;
@@ -199,23 +191,26 @@ nav{
     padding: 40px 130px;    
     margin-top: -180px;
 }
-.user-circle-tutor i,
+.user-circle-tutor i{
+    font-size: 80px;
+    color: #1A237E;
+    padding:20px;     
+}
 .user-circle-academico i{
     font-size: 80px;
-    color: #fff;
-    padding:20px;     
+    color: #000000;
+    padding:20px;
+}
+.user-circle-institucional i
+{
+    font-size: 80px;
+    color: #c62828;
+    padding:20px;
 }
 .user-circle-pass i{
     font-size: 70px;
     color: #455A64;    
     margin-top: 30px;
-}
-.user-circle-institucional i{
-    font-size: 130px;
-    color: #d32f2f;
-    padding: 40px 130px;    
-    margin-top: -180px;
-    background: #F5F5F5;
 }
 .c-user-icon{
     display:flex;
@@ -245,11 +240,6 @@ hr.line2{
      width:900px;
 }
 .usuario{
-    display: flex;
-    justify-content: center;
-}
-.usuario-tutor,
-.usuario-academico{
     margin-top:10px;
     display: flex;
     justify-content: center;
@@ -297,13 +287,11 @@ hr.line2{
     display: flex;
     justify-content: space-evenly;
 }
-.tutor-info .c-inputs-2,
-.academico-info .c-inputs-2{
+.info .c-inputs-2{
     display:flex;
     justify-content:space-between;
 }
-.tutor-info .c-inputs-2 .mdl-textfield
-.academico-info .c-inputs-2 .mdl-textfield {
+.info .c-inputs-2 .mdl-textfield {
     width: 20%!important;
 }
 .c-inputs-2 .mdl-textfield__input {

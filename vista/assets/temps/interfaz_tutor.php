@@ -18,15 +18,15 @@
         <div class="user-circle-tutor">
             <i class="fas fa-users"></i>
         </div>
-        <div class="usuario-tutor">
+        <div class="usuario">
             <span class="text-dir fs40 ls2 tajawalR white"></i>Bienvenido (a)</i></span><br>
         </div>
-        <div class="usuario-tutor">
+        <div class="usuario">
             <span class="text-dir fs40 ls2 tajawalR white"><i class="fas fa-quote-left white"></i>Tutor (a)<i class="fas fa-quote-right white"></i></span>
         </div>    
     </div>
 </section>
-<section class="tutor-info">
+<section class="info">
     <div class="grupo">
         <div class="info-1_1">
             <i class="fas fa-id-card"></i>          
