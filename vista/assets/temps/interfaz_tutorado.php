@@ -95,10 +95,36 @@
         <div class="modals">
             <button class="mdl-button mdl-js-button mdl-color--blue-grey-800 mdl-js-ripple-effect mdl-color-text--blue-grey-100 btn-pass">
             <i class="fas fa-key"></i>Cambiar Contraseña</button>
-            <button class="mdl-button mdl-js-button mdl-color--blue-grey-800 mdl-js-ripple-effect mdl-color-text--blue-grey-100">
+            <button class="mdl-button mdl-js-button mdl-color--blue-grey-800 mdl-js-ripple-effect mdl-color-text--blue-grey-100 btn-editar">
             <i class="fas fa-edit"></i>Editar Información</button>
         </div>
 </main>
+<!--MODAL PARA CAMBIAR CONTRASEÑA-->
 <?php include_once 'modal_contraseña.php'?>
-
+<!--MODAL PARA REGISTRAR CAMPOS FALTANTES DEL ALUMNO-->
+<div class="editar-modal fancy ">
+    <div class="modal-info-5">
+        <span class="fs25 tajawalL ls1">Editar Información</span>
+            <form>
+                <div class="c-inputs-4">
+                    <div class="form-icons"><i class="fas fa-envelope"></i></div>
+                    <div class="mdl-textfield mdl-js-textfield">
+                        <input class="mdl-textfield__input" type="text">
+                            <label class="mdl-textfield__label tajawalL" required="text">Correo</label>
+                    </div>
+                </div>
+                <div class="c-inputs-4">
+                    <div class="form-icons"><i class="fas fa-mobile-alt"></i></div>
+                    <div class="mdl-textfield mdl-js-textfield">
+                        <input class="mdl-textfield__input" type="text">
+                            <label class="mdl-textfield__label tajawalL" required="text">Telefono</label>
+                    </div>
+                </div>
+            </form>
+            <div class="modals">
+                <button class="close-fancy mdl-button mdl-js-button mdl-color--red-A200 mdl-js-ripple-effect mdl-color-text--blue-grey-100">Cancelar</button>
+                <button class="mdl-button mdl-js-button mdl-color--teal-700 mdl-js-ripple-effect mdl-color-text--blue-grey-100">Aceptar</button>
+            </div>            
+    </div>  
+</div>
 

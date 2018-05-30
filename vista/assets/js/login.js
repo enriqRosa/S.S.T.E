@@ -60,4 +60,3 @@ function preloadFinish() {
     //permitimos scroll
     $("body").css({"overflow-y":"auto"}); 
    });
-}

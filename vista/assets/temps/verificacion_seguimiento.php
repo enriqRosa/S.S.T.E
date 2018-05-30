@@ -42,4 +42,4 @@
     </table>
 </main>
 
-<?php include 'footer.php' ?>
+<?php include_once '../../footerPrincipal.php'?>

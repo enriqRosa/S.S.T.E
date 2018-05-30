@@ -30,7 +30,7 @@
     </div>
     <hr class="line2">
     <div class="table">
-        <table class="mdl-data-table mdl-js-data-table  mdl-shadow--2dp">
+        <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
             <thead>
                 <tr>
                     <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14">Matricula</td>
@@ -41,7 +41,7 @@
                     <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14">Grupo</td>
                     <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14">Semestre</td>
                     <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14">Tutor</td>
-                    <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14">Aceptar</td>
+                    <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14" onclick="registrar_tutor();">Aceptar</td>
                     <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14">Cancelar</td>
                 </tr>
             </thead>
