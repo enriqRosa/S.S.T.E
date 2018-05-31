@@ -1,4 +1,4 @@
-var x;
+/*var x;
 x = $(document);
 y = $(window);
 x.ready(inicializarEventos);
@@ -7,9 +7,22 @@ y.load(preloadFinish);
 function inicializarEventos() {
     preloadInit();
     login();
+}*/
+
+function login()
+{
+//$("#mensaje").html("");
+	alert("login")
+	var datos="action=login&"+$("#formlogin").serialize();
+  alert(datos);
+	$.post("../../../controlador/loginControlador.php",datos,function(data)
+	{
+		alert(data)
+		$("#mensaje").prepend(data);
+	});
 }
 
-function login(){
+/*function login(){
   $('#formlogin').submit(function(event){
     event.preventDefault();
     var folio = $("#itFolio").val();
@@ -59,4 +72,4 @@ function preloadFinish() {
     $(this).remove();
     //permitimos scroll
     $("body").css({"overflow-y":"auto"}); 
-   });
+   });*/

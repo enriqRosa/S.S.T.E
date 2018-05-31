@@ -37,13 +37,13 @@
         </div>
         <div class="c-inputs-2">
             <div class="mdl-textfield mdl-js-textfield ">
-                <input class="mdl-textfield__input" type="text"disabled >
+                <input class="mdl-textfield__input" type="text" name="ap_paterno" disabled >
             </div>
             <div class="mdl-textfield mdl-js-textfield">
-                <input class="mdl-textfield__input" type="text" disabled >
+                <input class="mdl-textfield__input" type="text" name="ap_materno" disabled >
             </div>
             <div class="mdl-textfield mdl-js-textfield">
-                <input class="mdl-textfield__input" type="text" disabled >
+                <input class="mdl-textfield__input" type="text" name="nombre" disabled >
             </div>
         </div>
             <div class="modals">  

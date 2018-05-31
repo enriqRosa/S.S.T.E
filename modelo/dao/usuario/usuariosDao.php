@@ -1,8 +1,10 @@
 <?php
 require_once $_SERVER['DOCUMENT_ROOT'].'/S.S.T.E"/ruta.php';
 require_once $_SERVER['DOCUMENT_ROOT'].ruta::ruta.'/modelo/dao/conexion_mdb.php';
+require_once $_SERVER['DOCUMENT_ROOT'].ruta::ruta.'/modelo/dao/objetos/usuarioObjeto.php';
 require_once $_SERVER['DOCUMENT_ROOT'].ruta::ruta.'/modelo/dao/procesaParametros.php';
 require_once $_SERVER['DOCUMENT_ROOT'].ruta::ruta.'/modelo/dao/usuario/usuarioSql.php';
+require_once $_SERVER['DOCUMENT_ROOT'].ruta::ruta.'/modelo/dao/objetos/mensaje.php';
 // require_once $_SERVER['DOCUMENT_ROOT'].ruta::ruta.'/vista/logicavista/notificationView.php';
 
 class usuarioDao {
@@ -10,13 +12,13 @@ class usuarioDao {
     private $con;
 
     function __construct() {
-        $this->con=  conexion::conectar();
+        $this->con=  conexion_mdb::conectar();
     }
     function __destruct() {
         $this->con->close();
     }
 
-    function logoutDao() {
+    /*function logoutDao() {
         session_start(); 
         session_destroy(); 
         print "<script>window.location='../index.php';</script>";  
@@ -33,14 +35,14 @@ class usuarioDao {
         if ($_SESSION['tipo'] != $type) {
             print "<script>window.location='main.php';</script>";  
         } 
-    }
+    }*/
 
-    function  identificarUsuarioDao($usuario, $password) 
+    function  identificarUsuarioDao($matricula, $password) 
     {
 
-        $datosArray=array($usuario,$password);
+        $datosArray=array($matricula,$password);
 
-        if( $usuario == '' || $usuario === NULL || is_null($usuario) || $password == '' || $password === NULL || is_null($password) )
+        if( $matricula == '' || $matricula === NULL || is_null($usuario) || $password == '' || $password === NULL || is_null($password) )
         {
           
             $result = Notification::requiredFields();
@@ -49,16 +51,23 @@ class usuarioDao {
         else
         {
 
-            $st = procesaParametros::PrepareStatement(usuariosSql::indentificarUsuario(),$datosArray);
+            $st = procesa_parametros::PrepareStatement(usuarioSql::indentificarUsuario(),$datosArray);
             $query=$this->con->query($st);
 
             if($query->num_rows==0)
             {
-
-                $result = Notification::incorrectCredentials();
+                $mensaje->mensaje="El usuario no es correcto ";
+                $mensaje->tipo="error";
+                return $mensaje;
+                //$result = Notification::incorrectCredentials();
 
             } 
-            else 
+            $mensaje->mensaje="Usuario identicado";
+            $mensaje->tipo="correcto";
+            $usuario=new $usuario();
+            $mensaje->otrosDatos=$usuario;
+            return $mensaje;//
+            /*else 
             {
 
                 $row = mysqli_fetch_array($query); 
@@ -67,10 +76,10 @@ class usuarioDao {
                 {
 
                     session_start();
-                    $_SESSION['idusuario']   = $row['idusuario']; 
+                    //$_SESSION['idusuario']   = $row['idusuario']; 
                     $_SESSION['nombre']      = $row['apaterno'].' '.$row['amaterno'].' '.$row['nombre']; 
-                    $_SESSION['tipo']        = $row['tipo'];               
-                    $result = "<script>window.location='main.php';</script>"; 
+                   // $_SESSION['tipo']        = $row['tipo'];               
+                   // $result = "<script>window.location='main.php';</script>"; 
 
                 } 
                 else 
@@ -79,10 +88,10 @@ class usuarioDao {
                     $result = Notification::disableUser();                
 
                 }
-            }            
+            } */           
         }  
 
-        return $result;     
+       // return $result;     
     }
 
 

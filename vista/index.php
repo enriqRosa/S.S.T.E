@@ -14,6 +14,8 @@
         <link rel="stylesheet" href="assets/libs/mdl/material.css">
         <link rel="stylesheet" href="assets/libs/fontawesome/css/fa-solid.css">
         <link rel="stylesheet" href="assets/libs/fontawesome/css/fontawesome.css"> 
+        <script type="text/javascript" src="assets/js/jquery.min.js"></script>
+        <script type="text/javascript" src="assets/js/login.js"></script>
 </head> 
     <body id="page">
 
@@ -33,7 +35,7 @@
         </ul>
         <div id="main-section">
             <div class="c-formulario">
-                <form action="" class="main-form">
+                <form action="" class="main-form" id="formlogin">
                     <div class="c-login-title">
                         <span class="fa fa-user-circle"></span>
                     </div>
@@ -42,6 +44,7 @@
                             <input
                                 class="mdl-textfield__input"
                                 type="text"
+                                name="matricula"
                                 id="tb-user"
                                 required="required">
                             <label class="mdl-textfield__label fs20 ls2" for="tb-mail">Usuario</label>
@@ -50,12 +53,13 @@
                             <input
                                 class="mdl-textfield__input"
                                 type="password"
+                                name="password"
                                 id="tb-password-1"
                                 required="required">
                             <label class="mdl-textfield__label fs20 ls2" for="tb-password-1">Contraseña</label>
                         </div>
                         <button
-                            class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Login</button>
+                            class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="login()">Login</button>
                     </div>
                 </form>
             </div>
@@ -104,6 +108,7 @@
             
         </footer>
     </body>
+    <h3 id="mensaje"></h3>
 </html>
 <script src="assets/libs/mdl/material.js"></script>
 <?php

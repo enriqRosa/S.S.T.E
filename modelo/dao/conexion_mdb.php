@@ -3,9 +3,9 @@
 class conexion {
 
     private static $host = "localhost";
-    private static $port = "3307";
+    private static $port = "";
     private static $user = "root";
-    private static $pwd = "root";
+    private static $pwd = "";
     private static $bd = "sstebd";
 
     public static function conectar() {

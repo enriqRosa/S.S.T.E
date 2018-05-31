@@ -5,17 +5,16 @@ require_once $_SERVER['DOCUMENT_ROOT'].ruta::ruta. '/modelo/dao/usuario/usuarios
 class usuarioBo {
 
     var $dao;
-
     function __construct() {
         $this->dao=new usuarioDao();
     }
 
-    function identificarUsuarioBo($usuario, $password) {
+    function identificarUsuarioBo($matricula, $password) {
         $resultado = $this->dao->identificarUsuarioDao($usuario, $password);
         return $resultado;
     }
 
-    function registrarUsuarioBo($apaterno, $amaterno, $nombre, $usuario, $clave, $tipo, $status) {
+    /*function registrarUsuarioBo($apaterno, $amaterno, $nombre, $usuario, $clave, $tipo, $status) {
         $resultado = $this->dao->registrarUsuarioDao($apaterno, $amaterno, $nombre, $usuario, $clave, $tipo, $status);
         return $resultado;
     }
@@ -54,6 +53,6 @@ class usuarioBo {
         $resultado = $this->dao->sessionUserTypeDao($type);
         return $resultado;
     }
-
+*/
 }
 ?>
