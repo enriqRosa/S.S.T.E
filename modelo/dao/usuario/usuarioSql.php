@@ -1,5 +1,5 @@
 <?php
-class usuariosSql
+class usuarioSql
 {
     public static function  indentificarUsuario()
     {

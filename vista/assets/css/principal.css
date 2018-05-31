@@ -2,7 +2,7 @@ body{
 	background: #F5F5F5;
 }
 nav{
-   background: #24292e
+   background: #24292e;
 }
 .home{
     align-items:center;
@@ -15,6 +15,18 @@ nav{
 }
 .menu-right a{
     color: rgb(0,105,92);
+}
+.menu-admin{
+    background:#37474F;
+}
+.menu-admin ul {
+    padding: 15px;
+    display:flex;
+    justify-content:space-evenly;
+    align-items:center;
+}
+.menu-admin  ul li:hover{
+    color: #80CBC4;
 }
 
 /*---------ICONS-------------*/

@@ -14,6 +14,7 @@
         <link rel="stylesheet" href="assets/libs/mdl/material.css">
         <link rel="stylesheet" href="assets/libs/fontawesome/css/fa-solid.css">
         <link rel="stylesheet" href="assets/libs/fontawesome/css/fontawesome.css"> 
+        <script type="text/javascript" src="assets/js/jquery-1.10.2.min.js"></script>
         <script type="text/javascript" src="assets/js/jquery.min.js"></script>
         <script type="text/javascript" src="assets/js/login.js"></script>
 </head> 

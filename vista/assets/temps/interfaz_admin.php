@@ -2,7 +2,17 @@
 <link rel="stylesheet" href="../../style.css">
 <script src="../js/modals.js"></script>
 
-<nav class="menu-right">
+<nav class="menu-admin">
+    <ul>
+        <li class="white tajawalL">Gestion de tutores</li>
+        <li class="white tajawalL">Gestión de Tutorados</li>
+        <li class="white tajawalL">Gestión de Coordinadores</li>
+        <li class="white tajawalL">Asignación Tutotes/Tutorados</li>
+        <li class="white tajawalL">Verficación de Seguimiento</li>
+        <li class="white tajawalL">Cerrar Sesión</li>
+    </ul>
+</nav>
+<!--<nav class="menu-right">
         <button id="demo-menu-lower-right"
             class="mdl-button mdl-js-button  mdl-js-ripple-effect ">
             <i class="material-icons mdl-color-text--blue-grey-200"><i class="fas fa-bars"></i></i>
@@ -15,7 +25,7 @@
             <a href=""><li class="mdl-menu__item tajawalB mdl-color-text--teal-800"><i class="fas fa-eye"></i>Verificación de Seguimiento</li></a>
             <a href="index.php"><li class="mdl-menu__item tajawalB mdl-color-text--teal-800"><i class="fas fa-sign-out-alt"></i>Cerrar Sesión</li></a>
         </ul>
-    </nav>
+    </nav>-->
 <main class="admin_pricipal">    
     <section class="admin">
         <div class="usuario">

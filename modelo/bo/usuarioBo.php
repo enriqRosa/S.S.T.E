@@ -1,5 +1,5 @@
 <?php
-require_once $_SERVER['DOCUMENT_ROOT'].'/S.S.T.E/ruta.php';
+require_once $_SERVER['DOCUMENT_ROOT'].'/ruta.php';
 require_once $_SERVER['DOCUMENT_ROOT'].ruta::ruta. '/modelo/dao/usuario/usuariosDao.php';
 
 class usuarioBo {
@@ -9,8 +9,8 @@ class usuarioBo {
         $this->dao=new usuarioDao();
     }
 
-    function identificarUsuarioBo($matricula, $password) {
-        $resultado = $this->dao->identificarUsuarioDao($usuario, $password);
+    function identificarUsuarioBo($usuario) {
+        $resultado = $this->dao->identificarUsuario($usuario);
         return $resultado;
     }
 

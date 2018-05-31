@@ -1,14 +1,14 @@
 <?php
-require_once $_SERVER['DOCUMENT_ROOT'].'/S.S.T.E"/ruta.php';
+require_once "../ruta.php";
 require_once $_SERVER['DOCUMENT_ROOT'].ruta::ruta.'/modelo/dao/conexion_mdb.php';
 require_once $_SERVER['DOCUMENT_ROOT'].ruta::ruta.'/modelo/dao/objetos/usuarioObjeto.php';
-require_once $_SERVER['DOCUMENT_ROOT'].ruta::ruta.'/modelo/dao/procesaParametros.php';
-require_once $_SERVER['DOCUMENT_ROOT'].ruta::ruta.'/modelo/dao/usuario/usuarioSql.php';
 require_once $_SERVER['DOCUMENT_ROOT'].ruta::ruta.'/modelo/dao/objetos/mensaje.php';
+require_once $_SERVER['DOCUMENT_ROOT'].ruta::ruta.'/modelo/dao/procesa_parametros.php';
+require_once $_SERVER['DOCUMENT_ROOT'].ruta::ruta.'/modelo/dao/usuario/usuarioSql.php';
 // require_once $_SERVER['DOCUMENT_ROOT'].ruta::ruta.'/vista/logicavista/notificationView.php';
 
 class usuarioDao {
-
+    
     private $con;
 
     function __construct() {
@@ -37,10 +37,10 @@ class usuarioDao {
         } 
     }*/
 
-    function  identificarUsuarioDao($matricula, $password) 
+    function  identificarUsuario($usuario) 
     {
 
-        $datosArray=array($matricula,$password);
+        /*$datosArray=array($matricula,$password);
 
         if( $matricula == '' || $matricula === NULL || is_null($usuario) || $password == '' || $password === NULL || is_null($password) )
         {
@@ -49,10 +49,12 @@ class usuarioDao {
 
         } 
         else
-        {
-
+        {*/
+            $mensaje=new mensaje();
+            $datosArray=array($usuario->matricula,$usuario->password);
             $st = procesa_parametros::PrepareStatement(usuarioSql::indentificarUsuario(),$datosArray);
-            $query=$this->con->query($st);
+            // $query=$con->query($st);
+            print $query=$this->con->query($st);
 
             if($query->num_rows==0)
             {
@@ -96,5 +98,5 @@ class usuarioDao {
 
 
    
-}
+//}
 ?>
