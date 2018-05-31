@@ -1,18 +1,17 @@
 <?php
 require_once "../ruta.php";
 require_once $_SERVER['DOCUMENT_ROOT'].ruta::ruta.'/modelo/dao/conexion_mdb.php';
-require_once $_SERVER['DOCUMENT_ROOT'].ruta::ruta.'/modelo/dao/objetos/usuarioObjeto.php';
-require_once $_SERVER['DOCUMENT_ROOT'].ruta::ruta.'/modelo/dao/objetos/mensaje.php';
+require_once $_SERVER['DOCUMENT_ROOT'].ruta::ruta.'/modelo/objetos/usuarioObj.php';
+require_once $_SERVER['DOCUMENT_ROOT'].ruta::ruta.'/modelo/objetos/mensaje.php';
 require_once $_SERVER['DOCUMENT_ROOT'].ruta::ruta.'/modelo/dao/procesa_parametros.php';
 require_once $_SERVER['DOCUMENT_ROOT'].ruta::ruta.'/modelo/dao/usuario/usuarioSql.php';
 // require_once $_SERVER['DOCUMENT_ROOT'].ruta::ruta.'/vista/logicavista/notificationView.php';
 
 class usuarioDao {
     
-    private $con;
-
+private $con;
     function __construct() {
-        $this->con=  conexion_mdb::conectar();
+        $this->con=conexion::conectar();
     }
     function __destruct() {
         $this->con->close();
@@ -39,22 +38,19 @@ class usuarioDao {
 
     function  identificarUsuario($usuario) 
     {
-
         /*$datosArray=array($matricula,$password);
-
-        if( $matricula == '' || $matricula === NULL || is_null($usuario) || $password == '' || $password === NULL || is_null($password) )
+        
+        if( $matricula == '' || $matricula === NULL || is_null($matricula) || $password == '' || $password === NULL || is_null($password) )
         {
-          
             $result = Notification::requiredFields();
-
         } 
         else
         {*/
             $mensaje=new mensaje();
             $datosArray=array($usuario->matricula,$usuario->password);
-            $st = procesa_parametros::PrepareStatement(usuarioSql::indentificarUsuario(),$datosArray);
+            $st = procesaParametros::PrepareStatement(usuarioSql::indentificarUsuario(),$datosArray);
             // $query=$con->query($st);
-            print $query=$this->con->query($st);
+            $query=$this->con->query($st);
 
             if($query->num_rows==0)
             {
@@ -90,7 +86,7 @@ class usuarioDao {
                     $result = Notification::disableUser();                
 
                 }
-            } */           
+            }  */          
         }  
 
        // return $result;     

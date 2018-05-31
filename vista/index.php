@@ -58,12 +58,15 @@
                                 id="tb-password-1"
                                 required="required">
                             <label class="mdl-textfield__label fs20 ls2" for="tb-password-1">Contraseña</label>
-                        </div>
+                            
+                         </div>
+                    </div>
+                
                         <button
                             class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="login()">Login</button>
-                    </div>
+                            </form>
                     <div id="mensaje"></div>
-                </form>
+
             </div>
         </div>
         <footer>

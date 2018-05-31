@@ -15,7 +15,7 @@ function login()
 	alert("login")
 	var datos="action=login&"+$("#formlogin").serialize();
   alert(datos);
-	$.post("../../controlador/loginControlador.php",datos,function(data)
+	$.post("../controlador/loginController.php",datos,function(data)
 	{
 		alert(data);
 		$("#mensaje").append(data);
