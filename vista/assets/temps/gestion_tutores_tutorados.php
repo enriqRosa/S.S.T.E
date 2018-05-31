@@ -37,10 +37,11 @@
                     <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14">Nombre</td>
                     <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14">Apellido Paterno</td>
                     <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14">Apellido Materno</td>
-                    <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14">Nombre</td>
+                    <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14">Tutor</td>
                     <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14">Grupo</td>
                     <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14">Semestre</td>
-                    <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14">Tutor</td>
+                    <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14">Edificio</td>
+                    <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14">Aula</td>
                     <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14" onclick="registrar_tutor();">Aceptar</td>
                     <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14">Cancelar</td>
                 </tr>
