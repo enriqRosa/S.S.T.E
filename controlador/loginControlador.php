@@ -3,7 +3,6 @@ require_once "../ruta.php";
 require_once $_SERVER['DOCUMENT_ROOT'].ruta::ruta. '/modelo/objetos/usuarioObjeto.php';
 require_once $_SERVER['DOCUMENT_ROOT'].ruta::ruta. '/modelo/bo/usuarioBo.php';
 
-//$bo=new Modulologin();
 
 switch ($_POST['action']) {
     case "login":

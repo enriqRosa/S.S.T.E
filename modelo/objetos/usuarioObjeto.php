@@ -4,7 +4,7 @@ class usuario
 	var $matricula;
     var $password;
     
-	private $data;
+	/*private $data;
         public function __set($name, $value)   {            
              $this->data[$name] = $value;   
          }
@@ -14,6 +14,6 @@ class usuario
                  return $this->data[$name];       
                  }      
             return null;
-        }
+        }*/
 }
 ?>

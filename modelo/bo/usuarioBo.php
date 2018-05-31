@@ -11,6 +11,7 @@ class usuarioBo {
 
     function identificarUsuarioBo($usuario) {
         $resultado = $this->dao->identificarUsuario($usuario);
+        print $resultado;
         return $resultado;
     }
 

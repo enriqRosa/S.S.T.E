@@ -19,19 +19,18 @@
         <a href="index.php"><li class="mdl-menu__item tajawalB mdl-color-text--teal-800"><i class="fas fa-sign-out-alt"></i>Cerrar Sesión</li></a>
     </ul>
 </nav>
-<main class="informacion2">
-    <div class="user-circle-admin">
-        <i class="fas fa-user-plus"></i>
-    </div>
+<section class="gestion_tutor">
     <div class="usuario">
-        <span class="text-dir fs25 ls2 tajawalR">Registro de Tutores</span>
+        <span class="text-dir fs40 ls2 tajawalR white">Registro de Tutores</span>
     </div>
-    <hr class="line2">
-    <div class="modals">
+</section>
+<main class="informacion2">
+    <div class="modals_2">
             <button class="mdl-button mdl-js-button mdl-color--teal-700 mdl-js-ripple-effect mdl-color-text--blue-grey-100 btn-pass">
             <i class="fas fa-user"></i>Registrar nuevo Tutor</button>
     </div>
-    <div class="table">
+</main>
+<section class="table">
         <table class="mdl-data-table mdl-js-data-table  mdl-shadow--2dp">
             <thead>
                 <tr>
@@ -49,7 +48,7 @@
                 </tr>
             </thead>
     </table>
-</main>
+</section>
 <!--MODAL PARA REGISTRAR NUEVO TUTOR-->
 <div class="pass-modal fancy ">
     <div class="modal-info-2">

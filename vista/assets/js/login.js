@@ -15,12 +15,14 @@ function login()
 	alert("login")
 	var datos="action=login&"+$("#formlogin").serialize();
   alert(datos);
-	$.post("../../../controlador/loginControlador.php",datos,function(data)
+	$.post("../../controlador/loginControlador.php",datos,function(data)
 	{
-		alert(data)
-		$("#mensaje").prepend(data);
+		alert(data);
+		$("#mensaje").append(data);
 	});
 }
+
+
 
 /*function login(){
   $('#formlogin').submit(function(event){

@@ -3,7 +3,8 @@ class usuarioSql
 {
     public static function  indentificarUsuario()
     {
-        $query="SELECT * FROM coordinador WHERE matricula=? AND password=?";
+        
+        $query="select * from coordinador where matricula=? and password=?";
         return $query;
     }
     public static function validateIfExistsUser()
