@@ -1,4 +1,44 @@
-<nav class="menu-right">
+<aside>
+    <nav class="menu-institucional">
+        <ul>
+            <li class="tajawalB fs19 lightG">COORDINADOR</li>
+            <li class="tajawalB fs17">Validación de Registros</li>
+            <li class="tajawalB fs17">Cerrar Sesión</li>
+        </ul>
+    </nav>
+</aside>
+<main class="institucional">
+    <div class="user-circle-institucional">
+        <i class="fas fa-user-circle"></i>
+    </div>
+    <div class="usuario">
+        <span class="text-dir fs50 ls2 tajawalR white"></i>Bienvenido</i></span><br>
+    </div>
+    <div class="usuario">
+         <span class="text-dir fs50 ls2 tajawalR white"><i class="fas fa-quote-left white"></i>Coordinador Institucional<i class="fas fa-quote-right white"></i></span>
+    </div>  
+</main>
+<section class="modalBtn">
+    <div class="modals_2"> 
+        <button 
+            class="mdl-button mdl-js-button mdl-color--deep-purple-A200 mdl-js-ripple-effect mdl-color-text--blue-grey-100 btn-pass"><i class="fas fa-key"></i>Cambiar Contraseña
+        </button>       
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<nav class="menu-right">
     <button id="demo-menu-lower-left"
         class="mdl-button mdl-js-button  mdl-js-ripple-effect ">
         <i class="material-icons mdl-color-text--blue-grey-200"><i class="fas fa-bars"></i></i>
@@ -67,5 +107,5 @@
         <button class="mdl-button mdl-js-button mdl-color--red-700 mdl-js-ripple-effect mdl-color-text--blue-grey-100 btn-pass">
         <i class="fas fa-key"></i>Cambiar Contraseña</button>
 </div>
-</section>
+</section>-->
 <?php include_once 'modal_contraseña.php'?>

@@ -1,4 +1,37 @@
-<nav class="menu-right">
+<aside>
+    <nav class="menu-tutorado">
+        <ul>
+            <li class="tajawalB fs19 lightG">TUTORADO</li>
+            <li class="tajawalB fs17">Verficación de Seguimiento</li>
+            <li class="tajawalB fs17">Cerrar Sesión</li>
+        </ul>
+    </nav>
+</aside>
+<main class="tutorado">
+    <div class="user-circle-tutorado">
+        <i class="fas fa-user-circle"></i>
+    </div>
+    <div class="usuario">
+        <span class="text-dir fs50 ls2 tajawalR white"></i>Bienvenido</i></span><br>
+    </div> 
+</main>
+<section class="modalBtn">
+    <div class="modals_2"> 
+        <button 
+            class="mdl-button mdl-js-button mdl-color--indigo-400 mdl-js-ripple-effect mdl-color-text--blue-grey-100 btn-pass"><i class="fas fa-key"></i>Cambiar Contraseña
+        </button>       
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+<!--<nav class="menu-right">
     <button id="demo-menu-lower-left"
         class="mdl-button mdl-js-button  mdl-js-ripple-effect ">
         <i class="material-icons mdl-color-text--blue-grey-200"><i class="fas fa-bars"></i></i>
@@ -98,7 +131,7 @@
             <button class="mdl-button mdl-js-button mdl-color--blue-grey-800 mdl-js-ripple-effect mdl-color-text--blue-grey-100 btn-editar">
             <i class="fas fa-edit"></i>Editar Información</button>
         </div>
-</section>
+</section>-->
 <!--MODAL PARA CAMBIAR CONTRASEÑA-->
 <?php include_once 'modal_contraseña.php'?>
 <!--MODAL PARA REGISTRAR CAMPOS FALTANTES DEL ALUMNO-->
