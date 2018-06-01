@@ -1,4 +1,41 @@
-<nav class="menu-right">
+<aside>
+    <nav class="menu-tutor">
+        <ul>
+            <li class="tajawalB fs19 lightG">TUTOR</li>
+            <li class="tajawalB fs17">Registro</li>
+            <li class="tajawalB fs17">Verficación de Seguimiento</li>
+            <li class="tajawalB fs17">Cerrar Sesión</li>
+        </ul>
+    </nav>
+</aside>
+<main class="tutor">
+    <div class="user-circle-tutor">
+        <i class="fas fa-user-circle"></i>
+    </div>
+    <div class="usuario">
+        <span class="text-dir fs50 ls2 tajawalR white"></i>Bienvenido</i></span><br>
+    </div>
+    <div class="usuario">
+         <span class="text-dir fs50 ls2 tajawalR white"><i class="fas fa-quote-left white"></i>Tutor<i class="fas fa-quote-right white"></i></span>
+    </div>  
+</main>
+<section class="modalBtn">
+    <div class="modals_2"> 
+        <button 
+            class="mdl-button mdl-js-button mdl-color--purple-800 mdl-js-ripple-effect mdl-color-text--blue-grey-100 btn-pass"><i class="fas fa-key"></i>Cambiar Contraseña
+        </button>       
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+<!--<nav class="menu-right">
     <button id="demo-menu-lower-left"
         class="mdl-button mdl-js-button  mdl-js-ripple-effect ">
         <i class="material-icons mdl-color-text--blue-grey-200"><i class="fas fa-bars"></i></i>
@@ -68,6 +105,6 @@
             <i class="fas fa-key"></i>Cambiar Contraseña</button>
         </div>
 
-</section>
+</section>-->
 <?php include_once 'modal_contraseña.php'?>
 
