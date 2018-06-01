@@ -5,11 +5,9 @@
                 show_404();
             }
             $data['titulo']=ucfirst($pagina);
-            /*INCLUIR EL HEADER
-            $this->load->view('temps/header');*/
+            $this->load->view('temps/header');
             $this->load->view('paginas/'.$pagina,$data);
-            /*INCLUIR EL FOOTER
-            $this->load->view('temps/footer');*/
+            $this->load->view('temps/footer');
         }
     }
     
