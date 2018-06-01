@@ -82,6 +82,7 @@ img {
 .fs40 {font-size: 40px;}
 .fs25 {font-size: 25px;}
 .fs19 {font-size: 19px;}
+.fs17 {font-size: 17px;}
 .fs16 {font-size: 16px;}
 .fs15 {font-size: 15px;}
 .fs14 {font-size: 14px;}
@@ -91,6 +92,7 @@ img {
 .green33 {color: #017533;}
 .grey {color: #CFD8DC;}
 .white {color: #fff;}
+.lightG {color:rgba(0,0,0,.38);}
 
 .ls2 {letter-spacing: 2px;}
 .ls1 {letter-spacing: 1px;}

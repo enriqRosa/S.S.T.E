@@ -17,16 +17,21 @@ nav{
     color: rgb(0,105,92);
 }
 .menu-admin{
-    background:#37474F;
+   background: #fff;
+   float:left;
 }
-.menu-admin ul {
-    padding: 15px;
-    display:flex;
-    justify-content:space-evenly;
-    align-items:center;
+.menu-admin ul li {
+    background:#ffffff;
+    padding: 20px 20px ;
 }
 .menu-admin  ul li:hover{
-    color: #80CBC4;
+   color:#00897B;
+}
+.menu-admin span{
+    padding: 20px 20px;
+}
+.menu-admin li:nth-child(7){
+    margin-bottom:140px;
 }
 
 /*---------ICONS-------------*/
@@ -51,7 +56,6 @@ nav{
     margin-right: 5px;
 }
 /*-----------MAIN-----------*/
-.admin,
 .tutor,
 .academico,
 .institucional,
@@ -65,6 +69,10 @@ nav{
     margin-top:60px;
     margin-bottom:50px;
     padding: 10px 50px 30px;
+}
+.admin{
+    background: #78909c;
+    padding: 0px 0px 30px 0px;
 }
 .info_tutorado{
     width: 70%;
@@ -81,17 +89,6 @@ nav{
     margin-top:120px;
     margin-bottom:100px;
     padding: 50px;
-}
-.admin_pricipal{
-     width: 100%;
-    height: 92vh;
-    background-image: url('../images/admin.jpg');
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    display:flex;
-    justify-content: center;
-    align-items:center;
 }
 .tutorado_principal{
     width: 100%;
@@ -128,6 +125,11 @@ nav{
 }
 .gestion_tutor{
      background-image: url('../images/gestion_t.jpg');
+}
+.modalBtn{
+    background:#eeeeee;
+    align-items:center;
+    padding: 100px 0px 90px 0px;
 }
 .tutor-modalBtn,
 .institucional-modalBtn,
@@ -212,11 +214,9 @@ nav{
     margin: 0 auto;    
 }
 .user-circle-admin i{
-    font-size: 130px;
-    color: #26A69A;
-    padding: 40px 130px;    
-    margin-top: -180px;
-    background: #F5F5F5;
+    font-size: 100px;
+    color: #00897B;
+    padding: 20px;
 }
 .user-circle i{
     font-size: 80px;

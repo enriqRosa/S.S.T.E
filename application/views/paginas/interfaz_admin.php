@@ -1,4 +1,38 @@
- <nav class="menu-admin">
+<aside>
+    <nav class="menu-admin">
+        <ul>
+            <li class="tajawalB fs19 lightG">ADMINISTRADOR</li>
+            <li class="tajawalB fs17">Gestión de Tutores</li>
+            <li class="tajawalB fs17">Gestión de Tutorados</li>
+            <li class="tajawalB fs17">Gestión de Coordinadores</li>
+            <li class="tajawalB fs17">Asignación Tutores/Tutorados</li>
+            <li class="tajawalB fs17">Verficación de Seguimiento</li>
+            <li class="tajawalB fs17">Cerrar Sesión</li>
+        </ul>
+    </nav>
+</aside>
+<main class="admin">
+    <div class="user-circle-admin">
+        <i class="fas fa-user-circle"></i>
+    </div>
+    <div class="usuario">
+        <span class="text-dir fs50 ls2 tajawalR white"></i>Bienvenido</i></span><br>
+    </div>
+    <div class="usuario">
+         <span class="text-dir fs50 ls2 tajawalR white"><i class="fas fa-quote-left white"></i>Administrador<i class="fas fa-quote-right white"></i></span>
+    </div>  
+</main>
+<section class="modalBtn">
+<div class="modals_2"> 
+                 <button 
+                    class="mdl-button mdl-js-button mdl-color--teal-700 mdl-js-ripple-effect mdl-color-text--blue-grey-100 btn-pass"><i class="fas fa-key"></i>Cambiar Contraseña
+                 </button>       
+            </div>
+</section>
+ 
+
+
+ <!--<nav class="menu-admin">
     <ul>
         <li class="white tajawalL">Gestion de tutores</li>
         <li class="white tajawalL">Gestión de Tutorados</li>
@@ -44,6 +78,7 @@
                  </button>       
             </div>
     </section> 
-</main>
+</main>-->
+
 <?php include_once 'modal_contraseña.php'?>
 
