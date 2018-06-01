@@ -1,4 +1,4 @@
-<nav class="menu-admin">
+ <nav class="menu-admin">
     <ul>
         <li class="white tajawalL">Gestion de tutores</li>
         <li class="white tajawalL">Gestión de Tutorados</li>
@@ -43,5 +43,7 @@
                     class="mdl-button mdl-js-button mdl-color--teal-700 mdl-js-ripple-effect mdl-color-text--blue-grey-100 btn-pass"><i class="fas fa-key"></i>Cambiar Contraseña
                  </button>       
             </div>
-    </section>
+    </section> 
 </main>
+<?php include_once 'modal_contraseña.php'?>
+
