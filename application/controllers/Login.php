@@ -36,10 +36,11 @@ Class Login extends CI_Controller{
                 //USUARIO COORDINADOR ACADEMICO
                 elseif($this->session->userdata('tipo_usuario')=="CA"){
                     redirect('c_academico/index');
-            }else{
-                $data['error']="Usuario o contraseña invalidos.";
-                $this->load->view('interfaces/index');
-            }
+                }
+                //USUARIO COORDINADOR INSTITUCIONAL
+                elseif($this->session->userdata('tipo_usuario')=='CI'){
+                    redirect('c_institucional/index');
+                }
         }
     }
 }
