@@ -1,41 +1,4 @@
-<aside>
-    <nav class="menu-academico">
-        <ul>
-            <li class="tajawalB fs19 lightG">COORDINADOR</li>
-            <li class="tajawalB fs17">Asignación Tutores/Tutorados</li>
-            <li class="tajawalB fs17">Verficación de Seguimiento</li>
-            <li class="tajawalB fs17">Cerrar Sesión</li>
-        </ul>
-    </nav>
-</aside>
-<main class="academico">
-    <div class="user-circle-academico">
-        <i class="fas fa-user-circle"></i>
-    </div>
-    <div class="usuario">
-        <span class="text-dir fs50 ls2 tajawalR white"></i>Bienvenido</i></span><br>
-    </div>
-    <div class="usuario">
-         <span class="text-dir fs50 ls2 tajawalR white"><i class="fas fa-quote-left white"></i>Coordinador Acádemico<i class="fas fa-quote-right white"></i></span>
-    </div>  
-</main>
-<section class="modalBtn">
-    <div class="modals_2"> 
-        <button 
-            class="mdl-button mdl-js-button mdl-color--red-400 mdl-js-ripple-effect mdl-color-text--blue-grey-100 btn-pass"><i class="fas fa-key"></i>Cambiar Contraseña
-        </button>       
-    </div>
-</section>
-
-
-
-
-
-
-
-
-
-<!--<nav class="menu-right">
+<nav class="menu-right">
     <button id="demo-menu-lower-left"
         class="mdl-button mdl-js-button  mdl-js-ripple-effect ">
         <i class="material-icons mdl-color-text--blue-grey-200"><i class="fas fa-bars"></i></i>
@@ -45,6 +8,11 @@
         <a href="verificacion_seguimiento.php"><li class="mdl-menu__item tajawalB mdl-color-text--teal-800"><i class="fas fa-eye"></i>Verificación de Seguimiento</li></a>
         <a href="index.php"><li class="mdl-menu__item tajawalB mdl-color-text--teal-800"><i class="fas fa-sign-out-alt"></i>Cerrar Sesión</li></a>
     </ul>
+    <div class="modalBtn">
+        <button 
+            class="mdl-button mdl-js-button mdl-color--red-400 mdl-js-ripple-effect mdl-color-text--blue-grey-100 btn-pass"><i class="fas fa-key"></i>Cambiar Contraseña
+        </button>       
+    </div>
 </nav>
 <section class="academico_principal">
     <div class="academico">
@@ -59,6 +27,58 @@
         </div>
     </div>
 </section>
+<section class="academico-info">
+    <div class="grupo-academico">
+    <div class="info-1">
+            <span class="fs15 ls2 tajawalR">Número de Seguro:</span>          
+        </div>
+    </div>
+    <div class="c-inputs-4" >
+        <div class="mdl-textfield mdl-js-textfield ">
+            <input class="mdl-textfield__input" type="text" disabled>
+        </div>  
+    </div>
+    <div class="grupo-academico">
+        <div class="info-1">
+            <span class="fs15 ls2 tajawalR">Apellido Paterno:</span>          
+        </div>
+        <div class="info-1">
+            <span class="fs15 ls2 tajawalR">Apellido Materno:</span>          
+        </div>
+        <div class="info-1">
+            <span class="fs15 ls2 tajawalR">Nombre(s):</span> 
+        </div>  
+        <div class="info-1">
+            <span class="fs15 ls2 tajawalR">Correo</span> 
+        </div>       
+    </div>
+    <div class="c-inputs-4" >
+        <div class="mdl-textfield mdl-js-textfield ">
+            <input class="mdl-textfield__input" type="text" disabled>
+        </div>                  
+        <div class="mdl-textfield mdl-js-textfield ">
+            <input class="mdl-textfield__input" type="text" disabled>              
+        </div>   
+        <div class="mdl-textfield mdl-js-textfield">
+            <input class="mdl-textfield__input" type="text" disabled>               
+        </div>
+        <div class="mdl-textfield mdl-js-textfield">
+            <input class="mdl-textfield__input" type="text" disabled>               
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+<!--
+
 <section class="info">
     <div class="grupo">
         <div class="info-1_3">
