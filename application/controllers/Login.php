@@ -6,16 +6,18 @@ Class Login extends CI_Controller{
 
         parent::__construct();
 
+        $this->load->view('temps/header');         
         $this->load->helper('url');
         $this->load->helper('form');
         $this->load->model('Modelo_login');
         $this->load->library('session');
-        }
-
+        $this->load->view('temps/footer');
+    }
+    //CONTROLADOR PRINCIPAL AL CARGAR LA PÁGINA
     public function index(){
         $this->load->view('interfaces/index');
     }
-
+    //AQUI SE CONSULTA LAS TABLAS Y DEPENDIENDO DE LA CONSULTA MANDA A CONTROLADOR DEL USUARIO
     function proceso_login(){
         $mat=$this->input->post('matricula');
         $pass=$this->input->post('password');
@@ -32,16 +34,14 @@ Class Login extends CI_Controller{
                     redirect('admin/index');
                 }
                 //USUARIO COORDINADOR ACADEMICO
-                elseif($this->session->userdata('tipo_usuario')=="TU"){
-                    redirect('tutor/index');
+                elseif($this->session->userdata('tipo_usuario')=="CA"){
+                    redirect('c_academico/index');
             }else{
                 $data['error']="Usuario o contraseña invalidos.";
                 $this->load->view('interfaces/index');
             }
+        }
     }
-    
-}
-
 }
 
 ?>

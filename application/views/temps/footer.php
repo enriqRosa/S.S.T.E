@@ -27,9 +27,9 @@
                     </ol>
                 </div>
                 <div class="c-logos">
-                    <img src="assets/images/sep-logo.png" alt="">
-                    <img src="assets/images/edomex-logo.png" alt="">
-                    <img src="assets/images/tesch_logo.png" alt="">
+                    <img src="<?= base_url() ?>assets/images/sep-logo.png" alt="">
+                    <img src="<?= base_url() ?>assets/images/edomex-logo.png" alt="">
+                    <img src="<?= base_url() ?>assets/images/tesch_logo.png" alt="">
                 </div>
                 <div class="c-direccion">
                     <span class="text-dir fs16 ls1 grey tajawalB">
@@ -39,5 +39,4 @@
                     <span class="tajawalL fs14 grey ls1">Estado de Méx.</span>
                 </div>
             </div>
-            
         </footer>
