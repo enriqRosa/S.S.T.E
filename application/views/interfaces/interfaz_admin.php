@@ -1,4 +1,3 @@
-
 <main class="admin_principal">
     <section class="admin">
         <div class="user-circle-admin">

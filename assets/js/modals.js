@@ -40,4 +40,17 @@ $( document ).ready(function() {
       });
   
   })
+ //--------------------Ventanas Modales para el registro de seguimiento tutorial-------------------------- 
+ $( document ).ready(function() {
+  console.log("Modal LISTA");    
+      $('.btn-registar').on('click', function(){
+          $('.registar-modal').addClass('visible');
+          $('body').addClass('scrollNO');
+          console.log("Abrir Modal");
+      })
+      $('.close-fancy').on('click', function(){
+          $(this).closest('.registar-modal').removeClass('visible');  
+          $('body').removeClass('scrollNO');
+      });
   
+  })
