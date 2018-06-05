@@ -15,7 +15,8 @@ Class Admin extends CI_Controller{
         $this->load->library('session');
     }
     function index(){
-        $this->load->view('interfaces/interfaz_admin');
+        $this->data['posts']=$this->Modelo_login->getPosts();
+        $this->load->view('interfaces/interfaz_admin',$this->data);
     }
 }
 ?>

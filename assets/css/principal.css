@@ -75,10 +75,10 @@ nav{
     padding:40px 0px 0px 0px;
 }
 .info-1{
-    width:25%;     
+    width:15%;     
 }
 .admin-info .c-inputs-4 .mdl-textfield{
-    width:25%!important;
+    width:15%!important;
     padding: 5px 0!important;
 } 
 /*-----------COORDINADOR ACADEMICO E INSTITUCIONAL---------*/
@@ -93,6 +93,10 @@ nav{
     justify-content: center;
     align-items:center;
 }
+.grupo-academico_1,
+.grupo-institucional_1{
+    padding: 20px 0px 0px 70px;
+}
 .grupo-academico,
 .grupo-institucional{
     display:flex; 
@@ -101,11 +105,15 @@ nav{
 }
 .grupo-academico .info-1,
 .grupo-institucional .info-1{
-    width:20%;     
+    width:15%;     
+}
+.c-inputs-4_1 {
+    padding: 0px 0px 0px 70px;
+
 }
 .academico-info .c-inputs-4 .mdl-textfield,
 .institucional-info .c-inputs-4 .mdl-textfield{
-    width:20%!important;
+    width:15%!important;
     padding: 5px 0!important;
 } 
 /*----------COORDINADOR INSTITUCIONAL----------*/

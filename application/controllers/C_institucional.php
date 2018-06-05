@@ -15,7 +15,8 @@ Class C_institucional extends CI_Controller{
         $this->load->library('session');
     }
     function index(){
-        $this->load->view('interfaces/interfaz_cinstitucional');
+        $this->data['posts']=$this->Modelo_login->getInstitucional();
+        $this->load->view('interfaces/interfaz_cinstitucional',$this->data);
     }
 }
 ?>

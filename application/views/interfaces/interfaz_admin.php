@@ -38,17 +38,19 @@
         </div>
     </div>
     <form>
-         <div class="c-inputs-4" >
-            <div class="mdl-textfield mdl-js-textfield ">
-                <input class="mdl-textfield__input" type="password" disabled>
-            </div>                  
-            <div class="mdl-textfield mdl-js-textfield ">
-                <input class="mdl-textfield__input" type="password" disabled>              
-            </div>   
-            <div class="mdl-textfield mdl-js-textfield">
-                <input class="mdl-textfield__input" type="password" disabled>               
+        <?php foreach($posts as $post){?>
+            <div class="c-inputs-4" >   
+                <div class="mdl-textfield mdl-js-textfield ">         
+                    <?php echo $post->nombre;?>                        
+                </div>          
+                <div class="mdl-textfield mdl-js-textfield">
+                    <?php echo $post->ap_paterno;?>   
+                </div>
+                <div class="mdl-textfield mdl-js-textfield">
+                    <?php echo $post->ap_materno;?>   
+                </div>
             </div>
-        </div>
+        <?php }?>  
     </form>
     <div class="modals_2"> 
         <button 

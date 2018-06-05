@@ -15,7 +15,6 @@
         <a href="index.php"><li class="mdl-menu__item tajawalB mdl-color-text--teal-800"><i class="fas fa-sign-out-alt"></i>Cerrar Sesión</li></a>
     </ul>
 </nav>
-
 <main class="informacion2">
     <div class="user-circle-admin">
         <i class="fas fa-user-plus"></i>

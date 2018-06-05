@@ -28,16 +28,18 @@
     </div>
 </section>
 <section class="institucional-info">
-    <div class="grupo-institucional">
+    <div class="grupo-institucional_1">
     <div class="info-1">
             <span class="fs15 ls2 tajawalR">Número de Seguro:</span>          
         </div>
     </div>
-    <div class="c-inputs-4" >
-        <div class="mdl-textfield mdl-js-textfield ">
-            <input class="mdl-textfield__input" type="text" disabled>
-        </div>  
-    </div>
+    <?php foreach($posts as $post){?>
+        <div class="c-inputs-4_1" >
+            <div class="mdl-textfield mdl-js-textfield ">
+                <?php echo $post->matricula;?> 
+            </div>  
+        </div>
+    <?php }?>
     <div class="grupo-institucional">
         <div class="info-1">
             <span class="fs15 ls2 tajawalR">Apellido Paterno:</span>          
@@ -53,18 +55,20 @@
         </div>       
     </div>
     <div class="c-inputs-4" >
-        <div class="mdl-textfield mdl-js-textfield ">
-            <input class="mdl-textfield__input" type="text" disabled>
-        </div>                  
-        <div class="mdl-textfield mdl-js-textfield ">
-            <input class="mdl-textfield__input" type="text" disabled>              
-        </div>   
-        <div class="mdl-textfield mdl-js-textfield">
-            <input class="mdl-textfield__input" type="text" disabled>               
-        </div>
-        <div class="mdl-textfield mdl-js-textfield">
-            <input class="mdl-textfield__input" type="text" disabled>               
-        </div>
+        <?php foreach($posts as $post){?>
+            <div class="mdl-textfield mdl-js-textfield ">
+                <?php echo $post->nombre;?> 
+            </div>                  
+            <div class="mdl-textfield mdl-js-textfield ">
+                <?php echo $post->ap_paterno;?>           
+            </div>   
+            <div class="mdl-textfield mdl-js-textfield">
+                <?php echo $post->ap_materno;?>            
+            </div>
+            <div class="mdl-textfield mdl-js-textfield">
+                <?php echo $post->correo;?>            
+            </div>
+        <?php }?>
     </div>
 </section>
 
