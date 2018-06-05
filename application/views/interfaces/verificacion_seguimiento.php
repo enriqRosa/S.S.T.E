@@ -1,3 +1,17 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Material Design DatePicker</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gijgo@1.9.6/js/gijgo.min.js" type="text/javascript"></script>
+    <link href="https://cdn.jsdelivr.net/npm/gijgo@1.9.6/css/gijgo.min.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    
+</body>
+</html>
+
 <main class="principales">
     <div class="usuario">
          <span class="text-dir fs40 ls2 tajawalR white"></i>Verificación de Seguimiento</i></span><br>
@@ -33,12 +47,13 @@
     <div class="modal-info-3">
         <span class="mdl-dialog__title fs25 tajawalL ls1">Registro de Seguimiento Tutorial</span>
             <form>
-                <div class="c-inputs-4" >
-                    
-                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                        <input class="mdl-textfield__input" type="text">
-                        <label class="mdl-textfield__label fs20 ls2  tajawalL" for="tb-mail">Fecha</label>
-                    </div>
+                <div class="c-inputs-4" > 
+                    <input id="datepicker" width="276" />
+                        <script>
+                            $('#datepicker').datepicker({
+                                showOtherMonths: true
+                            });
+                        </script>
                 </div>
                 <div class="c-inputs-4">
                    
