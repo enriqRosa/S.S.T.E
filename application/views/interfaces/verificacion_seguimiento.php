@@ -34,9 +34,12 @@
                         </button>
                     </td>
                     <td>
-                        <button 
-                            class="mdl-button mdl-js-button mdl-color--grey-700 mdl-js-ripple-effect mdl-color-text--blue-grey-100"><i class="fas fa-eye"></i>Seguimiento
-                        </button>
+                        <a href="<?= base_url() ?>Admin/seguimientoTutorial">
+                            <button 
+                                class="mdl-button mdl-js-button mdl-color--grey-700 mdl-js-ripple-effect mdl-color-text--blue-grey-100">
+                                <i class="fas fa-eye"></i>Seguimiento
+                            </button>
+                        </a>
                     </td>
                 </tr>
             </thead>
