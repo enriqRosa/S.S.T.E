@@ -151,9 +151,42 @@ nav{
     margin-bottom:100px;
     padding: 50px;
 }
-.seguimiento div:nth-child(2){
+.formato{
+    display:flex;
+    justify-content:space-around;
     margin-top:30px;
 }
+.seguimiento .c-inputs-4{
+    display:flex;
+    justify-content:space-around;
+}
+.seguimiento .c-inputs-4 .mdl-textfield__input {
+    border: solid 1px #B0BEC5!important;
+    border-radius: 10px;
+    height: 40px;
+    padding: 0!important;
+    color: #707070!important;
+    font-size: 16px!important;
+    text-indent: 15px;
+    text-transform: uppercase;
+}
+.seguimiento .info-1{
+    width:40%;
+}
+.seguimiento .c-inputs-4 .mdl-textfield{
+    width:40%!important;
+    padding: 5px 0!important;
+} 
+
+
+
+
+
+
+
+
+
+
 
 .info{
     width: 80%;
@@ -554,11 +587,7 @@ nav{
 
 /*---------FOOTER-----------*/
 
-footer {
-    width: 100%;
-    background: #24292e;
-    
-}
+
 
 
 /*.c-dropdown-list .mdl-textfield {
@@ -584,5 +613,7 @@ footer {
     color: #fff!important;
 }*/
 
-
-
+/*to get footer on the botton*/
+.table{
+    margin-bottom:125px;
+}

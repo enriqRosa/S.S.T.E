@@ -11,7 +11,7 @@ Class Login extends CI_Controller{
         $this->load->helper('form');
         $this->load->model('Modelo_login');
         $this->load->library('session');
-        $this->load->view('temps/footer');
+        //$this->load->view('temps/footer');
     }
     //CONTROLADOR PRINCIPAL AL CARGAR LA PÁGINA
     public function index(){

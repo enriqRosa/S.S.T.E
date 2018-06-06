@@ -44,9 +44,6 @@
         </button>       
     </div> 
 </section>
-
-    
-
-
 <?php include_once 'modal_contraseña.php'?>
+<?php include_once 'footer.php'?>
 
