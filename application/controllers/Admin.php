@@ -35,5 +35,9 @@ Class Admin extends CI_Controller{
     function verificacionSeguimiento(){
         $this->load->view('interfaces/verificacion_seguimiento');
     }
+    //FUNCIÓN PARA EL BOTÓN QUE SE DIRIGA A LA INTERFAZ 'seguimiento_tutorial'
+    function seguimientoTutorial(){
+        $this->load->view('interfaces/seguimiento_tutorial');
+    }
 }
 ?>
