@@ -17,7 +17,9 @@ Class Admin extends CI_Controller{
           
     }
     function index(){
-        $this->data['posts']=$this->Modelo_login->getPosts();
+        //TRAE SUS DATOS COMO EL 'nombre, apPaterno, apMaterno' de su tabla para mostrarse
+        //en su info personal de la interfaz principal 
+        $this->data['posts']=$this->Modelo_login->getAdmin();
         $this->load->view('interfaces/interfaz_admin',$this->data);
     }
     //FUNCIONES PARA CADA PÁGINA DEL MENÚ DEL ADMIN (redireccionar)

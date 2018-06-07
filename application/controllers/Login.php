@@ -41,6 +41,12 @@ Class Login extends CI_Controller{
                 elseif($this->session->userdata('tipo_usuario')=='CI'){
                     redirect('c_institucional/index');
                 }
+                elseif($this->session->userdata('tipo_usuario')=='TU'){
+                    redirect('tutor/index');
+                }
+                elseif($this->session->userdata('tipo_usuario')=='TO'){
+                    redirect('tutorado/index');
+                }
         }
     }
 }

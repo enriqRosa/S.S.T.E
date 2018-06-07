@@ -6,8 +6,7 @@ Class C_institucional extends CI_Controller{
 
         parent::__construct();
 
-        $this->load->view('temps/header');         
-        $this->load->view('temps/footer');   
+        $this->load->view('temps/header');        
 
         $this->load->helper('url');
         $this->load->helper('form');

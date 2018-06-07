@@ -12,19 +12,10 @@
     </div>
 </section>
 <section class="academico-info">
-    <div class="grupo-academico_1">
+    <div class="grupo-academico">
         <div class="info-1">
             <span class="fs15 ls2 tajawalR">Número de Seguro:</span>          
         </div>
-    </div>
-    <?php foreach($posts as $post){?>
-    <div class="c-inputs-4_1" >
-        <div class="mdl-textfield mdl-js-textfield ">
-            <?php echo $post->matricula;?> 
-        </div>  
-    </div>
-    <?php }?> 
-    <div class="grupo-academico">
         <div class="info-1">
             <span class="fs15 ls2 tajawalR">Apellido Paterno:</span>          
         </div>
@@ -41,6 +32,9 @@
     <?php foreach($posts as $post){?>
     <div class="c-inputs-4" >
         <div class="mdl-textfield mdl-js-textfield ">
+            <?php echo $post->matricula;?> 
+        </div> 
+        <div class="mdl-textfield mdl-js-textfield ">
             <?php echo $post->nombre;?> 
         </div>                  
         <div class="mdl-textfield mdl-js-textfield ">
@@ -54,8 +48,13 @@
         </div>
     </div>
     <?php }?>  
+    <div class="modals_2">
+        <button 
+            class="mdl-button mdl-js-button mdl-color--red-700 mdl-js-ripple-effect mdl-color-text--white btn-pass"><i class="fas fa-key"></i>Cambiar Contraseña
+        </button> 
+    </div>
 </section>
-
+<?php include_once 'footer.php'?>
 
 
 

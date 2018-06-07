@@ -4,7 +4,7 @@ class Modelo_login extends CI_Model{
     function login($mat,$pass){
         /*FUNCIÓN PARA CONSULTAR LOS CAMPOS DE LA TABLA*/
         $this->db->select('matricula, password, tipo_usuario');
-        $this->db->from('coordinador');
+        $this->db->from('usuarios');
         $this->db->where('matricula',$mat);
         $this->db->where('password',$pass);
         $this->db->limit(1);
@@ -16,12 +16,31 @@ class Modelo_login extends CI_Model{
             return false;
         }
     }
-    //FUNCIÓN PARA TRAER LOS CAMPOS 'nombre,ap_paterno,ap_materno DE LA TABLA 'coordinador'
+    //FUNCIÓN PARA TRAER LOS CAMPOS 'nombre,ap_paterno,ap_materno DE LA TABLA 'administrador'
     //ADMINISTRADOR
-    function getPosts(){       
+    function getAdmin(){       
         $this->db->select("nombre,ap_paterno,ap_materno"); 
-        $this->db->from('coordinador');
-        $this->db->where("tipo_usuario","AD");        
+        $this->db->from('administrador');        
+        $query = $this->db->get();
+        return $query->result();
+    }
+    //COORDINADOR ACADEMICO
+    function getAcademico(){
+        $this->db->select("matricula,nombre,ap_paterno,ap_materno,correo"); 
+        $this->db->from('c_academico');       
+        $query = $this->db->get();
+        return $query->result();
+    }
+    //COORDINADOR INSTITUCIONAL
+    function getInstitucional(){
+        $this->db->select("matricula,nombre,ap_paterno,ap_materno,correo"); 
+        $this->db->from('c_institucional');       
+        $query = $this->db->get();
+        return $query->result();
+    }
+    function getTutor(){
+        $this->db->select("matricula,nombre,ap_paterno,ap_materno,correo"); 
+        $this->db->from('tutor');       
         $query = $this->db->get();
         return $query->result();
     }

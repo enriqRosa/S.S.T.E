@@ -7,5 +7,5 @@
         <a href="<?= base_url() ?>C_academico/gestionTutoresTutorados"><li class="mdl-menu__item tajawalB mdl-color-text--teal-800"><i class="fas fa-file-alt"></i>Asignación Tutor/Tutorado</li></a>
         <a href="<?= base_url() ?>C_academico/seguimientoTutorial"><li class="mdl-menu__item tajawalB mdl-color-text--teal-800"><i class="fas fa-eye"></i>Seguimiento de Tutorias</li></a>
         <a href="index.php"><li class="mdl-menu__item tajawalB mdl-color-text--teal-800"><i class="fas fa-sign-out-alt"></i>Cerrar Sesión</li></a>
-    </ul>
+    </ul>     
 </nav>

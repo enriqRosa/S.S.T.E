@@ -1,6 +1,6 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-Class Tutor extends CI_Controller{
+Class Tutorado extends CI_Controller{
    
     function __construct(){
 
@@ -13,8 +13,7 @@ Class Tutor extends CI_Controller{
         $this->load->library('session');
     }
     function index(){
-        $this->data['posts']=$this->Modelo_login->getTutor();
-        $this->load->view('interfaces/interfaz_tutor',$this->data);
+        $this->load->view('interfaces/interfaz_tutorado');
     }
 }
 ?>
