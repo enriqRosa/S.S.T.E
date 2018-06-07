@@ -6,7 +6,9 @@ Class Tutor extends CI_Controller{
 
         parent::__construct();
 
-        $this->load->view('temps/header');         
+        $this->load->view('temps/header');
+        $this->load->view('temps/menu_tutor');
+        
         $this->load->helper('url');
         $this->load->helper('form');
         $this->load->model('Modelo_login');
@@ -15,6 +17,12 @@ Class Tutor extends CI_Controller{
     function index(){
         $this->data['posts']=$this->Modelo_login->getTutor();
         $this->load->view('interfaces/interfaz_tutor',$this->data);
+    }
+    function registroSeguimiento(){
+        $this->load->view('interfaces/gestion_tutores');
+    }
+    function verificacionSeguimiento(){
+        $this->load->view('interfaces/verificacion_seguimiento');
     }
 }
 ?>

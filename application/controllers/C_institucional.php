@@ -6,7 +6,8 @@ Class C_institucional extends CI_Controller{
 
         parent::__construct();
 
-        $this->load->view('temps/header');        
+        $this->load->view('temps/header');
+        $this->load->view('temps/menu_cinstitucional');        
 
         $this->load->helper('url');
         $this->load->helper('form');
@@ -16,6 +17,9 @@ Class C_institucional extends CI_Controller{
     function index(){
         $this->data['posts']=$this->Modelo_login->getInstitucional();
         $this->load->view('interfaces/interfaz_cinstitucional',$this->data);
+    }
+    function validacionRegistros(){
+        $this->load->view('interfaces/gestion_tutores');
     }
 }
 ?>
