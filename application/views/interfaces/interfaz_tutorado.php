@@ -1,57 +1,34 @@
-<aside>
-    <nav class="menu-tutorado">
-        <ul>
-            <li class="tajawalB fs19 lightG">TUTORADO</li>
-            <li class="tajawalB fs17">Verficación de Seguimiento</li>
-            <li class="tajawalB fs17">Cerrar Sesión</li>
-        </ul>
-    </nav>
-</aside>
-<main class="tutorado">
-    <div class="user-circle-tutorado">
-        <i class="fas fa-user-circle"></i>
-    </div>
-    <div class="usuario">
-        <span class="text-dir fs50 ls2 tajawalR white"></i>Bienvenido</i></span><br>
-    </div> 
-</main>
-<section class="modalBtn">
-    <div class="modals_2"> 
-        <button 
-            class="mdl-button mdl-js-button mdl-color--indigo-400 mdl-js-ripple-effect mdl-color-text--blue-grey-100 btn-pass"><i class="fas fa-key"></i>Cambiar Contraseña
-        </button>       
-    </div>
-</section>
-
-
-
-
-
-
-
-
-
-<!--<nav class="menu-right">
+<nav class="menu-right">
     <button id="demo-menu-lower-left"
         class="mdl-button mdl-js-button  mdl-js-ripple-effect ">
         <i class="material-icons mdl-color-text--blue-grey-200"><i class="fas fa-bars"></i></i>
     </button>
     <ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect"
         for="demo-menu-lower-left">
-        <a href=""><li class="mdl-menu__item tajawalB mdl-color-text--teal-800"><i class="fas fa-eye"></i>Verificación de Seguimiento</li></a>
+        <a href=""><li class="mdl-menu__item tajawalB mdl-color-text--teal-800"><i class="fas fa-eye"></i>Seguimiento Tutorial</li></a>
         <a href="index.php"><li class="mdl-menu__item tajawalB mdl-color-text--teal-800"><i class="fas fa-sign-out-alt"></i>Cerrar Sesión</li></a>
     </ul>
 </nav>
 <section class="tutorado_principal">
-<div class="tutorado">
-    <div class="user-circle">
-        <i class="fas fa-user"></i>
+<div class="academico">
+        <div class="user-circle-academico">
+            <i class="fas fa-user-circle"></i>
+        </div>
+        <div class="usuario">
+            <span class="text-dir fs40 ls2 tajawalR white">Bienvenido (a)</i></span>
+        </div>
     </div>
-    <div class="usuario">
-        <span class="text-dir fs40 ls2 tajawalR white">Bienvenido (a)</i></span>
-    </div>
-</div>
 </section>
+
+
+
+
+
+
+
+
+<!--
+
 <section class="info_tutorado">
     <div class="grupo">
         <div class="info-1">
