@@ -21,22 +21,22 @@
         <table class="mdl-data-table mdl-js-data-table  mdl-shadow--2dp">
             <thead>
                 <tr>
-                    <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14">Matricula</td>
-                    <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14">Nombre</td>
-                    <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14">Apellido Paterno</td>
-                    <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14">Apellido Materno</td>
-                    <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14">Nombre</td>
-                    <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14">Semestre</td>
-                    <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14">Grupo</td>
+                    <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14 mdl-color--black white">Matricula</td>
+                    <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14 mdl-color--black white">Nombre</td>
+                    <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14 mdl-color--black white">Apellido Paterno</td>
+                    <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14 mdl-color--black white">Apellido Materno</td>
+                    <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14 mdl-color--black white">Nombre</td>
+                    <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14 mdl-color--black white">Semestre</td>
+                    <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14 mdl-color--black white">Grupo</td>
                     <td>
                         <button 
-                            class="mdl-button mdl-js-button mdl-color--green-700 mdl-js-ripple-effect mdl-color-text--blue-grey-100 btn-registar"><i class="fas fa-user-plus"></i>Agregar
+                            class="mdl-button mdl-js-button mdl-color--green-700 mdl-js-ripple-effect mdl-color-text--white mdl-color--orange-500 btn-registar"><i class="fas fa-user-plus"></i>Agregar
                         </button>
                     </td>
                     <td>
                         <a href="<?= base_url() ?>Admin/seguimientoTutorial">
                             <button 
-                                class="mdl-button mdl-js-button mdl-color--grey-700 mdl-js-ripple-effect mdl-color-text--blue-grey-100">
+                                class="mdl-button mdl-js-button mdl-color--grey-700 mdl-js-ripple-effect mdl-color-text--white">
                                 <i class="fas fa-eye"></i>Seguimiento
                             </button>
                         </a>
@@ -127,26 +127,26 @@
                 </div>
                 <div class="c-inputs-4">
                     <div class="status">
-                        <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="switch-7">
-                            <input type="checkbox" id="switch-7" class="mdl-switch__input">
-                            <span class="mdl-switch__label tajawalR ls2">Psicología</span>
+                    <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-1">
+                            <input type="radio" id="option-1" class="mdl-radio__button" name="options" value="2">
+                            <span class="mdl-radio__label tajawalR ls2">Psicología</span>
                         </label>
                     </div>
                 </div>
                 <div class="c-inputs-4">
                         <div class="status">
-                            <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="switch-8">
-                                <input type="checkbox" id="switch-8" class="mdl-switch__input">
-                                <span class="mdl-switch__label tajawalR ls2">Academico</span>
-                            </label>
+                        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-2">
+                            <input type="radio" id="option-2" class="mdl-radio__button" name="options" value="2">
+                            <span class="mdl-radio__label tajawalR ls2">Academico</span>
+                        </label>
                         </div>
                     </div>
                     <div class="c-inputs-4">
                         <div class="status">
-                            <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="switch-9">
-                                <input type="checkbox" id="switch-9" class="mdl-switch__input">
-                                <span class="mdl-switch__label tajawalR ls2">Juridico</span>
-                            </label>
+                        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-3">
+                            <input type="radio" id="option-3" class="mdl-radio__button" name="options" value="2">
+                            <span class="mdl-radio__label tajawalR ls2">Juridico</span>
+                        </label>
                         </div>
                     </div>
             </form>

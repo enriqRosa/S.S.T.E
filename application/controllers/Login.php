@@ -43,22 +43,6 @@ Class Login extends CI_Controller{
                 }
         }
     }
-    //AQUI SE CONSULTA SOLO LA TABLA 'tutor' PARA PODER ENTRAR
-    function tutor_login(){
-        $mat=$this->input->post('matricula');
-        $pass=$this->input->post('password');
-        
-        $checklogin=$this->Modelo_login->login_tutor($mat,$pass);
-        if($checklogin){
-            foreach ($checklogin as $row);
-                $this->session->set_userdata('matricula',$row->matricula);
-                $this->session->set_userdata('tipo_usuario',$row->tipo_usuario);
-                //USARIO TUTOR
-                if($this->session->userdata('tipo_usuario')=="TU"){
-                    redirect('tutor/index');
-                }     
-        }
-    }
 }
 
 ?>

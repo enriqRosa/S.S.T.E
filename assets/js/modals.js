@@ -54,3 +54,17 @@ $( document ).ready(function() {
       });
   
   })
+   //--------------------Ventanas Modales para editar formato de seguimiento tutorial-------------------------- 
+ $( document ).ready(function() {
+  console.log("Modal LISTA");    
+      $('.btn_editar_formato').on('click', function(){
+          $('.editar_modal_formato').addClass('visible');
+          $('body').addClass('scrollNO');
+          console.log("Abrir Modal");
+      })
+      $('.close-fancy').on('click', function(){
+          $(this).closest('.editar_modal_formato').removeClass('visible');  
+          $('body').removeClass('scrollNO');
+      });
+  
+  })
