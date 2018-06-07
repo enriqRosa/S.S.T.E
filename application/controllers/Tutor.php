@@ -18,9 +18,6 @@ Class Tutor extends CI_Controller{
         $this->data['posts']=$this->Modelo_login->getTutor();
         $this->load->view('interfaces/interfaz_tutor',$this->data);
     }
-    function registroSeguimiento(){
-        $this->load->view('interfaces/gestion_tutores');
-    }
     function verificacionSeguimiento(){
         $this->load->view('interfaces/verificacion_seguimiento');
     }

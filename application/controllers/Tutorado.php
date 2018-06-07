@@ -18,7 +18,7 @@ Class Tutorado extends CI_Controller{
         $this->load->view('interfaces/interfaz_tutorado');
     }
     function seguimientoTutorial(){
-        $this->load->view('interfaces/verificacion_seguimiento');
+        $this->load->view('interfaces/seguimiento_tutorial');
     }
 }
 ?>

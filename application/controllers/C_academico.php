@@ -21,8 +21,8 @@ Class C_academico extends CI_Controller{
     function gestionTutoresTutorados(){
         $this->load->view('interfaces/gestion_tutores_tutorados');
     }
-    function seguimientoTutorial(){
-        $this->load->view('interfaces/seguimiento_tutorial');
+    function verificacionSeguimiento(){
+        $this->load->view('interfaces/verificacion_seguimiento');
     }
 }
 ?>

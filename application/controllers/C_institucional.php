@@ -18,8 +18,8 @@ Class C_institucional extends CI_Controller{
         $this->data['posts']=$this->Modelo_login->getInstitucional();
         $this->load->view('interfaces/interfaz_cinstitucional',$this->data);
     }
-    function validacionRegistros(){
-        $this->load->view('interfaces/gestion_tutores');
+    function verificacionSeguimiento(){
+        $this->load->view('interfaces/verificacion_seguimiento');
     }
 }
 ?>
