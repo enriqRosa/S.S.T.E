@@ -14,13 +14,13 @@
 <section class=admin-info>
     <div class="grupo-admin">
         <div class="info-1">
+            <span class="fs15 ls2 tajawalR">Nombre(s):</span>          
+        </div>
+        <div class="info-1">
             <span class="fs15 ls2 tajawalR">Apellido Paterno:</span>          
         </div>
         <div class="info-1">
             <span class="fs15 ls2 tajawalR">Apellido Materno:</span>          
-        </div>
-        <div class="info-1">
-            <span class="fs15 ls2 tajawalR">Nombre(s):</span>          
         </div>
     </div>
     <form>

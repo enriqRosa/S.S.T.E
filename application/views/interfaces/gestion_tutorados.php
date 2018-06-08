@@ -1,37 +1,40 @@
-<main class="informacion2_2">
-    <div class="user-circle-admin">
-        <i class="fas fa-user-plus"></i>
-    </div>
-    <div class="usuario">
-        <span class="text-dir fs25 ls2 tajawalR">Registro de Alumnos</span>
-    </div>
-    <hr class="line2">
-    <div class="modals">
-            <button class="mdl-button mdl-js-button mdl-color--teal-700 mdl-js-ripple-effect mdl-color-text--blue-grey-100 btn-pass">
-            <i class="fas fa-user"></i>Registrar Alumno</button>
-    </div>
-    <div class="table">
-        <table class="mdl-data-table mdl-js-data-table  mdl-shadow--2dp">
+<main class="gestion_tutorados">
+    <section class="admin">
+        <div class="user-circle-admin">
+            <i class="fas fa-user mdl-color-text--white"></i>
+        </div>
+        <div class="usuario mdl-color--grey-800">
+            <span class="text-dir fs40 ls2 tajawalR mdl-color-text--white"></i>Gestión de Tutorados</i></span><br>
+        </div>
+    </section> 
+</main>
+<div class="modals_2">
+    <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--white mdl-color--red-600 btn-pass">
+    <i class="fas fa-user-plus"></i>Registrar nuevo Tutorado</button>
+</div>
+<div class="table">
+    <table class="mdl-data-table mdl-js-data-table  mdl-shadow--2dp">
             <thead>
                 <tr>
-                    <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14">Matricula</td>
-                    <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14">Nombre</td>
-                    <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14">Apellido Paterno</td>
-                    <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14">Apellido Materno</td>
-                    <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14">Nombre</td>
-                    <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14">Carrera</td>
-                    <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14">Grupo</td>
-                    <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14">Semestre</td>
-                    <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14">Correo</td>
-                    <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14">Telefono</td>
-                    <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14">Status</td>
+                    <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14 mdl-color--black white">Matricula</td>
+                    <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14 mdl-color--black white">Nombre</td>
+                    <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14 mdl-color--black white">Apellido Paterno</td>
+                    <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14 mdl-color--black white">Apellido Materno</td>
+                    <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14 mdl-color--black white">Nombre</td>
+                    <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14 mdl-color--black white">Carrera</td>
+                    <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14 mdl-color--black white">Grupo</td>
+                    <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14 mdl-color--black white">Semestre</td>
+                    <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14 mdl-color--black white">Correo</td>
+                    <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14 mdl-color--black white">Telefono</td>
+                    <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14 mdl-color--black white">Status</td>
                     <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14">
-                        <button class="mdl-button mdl-js-button mdl-color--teal-700 mdl-js-ripple-effect mdl-color-text--blue-grey-100 btn-status">
+                        <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--white mdl-color--grey-700 btn-status">
                         <i class="fas fa-user"></i>Editar</button></td>
                 </tr>
             </thead>
     </table>
-</main>
+</div>
+<?php include_once 'footer.php' ?>
 <!--MODAL PARA AGREGAR NUEVO ALUMNO-->
 <div class="pass-modal fancy ">
     <div class="modal-info-3">

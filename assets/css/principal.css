@@ -10,6 +10,7 @@ nav{
 }
 .menu-right {
     display: flex;
+    justify-content:end;
     padding: 7px;
 }
 .menu-right a{
@@ -115,9 +116,35 @@ nav{
 }
 /*----TUTORADO----*/
 .tutorado_principal{
-     width: 100%;
+    width: 100%;
     height: 40vh;
     background-image: url('../images/tutorado.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    opacity:0.9;
+}
+/*------GESTIÓN DE TUTORES-------*/
+.gestion_tutores{
+    width: 100%;
+    height: 40vh;
+    background-image: url('../images/gestion_tutor.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    opacity:0.8;
+}
+/*------GESTION TUTORADOS-----*/
+.gestion_tutorados{
+    width: 100%;
+    height: 40vh;
+    background-image: url('../images/gestion_tutorado.jpg');
     background-size: cover;
     background-position: center;
     position: relative;
@@ -155,7 +182,8 @@ nav{
     margin-top:30px;
 }
 .seguimiento .usuario{
-    margin-bottom:30px;
+    margin-top:10px;
+    margin-bottom:40px;
 }
 .seguimiento .c-inputs-4{
     display:flex;

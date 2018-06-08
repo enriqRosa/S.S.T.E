@@ -1,6 +1,6 @@
 <section class="seguimiento">
     <div class="usuario">
-        <span class="fs25 ls2 tajawalB">FORMATO DE SEGUIMIENTO TUTORIAL</span>
+        <span class="fs30 ls2 tajawalB">FORMATO DE SEGUIMIENTO TUTORIAL</span>
     </div>
     <div>
         <span class="fs16 ls1 tajawalB">
