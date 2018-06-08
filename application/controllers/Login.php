@@ -19,7 +19,7 @@ Class Login extends CI_Controller{
     //AQUI SE CONSULTA LAS TABLAS Y DEPENDIENDO DE LA CONSULTA MANDA A CONTROLADOR DEL USUARIO
     function proceso_login(){
         $mat=$this->input->post('matricula');
-        $pass=$this->input->post('password');
+        $pass=$this->input->post('pass');
         
         /*SE PASAN LAS VARIABLES COMO PARÁMETROS EN LA FUNCIÓN 'login'*/
         /*'Modelo_login' NOMBRE DE LA CLASE DEL MODELO*/

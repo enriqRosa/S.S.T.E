@@ -40,7 +40,7 @@
     </form>
     <div class="modals_2"> 
         <button 
-            class="mdl-button mdl-js-button mdl-color--teal-700 mdl-js-ripple-effect mdl-color-text--blue-grey-100 btn-pass"><i class="fas fa-key"></i>Cambiar Contraseña
+            class="mdl-button mdl-js-button mdl-color--teal-900 mdl-js-ripple-effect mdl-color-text--blue-grey-100 btn-pass"><i class="fas fa-key"></i>Cambiar Contraseña
         </button>       
     </div> 
 </section>

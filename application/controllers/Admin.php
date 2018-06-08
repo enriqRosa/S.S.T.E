@@ -49,12 +49,12 @@ Class Admin extends CI_Controller{
         }else {
             $sql=$this->db->select("*")->from("usuarios")->where("matricula",$this->session->userdata("matricula"))->get();
             foreach ($sql->result() as $my_pswd) {
-                $db_password=$my_pswd->password;
+                $db_password=$my_pswd->pass;
                 $db_matricula=$my_pswd->matricula;
             }
             if($this->input->post("actual_pswd")==$db_password){
                 $fixed_pw=$this->input->post("new_pswd");
-                $update=$this->db->query("UPDATE usuarios SET password='$fixed_pw' WHERE matricula='$db_matricula'")or die(mysqli_error());
+                $update=$this->db->query("UPDATE usuarios SET pass='$fixed_pw' WHERE matricula='$db_matricula'")or die(mysqli_error());
                 redirect('admin/index');
                 $this->session->set_flashdata('notification', 'User has been saved');
             }else{

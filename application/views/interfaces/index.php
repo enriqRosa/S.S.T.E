@@ -55,7 +55,7 @@
 							<input
 								class="mdl-textfield__input"
 								type="password"
-								name="password"
+								name="pass"
 								id="tb-password-1"
 								required>
 							<label class="mdl-textfield__label fs20 ls2" for="tb-password-1">Contraseña</label>
