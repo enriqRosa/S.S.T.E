@@ -38,7 +38,8 @@
 <div class="pass-modal fancy ">
     <div class="modal-info-2">
         <span class="fs25 tajawalL ls1">Registrar nuevo tutor</span>
-            <form>
+            <!--SE LLAMA LA FUNCIÓN 'nuevoTutor' DEL CONTROLADOR 'Admin'-->
+            <?php echo form_open("Admin/nuevoTutor"); ?>
                 <div class="c-inputs-4" >
                     <div class="form-icons"><i class="fas fa-id-card"></i></div>
                     <div class="mdl-textfield mdl-js-textfield  mdl-textfield--floating-label">
@@ -91,26 +92,38 @@
                 <div class="c-inputs-4">
                     <div class="form-icons"><i class="fas fa-key"></i></div>
                     <div class="mdl-textfield mdl-js-textfield  mdl-textfield--floating-label name=""">
-                        <input class="mdl-textfield__input" type="password" name="">
+                        <input class="mdl-textfield__input" type="password" name="repeat_pswd">
                             <label class="mdl-textfield__label tajawalL" required="text">Confirmar contraseña</label>
                     </div>
+                </div>
+                <div class="c-inputs-4">
+                    <div class="form-icons"><i class="fas fa-question"></i></div>
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select">
+                        <input type="text" value="" class="mdl-textfield__input mdl-color-text--black" id="">
+                        <input type="hidden" value="" name="tipo_usuario">
+                            <label for="" class="mdl-textfield__label">Tipo Usuario</label>
+                                <ul for="" class="mdl-menu mdl-menu--bottom-left mdl-js-menu">
+                                    <li class="mdl-menu__item" data-val="TU">Tutor</li>
+                                </ul>
+                    </div> 
                 </div>
                 <div class="c-inputs-4">
                     <span class="fs19 ls2 tajawalR">Status</span>
                     <div class="status">
                         <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-1">
-                            <input type="radio" id="option-1" class="mdl-radio__button" name="status" value="1">
+                            <input type="radio" id="option-1" class="mdl-radio__button" name="status" value="ACTIVO">
                             <span class="mdl-radio__label tajawalR ls2">Activo</span>
                         </label>
                     </div>
                     <div class="status">
                         <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-2">
-                            <input type="radio" id="option-2" class="mdl-radio__button" name="status" value="2">
+                            <input type="radio" id="option-2" class="mdl-radio__button" name="status" value="INACTIVO">
                             <span class="mdl-radio__label tajawalR ls2">Inactivo</span>
                         </label>
                     </div>
                 </div>
-            </form>
+            <!--SE CIERRA EL FORMULARIO-->
+            <?php echo form_close(); ?> 
             <div class="modals">
                 <button class="close-fancy mdl-button mdl-js-button mdl-color--red-A200 mdl-js-ripple-effect mdl-color-text--blue-grey-100">Cancelar</button>
                 <button class="mdl-button mdl-js-button mdl-color--teal-700 mdl-js-ripple-effect mdl-color-text--blue-grey-100">Aceptar</button>

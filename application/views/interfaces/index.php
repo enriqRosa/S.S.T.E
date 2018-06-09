@@ -35,7 +35,7 @@
 		<div id="main-section">
 			<div class="c-formulario">
             <?php $this->load->helper('form'); ?>
-			<!--SE LLAMA LA FUNCIÓN 'proceso_login' DEL CONTROLADOR 'Paginas'-->
+			<!--SE LLAMA LA FUNCIÓN 'proceso_login' DEL CONTROLADOR 'Login'-->
 			<?php echo form_open("login/proceso_login",'class="main-form"'); ?>
 				<!--<form class="main-form">-->
 					<div class="c-login-title">

@@ -12,6 +12,7 @@ Class Admin extends CI_Controller{
         $this->load->helper('url');
         $this->load->helper('form');
         $this->load->model('Modelo_login');
+        $this->load->model('modelo_registrar_usuarios');
         $this->load->library('session');
         
           
@@ -67,6 +68,19 @@ Class Admin extends CI_Controller{
     function seguimientoTutorial(){
         $this->load->view('interfaces/seguimiento_tutorial');
     }
-    
+    //FUNCIÓN PARA AGREGAR UN NUEVO TUTOR
+    function nuevoTutor(){
+        $this->load->view('interfaces/gestion_tutores');
+        $mat = $this->input->post('matricula');
+        $nom = $this->input->post('nombre');
+        $paterno = $this->input->post('ap_paterno');
+        $materno = $this->input->post('ap_materno');
+        $correo = $this->input->post('correo');
+        $telefono = $this->input->post('telefono');
+        $pass = $this->input->post('pass');
+        $status = $this->input->post('status');
+        $tipo = $this->input->post('tipo_usuario');
+        $insertTutor = $this->modelo_registrar_usuarios->registrarTutores($mat,$nom,$paterno,$materno,$correo,$telefono,$pass,$status,$tipo);
+    }
 }
 ?>      
