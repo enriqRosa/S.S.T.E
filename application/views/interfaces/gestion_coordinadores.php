@@ -1,34 +1,36 @@
-<main class="informacion2">
-    <div class="user-circle-admin">
-        <i class="fas fa-user-plus"></i>
-    </div>
-    <div class="usuario">
-        <span class="text-dir fs25 ls2 tajawalR">Gestión de Coordinador</span>
-    </div>
-    <hr class="line2">
-    <div class="modals">
-            <button class="mdl-button mdl-js-button mdl-color--teal-700 mdl-js-ripple-effect mdl-color-text--blue-grey-100 btn-pass">
-            <i class="fas fa-user"></i>Registrar nuevo Coordinador</button>
-    </div>
-    <div class="table">
+<main class="gestion_coordinadores">
+    <section class="admin">
+        <div class="user-circle-admin">
+            <i class="fas fa-user mdl-color-text--black"></i>
+        </div>
+        <div class="usuario mdl-color--grey-800">
+            <span class="text-dir fs40 ls2 tajawalR mdl-color-text--white"></i>Gestión de Coordinadores</i></span><br>
+        </div>
+    </section> 
+</main>
+<div class="modals_2">
+    <button class="mdl-button mdl-js-button mdl-color--brown-500 mdl-js-ripple-effect mdl-color-text--white btn-pass">
+    <i class="fas fa-user-plus"></i>Registrar nuevo Coordinador</button>
+</div>
+<div class="table">
         <table class="mdl-data-table mdl-js-data-table  mdl-shadow--2dp">
             <thead>
                 <tr>
-                    <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14">Matricula</td>
-                    <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14">Nombre</td>
-                    <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14">Apellido Paterno</td>
-                    <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14">Apellido Materno</td>
-                    <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14">Nombre</td>
-                    <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14">Correo</td>
-                    <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14">Telefono</td>
-                    <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14">Status</td>
+                    <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14 mdl-color--black white">Matricula</td>
+                    <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14 mdl-color--black white">Nombre</td>
+                    <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14 mdl-color--black white">Apellido Paterno</td>
+                    <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14 mdl-color--black white">Apellido Materno</td>
+                    <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14 mdl-color--black white">Nombre</td>
+                    <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14 mdl-color--black white">Correo</td>
+                    <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14 mdl-color--black white">Telefono</td>
+                    <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14 mdl-color--black white">Status</td>
                     <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14">
-                        <button class="mdl-button mdl-js-button mdl-color--teal-700 mdl-js-ripple-effect mdl-color-text--blue-grey-100 btn-editar">
+                        <button class="mdl-button mdl-js-button mdl-color--grey-700 mdl-js-ripple-effect mdl-color-text--white btn-editar">
                         <i class="fas fa-user"></i>Editar</td></button>
                 </tr>
             </thead>
     </table>
-</main>
+</div> 
 <!--MODAL PARA AGREGAR A UN NUEVO CORDINADOR-->
 <div class="pass-modal fancy ">
     <div class="modal-info-2">
@@ -90,31 +92,19 @@
                             <label class="mdl-textfield__label tajawalL" required="text">Confirmar contraseña</label>
                     </div>
                 </div>
-
-
- 
-    <div class="c-dropdown-list">
-    
-      <!-- Select with floating label -->
-    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select">
-        <input type="text" value="" class="mdl-textfield__input" id="sample3" readonly>
-        <input type="hidden" value="" name="sample3">
-        <label for="sample3" class="mdl-textfield__label">Country</label>
-        <ul for="sample3" class="mdl-menu mdl-menu--bottom-left mdl-js-menu">
-            <li class="mdl-menu__item" data-val="DEU">Germany</li>
-            <li class="mdl-menu__item" data-val="BLR">Belarus</li>
-            <li class="mdl-menu__item" data-val="RUS">Russia</li>
-        </ul>
-    </div>
-                                            
-    
-    
-    
-                                            
-                                            
-</div>
-
-
+                <!-- Select with floating label -->
+                <div class="c-inputs-4">
+                    <div class="form-icons"><i class="fas fa-question"></i></div>
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select">
+                        <input type="text" value="" class="mdl-textfield__input mdl-color-text--black" id="sample3">
+                        <input type="hidden" value="" name="sample3">
+                            <label for="sample3" class="mdl-textfield__label">Tipo Usuario</label>
+                                <ul for="sample3" class="mdl-menu mdl-menu--bottom-left mdl-js-menu">
+                                    <li class="mdl-menu__item" data-val="DEU">Coordinador Acádemico</li>
+                                    <li class="mdl-menu__item" data-val="BLR">Coordinador Institucional</li>
+                                </ul>
+                    </div>                        
+                </div>
                 <div class="c-inputs-4">
                     <span class="fs19 ls2 tajawalR">Status</span>
                     <div class="status">
@@ -220,4 +210,4 @@
             </div>
     </div>  
 </div>
-
+<?php include_once 'footer.php' ?>

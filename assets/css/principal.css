@@ -153,6 +153,19 @@ nav{
     align-items:center;
     opacity:0.9;
 }
+/*-----GESTION COORDINADORES------*/
+.gestion_coordinadores{
+    width: 100%;
+    height: 40vh;
+    background-image: url('../images/gestion_coordinador.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    opacity:0.9;
+}
 /*------VERIFICACIÓN DE SEGUIMIENTO------*/
 .principales{
     width: 100%;
