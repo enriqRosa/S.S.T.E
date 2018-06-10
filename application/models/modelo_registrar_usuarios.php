@@ -23,8 +23,10 @@ class Modelo_registrar_usuarios extends CI_Model{
         return $query;        
     }
     //FUNCIÓN QUE MUESTRA LOS DATOS DEL TUTOR PARA SER EDITADOS
-    function traerdatosTutor(){
-
+    function traerdatosTutor($mat){
+        $this->db->where("matricula",$mat);
+        $query=$this->db->get("tutor");
+        return $query;
     }
 }
 ?>
