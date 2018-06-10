@@ -4,7 +4,7 @@
             <i class="fas fa-user mdl-color-text--black"></i>
         </div>
         <div class="usuario">
-            <span class="text-dir fs40 ls2 tajawalR "></i>Gestión de Tutores</i></span><br>
+            <span class="text-dir fs40 ls2 tajawalR ">Gestión de Tutores</span><br>
         </div>
     </section> 
 </main>
@@ -57,14 +57,12 @@
             ?>
         </table>    
     </section>
-<?php include_once 'footer.php' ?>
-<!--MODAL PARA REGISTRAR NUEVO TUTOR-->
+<!--MODAL PARA REGISTRAR NUEVO TUTOR
+    SE LLAMA LA FUNCIÓN 'nuevoTutor' DEL CONTROLADOR 'Admin'-->
 <?php echo form_open("Admin/nuevoTutor"); ?>
 <div class="pass-modal fancy ">
     <div class="modal-info-2">
-        <span class="fs25 tajawalL ls1">Registrar nuevo tutor</span>
-            <!--SE LLAMA LA FUNCIÓN 'nuevoTutor' DEL CONTROLADOR 'Admin'-->
-            
+        <span class="fs25 tajawalL ls1">Registrar nuevo tutor</span>           
                 <div class="c-inputs-4" >
                     <div class="form-icons"><i class="fas fa-id-card"></i></div>
                     <div class="mdl-textfield mdl-js-textfield  mdl-textfield--floating-label">
@@ -116,7 +114,7 @@
                 </div>
                 <div class="c-inputs-4">
                     <div class="form-icons"><i class="fas fa-key"></i></div>
-                    <div class="mdl-textfield mdl-js-textfield  mdl-textfield--floating-label name=""">
+                    <div class="mdl-textfield mdl-js-textfield  mdl-textfield--floating-label">
                         <input class="mdl-textfield__input" type="password" name="repeat_pswd">
                             <label class="mdl-textfield__label tajawalL" required="text">Confirmar contraseña</label>
                     </div>
@@ -146,22 +144,21 @@
                             <span class="mdl-radio__label tajawalR ls2">Inactivo</span>
                         </label>
                     </div>
-                </div>
-            <!--SE CIERRA EL FORMULARIO-->
-            
+                </div>            
             <div class="modals">
-                <button class="close-fancy mdl-button mdl-js-button mdl-color--red-A200 mdl-js-ripple-effect mdl-color-text--blue-grey-100">Cancelar</button>
+                <a href="<?php base_url()?>Admin/cancelarBoton"><button class="close-fancy mdl-button mdl-js-button mdl-color--red-A200 mdl-js-ripple-effect mdl-color-text--blue-grey-100">Cancelar</button></a>
                 <button class="mdl-button mdl-js-button mdl-color--teal-700 mdl-js-ripple-effect mdl-color-text--blue-grey-100">Aceptar</button>
-                
             </div>            
     </div>  
 </div>
+<!--SE CIERRA EL FORMULARIO PARA EL PRIMER MODAL-->
 <?php echo form_close(); ?>
-<!--MODAL PARA EDITAR EL TUTOR-->
+<!--MODAL PARA EDITAR EL TUTOR
+    SE LLAMA LA FUNCIÓN 'nuevoTutor' DEL CONTROLADOR 'Admin'-->
+
 <div class="editar-modal fancy ">
     <div class="modal-info-2">
         <span class="fs25 tajawalL ls1">Editar tutor</span>
-            <form>
                 <div class="c-inputs-4" >
                     <div class="form-icons"><i class="fas fa-id-card"></i></div>
                     <div class="mdl-textfield mdl-js-textfield ">
@@ -233,11 +230,10 @@
                         </label>
                     </div>
                 </div>
-            </form>
             <div class="modals">
                 <button class="close-fancy mdl-button mdl-js-button mdl-color--red-A200 mdl-js-ripple-effect mdl-color-text--blue-grey-100">Cancelar</button>
                 <button class="mdl-button mdl-js-button mdl-color--teal-700 mdl-js-ripple-effect mdl-color-text--blue-grey-100">Aceptar</button>
             </div>            
     </div>  
 </div>
-
+<?php include_once 'footer.php' ?>

@@ -86,5 +86,14 @@ Class Admin extends CI_Controller{
         $this->data['mostrardatosTutor']=$this->modelo_registrar_usuarios->mostrardatosTutor();
         $this->load->view('interfaces/gestion_tutores',$this->data);
     }
+    //FUNCIÓN PARA EDITAR LOS DATOS DEL TUTOR
+    function editardatosTutor(){
+
+    }
+    function cancelarBoton(){
+        $this->data['mostrardatosTutor']=$this->modelo_registrar_usuarios->mostrardatosTutor();
+        $this->load->view('interfaces/gestion_tutores',$this->data);
+        
+    }
 }
 ?>      
