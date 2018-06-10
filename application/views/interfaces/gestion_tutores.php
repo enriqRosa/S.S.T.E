@@ -146,7 +146,7 @@
                     </div>
                 </div>            
             <div class="modals">
-                <a href="<?php base_url()?>Admin/cancelarBoton"><button class="close-fancy mdl-button mdl-js-button mdl-color--red-A200 mdl-js-ripple-effect mdl-color-text--blue-grey-100">Cancelar</button></a>
+                <input type="button" class="close-fancy mdl-button mdl-js-button mdl-color--red-A200 mdl-js-ripple-effect mdl-color-text--blue-grey-100" value="Cancelar"></input>
                 <button class="mdl-button mdl-js-button mdl-color--teal-700 mdl-js-ripple-effect mdl-color-text--blue-grey-100">Aceptar</button>
             </div>            
     </div>  
@@ -155,7 +155,6 @@
 <?php echo form_close(); ?>
 <!--MODAL PARA EDITAR EL TUTOR
     SE LLAMA LA FUNCIÓN 'nuevoTutor' DEL CONTROLADOR 'Admin'-->
-
 <div class="editar-modal fancy ">
     <div class="modal-info-2">
         <span class="fs25 tajawalL ls1">Editar tutor</span>
@@ -231,7 +230,7 @@
                     </div>
                 </div>
             <div class="modals">
-                <button class="close-fancy mdl-button mdl-js-button mdl-color--red-A200 mdl-js-ripple-effect mdl-color-text--blue-grey-100">Cancelar</button>
+                <input  class="close-fancy mdl-button mdl-js-button mdl-color--red-A200 mdl-js-ripple-effect mdl-color-text--blue-grey-100">Cancelar</button>
                 <button class="mdl-button mdl-js-button mdl-color--teal-700 mdl-js-ripple-effect mdl-color-text--blue-grey-100">Aceptar</button>
             </div>            
     </div>  
