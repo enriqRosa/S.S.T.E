@@ -16,5 +16,15 @@ class Modelo_registrar_usuarios extends CI_Model{
         );
         return $this->db->insert('tutor', $data);
     }
+    //FUNCIÓN QUE MUESTRA A LOS TUTORES REGISTRADOS EN LA TABLA
+    function mostrardatosTutor(){
+        //select * from tutor
+        $query=$this->db->get('tutor');
+        return $query;        
+    }
+    //FUNCIÓN QUE MUESTRA LOS DATOS DEL TUTOR PARA SER EDITADOS
+    function traerdatosTutor(){
+
+    }
 }
 ?>

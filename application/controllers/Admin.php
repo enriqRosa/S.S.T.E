@@ -18,14 +18,16 @@ Class Admin extends CI_Controller{
           
     }
     function index(){
-        /*TRAE SUS DATOS COMO EL 'nombre, apPaterno, apMaterno' de su tabla para mostrarse
-            en su info personal de la interfaz principal */
+        /*TRAE SUS DATOS COMO EL 'nombre, apPaterno, apMaterno' DE SU TABLA PARA MOSTRARSE
+            EN SU INFO PERSONAL DE LA INTERFAZ PRINCIPAL */
         $this->data['posts']=$this->Modelo_login->getAdmin();
         $this->load->view('interfaces/interfaz_admin',$this->data);
     }
     //FUNCIONES PARA CADA PÁGINA DEL MENÚ DEL ADMIN (redireccionar)
     function gestionTutores(){
-        $this->load->view('interfaces/gestion_tutores');
+        /*TRAE TODOS LOS DATOS DEL TUTOR QUE HAN SIDO REGISTRADOS PARA MOSTRARSE EN LA INTERFAZ*/
+        $this->data['mostrardatosTutor']=$this->modelo_registrar_usuarios->mostrardatosTutor();
+        $this->load->view('interfaces/gestion_tutores',$this->data);
     }
     function gestionTutorados(){
         $this->load->view('interfaces/gestion_tutorados');
@@ -70,7 +72,6 @@ Class Admin extends CI_Controller{
     }
     //FUNCIÓN PARA AGREGAR UN NUEVO TUTOR
     function nuevoTutor(){
-        $this->load->view('interfaces/gestion_tutores');
         $mat = $this->input->post('matricula');
         $nom = $this->input->post('nombre');
         $paterno = $this->input->post('ap_paterno');
@@ -81,6 +82,9 @@ Class Admin extends CI_Controller{
         $status = $this->input->post('status');
         $tipo = $this->input->post('tipo_usuario');
         $insertTutor = $this->modelo_registrar_usuarios->registrarTutores($mat,$nom,$paterno,$materno,$correo,$telefono,$pass,$status,$tipo);
+
+        $this->data['mostrardatosTutor']=$this->modelo_registrar_usuarios->mostrardatosTutor();
+        $this->load->view('interfaces/gestion_tutores',$this->data);
     }
 }
 ?>      

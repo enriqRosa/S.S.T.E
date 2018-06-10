@@ -13,33 +13,58 @@
         <i class="fas fa-user-plus"></i>Registrar nuevo Tutor</button>
     </div>
     <section class="table">
-    <table class="mdl-data-table mdl-js-data-table  mdl-shadow--3dp">
-        <thead>
-            <tr>
-                <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14 mdl-color--black white">Matricula</td>
-                <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14 mdl-color--black white">Nombre</td>
-                <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14 mdl-color--black white">Apellido Paterno</td>
-                <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14 mdl-color--black white">Apellido Materno</td>
-                <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14 mdl-color--black white">Nombre</td>
-                <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14 mdl-color--black white">Correo</td>
-                <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14 mdl-color--black white">Telefono</td>
-                <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14 mdl-color--black white">Status</td>
-                <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14 ">
-                    <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--white mdl-color--grey-700 btn-editar">
-                        <i class="fas fa-user"></i>Editar
-                    </button>
-                </td>
-            </tr>
-        </thead>
-    </table>
+        <table class="mdl-data-table mdl-js-data-table  mdl-shadow--3dp">
+            <thead>
+                <tr>
+                    <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14 mdl-color--black white">Matricula</td>
+                    <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14 mdl-color--black white">Nombre</td>
+                    <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14 mdl-color--black white">Apellido Paterno</td>
+                    <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14 mdl-color--black white">Apellido Materno</td>
+                    <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14 mdl-color--black white">Correo</td>
+                    <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14 mdl-color--black white">Telefono</td>
+                    <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14 mdl-color--black white">Status</td>
+                    
+                </tr>
+            </thead>
+            <!--MUESTRA CADA DATO POR FILA DEL TUTOR REGISTRADO-->
+            <?php
+                if($mostrardatosTutor->num_rows()>0){
+                    foreach ($mostrardatosTutor->result() as $row) {
+            ?>
+                <tr>
+                    <td class="tajawalL fs16 "><?php echo $row->matricula; ?></td>
+                    <td class="tajawalL fs16 "><?php echo $row->nombre; ?></td>
+                    <td class="tajawalL fs16 "><?php echo $row->ap_paterno; ?></td>
+                    <td class="tajawalL fs16 "><?php echo $row->ap_materno; ?></td>
+                    <td class="tajawalL fs16 "><?php echo $row->correo; ?></td>
+                    <td class="tajawalL fs16 "><?php echo $row->telefono; ?></td>
+                    <td class="tajawalL fs16 "><?php echo $row->status; ?></td>
+                    <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14 ">
+                        <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--white mdl-color--red-800 btn-editar">
+                            <i class="fas fa-edit"></i>Editar
+                        </button>
+                    </td>
+                </tr>
+            <?php
+                    }
+                }else{
+            ?>
+                <tr>
+                    <td>No se encontro el tutor</td>
+                </tr>
+            <?php 
+                }
+            ?>
+        </table>    
     </section>
 <?php include_once 'footer.php' ?>
 <!--MODAL PARA REGISTRAR NUEVO TUTOR-->
+<?php echo form_open("Admin/nuevoTutor"); ?>
 <div class="pass-modal fancy ">
     <div class="modal-info-2">
         <span class="fs25 tajawalL ls1">Registrar nuevo tutor</span>
             <!--SE LLAMA LA FUNCIÓN 'nuevoTutor' DEL CONTROLADOR 'Admin'-->
-            <?php echo form_open("Admin/nuevoTutor"); ?>
+            
                 <div class="c-inputs-4" >
                     <div class="form-icons"><i class="fas fa-id-card"></i></div>
                     <div class="mdl-textfield mdl-js-textfield  mdl-textfield--floating-label">
@@ -123,13 +148,15 @@
                     </div>
                 </div>
             <!--SE CIERRA EL FORMULARIO-->
-            <?php echo form_close(); ?> 
+            
             <div class="modals">
                 <button class="close-fancy mdl-button mdl-js-button mdl-color--red-A200 mdl-js-ripple-effect mdl-color-text--blue-grey-100">Cancelar</button>
                 <button class="mdl-button mdl-js-button mdl-color--teal-700 mdl-js-ripple-effect mdl-color-text--blue-grey-100">Aceptar</button>
+                
             </div>            
     </div>  
 </div>
+<?php echo form_close(); ?>
 <!--MODAL PARA EDITAR EL TUTOR-->
 <div class="editar-modal fancy ">
     <div class="modal-info-2">
