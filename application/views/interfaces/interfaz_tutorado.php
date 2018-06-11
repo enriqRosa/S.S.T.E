@@ -99,7 +99,7 @@
         </div>
 </section>-->
 <!--MODAL PARA CAMBIAR CONTRASEÑA-->
-<?php include_once 'modal_contraseña.php'?>
+
 <!--MODAL PARA REGISTRAR CAMPOS FALTANTES DEL ALUMNO-->
 <div class="editar-modal fancy ">
     <div class="modal-info-5">

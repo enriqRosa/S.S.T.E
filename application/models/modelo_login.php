@@ -32,20 +32,23 @@ class Modelo_login extends CI_Model{
     //COORDINADOR ACADEMICO
     function getAcademico(){
         $this->db->select("matricula,nombre,ap_paterno,ap_materno,correo"); 
-        $this->db->from('c_academico');       
+        $this->db->from('c_academico'); 
+        $this->db->where("matricula",$this->session->userdata("matricula"));      
         $query = $this->db->get();
         return $query->result();
     }
     //COORDINADOR INSTITUCIONAL
     function getInstitucional(){
         $this->db->select("matricula,nombre,ap_paterno,ap_materno,correo"); 
-        $this->db->from('c_institucional');       
+        $this->db->from('c_institucional');  
+        $this->db->where("matricula",$this->session->userdata("matricula"));     
         $query = $this->db->get();
         return $query->result();
     }
     function getTutor(){
         $this->db->select("matricula,nombre,ap_paterno,ap_materno,correo"); 
-        $this->db->from('tutor');       
+        $this->db->from('tutor');  
+        $this->db->where("matricula",$this->session->userdata("matricula"));     
         $query = $this->db->get();
         return $query->result();
     }
