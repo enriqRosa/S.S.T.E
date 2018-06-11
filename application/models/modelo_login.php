@@ -8,7 +8,6 @@ class Modelo_login extends CI_Model{
         $this->db->where('matricula',$mat);
         $this->db->where('pass',$pass);
         $this->db->limit(1);
-//SI ES FALSO QUE BUSCAR EM OTRA TABLA
         $query=$this->db->get();
         if($query->num_rows()==1){
             return $query->result();

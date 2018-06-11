@@ -75,8 +75,25 @@ Class Admin extends CI_Controller{
         $this->data['mostrardatosTutorado']=$this->modelo_registrar_usuarios->mostrardatosTutorado();
         $this->load->view('interfaces/gestion_tutorados',$this->data);
     }
+    /*************************************************FUNCIONES PARA COORDINADORES************************************************************* */
     function gestionCoordinadores(){
-        $this->load->view('interfaces/gestion_coordinadores');
+        $this->data['mostrardatosCoord']=$this->modelo_registrar_usuarios->mostrardatosCoordinador();
+        $this->load->view('interfaces/gestion_coordinadores',$this->data);
+    }
+    function nuevoCoordinador(){
+        $mat = $this->input->post('matricula');
+        $nom = $this->input->post('nombre');
+        $paterno = $this->input->post('ap_paterno');
+        $materno = $this->input->post('ap_materno');
+        $correo = $this->input->post('correo');
+        $telefono = $this->input->post('telefono');
+        $pass = $this->input->post('pass');
+        $tipo = $this->input->post('tipo_usuario');
+        $status = $this->input->post('status');
+        $insertTutorado = $this->modelo_registrar_usuarios->registrarCoordinador($mat,$nom,$paterno,$materno,$correo,$telefono,$pass,$tipo,$status);
+        //SE VUELVE A CARGAR LOS DATOS DEL TUTORADO EN LA TABLA
+        $this->data['mostrardatosCoord']=$this->modelo_registrar_usuarios->mostrardatosCoordinador();
+        $this->load->view('interfaces/gestion_coordinadores',$this->data);
     }
     function tutoresTutorados(){
         $this->load->view('interfaces/gestion_tutores_tutorados');

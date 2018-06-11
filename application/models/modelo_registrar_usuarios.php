@@ -52,5 +52,36 @@ class Modelo_registrar_usuarios extends CI_Model{
         $query=$this->db->get('tutorado');
         return $query;        
     }
+    /*************************************************FUNCIONES DEL COORDINADOR*************************************************************** */
+    //FUNCIÓN PARA REGISTRAR A LOS TUTORADOS -->DEL CONTROLADOR ADMIN
+    function registrarCoordinador($mat,$nom,$paterno,$materno,$correo,$telefono,$pass,$tipo,$status){
+        $data = array(
+            'matricula' => $mat,
+            'nombre' => $nom,
+            'ap_paterno' => $paterno,
+            'ap_materno' => $materno,
+            'correo' => $correo,
+            'telefono' => $telefono,
+            'pass' =>$pass,
+            'tipo_usuario' => $tipo,
+            'status' => $status
+        );
+        $this->session->set_userdata('tipo_usuario',$tipo);
+        if($this->session->userdata('tipo_usuario')=="CA"){
+            return $this->db->insert('c_academico', $data);
+        }
+        elseif ($this->session->userdata('tipo_usuario')=="CI") {
+            return $this->db->insert('c_institucional', $data);
+        }
+    }
+    //FUNCIÓN QUE MUESTRA A LOS TUTORES REGISTRADOS EN LA TABLA
+    function mostrardatosCoordinador(){
+        //select * from tutor
+        $this->db->
+        select('matricula,nombre,ap_paterno,ap_materno,correo,telefono,status')
+        ->from('artist, country ')
+        ->where('c_academico.matricula','c_institucional.matricula');
+        
+    }
 }
 ?>
