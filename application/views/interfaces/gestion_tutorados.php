@@ -12,8 +12,8 @@
     <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--white mdl-color--orange-500 btn-pass">
     <i class="fas fa-user-plus"></i>Registrar nuevo Tutorado</button>
 </div>
-<div class="table">
-    <table class="mdl-data-table mdl-js-data-table  mdl-shadow--2dp">
+<div class="table2 overflow">
+    <table class="mdl-data-table mdl-js-data-table  mdl-shadow--2dp ">
             <thead>
                 <tr>
                     <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14 mdl-color--black white">Matricula</td>
@@ -103,7 +103,7 @@
                     <div class="c-inputs-4">
                         <div class="form-icons"><i class="fas fa-briefcase"></i></div>
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <input class="mdl-textfield__input" type="text" name="carrera" value="ISC">
+                            <input class="mdl-textfield__input" type="text" name="carrera" value="INGENIERIA EN SISTEMAS COMPUTACIONALES">
                                 <label class="mdl-textfield__label tajawalL" required="text">Carrera</label>
                         </div>
                     </div>

@@ -127,6 +127,9 @@ nav{
     align-items:center;
     opacity:0.9;
 }
+.overflow{
+    overflow-X: scroll;              
+}
 /*------GESTIÓN DE TUTORES-------*/
 .gestion_tutores{
     width: 100%;
@@ -448,6 +451,10 @@ nav{
     justify-content:center;
     margin-top: 40px;
     margin-bottom: 80px;    
+}
+.table2{        
+    width:85%;
+    margin: 40px auto;
 }
 /*---------MODALES----------*/
 .pass-modal,
