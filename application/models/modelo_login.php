@@ -8,7 +8,6 @@ class Modelo_login extends CI_Model{
         $this->db->where('matricula',$mat);
         $this->db->where('pass',$pass);
         $this->db->limit(1);
-//SI ES FALSO QUE BUSCAR EM OTRA TABLA
         $query=$this->db->get();
         if($query->num_rows()==1){
             return $query->result();
@@ -29,26 +28,41 @@ class Modelo_login extends CI_Model{
             return false;
         }
     }
-    //COORDINADOR ACADEMICO
-    function getAcademico(){
+    //COORDINADORES
+    function getCoordinador(){
         $this->db->select("matricula,nombre,ap_paterno,ap_materno,correo"); 
         $this->db->from('coordinador'); 
         $this->db->where("matricula",$this->session->userdata("matricula"));      
         $query = $this->db->get();
-        return $query->result();
+        if($query->num_rows()==1){
+            return $query->result();
+        }else {
+            return false;
+        }
     }
-    //COORDINADOR INSTITUCIONAL
-    function getInstitucional(){
+    //TUTOR
+    function getTutor(){
         $this->db->select("matricula,nombre,ap_paterno,ap_materno,correo"); 
+<<<<<<< HEAD
         $this->db->from('coordinador');  
+=======
+        $this->db->from('tutor');  
+>>>>>>> 72b7d489315636b6913404f02b56201830749f7a
         $this->db->where("matricula",$this->session->userdata("matricula"));     
         $query = $this->db->get();
         return $query->result();
     }
+<<<<<<< HEAD
     //COORDINADOR TUTOR
     function getTutor(){
         $this->db->select("matricula,nombre,ap_paterno,ap_materno,correo"); 
         $this->db->from('tutor');  
+=======
+    //TUTORADO
+    function getTutorado(){
+        $this->db->select("matricula,nombre,ap_paterno,ap_materno,semestre,correo,telefono"); 
+        $this->db->from('tutorado');  
+>>>>>>> 72b7d489315636b6913404f02b56201830749f7a
         $this->db->where("matricula",$this->session->userdata("matricula"));     
         $query = $this->db->get();
         return $query->result();

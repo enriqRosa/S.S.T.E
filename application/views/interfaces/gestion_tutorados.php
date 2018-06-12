@@ -42,8 +42,8 @@
                     <td class="tajawalL fs16 "><?php echo $row->carrera; ?></td>
                     <td class="tajawalL fs16 "><?php echo $row->semestre; ?></td>
                     <td class="tajawalL fs16 "><?php echo $row->programa; ?></td>
-                    <td class="tajawalL fs16 "></td>
-                    <td class="tajawalL fs16 "></td>
+                    <td class="tajawalL fs16 "><?php echo $row->correo; ?></td>
+                    <td class="tajawalL fs16 "><?php echo $row->telefono; ?></td>
                     <td class="tajawalL fs16 "><?php echo $row->status; ?></td>
                     <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14 ">
                        
@@ -58,7 +58,7 @@
                 }else{
             ?>
                 <tr>
-                    <td>No se encontro el tutor</td>
+                    <td>No se encontro el tutorado</td>
                 </tr>
             <?php 
                 }
@@ -103,7 +103,7 @@
                     <div class="c-inputs-4">
                         <div class="form-icons"><i class="fas fa-briefcase"></i></div>
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <input class="mdl-textfield__input" type="text" name="carrera" value="INGENIERIA EN SISTEMAS COMPUTACIONALES">
+                            <input class="mdl-textfield__input" type="text" name="carrera" value="ISC">
                                 <label class="mdl-textfield__label tajawalL" required="text">Carrera</label>
                         </div>
                     </div>

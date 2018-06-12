@@ -4,16 +4,19 @@ Class Login extends CI_Controller{
    
     function __construct(){
 
-        parent::__construct();
-        //$this->load->view('temps/header');         
+        parent::__construct(); 
+        //$this->load->view('temps/menu_index');  
+        //$this->load->view('temps/header');       
         $this->load->helper('url');
         $this->load->helper('form');
         $this->load->model('Modelo_login');
         $this->load->library('session');
-        //$this->load->view('temps/footer');
+        //$this->load->view('interfaces/footer');
     }
     //CONTROLADOR PRINCIPAL AL CARGAR LA PÁGINA
     public function index(){
+        $this->load->view('temps/header_index');
+        $this->load->view('temps/header');         
         $this->load->view('interfaces/index');
     }
     //AQUI SE CONSULTA LAS TABLAS Y DEPENDIENDO DE LA CONSULTA MANDA A CONTROLADOR DEL USUARIO

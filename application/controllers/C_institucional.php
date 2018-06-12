@@ -15,7 +15,7 @@ Class C_institucional extends CI_Controller{
         $this->load->library('session');
     }
     function index(){
-        $this->data['posts']=$this->Modelo_login->getInstitucional();
+        $this->data['posts']=$this->Modelo_login->getCoordinador();
         $this->load->view('interfaces/interfaz_cinstitucional',$this->data);
     }
     function verificacionSeguimiento(){
@@ -45,6 +45,12 @@ Class C_institucional extends CI_Controller{
                 $this->load->view("interfaces/interfaz_cinstitucional");
             }
         }        
+    }
+    //CERRAR SESIÒN
+    public function logout(){
+        $this->session->unset_userdata('matricula');
+        $this->session->sess_destroy();
+        redirect('login/index');
     }
 }
 ?>

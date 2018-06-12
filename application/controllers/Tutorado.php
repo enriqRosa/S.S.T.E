@@ -12,14 +12,26 @@ Class Tutorado extends CI_Controller{
         $this->load->helper('url');
         $this->load->helper('form');
         $this->load->model('Modelo_login');
+        $this->load->model('modelo_registrar_usuarios');
         $this->load->library('session');
     }
     function index(){
-        $this->load->view('interfaces/interfaz_tutorado');
+        $this->data['mostrardatosTutorado']=$this->Modelo_login->getTutorado();
+        $this->load->view('interfaces/interfaz_tutorado',$this->data);
+    }
+    //FUNCIÓN PARA QUE PUEDA LLENAR LOS CAMPOS 'correo' y 'telefono' DEL MODAL 'editar información'
+    function editarInfo(){
+        $correo = $this->input->post('correo');
+        $telefono = $this->input->post('telefono');
+        $insertTutor = $this->modelo_registrar_usuarios->actualizarTutorado($correo,$telefono);
+
+        $this->data['mostrardatosTutorado']=$this->Modelo_login->getTutorado();
+        $this->load->view('interfaces/interfaz_tutorado',$this->data);
     }
     function seguimientoTutorial(){
         $this->load->view('interfaces/seguimiento_tutorial');
     }
+<<<<<<< HEAD
     //FUNCIÓN PARA CAMBIAR LA CONTRASEÑA DEL ADMINISTRADOR PARA LA TABLA 'usuarios'
     function cambiarPassword(){
         $this->form_validation->set_rules('actual_pswd','Ingresa tu contraseña actual','required');
@@ -44,6 +56,13 @@ Class Tutorado extends CI_Controller{
                 $this->load->view("interfaces/interfaz_tutorado");
             }
         }        
+=======
+    //CERRAR SESIÒN
+    public function logout(){
+        $this->session->unset_userdata('matricula');
+        $this->session->sess_destroy();
+        redirect('login/index');
+>>>>>>> 72b7d489315636b6913404f02b56201830749f7a
     }
 }
 ?>

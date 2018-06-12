@@ -449,8 +449,7 @@ nav{
 .table{
     display: flex;
     justify-content:center;
-    margin-top: 40px;
-    margin-bottom: 80px;    
+    margin-top: 40px;  
 }
 .table2{        
     width:85%;
