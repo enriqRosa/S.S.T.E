@@ -28,21 +28,17 @@ class Modelo_login extends CI_Model{
             return false;
         }
     }
-    //COORDINADOR ACADEMICO
-    function getAcademico(){
+    //COORDINADORES
+    function getCoordinador(){
         $this->db->select("matricula,nombre,ap_paterno,ap_materno,correo"); 
-        $this->db->from('c_academico'); 
+        $this->db->from('coordinador'); 
         $this->db->where("matricula",$this->session->userdata("matricula"));      
         $query = $this->db->get();
-        return $query->result();
-    }
-    //COORDINADOR INSTITUCIONAL
-    function getInstitucional(){
-        $this->db->select("matricula,nombre,ap_paterno,ap_materno,correo"); 
-        $this->db->from('c_institucional');  
-        $this->db->where("matricula",$this->session->userdata("matricula"));     
-        $query = $this->db->get();
-        return $query->result();
+        if($query->num_rows()==1){
+            return $query->result();
+        }else {
+            return false;
+        }
     }
     function getTutor(){
         $this->db->select("matricula,nombre,ap_paterno,ap_materno,correo"); 

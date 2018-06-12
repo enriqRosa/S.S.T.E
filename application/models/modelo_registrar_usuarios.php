@@ -66,22 +66,12 @@ class Modelo_registrar_usuarios extends CI_Model{
             'tipo_usuario' => $tipo,
             'status' => $status
         );
-        $this->session->set_userdata('tipo_usuario',$tipo);
-        if($this->session->userdata('tipo_usuario')=="CA"){
-            return $this->db->insert('c_academico', $data);
-        }
-        elseif ($this->session->userdata('tipo_usuario')=="CI") {
-            return $this->db->insert('c_institucional', $data);
-        }
+        return $this->db->insert('coordinador', $data);
     }
     //FUNCIÓN QUE MUESTRA A LOS TUTORES REGISTRADOS EN LA TABLA
     function mostrardatosCoordinador(){
-        //select * from tutor
-        $this->db->
-        select('matricula,nombre,ap_paterno,ap_materno,correo,telefono,status')
-        ->from('artist, country ')
-        ->where('c_academico.matricula','c_institucional.matricula');
-        
+        $query=$this->db->get('coordinador');
+        return $query;        
     }
 }
 ?>
