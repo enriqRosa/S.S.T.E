@@ -40,7 +40,7 @@ Class C_academico extends CI_Controller{
             }
             if($this->input->post("actual_pswd")==$db_password){
                 $fixed_pw=$this->input->post("new_pswd");
-                $update=$this->db->query("UPDATE usuarios SET pass='$fixed_pw' WHERE matricula='$db_matricula'")or die(mysqli_error());
+                $update=$this->db->query("UPDATE coordinador SET pass='$fixed_pw' WHERE matricula='$db_matricula'")or die(mysqli_error());
                 redirect('C_academico/index');
                 $this->session->set_flashdata('notification', 'User has been saved');
             }else{

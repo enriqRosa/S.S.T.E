@@ -8,98 +8,41 @@
         </div>
     </div>
 </section>
-
-
-
-
-
-
-
-
-<!--
-
-<section class="info_tutorado">
-    <div class="grupo">
-        <div class="info-1">
-            <i class="fas fa-id-card"></i>          
-        </div>
-    </div>
-    <div class="c-inputs-2">
-            <div class="mdl-textfield mdl-js-textfield">
-                <input class="mdl-textfield__input" type="text" id="sample1" disabled>
-            </div>
-    </div>
-    <div class="grupo">
-            <div class="info-1">
-                <span class="fs15 ls2 tajawalR">Apellido Paterno:</span>          
-            </div>
-            <div class="info-1">
-                <span class="fs15 ls2 tajawalR">Apellido Materno:</span>          
-            </div>
-            <div class="info-1">
-                <span class="fs15 ls2 tajawalR">Nombre(s):</span>          
-            </div>
-        </div>
-        <div class="c-inputs-2">
-            <div class="mdl-textfield mdl-js-textfield ">
-                <input class="mdl-textfield__input" type="text"disabled >
-            </div>
-            <div class="mdl-textfield mdl-js-textfield">
-                <input class="mdl-textfield__input" type="text" disabled >
-            </div>
-            <div class="mdl-textfield mdl-js-textfield">
-                <input class="mdl-textfield__input" type="text" disabled >
-            </div>
-        </div>
-        <div class="grupo">
-            <div class="info-1">
-                <span class="fs15 ls2 tajawalR">Grupo:</span>          
-            </div>
-            <div class="info-1">
-                <span class="fs15 ls2 tajawalR">Semestre:</span>          
-            </div>
-            <div class="info-1">
-                <span class="fs15 ls2 tajawalR">Turno:</span>          
-            </div>
-        </div>
-        <div class="c-inputs-2">
-            <div class="mdl-textfield mdl-js-textfield">
-                <input class="mdl-textfield__input" type="text" disabled>
-            </div>
-            <div class="mdl-textfield mdl-js-textfield ">
-                <input class="mdl-textfield__input" type="text"disabled >
-            </div>
-            <div class="mdl-textfield mdl-js-textfield">
-                <input class="mdl-textfield__input" type="text" disabled>
-            </div>
-        </div>
-        <div class="grupo-2">
-            <div class="info-1">
-                <span class="fs15 ls2 tajawalR">Correo:</span>          
-            </div>
-            <div class="info-1">
-                <span class="fs15 ls2 tajawalR">Telefono:</span>          
-            </div>
-        </div>
-        <div class="c-inputs-3">
-            <div class="mdl-textfield mdl-js-textfield ">
-                <input class="mdl-textfield__input" type="text" disabled>
-            </div>
-            <div class="mdl-textfield mdl-js-textfield ">
-                <input class="mdl-textfield__input" type="text"disabled >
-            </div>
-        </div>
-      </section>
-      <section class="tutorado-modalBtn">
-        <div class="modals">
-            <button class="mdl-button mdl-js-button mdl-color--blue-grey-800 mdl-js-ripple-effect mdl-color-text--blue-grey-100 btn-pass">
-            <i class="fas fa-key"></i>Cambiar Contraseña</button>
-            <button class="mdl-button mdl-js-button mdl-color--blue-grey-800 mdl-js-ripple-effect mdl-color-text--blue-grey-100 btn-editar">
-            <i class="fas fa-edit"></i>Editar Información</button>
-        </div>
-</section>-->
 <!--MODAL PARA CAMBIAR CONTRASEÑA-->
-
+<?php echo form_open("tutorado/cambiarPassword"); ?>
+<div class="pass-modal fancy">
+    <div class="modal-info">
+        <span class="mdl-dialog__title fs25 tajawalL ls1">Modificar Contraseña</span>
+            <form>
+                <div class="c-inputs-4" >
+                    <div class="mdl-textfield mdl-js-textfield ">
+                        <input class="mdl-textfield__input" type="password" name="actual_pswd">
+                        <label class="mdl-textfield__label tajawalL" required="required">Ingresa tu contraseña actual</label>
+                        <?php form_error("actual_pswd"); ?>
+                    </div>
+                </div>
+                <div class="c-inputs-4">
+                    <div class="mdl-textfield mdl-js-textfield ">
+                        <input class="mdl-textfield__input" type="password" name="new_pswd">
+                            <label class="mdl-textfield__label tajawalL" required="required">Ingresa nueva contraseña</label>
+                            <?php form_error("new_pswd"); ?>
+                    </div>
+                </div>
+                <div class="c-inputs-4">
+                    <div class="mdl-textfield mdl-js-textfield">
+                        <input class="mdl-textfield__input" type="password" name="repeat_pswd">
+                            <label class="mdl-textfield__label tajawalL" required="required">Confirmar contraseña</label>
+                            <?php form_error("repeat_pswd"); ?>
+                    </div>
+                </div>
+            </form>
+        <div class="modals">
+            <button class="close-fancy mdl-button mdl-js-button mdl-color--red-A200 mdl-js-ripple-effect mdl-color-text--blue-grey-100">Cancelar</button>
+            <button class="mdl-button mdl-js-button mdl-color--teal-700 mdl-js-ripple-effect mdl-color-text--blue-grey-100">Aceptar</button>
+        </div>
+    </div>  
+</div>
+<?php echo form_close(); ?> 
 <!--MODAL PARA REGISTRAR CAMPOS FALTANTES DEL ALUMNO-->
 <div class="editar-modal fancy ">
     <div class="modal-info-5">
@@ -126,4 +69,3 @@
             </div>            
     </div>  
 </div>
-
