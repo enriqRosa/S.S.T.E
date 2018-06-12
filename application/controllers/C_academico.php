@@ -15,7 +15,7 @@ Class C_academico extends CI_Controller{
         $this->load->library('session');
     }
     function index(){
-        $this->data['posts']=$this->Modelo_login->getAcademico();
+        $this->data['posts']=$this->Modelo_login->getCoordinador();
         $this->load->view('interfaces/interfaz_cacademico',$this->data);
     }
     function gestionTutoresTutorados(){
