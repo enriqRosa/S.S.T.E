@@ -49,5 +49,11 @@ Class C_academico extends CI_Controller{
             }
         }        
     }
+    //CERRAR SESIÒN
+    public function logout(){
+        $this->session->unset_userdata('matricula');
+        $this->session->sess_destroy();
+        redirect('login/index');
+    }
 }
 ?>

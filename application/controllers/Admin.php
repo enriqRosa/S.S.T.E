@@ -32,8 +32,11 @@ Class Admin extends CI_Controller{
     function nuevoTutor(){
         $mat = $this->input->post('matricula');
         $nom = $this->input->post('nombre');
+        $nom = strtoupper($nom);//INSERTA VALORES EN MAYÙSCULAS
         $paterno = $this->input->post('ap_paterno');
+        $paterno = strtoupper($paterno);
         $materno = $this->input->post('ap_materno');
+        $materno = strtoupper($materno);
         $correo = $this->input->post('correo');
         $telefono = $this->input->post('telefono');
         $pass = $this->input->post('pass');
@@ -62,10 +65,14 @@ Class Admin extends CI_Controller{
     function nuevoTutorado(){
         $mat = $this->input->post('matricula');
         $nom = $this->input->post('nombre');
+        $nom = strtoupper($nom);
         $paterno = $this->input->post('ap_paterno');
+        $paterno = strtoupper($paterno);
         $materno = $this->input->post('ap_materno');
+        $materno = strtoupper($materno);
         $carrera = $this->input->post('carrera');
         $semestre = $this->input->post('semestre');
+        $semestre = strtoupper($semestre);
         $prog = $this->input->post('programa');
         $pass = $this->input->post('pass');
         $tipo = $this->input->post('tipo_usuario');
@@ -83,8 +90,11 @@ Class Admin extends CI_Controller{
     function nuevoCoordinador(){
         $mat = $this->input->post('matricula');
         $nom = $this->input->post('nombre');
+        $nom = strtoupper($nom);
         $paterno = $this->input->post('ap_paterno');
+        $paterno = strtoupper($paterno);
         $materno = $this->input->post('ap_materno');
+        $materno= strtoupper($materno);
         $correo = $this->input->post('correo');
         $telefono = $this->input->post('telefono');
         $pass = $this->input->post('pass');
@@ -130,6 +140,11 @@ Class Admin extends CI_Controller{
     function seguimientoTutorial(){
         $this->load->view('interfaces/seguimiento_tutorial');
     }
-    
+    //CERRAR SESIÒN
+    public function logout(){
+        $this->session->unset_userdata('matricula');
+        $this->session->sess_destroy();
+        redirect('login/index');
+    }
 }
 ?>      

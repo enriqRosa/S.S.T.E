@@ -7,7 +7,7 @@
             <span class="text-dir fs40 ls2 tajawalR mdl-color-text--white "></i>Bienvenido (a)</i></span><br>
         </div>
         <div class="usuario">
-            <span class="text-dir fs40 ls2 tajawalR mdl-color-text--white"><i class="fas fa-quote-left white"></i>Tutor (a)<i class="fas fa-quote-right white"></i></span>
+            <span class="text-dir fs40 ls2 tajawalR mdl-color-text--white"><i class="fas fa-quote-left mdl-color-text--white"></i>Tutor (a)<i class="fas fa-quote-right mdl-color-text--white"></i></span>
         </div>    
     </div>
 </section>

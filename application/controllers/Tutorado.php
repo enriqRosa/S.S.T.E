@@ -31,5 +31,11 @@ Class Tutorado extends CI_Controller{
     function seguimientoTutorial(){
         $this->load->view('interfaces/seguimiento_tutorial');
     }
+    //CERRAR SESIÒN
+    public function logout(){
+        $this->session->unset_userdata('matricula');
+        $this->session->sess_destroy();
+        redirect('login/index');
+    }
 }
 ?>

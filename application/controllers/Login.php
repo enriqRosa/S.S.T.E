@@ -5,12 +5,12 @@ Class Login extends CI_Controller{
     function __construct(){
 
         parent::__construct();
-        //$this->load->view('temps/header');         
+        $this->load->view('temps/menu_index');         
         $this->load->helper('url');
         $this->load->helper('form');
         $this->load->model('Modelo_login');
         $this->load->library('session');
-        //$this->load->view('temps/footer');
+        //$this->load->view('interfaces/footer');
     }
     //CONTROLADOR PRINCIPAL AL CARGAR LA PÁGINA
     public function index(){
