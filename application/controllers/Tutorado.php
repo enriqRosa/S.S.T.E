@@ -31,7 +31,6 @@ Class Tutorado extends CI_Controller{
     function seguimientoTutorial(){
         $this->load->view('interfaces/seguimiento_tutorial');
     }
-<<<<<<< HEAD
     //FUNCIÓN PARA CAMBIAR LA CONTRASEÑA DEL ADMINISTRADOR PARA LA TABLA 'usuarios'
     function cambiarPassword(){
         $this->form_validation->set_rules('actual_pswd','Ingresa tu contraseña actual','required');
@@ -56,13 +55,11 @@ Class Tutorado extends CI_Controller{
                 $this->load->view("interfaces/interfaz_tutorado");
             }
         }        
-=======
     //CERRAR SESIÒN
     public function logout(){
         $this->session->unset_userdata('matricula');
         $this->session->sess_destroy();
         redirect('login/index');
->>>>>>> 72b7d489315636b6913404f02b56201830749f7a
     }
 }
 ?>
