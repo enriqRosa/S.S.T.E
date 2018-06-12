@@ -43,33 +43,14 @@ class Modelo_login extends CI_Model{
     //TUTOR
     function getTutor(){
         $this->db->select("matricula,nombre,ap_paterno,ap_materno,correo"); 
-<<<<<<< HEAD
-        $this->db->from('coordinador');  
-=======
         $this->db->from('tutor');  
->>>>>>> 72b7d489315636b6913404f02b56201830749f7a
         $this->db->where("matricula",$this->session->userdata("matricula"));     
         $query = $this->db->get();
         return $query->result();
     }
-<<<<<<< HEAD
-    //COORDINADOR TUTOR
-    function getTutor(){
-        $this->db->select("matricula,nombre,ap_paterno,ap_materno,correo"); 
-        $this->db->from('tutor');  
-=======
     //TUTORADO
     function getTutorado(){
         $this->db->select("matricula,nombre,ap_paterno,ap_materno,semestre,correo,telefono"); 
-        $this->db->from('tutorado');  
->>>>>>> 72b7d489315636b6913404f02b56201830749f7a
-        $this->db->where("matricula",$this->session->userdata("matricula"));     
-        $query = $this->db->get();
-        return $query->result();
-    }
-    //COORDINADOR TUTORADO
-    function getTutorado(){
-        $this->db->select("matricula,nombre,ap_paterno,ap_materno,correo"); 
         $this->db->from('tutorado');  
         $this->db->where("matricula",$this->session->userdata("matricula"));     
         $query = $this->db->get();
