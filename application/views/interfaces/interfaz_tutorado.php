@@ -8,122 +8,133 @@
         </div>
     </div>
 </section>
-
-
-
-
-
-
-
-
-<!--
-
-<section class="info_tutorado">
-    <div class="grupo">
+<section class="academico-info"> 
+    <div class="grupo-academico">
         <div class="info-1">
-            <i class="fas fa-id-card"></i>          
+            <span class="fs15 ls2 tajawalR">Número de Seguro:</span>          
         </div>
+        <div class="info-1">
+            <span class="fs15 ls2 tajawalR">Nombre(s):</span>          
+        </div>
+        <div class="info-1">
+            <span class="fs15 ls2 tajawalR">Apellido Paterno:</span>          
+        </div>
+        <div class="info-1">
+            <span class="fs15 ls2 tajawalR">Apellido Materno:</span> 
+        </div>        
     </div>
-    <div class="c-inputs-2">
+    <?php foreach($mostrardatosTutorado as $post){?>
+        <div class="c-inputs-4" >
+            <div class="mdl-textfield mdl-js-textfield ">
+                <?php echo $post->matricula;?> 
+            </div> 
+            <div class="mdl-textfield mdl-js-textfield ">
+                <?php echo $post->nombre;?> 
+            </div>                  
+            <div class="mdl-textfield mdl-js-textfield ">
+                <?php echo $post->ap_paterno;?>
+             </div>   
             <div class="mdl-textfield mdl-js-textfield">
-                <input class="mdl-textfield__input" type="text" id="sample1" disabled>
+                <?php echo $post->ap_materno;?>
             </div>
+        </div>
+    <?php }?> 
+    <div class="grupo-academico">
+        <div class="info-1">
+            <span class="fs15 ls2 tajawalR">Grupo:</span>          
+        </div>
+        <div class="info-1">
+            <span class="fs15 ls2 tajawalR">Semestre:</span>          
+        </div>
+        <div class="info-1">
+            <span class="fs15 ls2 tajawalR">Correo:</span>          
+        </div>
+        <div class="info-1">
+            <span class="fs15 ls2 tajawalR">Telefono:</span> 
+        </div>        
     </div>
-    <div class="grupo">
-            <div class="info-1">
-                <span class="fs15 ls2 tajawalR">Apellido Paterno:</span>          
-            </div>
-            <div class="info-1">
-                <span class="fs15 ls2 tajawalR">Apellido Materno:</span>          
-            </div>
-            <div class="info-1">
-                <span class="fs15 ls2 tajawalR">Nombre(s):</span>          
-            </div>
-        </div>
-        <div class="c-inputs-2">
+    <?php foreach($mostrardatosTutorado as $post){?>
+        <div class="c-inputs-4" >
             <div class="mdl-textfield mdl-js-textfield ">
-                <input class="mdl-textfield__input" type="text"disabled >
-            </div>
-            <div class="mdl-textfield mdl-js-textfield">
-                <input class="mdl-textfield__input" type="text" disabled >
-            </div>
-            <div class="mdl-textfield mdl-js-textfield">
-                <input class="mdl-textfield__input" type="text" disabled >
-            </div>
-        </div>
-        <div class="grupo">
-            <div class="info-1">
-                <span class="fs15 ls2 tajawalR">Grupo:</span>          
-            </div>
-            <div class="info-1">
-                <span class="fs15 ls2 tajawalR">Semestre:</span>          
-            </div>
-            <div class="info-1">
-                <span class="fs15 ls2 tajawalR">Turno:</span>          
-            </div>
-        </div>
-        <div class="c-inputs-2">
-            <div class="mdl-textfield mdl-js-textfield">
-                <input class="mdl-textfield__input" type="text" disabled>
-            </div>
+            
+            </div> 
             <div class="mdl-textfield mdl-js-textfield ">
-                <input class="mdl-textfield__input" type="text"disabled >
-            </div>
+                <?php echo $post->semestre;?> 
+            </div>                  
+            <div class="mdl-textfield mdl-js-textfield ">
+                <?php echo $post->correo;?>
+             </div>   
             <div class="mdl-textfield mdl-js-textfield">
-                <input class="mdl-textfield__input" type="text" disabled>
+                <?php echo $post->telefono;?>
             </div>
-        </div>
-        <div class="grupo-2">
-            <div class="info-1">
-                <span class="fs15 ls2 tajawalR">Correo:</span>          
-            </div>
-            <div class="info-1">
-                <span class="fs15 ls2 tajawalR">Telefono:</span>          
-            </div>
-        </div>
-        <div class="c-inputs-3">
-            <div class="mdl-textfield mdl-js-textfield ">
-                <input class="mdl-textfield__input" type="text" disabled>
-            </div>
-            <div class="mdl-textfield mdl-js-textfield ">
-                <input class="mdl-textfield__input" type="text"disabled >
-            </div>
-        </div>
-      </section>
-      <section class="tutorado-modalBtn">
-        <div class="modals">
-            <button class="mdl-button mdl-js-button mdl-color--blue-grey-800 mdl-js-ripple-effect mdl-color-text--blue-grey-100 btn-pass">
-            <i class="fas fa-key"></i>Cambiar Contraseña</button>
-            <button class="mdl-button mdl-js-button mdl-color--blue-grey-800 mdl-js-ripple-effect mdl-color-text--blue-grey-100 btn-editar">
-            <i class="fas fa-edit"></i>Editar Información</button>
-        </div>
-</section>-->
-<!--MODAL PARA CAMBIAR CONTRASEÑA-->
-
+        </div> 
+    <?php }?> 
+</section>
+<div class="modals">
+    <button class="close-fancy mdl-button mdl-js-button mdl-color--blue-900 mdl-js-ripple-effect mdl-color-text--white btn-editar">Editar Información</button>
+    <button class="mdl-button mdl-js-button mdl-color--blue-900 mdl-js-ripple-effect mdl-color-text--white btn-pass">Cambiar Contraseña</button>
+</div>
 <!--MODAL PARA REGISTRAR CAMPOS FALTANTES DEL ALUMNO-->
-<div class="editar-modal fancy ">
-    <div class="modal-info-5">
-        <span class="fs25 tajawalL ls1">Editar Información</span>
+<?php echo form_open("Tutorado/editarInfo"); ?>
+    <div class="editar-modal fancy ">
+        <div class="modal-info-5">
+            <span class="fs25 tajawalL ls1">Editar Información</span>
+                <form>
+                    <div class="c-inputs-4">
+                        <div class="form-icons"><i class="fas fa-envelope"></i></div>
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <input class="mdl-textfield__input" type="text" name="correo">
+                                <label class="mdl-textfield__label tajawalL" required="text">Correo</label>
+                        </div>
+                    </div>
+                    <div class="c-inputs-4">
+                        <div class="form-icons"><i class="fas fa-mobile-alt"></i></div>
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <input class="mdl-textfield__input" type="text" name="telefono">
+                                <label class="mdl-textfield__label tajawalL" required="text">Telefono</label>
+                        </div>
+                    </div>
+                </form>
+                <div class="modals">
+                    <input type="button" class="close-fancy mdl-button mdl-js-button mdl-color--red-A200 mdl-js-ripple-effect mdl-color-text--blue-grey-100" value="CANCELAR"></input>
+                    <button class="mdl-button mdl-js-button mdl-color--teal-700 mdl-js-ripple-effect mdl-color-text--blue-grey-100">Aceptar</button>
+                </div>            
+        </div>  
+    </div>
+<?php echo form_close(); ?> 
+<!--MODAL PARA CAMBIAR CONTRASEÑA-->
+<?php echo form_open("tutorado/cambiarPassword"); ?>
+<div class="pass-modal fancy">
+    <div class="modal-info">
+        <span class="mdl-dialog__title fs25 tajawalL ls1">Modificar Contraseña</span>
             <form>
-                <div class="c-inputs-4">
-                    <div class="form-icons"><i class="fas fa-envelope"></i></div>
-                    <div class="mdl-textfield mdl-js-textfield">
-                        <input class="mdl-textfield__input" type="text">
-                            <label class="mdl-textfield__label tajawalL" required="text">Correo</label>
+                <div class="c-inputs-4" >
+                    <div class="mdl-textfield mdl-js-textfield ">
+                        <input class="mdl-textfield__input" type="password" name="actual_pswd">
+                        <label class="mdl-textfield__label tajawalL" required="required">Ingresa tu contraseña actual</label>
+                        <?php form_error("actual_pswd"); ?>
                     </div>
                 </div>
                 <div class="c-inputs-4">
-                    <div class="form-icons"><i class="fas fa-mobile-alt"></i></div>
+                    <div class="mdl-textfield mdl-js-textfield ">
+                        <input class="mdl-textfield__input" type="password" name="new_pswd">
+                            <label class="mdl-textfield__label tajawalL" required="required">Ingresa nueva contraseña</label>
+                            <?php form_error("new_pswd"); ?>
+                    </div>
+                </div>
+                <div class="c-inputs-4">
                     <div class="mdl-textfield mdl-js-textfield">
-                        <input class="mdl-textfield__input" type="text">
-                            <label class="mdl-textfield__label tajawalL" required="text">Telefono</label>
+                        <input class="mdl-textfield__input" type="password" name="repeat_pswd">
+                            <label class="mdl-textfield__label tajawalL" required="required">Confirmar contraseña</label>
+                            <?php form_error("repeat_pswd"); ?>
                     </div>
                 </div>
             </form>
-            <div class="modals">
-                <button class="close-fancy mdl-button mdl-js-button mdl-color--red-A200 mdl-js-ripple-effect mdl-color-text--blue-grey-100">Cancelar</button>
-                <button class="mdl-button mdl-js-button mdl-color--teal-700 mdl-js-ripple-effect mdl-color-text--blue-grey-100">Aceptar</button>
-            </div>            
+        <div class="modals">
+            <input type="button" class="close-fancy mdl-button mdl-js-button mdl-color--red-A200 mdl-js-ripple-effect mdl-color-text--blue-grey-100" value="CANCELAR"></input>
+            <button class="mdl-button mdl-js-button mdl-color--teal-700 mdl-js-ripple-effect mdl-color-text--blue-grey-100">Aceptar</button>
+        </div>
     </div>  
 </div>
-
+<?php echo form_close(); ?> 
+<?php include_once 'footer.php' ?>

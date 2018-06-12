@@ -40,9 +40,18 @@ class Modelo_login extends CI_Model{
             return false;
         }
     }
+    //TUTOR
     function getTutor(){
         $this->db->select("matricula,nombre,ap_paterno,ap_materno,correo"); 
         $this->db->from('tutor');  
+        $this->db->where("matricula",$this->session->userdata("matricula"));     
+        $query = $this->db->get();
+        return $query->result();
+    }
+    //TUTORADO
+    function getTutorado(){
+        $this->db->select("matricula,nombre,ap_paterno,ap_materno,semestre,correo,telefono"); 
+        $this->db->from('tutorado');  
         $this->db->where("matricula",$this->session->userdata("matricula"));     
         $query = $this->db->get();
         return $query->result();

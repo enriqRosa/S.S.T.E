@@ -52,6 +52,14 @@ class Modelo_registrar_usuarios extends CI_Model{
         $query=$this->db->get('tutorado');
         return $query;        
     }
+    function actualizarTutorado($correo,$telefono){        
+        $data=array(
+            'correo' => $correo,
+            'telefono' => $telefono
+        );
+        $this->db->where('matricula', $this->session->userdata("matricula"));
+        $this->db->update('tutorado', $data);
+    }
     /*************************************************FUNCIONES DEL COORDINADOR*************************************************************** */
     //FUNCIÓN PARA REGISTRAR A LOS TUTORADOS -->DEL CONTROLADOR ADMIN
     function registrarCoordinador($mat,$nom,$paterno,$materno,$correo,$telefono,$pass,$tipo,$status){

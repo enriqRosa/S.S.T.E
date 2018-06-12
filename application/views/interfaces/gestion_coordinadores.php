@@ -23,9 +23,6 @@
                     <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14 mdl-color--black white">Correo</td>
                     <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14 mdl-color--black white">Telefono</td>
                     <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14 mdl-color--black white">Status</td>
-                    <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14">
-                        <button class="mdl-button mdl-js-button mdl-color--red-800 mdl-js-ripple-effect mdl-color-text--white btn-editar">
-                        <i class="fas fa-user"></i>Editar</td></button>
                 </tr>
             </thead>
             <?php
@@ -53,7 +50,7 @@
                 }else{
             ?>
                 <tr>
-                    <td>No se encontro el tutor</td>
+                    <td>No se encontro el coordinador</td>
                 </tr>
             <?php 
                 }
