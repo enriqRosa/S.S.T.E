@@ -1,21 +1,11 @@
 <div class="editar-modal">
     <div class="modal-info-2">
         <span class="fs25 tajawalL ls1">Editar tutor</span>
-        <?php
-          
-                foreach($actualizarTutor as $row){
-                    $mat= $row->matricula;
-                }
-        ?>
-            
-
-
-
-
+        <?php foreach($actualizarTutor as $post){?>
                 <div class="c-inputs-4" >
                     <div class="form-icons"><i class="fas fa-id-card"></i></div>
                     <div class="mdl-textfield mdl-js-textfield ">
-                        <input class="mdl-textfield__input" type="text" name="matricula" value="<?php echo $mat; ?>">
+                        <input class="mdl-textfield__input" type="text" name="matricula" value=" <?php echo $post->matricula;?>">
                         <label class="mdl-textfield__label tajawalL" required="required">Matricula</label>
                     </div>
                 </div>
@@ -83,6 +73,7 @@
                         </label>
                     </div>
                 </div>
+                <?php }?> 
             <div class="modals">
                 <input  class="close-fancy mdl-button mdl-js-button mdl-color--red-A200 mdl-js-ripple-effect mdl-color-text--blue-grey-100">Cancelar</button>
                 <button class="mdl-button mdl-js-button mdl-color--teal-700 mdl-js-ripple-effect mdl-color-text--blue-grey-100">Aceptar</button>

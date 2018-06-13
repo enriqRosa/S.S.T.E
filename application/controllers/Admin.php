@@ -49,9 +49,9 @@ Class Admin extends CI_Controller{
     }
     //FUNCIÓN PARA EDITAR LOS DATOS DEL TUTOR
     function editardatosTutor(){
-        $mat=$this->uri->segment(3);
-        $this->load->model('modelo_registrar_usuarios');
-        $this->data['actualizarTutor']=$this->modelo_registrar_usuarios->traerdatosTutor($mat);
+        
+        
+        $this->data['actualizarTutor']=$this->modelo_registrar_usuarios->traerdatosTutor();
         
         $this->load->view('interfaces/modal_editarTutor',$this->data);
     }

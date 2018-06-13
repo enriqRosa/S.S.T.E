@@ -24,10 +24,11 @@ class Modelo_registrar_usuarios extends CI_Model{
         return $query;        
     }
     //FUNCIÓN QUE MUESTRA LOS DATOS DEL TUTOR PARA SER EDITADOS
-    function traerdatosTutor($mat){
-        $this->db->where("matricula",$mat);
-        $query=$this->db->get("tutor");
-        return $query;
+    function traerdatosTutor(){
+        $this->db->select("nombre,ap_paterno,ap_materno"); 
+        $this->db->from('administrador');  
+        $this->db->where("matricula",$this->session->userdata("matricula"));
+        $query=$this->db->get();
     }
 /*************************************************FUNCIONES PARA EL TUTORADO*************************************************************** */
     //FUNCIÓN PARA REGISTRAR A LOS TUTORADOS -->DEL CONTROLADOR ADMIN
