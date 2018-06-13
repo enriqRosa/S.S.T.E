@@ -54,7 +54,8 @@ Class Tutorado extends CI_Controller{
                 echo "ERROR";
                 $this->load->view("interfaces/interfaz_tutorado");
             }
-        }        
+        }
+    }        
     //CERRAR SESIÒN
     public function logout(){
         $this->session->unset_userdata('matricula');
