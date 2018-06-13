@@ -30,6 +30,7 @@ Class Admin extends CI_Controller{
     }
     //FUNCIÓN PARA AGREGAR UN NUEVO TUTOR
     function nuevoTutor(){
+        $this->load->view('interfaces/gestion_tutores');
         $mat = $this->input->post('matricula');
         $nom = $this->input->post('nombre');
         $nom = strtoupper($nom);//INSERTA VALORES EN MAYÙSCULAS
@@ -42,19 +43,33 @@ Class Admin extends CI_Controller{
         $pass = $this->input->post('pass');
         $status = $this->input->post('status');
         $tipo = $this->input->post('tipo_usuario');
-        $insertTutor = $this->modelo_registrar_usuarios->registrarTutores($mat,$nom,$paterno,$materno,$correo,$telefono,$pass,$status,$tipo);
-        //SE VUELVE A CARGAR LOS DATOS DEL TUTOR EN LA TABLA
-        $this->data['mostrardatosTutor']=$this->modelo_registrar_usuarios->mostrardatosTutor();
-        $this->load->view('interfaces/gestion_tutores',$this->data);
+
+        $data = array(
+            'matricula' => $mat,
+            'nombre' => $nom,
+            'ap_paterno' => $paterno,
+            'ap_materno' => $materno,
+            'correo' => $correo,
+            'telefono' => $telefono,
+            'pass' => $pass,
+            'status' => $status,
+            'tipo_usuario' => $tipo
+        );
+
+        if ($this->modelo_registrar_usuarios->registrarTutores($data)){
+            //SE LLAMA A LA FUNCIÓN PRINCIPAL 'function gestion_tutores'
+            $this->gestion_tutores();
+        }else{
+            echo "no registrado";
+        }
     }
-    //FUNCIÓN PARA EDITAR LOS DATOS DEL TUTOR
-    function editardatosTutor(){
-        
-        
-        $this->data['actualizarTutor']=$this->modelo_registrar_usuarios->traerdatosTutor();
-        
-        $this->load->view('interfaces/modal_editarTutor',$this->data);
-    }
+        function editar(){
+            $matricula=$this->input->get('matricula');
+            $this->load->model('modelo_registrar_usuarios');
+            $this->data['mostrardatosTutor']=$this->modelo_registrar_usuarios->traerdatosTutor($matricula);
+            $this->load->view('interfaces/modal_editarTutor',$this->data);
+        }
+    
     /*************************************************FUNCIONES PARA TUTORADOS*************************************************************** */
     //FUNCION PARA (redireccionar) EN EL MENÚ DEL ADMIN
     function gestionTutorados(){

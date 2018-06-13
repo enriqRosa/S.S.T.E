@@ -3,32 +3,25 @@ class Modelo_registrar_usuarios extends CI_Model{
 
     /*************************************************FUNCIONES PARA EL TUTOR*************************************************************** */
     //FUNCIÓN PARA REGISTRAR A LOS TUTORES -->DEL CONTROLADOR ADMIN
-    function registrarTutores($mat,$nom,$paterno,$materno,$correo,$telefono,$pass,$status,$tipo){
-        $data = array(
-            'matricula' => $mat,
-            'nombre' => $nom,
-            'ap_paterno' => $paterno,
-            'ap_materno' => $materno,
-            'correo' => $correo,
-            'telefono' => $telefono,
-            'pass' => $pass,
-            'status' => $status,
-            'tipo_usuario' => $tipo
-        );
-        return $this->db->insert('tutor', $data);
+    function registrarTutores($data){
+        $count=$this->db->insert('tutor',$data);        
+        if($count>0){
+            return true;
+        }else{
+            return false;
+        }
     }
     //FUNCIÓN QUE MUESTRA A LOS TUTORES REGISTRADOS EN LA TABLA
     function mostrardatosTutor(){
         //select * from tutor
-        $query=$this->db->get('tutor');
-        return $query;        
+        $data=$this->db->get('tutor');
+        return $data->result();
     }
-    //FUNCIÓN QUE MUESTRA LOS DATOS DEL TUTOR PARA SER EDITADOS
-    function traerdatosTutor(){
-        $this->db->select("nombre,ap_paterno,ap_materno"); 
-        $this->db->from('administrador');  
-        $this->db->where("matricula",$this->session->userdata("matricula"));
-        $query=$this->db->get();
+    //FUNCIÓN QUE MUESTRA LOS DATOS DEL TUTOR PARA SER EDITADOS MEDIANTE LA 'matricula'
+    function traerdatosTutor($matricula){
+        $this->db->where('matricula',$matricula);
+        $data=$this->db->get('tutor');
+        return $data->result();
     }
 /*************************************************FUNCIONES PARA EL TUTORADO*************************************************************** */
     //FUNCIÓN PARA REGISTRAR A LOS TUTORADOS -->DEL CONTROLADOR ADMIN

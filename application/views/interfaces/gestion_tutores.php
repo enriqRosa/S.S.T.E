@@ -13,7 +13,7 @@
         <i class="fas fa-user-plus"></i>Registrar nuevo Tutor</button>
     </div>
     <section class="table">
-        <table class="mdl-data-table mdl-js-data-table  mdl-shadow--3dp">
+    <table class="mdl-data-table mdl-js-data-table  mdl-shadow--3dp">
             <thead>
                 <tr>
                     <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14 mdl-color--black white">Matricula</td>
@@ -23,41 +23,31 @@
                     <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14 mdl-color--black white">Correo</td>
                     <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14 mdl-color--black white">Telefono</td>
                     <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14 mdl-color--black white">Status</td>
-                    
                 </tr>
             </thead>
-            <!--MUESTRA CADA DATO POR FILA DEL TUTOR REGISTRADO-->
-            <?php
-                if($mostrardatosTutor->num_rows()>0){
-                    foreach ($mostrardatosTutor->result() as $row) {
-            ?>
-                <tr>
-                    <td class="tajawalL fs16 "><?php echo $row->matricula; ?></td>
-                    <td class="tajawalL fs16 "><?php echo $row->nombre; ?></td>
-                    <td class="tajawalL fs16 "><?php echo $row->ap_paterno; ?></td>
-                    <td class="tajawalL fs16 "><?php echo $row->ap_materno; ?></td>
-                    <td class="tajawalL fs16 "><?php echo $row->correo; ?></td>
-                    <td class="tajawalL fs16 "><?php echo $row->telefono; ?></td>
-                    <td class="tajawalL fs16 "><?php echo $row->status; ?></td>
-                    <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14 ">
-                        <a href="<?= base_url() ?>Admin/editardatosTutor ">
-                            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--white mdl-color--red-800">
-                                <i class="fas fa-edit"></i>Editar
-                            </button>
-                        </a>
-                    </td>
-                </tr>
-            <?php
-                    }
-                }else{
-            ?>
-                <tr>
-                    <td>No se encontro el tutor</td>
-                </tr>
-            <?php 
-                }
-            ?>
-        </table>    
+    <?php
+        foreach ($mostrardatosTutor as $row) {   
+    ?>
+        <tr>
+            <td class="tajawalL ls1 fs14"><?php echo $row->matricula; ?></td>
+            <td class="tajawalL ls1 fs14"><?php echo $row->nombre; ?></td>
+            <td class="tajawalL ls1 fs14"><?php echo $row->ap_paterno; ?></td>
+            <td class="tajawalL ls1 fs14"><?php echo $row->ap_materno; ?></td>
+            <td class="tajawalL ls1 fs14"><?php echo $row->correo; ?></td>
+            <td class="tajawalL ls1 fs14"><?php echo $row->telefono; ?></td>
+            <td class="tajawalL ls1 fs14"><?php echo $row->status; ?></td>
+            <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14 ">
+                <a href="<?= base_url() ?>Admin/editar/?matricula=<?php echo $row->matricula; ?>">
+                    <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--white mdl-color--red-800">
+                        <i class="fas fa-edit"></i>Editar
+                    </button>
+                </a>
+            </td>
+        </tr>
+    <?php
+    }
+    ?>            
+        </table>  
     </section>
 <!--MODAL PARA REGISTRAR NUEVO TUTOR
     SE LLAMA LA FUNCIÓN 'nuevoTutor' DEL CONTROLADOR 'Admin'-->
