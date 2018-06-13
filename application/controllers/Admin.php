@@ -58,7 +58,7 @@ Class Admin extends CI_Controller{
 
         if ($this->modelo_registrar_usuarios->registrarTutores($data)){
             //SE LLAMA A LA FUNCIÓN PRINCIPAL 'function gestion_tutores'
-            $this->gestion_tutores();
+            $this->gestionTutores();
         }else{
             echo "no registrado";
         }
