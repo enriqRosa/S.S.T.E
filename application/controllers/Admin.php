@@ -63,13 +63,12 @@ Class Admin extends CI_Controller{
             echo "no registrado";
         }
     }
-        function editar(){
-            $this->load->view('temps/header_modal');
-            $matricula=$this->input->get('matricula');
-            $this->data['mostrardatosTutor']=$this->modelo_registrar_usuarios->traerdatosTutor($matricula);
-            $this->load->view('interfaces/modal_editarTutor',$this->data);
-        }
-    
+    function editar(){
+        $this->load->view('temps/header_modal');
+        $matricula=$this->input->get('matricula');
+        $this->data['mostrardatosTutor']=$this->modelo_registrar_usuarios->traerdatosTutor($matricula);
+        $this->load->view('interfaces/modal_editarTutor',$this->data);
+    }
     /*************************************************FUNCIONES PARA TUTORADOS*************************************************************** */
     //FUNCION PARA (redireccionar) EN EL MENÚ DEL ADMIN
     function gestionTutorados(){
@@ -92,10 +91,31 @@ Class Admin extends CI_Controller{
         $pass = $this->input->post('pass');
         $tipo = $this->input->post('tipo_usuario');
         $status = $this->input->post('status');
-        $insertTutorado = $this->modelo_registrar_usuarios->registrarTutorado($mat,$nom,$paterno,$materno,$carrera,$semestre,$prog,$pass,$tipo,$status);
-        //SE VUELVE A CARGAR LOS DATOS DEL TUTORADO EN LA TABLA
-        $this->data['mostrardatosTutorado']=$this->modelo_registrar_usuarios->mostrardatosTutorado();
-        $this->load->view('interfaces/gestion_tutorados',$this->data);
+        
+        $data = array(
+            'matricula' => $mat,
+            'nombre' => $nom,
+            'ap_paterno' => $paterno,
+            'ap_materno' => $materno,
+            'carrera' => $carrera,
+            'semestre' => $semestre,
+            'programa' => $prog,
+            'pass' => $pass,
+            'tipo_usuario' => $tipo,
+            'status' => $status
+        );
+        if ($this->modelo_registrar_usuarios->registrarTutorado($data)){
+            //SE LLAMA A LA FUNCIÓN PRINCIPAL 'function gestion_tutores'
+            $this->gestionTutorados();
+        }else{
+            echo "no registrado";
+        }
+    }
+    function editarTutorado(){
+        $this->load->view('temps/header_modal');
+        $matricula=$this->input->get('matricula');
+        $this->data['mostrardatosTutorado']=$this->modelo_registrar_usuarios->traerdatosTutorado($matricula);
+        $this->load->view('interfaces/modal_editarTutorado',$this->data);
     }
     /*************************************************FUNCIONES PARA COORDINADORES************************************************************* */
     function gestionCoordinadores(){

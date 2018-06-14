@@ -68,6 +68,7 @@
                         </div>
                             <?php } ?>
                     </div>
+                    </div>
                     <div class="modals">
                         <a href="<?= base_url() ?>Admin/gestionTutores">
                             <input type="button" class="close-fancy mdl-button mdl-js-button mdl-color--red-A200 mdl-js-ripple-effect mdl-color-text--blue-grey-100" value="CANCELAR"></button>

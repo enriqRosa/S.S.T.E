@@ -31,8 +31,7 @@
             </thead>
             <!--MUESTRA CADA DATO POR FILA DEL TUTORADO REGISTRADO-->
             <?php
-                if($mostrardatosTutorado->num_rows()>0){
-                    foreach ($mostrardatosTutorado->result() as $row) {
+                foreach ($mostrardatosTutorado as $row) {
             ?>
                 <tr>
                     <td class="tajawalL fs16 "><?php echo $row->matricula; ?></td>
@@ -46,21 +45,14 @@
                     <td class="tajawalL fs16 "><?php echo $row->telefono; ?></td>
                     <td class="tajawalL fs16 "><?php echo $row->status; ?></td>
                     <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14 ">
-                       
+                        <a href="<?= base_url() ?>Admin/editarTutorado/?matricula=<?php echo $row->matricula; ?>">
                             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--white mdl-color--red-800">
                                 <i class="fas fa-edit"></i>Editar
                             </button>
-                        
+                        </a>
                     </td>
                 </tr>
             <?php
-                    }
-                }else{
-            ?>
-                <tr>
-                    <td>No se encontro el tutorado</td>
-                </tr>
-            <?php 
                 }
             ?>
     </table>
@@ -185,30 +177,4 @@
     </div>
 <!--SE CIERRA EL FORMULARIO PARA EL PRIMER MODAL-->
 <?php echo form_close(); ?>
-<!--MODAL PARA EDITAR EL STATUS DE ALUMNO-->
-<div class="editar-status fancy ">
-    <div class="modal-info-4">
-        <span class="mdl-dialog__title fs25 tajawalL ls1">Editar Status</span>
-            <form>
-                <div class="c-inputs-4">
-                    <div class="status">
-                        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-3">
-                            <input type="radio" id="option-3" class="mdl-radio__button" name="options" value="ACTIVO">
-                            <span class="mdl-radio__label tajawalR ls2">Activo</span>
-                        </label>
-                    </div>
-                    <div class="status">
-                        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-4">
-                            <input type="radio" id="option-4" class="mdl-radio__button" name="options" value="INACTIVO">
-                            <span class="mdl-radio__label tajawalR ls2">Inactivo</span>
-                        </label>
-                    </div>
-                </div>
-            </form>
-            <div class="modals">
-                <button class="close-fancy mdl-button mdl-js-button mdl-color--red-A200 mdl-js-ripple-effect mdl-color-text--blue-grey-100">Cancelar</button>
-                <button class="mdl-button mdl-js-button mdl-color--teal-700 mdl-js-ripple-effect mdl-color-text--blue-grey-100">Aceptar</button>
-            </div>            
-    </div>  
-</div>
 <?php include_once 'footer.php' ?>

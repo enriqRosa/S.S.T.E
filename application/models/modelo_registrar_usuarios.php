@@ -25,27 +25,26 @@ class Modelo_registrar_usuarios extends CI_Model{
     }
 /*************************************************FUNCIONES PARA EL TUTORADO*************************************************************** */
     //FUNCIÓN PARA REGISTRAR A LOS TUTORADOS -->DEL CONTROLADOR ADMIN
-    function registrarTutorado($mat,$nom,$paterno,$materno,$carrera,$semestre,$prog,$pass,$tipo,$status){
-        $data = array(
-            'matricula' => $mat,
-            'nombre' => $nom,
-            'ap_paterno' => $paterno,
-            'ap_materno' => $materno,
-            'carrera' => $carrera,
-            'semestre' => $semestre,
-            'programa' => $prog,
-            'pass' => $pass,
-            'tipo_usuario' => $tipo,
-            'status' => $status
-        );
-        return $this->db->insert('tutorado', $data);
+    function registrarTutorado($data){
+        $count=$this->db->insert('tutorado',$data);        
+        if($count>0){
+            return true;
+        }else{
+            return false;
+        }
     }
     //FUNCIÓN QUE MUESTRA A LOS TUTORES REGISTRADOS EN LA TABLA
     function mostrardatosTutorado(){
         //select * from tutor
-        $query=$this->db->get('tutorado');
-        return $query;        
+        $data=$this->db->get('tutorado');
+        return $data->result();       
     }
+    function traerdatosTutorado($matricula){
+        $this->db->where('matricula',$matricula);
+        $data=$this->db->get('tutorado');
+        return $data->result();
+    }
+    //FUNCIÓN PARA EL TUTORADO, NO PARA EL ADMIN 
     function actualizarTutorado($correo,$telefono){        
         $data=array(
             'correo' => $correo,
