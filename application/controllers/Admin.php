@@ -64,8 +64,8 @@ Class Admin extends CI_Controller{
         }
     }
         function editar(){
+            $this->load->view('temps/header_modal');
             $matricula=$this->input->get('matricula');
-            $this->load->model('modelo_registrar_usuarios');
             $this->data['mostrardatosTutor']=$this->modelo_registrar_usuarios->traerdatosTutor($matricula);
             $this->load->view('interfaces/modal_editarTutor',$this->data);
         }
