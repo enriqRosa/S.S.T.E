@@ -34,7 +34,7 @@
                         </button>
                     </td>
                     <td>
-                        <a href="<?= base_url() ?>Admin/seguimientoTutorial">
+                        <a href="<?= base_url() ?>Seguimiento/index">
                             <button 
                                 class="mdl-button mdl-js-button mdl-color--grey-700 mdl-js-ripple-effect mdl-color-text--white">
                                 <i class="fas fa-eye"></i>Seguimiento
