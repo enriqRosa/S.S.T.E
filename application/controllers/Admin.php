@@ -218,8 +218,33 @@ Class Admin extends CI_Controller{
         $matricula=$this->input->get('matricula');
         $this->data['mostrardatosCoord']=$this->modelo_registrar_usuarios->traerdatosCoordinador($matricula);
         $this->load->view('interfaces/modal_editarCoordinador',$this->data);
+    }
+    function actualizarCoord(){
+        $mat = $this->input->post('matricula');
+        $nom = $this->input->post('nombre');
+        $nom = strtoupper($nom);
+        $paterno = $this->input->post('ap_paterno');
+        $paterno = strtoupper($paterno);
+        $materno = $this->input->post('ap_materno');
+        $materno= strtoupper($materno);
+        $correo = $this->input->post('correo');
+        $telefono = $this->input->post('telefono');
+        $status = $this->input->post('status');
+        
+        $data = array(
+            'matricula' => $mat,
+            'nombre' => $nom,
+            'ap_paterno' => $paterno,
+            'ap_materno' => $materno,
+            'correo' => $correo,
+            'telefono' => $telefono,
+            'status' => $status
+        );
+        if($this->modelo_registrar_usuarios->updateCoord($data,$mat)){
+            $this->data['mostrardatosCoord']=$this->modelo_registrar_usuarios->mostrardatosCoordinador();
+            $this->load->view('interfaces/gestion_coordinadores',$this->data);
         }
-    
+    }
     /******************************************************************************************************************************/
     function tutoresTutorados(){
         $this->load->view('interfaces/gestion_tutores_tutorados');

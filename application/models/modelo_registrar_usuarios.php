@@ -83,5 +83,10 @@ class Modelo_registrar_usuarios extends CI_Model{
         $data=$this->db->get('coordinador');
         return $data->result();
     }
+    function updateCoord($data,$mat){
+        $this->db->where('matricula',$mat);
+        $this->db->update('coordinador', $data);
+        return true;
+    }
 }
 ?>
