@@ -23,6 +23,7 @@
                     <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14 mdl-color--black white">Carrera</td>
                     <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14 mdl-color--black white">Semestre</td>
                     <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14 mdl-color--black white">Programa</td>
+                    <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14 mdl-color--black white">Tutoría</td>
                     <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14 mdl-color--black white">Correo</td>
                     <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14 mdl-color--black white">Telefono</td>
                     <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14 mdl-color--black white">Status</td>
@@ -41,6 +42,7 @@
                     <td class="tajawalL fs16 "><?php echo $row->carrera; ?></td>
                     <td class="tajawalL fs16 "><?php echo $row->semestre; ?></td>
                     <td class="tajawalL fs16 "><?php echo $row->programa; ?></td>
+                    <td class="tajawalL fs16 "><?php echo $row->tipo_tutoria; ?></td>
                     <td class="tajawalL fs16 "><?php echo $row->correo; ?></td>
                     <td class="tajawalL fs16 "><?php echo $row->telefono; ?></td>
                     <td class="tajawalL fs16 "><?php echo $row->status; ?></td>
@@ -105,7 +107,7 @@
                             <input type="text" value="" class="mdl-textfield__input mdl-color-text--black" id="">
                             <input type="hidden" value="" name="semestre">
                                 <label for="" class="mdl-textfield__label">Semestre</label>
-                                    <ul for="" class="mdl-menu mdl-menu--bottom-left mdl-js-menu">
+                                    <ul for=""class="mdl-menu mdl-menu--bottom-left mdl-js-menu">
                                         <li class="mdl-menu__item" data-val="PRIMERO">PRIMERO</li>
                                         <li class="mdl-menu__item" data-val="SEGUNDO">SEGUNDO</li>
                                         <li class="mdl-menu__item" data-val="TERCERO">TERCERO</li>
@@ -124,8 +126,15 @@
                     <div class="c-inputs-4">
                         <div class="form-icons"><i class="fas fa-book"></i></div>
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <input class="mdl-textfield__input" type="text" value="TUTORÍA INDIVIDUAL" name="programa">
+                            <input class="mdl-textfield__input" type="text" value="ESPECIAL" name="programa">
                                 <label class="mdl-textfield__label tajawalL" required="text">Programa</label>
+                        </div>
+                    </div>
+                    <div class="c-inputs-4">
+                        <div class="form-icons"><i class="fas fa-book"></i></div>
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <input class="mdl-textfield__input" type="text" value="TUTORÍA INDIVIDUAL" name="tipo_tutoria">
+                                <label class="mdl-textfield__label tajawalL" required="text">Tutoría</label>
                         </div>
                     </div>
                     <div class="c-inputs-4">

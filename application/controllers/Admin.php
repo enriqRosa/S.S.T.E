@@ -55,7 +55,6 @@ Class Admin extends CI_Controller{
             'status' => $status,
             'tipo_usuario' => $tipo
         );
-
         if ($this->modelo_registrar_usuarios->registrarTutores($data)){
             //SE LLAMA A LA FUNCIÓN PRINCIPAL 'function gestion_tutores'
             $this->gestionTutores();
@@ -94,7 +93,6 @@ Class Admin extends CI_Controller{
             $this->data['mostrardatosTutor']=$this->modelo_registrar_usuarios->mostrardatosTutor();
             $this->load->view('interfaces/gestion_tutores',$this->data);
         }
-
     }
     /*************************************************FUNCIONES PARA TUTORADOS*************************************************************** */
     //FUNCION PARA (redireccionar) EN EL MENÚ DEL ADMIN
@@ -115,6 +113,7 @@ Class Admin extends CI_Controller{
         $semestre = $this->input->post('semestre');
         $semestre = strtoupper($semestre);
         $prog = $this->input->post('programa');
+        $tutoria = $this->input->post('tipo_tutoria');
         $pass = $this->input->post('pass');
         $tipo = $this->input->post('tipo_usuario');
         $status = $this->input->post('status');
@@ -127,6 +126,7 @@ Class Admin extends CI_Controller{
             'carrera' => $carrera,
             'semestre' => $semestre,
             'programa' => $prog,
+            'tipo_tutoria' => $tutoria,
             'pass' => $pass,
             'tipo_usuario' => $tipo,
             'status' => $status
@@ -143,6 +143,37 @@ Class Admin extends CI_Controller{
         $matricula=$this->input->get('matricula');
         $this->data['mostrardatosTutorado']=$this->modelo_registrar_usuarios->traerdatosTutorado($matricula);
         $this->load->view('interfaces/modal_editarTutorado',$this->data);
+    }
+    function actualizarTutorado(){
+        $mat = $this->input->post('matricula');
+        $nom = $this->input->post('nombre');
+        $nom = strtoupper($nom);
+        $paterno = $this->input->post('ap_paterno');
+        $paterno = strtoupper($paterno);
+        $materno = $this->input->post('ap_materno');
+        $materno = strtoupper($materno);
+        $carrera = $this->input->post('carrera');
+        $semestre = $this->input->post('semestre');
+        $semestre = strtoupper($semestre);
+        $prog = $this->input->post('programa');
+        $tutoria = $this->input->post('tipo_tutoria');
+        $status = $this->input->post('status');
+        
+        $data = array(
+            'matricula' => $mat,
+            'nombre' => $nom,
+            'ap_paterno' => $paterno,
+            'ap_materno' => $materno,
+            'carrera' => $carrera,
+            'semestre' => $semestre,
+            'programa' => $prog,
+            'tipo_tutoria' => $tutoria,
+            'status' => $status
+        );
+        if($this->modelo_registrar_usuarios->updateTutorado($data,$mat)){
+            $this->data['mostrardatosTutorado']=$this->modelo_registrar_usuarios->mostrardatosTutorado();
+            $this->load->view('interfaces/gestion_tutorados',$this->data);
+        }
     }
     /*************************************************FUNCIONES PARA COORDINADORES************************************************************* */
     function gestionCoordinadores(){
