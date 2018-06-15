@@ -26,8 +26,7 @@
                 </tr>
             </thead>
             <?php
-                if($mostrardatosCoord->num_rows()>0){
-                    foreach ($mostrardatosCoord->result() as $row) {
+                foreach ($mostrardatosCoord as $row) {
             ?>
                 <tr>
                     <td class="tajawalL fs16 "><?php echo $row->matricula; ?></td>
@@ -38,7 +37,7 @@
                     <td class="tajawalL fs16 "><?php echo $row->telefono; ?></td>
                     <td class="tajawalL fs16 "><?php echo $row->status; ?></td>
                     <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14 ">
-                        <a href="<?= base_url() ?>Admin/editardatosTutor ">
+                        <a href="<?= base_url() ?>Admin/editarCoordinador/?matricula=<?php echo $row->matricula; ?>">
                             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--white mdl-color--red-800">
                                 <i class="fas fa-edit"></i>Editar
                             </button>
@@ -46,13 +45,6 @@
                     </td>
                 </tr>
             <?php
-                    }
-                }else{
-            ?>
-                <tr>
-                    <td>No se encontro el coordinador</td>
-                </tr>
-            <?php 
                 }
             ?>
             
@@ -156,87 +148,4 @@
     </div>
 <!--SE CIERRA EL FORMULARIO PARA EL PRIMER MODAL-->
 <?php echo form_close(); ?>
-<!--MODAL PARA EDITAR EL COORDINADOR-->
-<div class="editar-modal fancy ">
-    <div class="modal-info-2">
-        <span class="mdl-dialog__title fs25 tajawalL ls1">Editar Coordinador</span>
-            <form>
-                <div class="c-inputs-4" >
-                    <div class="form-icons"><i class="fas fa-id-card"></i></div>
-                    <div class="mdl-textfield mdl-js-textfield ">
-                        <input class="mdl-textfield__input" type="text">
-                        <label class="mdl-textfield__label tajawalL" required="required">Matricula</label>
-                    </div>
-                </div>
-                <div class="c-inputs-4">
-                    <div class="form-icons"><i class="fas fa-user"></i></div>
-                    <div class="mdl-textfield mdl-js-textfield ">
-                        <input class="mdl-textfield__input" type="text">
-                            <label class="mdl-textfield__label tajawalL" required="required">Nombre</label>
-                    </div>
-                </div>
-                <div class="c-inputs-4">
-                    <div class="form-icons"><i class="fas fa-user"></i></div>
-                    <div class="mdl-textfield mdl-js-textfield">
-                        <input class="mdl-textfield__input" type="password">
-                            <label class="mdl-textfield__label tajawalL" required="text">Apellido Paterno</label>
-                    </div>
-                </div>
-                <div class="c-inputs-4">
-                    <div class="form-icons"><i class="fas fa-user"></i></div>
-                    <div class="mdl-textfield mdl-js-textfield">
-                        <input class="mdl-textfield__input" type="password">
-                            <label class="mdl-textfield__label tajawalL" required="text">Apellido Materno</label>
-                    </div>
-                </div>
-                <div class="c-inputs-4">
-                    <div class="form-icons"><i class="fas fa-envelope"></i></div>
-                    <div class="mdl-textfield mdl-js-textfield">
-                        <input class="mdl-textfield__input" type="password">
-                            <label class="mdl-textfield__label tajawalL" required="text">Correo</label>
-                    </div>
-                </div>
-                <div class="c-inputs-4">
-                    <div class="form-icons"><i class="fas fa-mobile-alt"></i></div>
-                    <div class="mdl-textfield mdl-js-textfield">
-                        <input class="mdl-textfield__input" type="password">
-                            <label class="mdl-textfield__label tajawalL" required="text">Telefono</label>
-                    </div>
-                </div>
-                <div class="c-inputs-4">
-                    <div class="form-icons"><i class="fas fa-key"></i></div>
-                    <div class="mdl-textfield mdl-js-textfield">
-                        <input class="mdl-textfield__input" type="password">
-                            <label class="mdl-textfield__label tajawalL" required="password">Contraseña</label>
-                    </div>
-                </div>
-                <div class="c-inputs-4">
-                    <div class="form-icons"><i class="fas fa-key"></i></div>
-                    <div class="mdl-textfield mdl-js-textfield">
-                        <input class="mdl-textfield__input" type="password">
-                            <label class="mdl-textfield__label tajawalL" required="text">Confirmar contraseña</label>
-                    </div>
-                </div>
-                <div class="c-inputs-4">
-                    <span class="fs19 ls2 tajawalR">Status</span>
-                    <div class="status">
-                        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-3">
-                            <input type="radio" id="option-3" class="mdl-radio__button" name="options" value="1">
-                            <span class="mdl-radio__label tajawalR ls2">Activo</span>
-                        </label>
-                    </div>
-                    <div class="status">
-                        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-4">
-                            <input type="radio" id="option-4" class="mdl-radio__button" name="options" value="2">
-                            <span class="mdl-radio__label tajawalR ls2">Inactivo</span>
-                        </label>
-                    </div>
-                </div>
-            </form>
-            <div class="modals">
-                <button class="close-fancy mdl-button mdl-js-button mdl-color--red-A200 mdl-js-ripple-effect mdl-color-text--blue-grey-100">Cancelar</button>
-                <button class="mdl-button mdl-js-button mdl-color--teal-700 mdl-js-ripple-effect mdl-color-text--blue-grey-100">Aceptar</button>
-            </div>
-    </div>  
-</div>
 <?php include_once 'footer.php' ?>

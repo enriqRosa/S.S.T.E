@@ -135,11 +135,34 @@ Class Admin extends CI_Controller{
         $pass = $this->input->post('pass');
         $tipo = $this->input->post('tipo_usuario');
         $status = $this->input->post('status');
-        $insertTutorado = $this->modelo_registrar_usuarios->registrarCoordinador($mat,$nom,$paterno,$materno,$correo,$telefono,$pass,$tipo,$status);
-        //SE VUELVE A CARGAR LOS DATOS DEL TUTORADO EN LA TABLA
-        $this->data['mostrardatosCoord']=$this->modelo_registrar_usuarios->mostrardatosCoordinador();
-        $this->load->view('interfaces/gestion_coordinadores',$this->data);
+        
+        $data = array(
+            'matricula' => $mat,
+            'nombre' => $nom,
+            'ap_paterno' => $paterno,
+            'ap_materno' => $materno,
+            'correo' => $correo,
+            'telefono' => $telefono,
+            'pass' =>$pass,
+            'tipo_usuario' => $tipo,
+            'status' => $status
+        );
+
+        if ($this->modelo_registrar_usuarios->registrarCoordinador($data)){
+            //SE LLAMA A LA FUNCIÓN PRINCIPAL 'function gestionCoordinadores'
+            $this->gestionCoordinadores();
+        }else{
+            echo "no registrado";
+        }
     }
+    function editarCoordinador(){
+        $this->load->view('temps/header_modal');
+        $matricula=$this->input->get('matricula');
+        $this->data['mostrardatosCoord']=$this->modelo_registrar_usuarios->traerdatosCoordinador($matricula);
+        $this->load->view('interfaces/modal_editarCoordinador',$this->data);
+        }
+    
+    /******************************************************************************************************************************/
     function tutoresTutorados(){
         $this->load->view('interfaces/gestion_tutores_tutorados');
     }
