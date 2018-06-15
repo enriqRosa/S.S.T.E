@@ -8,7 +8,6 @@
         </div>
     </div>
 </section>
-<<<<<<< HEAD
 <!--MODAL PARA CAMBIAR CONTRASEÑA-->
 <?php echo form_open("tutorado/cambiarPassword"); ?>
 <div class="pass-modal fancy">
@@ -44,7 +43,6 @@
     </div>  
 </div>
 <?php echo form_close(); ?> 
-=======
 <section class="academico-info"> 
     <div class="grupo-academico">
         <div class="info-1">
@@ -111,7 +109,6 @@
     <button class="close-fancy mdl-button mdl-js-button mdl-color--blue-900 mdl-js-ripple-effect mdl-color-text--white btn-editar">Editar Información</button>
     <button class="mdl-button mdl-js-button mdl-color--blue-900 mdl-js-ripple-effect mdl-color-text--white btn-pass">Cambiar Contraseña</button>
 </div>
->>>>>>> 72b7d489315636b6913404f02b56201830749f7a
 <!--MODAL PARA REGISTRAR CAMPOS FALTANTES DEL ALUMNO-->
 <?php echo form_open("Tutorado/editarInfo"); ?>
     <div class="editar-modal fancy ">
@@ -174,8 +171,6 @@
         </div>
     </div>  
 </div>
-<<<<<<< HEAD
-=======
 <?php echo form_close(); ?> 
 <?php include_once 'footer.php' ?>
->>>>>>> 72b7d489315636b6913404f02b56201830749f7a
+

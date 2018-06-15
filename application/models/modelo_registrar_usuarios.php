@@ -23,6 +23,11 @@ class Modelo_registrar_usuarios extends CI_Model{
         $data=$this->db->get('tutor');
         return $data->result();
     }
+    function updateTutor($data,$mat){
+        $this->db->where('matricula',$mat);
+        $this->db->update('tutor', $data);
+        return true;
+    }
 /*************************************************FUNCIONES PARA EL TUTORADO*************************************************************** */
     //FUNCIÓN PARA REGISTRAR A LOS TUTORADOS -->DEL CONTROLADOR ADMIN
     function registrarTutorado($data){

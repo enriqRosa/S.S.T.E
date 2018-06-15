@@ -69,6 +69,33 @@ Class Admin extends CI_Controller{
         $this->data['mostrardatosTutor']=$this->modelo_registrar_usuarios->traerdatosTutor($matricula);
         $this->load->view('interfaces/modal_editarTutor',$this->data);
     }
+    function actualizarTutor(){
+        $mat = $this->input->post('matricula');
+        $nom = $this->input->post('nombre');
+        $nom = strtoupper($nom);//INSERTA VALORES EN MAYÙSCULAS
+        $paterno = $this->input->post('ap_paterno');
+        $paterno = strtoupper($paterno);
+        $materno = $this->input->post('ap_materno');
+        $materno = strtoupper($materno);
+        $correo = $this->input->post('correo');
+        $telefono = $this->input->post('telefono');
+        $status = $this->input->post('status');
+
+        $data = array(
+            'matricula' => $mat,
+            'nombre' => $nom,
+            'ap_paterno' => $paterno,
+            'ap_materno' => $materno,
+            'correo' => $correo,
+            'telefono' => $telefono,
+            'status' => $status
+        );
+        if($this->modelo_registrar_usuarios->updateTutor($data,$mat)){
+            $this->data['mostrardatosTutor']=$this->modelo_registrar_usuarios->mostrardatosTutor();
+            $this->load->view('interfaces/gestion_tutores',$this->data);
+        }
+
+    }
     /*************************************************FUNCIONES PARA TUTORADOS*************************************************************** */
     //FUNCION PARA (redireccionar) EN EL MENÚ DEL ADMIN
     function gestionTutorados(){
@@ -193,10 +220,6 @@ Class Admin extends CI_Controller{
                 $this->load->view("interfaces/interfaz_admin");
             }
         }        
-    }
-    //FUNCIÓN PARA EL BOTÓN QUE SE DIRIGA A LA INTERFAZ 'seguimiento_tutorial'
-    function seguimientoTutorial(){
-        $this->load->view('interfaces/seguimiento_tutorial');
     }
     //CERRAR SESIÒN
     public function logout(){
