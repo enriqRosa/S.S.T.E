@@ -17,9 +17,9 @@
             <thead>
                 <tr>
                     <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14 mdl-color--black white">Matricula</td>
-                    <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14 mdl-color--black white">Nombre</td>
                     <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14 mdl-color--black white">Apellido Paterno</td>
                     <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14 mdl-color--black white">Apellido Materno</td>
+                    <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14 mdl-color--black white">Nombre</td>
                     <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14 mdl-color--black white">Correo</td>
                     <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14 mdl-color--black white">Telefono</td>
                     <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14 mdl-color--black white">Status</td>
@@ -30,9 +30,9 @@
     ?>
         <tr>
             <td class="tajawalL ls1 fs14"><?php echo $row->matricula; ?></td>
-            <td class="tajawalL ls1 fs14"><?php echo $row->nombre; ?></td>
             <td class="tajawalL ls1 fs14"><?php echo $row->ap_paterno; ?></td>
             <td class="tajawalL ls1 fs14"><?php echo $row->ap_materno; ?></td>
+            <td class="tajawalL ls1 fs14"><?php echo $row->nombre; ?></td>
             <td class="tajawalL ls1 fs14"><?php echo $row->correo; ?></td>
             <td class="tajawalL ls1 fs14"><?php echo $row->telefono; ?></td>
             <td class="tajawalL ls1 fs14"><?php echo $row->status; ?></td>

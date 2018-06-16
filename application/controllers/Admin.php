@@ -30,7 +30,6 @@ Class Admin extends CI_Controller{
     }
     //FUNCIÓN PARA AGREGAR UN NUEVO TUTOR
     function nuevoTutor(){
-        $this->load->view('interfaces/gestion_tutores');
         $mat = $this->input->post('matricula');
         $nom = $this->input->post('nombre');
         $nom = strtoupper($nom);//INSERTA VALORES EN MAYÙSCULAS

@@ -27,7 +27,7 @@ Class C_institucional extends CI_Controller{
         $this->form_validation->set_rules('new_pswd','Ingresa nueva contraseña','required|max_length[20]|min_length[6]');
         $this->form_validation->set_rules('repeat_pswd','Confirmar contraseña','required|matches[new_pswd]');
         if($this->form_validation->run()!=true){
-            $this->data['posts']=$this->Modelo_login->getInstitucional();
+            $this->data['posts']=$this->Modelo_login->getCoordinador();
             $this->load->view('interfaces/interfaz_cinstitucional',$this->data);
         }else {
             $sql=$this->db->select("*")->from("usuarios")->where("matricula",$this->session->userdata("matricula"))->get();

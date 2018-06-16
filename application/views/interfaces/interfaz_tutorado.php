@@ -44,10 +44,17 @@
 </div>
 <?php echo form_close(); ?> 
 <section class="academico-info"> 
-    <div class="grupo-academico">
-        <div class="info-1">
-            <span class="fs15 ls2 tajawalR">Número de Seguro:</span>          
+    <?php foreach($mostrardatosTutorado as $post){?>
+        <div class="grupo-academico" >
+            <div class="info-1">
+            <span class="fs15 ls2 tajawalR">Matricula:</span>  
+                <div class="mdl-textfield mdl-js-textfield ">
+                    <?php echo $post->matricula;?> 
+                </div> 
+            </div>
         </div>
+    <?php }?>     
+    <div class="grupo-academico">
         <div class="info-1">
             <span class="fs15 ls2 tajawalR">Nombre(s):</span>          
         </div>
@@ -61,9 +68,6 @@
     <?php foreach($mostrardatosTutorado as $post){?>
         <div class="c-inputs-4" >
             <div class="mdl-textfield mdl-js-textfield ">
-                <?php echo $post->matricula;?> 
-            </div> 
-            <div class="mdl-textfield mdl-js-textfield ">
                 <?php echo $post->nombre;?> 
             </div>                  
             <div class="mdl-textfield mdl-js-textfield ">
@@ -76,9 +80,6 @@
     <?php }?> 
     <div class="grupo-academico">
         <div class="info-1">
-            <span class="fs15 ls2 tajawalR">Grupo:</span>          
-        </div>
-        <div class="info-1">
             <span class="fs15 ls2 tajawalR">Semestre:</span>          
         </div>
         <div class="info-1">
@@ -90,9 +91,6 @@
     </div>
     <?php foreach($mostrardatosTutorado as $post){?>
         <div class="c-inputs-4" >
-            <div class="mdl-textfield mdl-js-textfield ">
-            
-            </div> 
             <div class="mdl-textfield mdl-js-textfield ">
                 <?php echo $post->semestre;?> 
             </div>                  
@@ -166,7 +164,7 @@
                 </div>
             </form>
         <div class="modals">
-            <input type="button" class="close-fancy mdl-button mdl-js-button mdl-color--red-A200 mdl-js-ripple-effect mdl-color-text--blue-grey-100" value="CANCELAR"></input>
+            <button class="close-fancy mdl-button mdl-js-button mdl-color--red-A200 mdl-js-ripple-effect mdl-color-text--blue-grey-100">CANCELAR</button>
             <button class="mdl-button mdl-js-button mdl-color--teal-700 mdl-js-ripple-effect mdl-color-text--blue-grey-100">Aceptar</button>
         </div>
     </div>  
