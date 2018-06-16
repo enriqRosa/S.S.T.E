@@ -247,7 +247,8 @@ Class Admin extends CI_Controller{
     }
     /******************************************************************************************************************************/
     function tutoresTutorados(){
-        $this->load->view('interfaces/gestion_tutores_tutorados');
+        $this->data['mostrardatosTutorado']=$this->modelo_registrar_usuarios->mostrardatosTutorado();
+        $this->load->view('interfaces/gestion_tutores_tutorados',$this->data);
     }
     function verificacionSeguimiento(){
         $this->load->view('interfaces/verificacion_seguimiento');
