@@ -244,11 +244,17 @@ Class Admin extends CI_Controller{
             $this->load->view('interfaces/gestion_coordinadores',$this->data);
         }
     }
-    /******************************************************************************************************************************/
+    /**************************************ASIGNACION DE TUTORES A TUTORADOS FUNCIONES***********************************************/
     function tutoresTutorados(){
         $this->data['mostrardatosTutorado']=$this->modelo_registrar_usuarios->mostrardatosTutorado();
         $this->load->view('interfaces/gestion_tutores_tutorados',$this->data);
     }
+    function mostrarTutores(){
+        $this->load->view('temps/header_modal');
+        $this->data['mostrarTutores']=$this->modelo_registrar_usuarios->mostrardatosTutor(); 
+        $this->load->view('interfaces/modal_asignarTutor',$this->data);
+    }
+    /********************************************************************************************************************************/
     function verificacionSeguimiento(){
         $this->load->view('interfaces/verificacion_seguimiento');
     }

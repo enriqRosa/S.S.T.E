@@ -25,9 +25,11 @@
                 <td></td>
                 <td></td>
                 <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14 ">
-                    <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--white mdl-color--orange-500 btn-pass">
-                        <i class="fas fa-edit"></i>Asignar
-                    </button>
+                    <a href="<?= base_url() ?>Admin/mostrarTutores/?matricula=<?php echo $row->matricula; ?>">
+                        <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--white mdl-color--orange-500 btn-pass">
+                            <i class="fas fa-edit"></i>Asignar
+                        </button>
+                    </a>
                 </td>
                 <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14 btn-editar">
                     <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--white mdl-color--red-800">
@@ -40,27 +42,6 @@
         ?>
     </table>
 </div>
-    <!--MODAL ASIGNAR-->
-    <div class="pass-modal fancy ">
-        <div class="modal-info-5">
-            <span class="mdl-dialog__title fs25 tajawalL ls1">Asignar Tutor</span>
-            <div class="c-inputs-4" >
-                <div class="form-icons"><i class="fas fa-user"></i></div>
-                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select">
-                    <input type="text" value="" class="mdl-textfield__input mdl-color-text--black" id="">
-                    <input type="hidden" value="" name="semestre">
-                        <label for="" class="mdl-textfield__label">Tutor</label>
-                        <ul for=""class="mdl-menu mdl-menu--bottom-left mdl-js-menu">
-                            
-                        </ul>
-                </div>
-            </div>
-            <div class="modals">
-                <input type="button" class="close-fancy mdl-button mdl-js-button mdl-color--red-A200 mdl-js-ripple-effect mdl-color-text--blue-grey-100" value="Cancelar"></input>
-                <button class="mdl-button mdl-js-button mdl-color--teal-700 mdl-js-ripple-effect mdl-color-text--blue-grey-100">Aceptar</button>
-            </div> 
-        </div>
-    </div>
     <!--MODAL EDITAR-->
     <div class="editar-modal fancy ">
         <div class="modal-info-5">

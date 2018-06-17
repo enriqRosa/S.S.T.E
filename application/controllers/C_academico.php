@@ -12,15 +12,18 @@ Class C_academico extends CI_Controller{
         $this->load->helper('url');
         $this->load->helper('form');
         $this->load->model('Modelo_login');
+        $this->load->model('modelo_registrar_usuarios');
         $this->load->library('session');
     }
     function index(){
         $this->data['posts']=$this->Modelo_login->getCoordinador();
         $this->load->view('interfaces/interfaz_cacademico',$this->data);
     }
-    function gestionTutoresTutorados(){
-        $this->load->view('interfaces/gestion_tutores_tutorados');
+    function tutoresTutorados(){
+        $this->data['mostrardatosTutorado']=$this->modelo_registrar_usuarios->mostrardatosTutorado();
+        $this->load->view('interfaces/gestion_tutores_tutorados',$this->data);
     }
+    
     function verificacionSeguimiento(){
         $this->load->view('interfaces/verificacion_seguimiento');
     }

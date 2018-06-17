@@ -42,7 +42,9 @@ class Modelo_registrar_usuarios extends CI_Model{
     function mostrardatosTutorado(){
         //select * from tutor
         $data=$this->db->get('tutorado');
-        return $data->result();       
+        return $data->result();  
+        $data->$this->db->get('tutores');
+        return $data->result();     
     }
     function traerdatosTutorado($matricula){
         $this->db->where('matricula',$matricula);
@@ -88,5 +90,6 @@ class Modelo_registrar_usuarios extends CI_Model{
         $this->db->update('coordinador', $data);
         return true;
     }
+    /*****************************************TRAER A LOS TUTORES PARA MOSTRARSE EN EL COMBOBOX EN MODAL********************************/
 }
 ?>
