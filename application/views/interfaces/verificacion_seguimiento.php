@@ -127,7 +127,7 @@
                 </div>
                 <div class="c-inputs-4">
                     <div class="status">
-                    <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-1">
+                        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-1">
                             <input type="radio" id="option-1" class="mdl-radio__button" name="options" value="2">
                             <span class="mdl-radio__label tajawalR ls2">Psicología</span>
                         </label>
@@ -156,34 +156,4 @@
             </div>           
     </div>  
 </div>
-
-
-
-
-
-<!--<main class="informacion3_2">
-    <div class="user-circle-tutor">
-        <i class="fas fa-file-alt"></i>
-    </div>
-    <div class="usuario">
-        <span class="text-dir fs25 ls2 tajawalR">Verificación de Seguimiento</span>
-    </div>
-    <hr class="line2">
-    <div class="table">
-        <table class="mdl-data-table mdl-js-data-table  mdl-shadow--2dp">
-            <thead>
-                <tr>
-                    <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14">Matricula</td>
-                    <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14">Nombre</td>
-                    <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14">Apellido Paterno</td>
-                    <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14">Apellido Materno</td>
-                    <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14">Nombre</td>
-                    <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14">Semestre</td>
-                    <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14">Grupo</td>
-                    <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14">Agregar</td>
-                    <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14">Seguimiento</td>
-                </tr>
-            </thead>
-    </table>
-</main>-->
 <?php include_once 'footer.php'?>

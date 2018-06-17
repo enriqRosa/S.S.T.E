@@ -65,9 +65,7 @@
                 <div class="c-inputs-4">
                     <div class="form-icons"><i class="fas fa-user"></i></div>
                     <div class="mdl-textfield mdl-js-textfield  mdl-textfield--floating-label  mdl-textfield--floating-label">
-                    
                         <input class="mdl-textfield__input" type="text" name="nombre">
-                        
                             <label class="mdl-textfield__label tajawalL" required="required">Nombre</label>
                     </div>
                 </div>
