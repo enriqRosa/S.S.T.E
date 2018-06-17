@@ -1,7 +1,22 @@
-<?php echo form_open(""); ?>  
+<?php echo form_open("Admin/actualizarTutorado"); ?> 
+<?php echo form_open("Admin/asignarFkTutor"); ?>  
     <div class="pass-modal">
         <div class="modal-info-5">
             <span class="mdl-dialog__title fs25 tajawalL ls1">Asignar Tutor</span>
+            <div class="c-inputs-4" >
+                
+               
+                    <?php foreach ($mostrardatosTutorado as $mostrar) { ?>
+                    <div class="c-inputs-4">
+                        <span class="mdl-dialog__title fs16 tajawalR ls1">Matricula: </span>
+                    <div class="mdl-textfield mdl-js-textfield ">
+                            <input class="mdl-textfield__input" type="text" name="matricula" value=" <?php echo $mostrar->matricula;?>">
+                            <label class="mdl-textfield__label tajawalL" required="required">matricula</label>
+                        </div>
+                        </div>
+                <?php }?>
+                
+            </div>
             <div class="c-inputs-4" >
                 <div class="form-icons"><i class="fas fa-user"></i></div>
                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select">
@@ -12,7 +27,7 @@
                             <?php 
                                 if(isset($mostrarTutores)){
                                     foreach($mostrarTutores as $mostrar){ ?>
-                                    <li class="mdl-menu__item fs14 tajawalR ls1" value="<?php echo $mostrar->matricula; ?>"><?php echo $mostrar->nombre;?><?php echo " " ?>
+                                    <li class="mdl-menu__item fs14 tajawalR ls1" data-val="<?php echo $mostrar->matricula; ?>"><?php echo $mostrar->nombre;?><?php echo " " ?>
                                     <?php echo " " ?><?php echo $mostrar->ap_paterno; ?><?php echo " " ?><?php echo $mostrar->ap_materno; ?></li>
                             <?php  }
                                 }

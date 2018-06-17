@@ -90,6 +90,13 @@ class Modelo_registrar_usuarios extends CI_Model{
         $this->db->update('coordinador', $data);
         return true;
     }
-    /*****************************************TRAER A LOS TUTORES PARA MOSTRARSE EN EL COMBOBOX EN MODAL********************************/
+    //INSERTAR EL TUTOR EN LA TABLA 'tutorado'
+    function FKtutor($tutor,$mat){
+        $mostrardatosTutorado;
+        $this->db->where('matricula',$mat);
+        $this->db->update('tutorado', $tutor);
+        return true;
+        
+    }
 }
 ?>

@@ -251,8 +251,19 @@ Class Admin extends CI_Controller{
     }
     function mostrarTutores(){
         $this->load->view('temps/header_modal');
+        $matricula=$this->input->get('matricula');
         $this->data['mostrarTutores']=$this->modelo_registrar_usuarios->mostrardatosTutor(); 
+        $this->data['mostrardatosTutorado']=$this->modelo_registrar_usuarios->traerdatosTutorado($matricula);
         $this->load->view('interfaces/modal_asignarTutor',$this->data);
+        
+    }
+    function asignarFkTutor(){
+        $mat = $this->input->post('matricula');
+        $tutor=$this->input->post('FK_tutor');
+
+        if($this->modelo_registrar_usuarios->FKtutor($mat,$tutor)){
+            $this->tutoresTutorados();
+        }
     }
     /********************************************************************************************************************************/
     function verificacionSeguimiento(){
