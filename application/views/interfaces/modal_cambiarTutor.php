@@ -19,9 +19,7 @@
                 <?php 
                 if(isset($vernombreTutor)){
                     foreach ($vernombreTutor as $mostrarnombre) { ?>
-                   
                         <span class="fs19 ls2 tajawalB" ><?php echo $mostrarnombre->nombre;?> <?php echo $mostrarnombre->ap_paterno;?> <?php echo $mostrarnombre->ap_materno;?></span>
-                    
                 <?php }?>
             </div>
             <div class="c-inputs-4" >

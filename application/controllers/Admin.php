@@ -256,11 +256,16 @@ Class Admin extends CI_Controller{
         $this->data['mostrardatosTutorado']=$this->modelo_registrar_usuarios->traerdatosTutorado($matricula);
         $this->load->view('interfaces/modal_asignarTutor',$this->data);
     }
-    function asignarFkTutor(){
+    function asignarTutor(){
         $mat = $this->input->post('matricula');
         $tutor=$this->input->post('FK_tutor');
 
-        if($this->modelo_registrar_usuarios->FKtutor($mat,$tutor)){
+        $data = array(
+            'matricula' => $mat,
+            'FK_tutor'  => $tutor
+        );
+
+        if($this->modelo_registrar_usuarios->FKtutor($mat,$data)){
             $this->tutoresTutorados();
         }
     } 

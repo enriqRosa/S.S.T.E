@@ -1,4 +1,4 @@
-<?php echo form_open("Admin/asignarFkTutor"); ?>  
+<?php echo form_open("Admin/asignarTutor"); ?>  
         <div class="pass-modal">
             <div class="modal-info-5">
                 <span class="mdl-dialog__title fs25 tajawalL ls1">Asignar Tutor</span>
@@ -6,7 +6,7 @@
                 <?php foreach ($mostrardatosTutorado as $mostrar) { ?>
                     <span class="mdl-dialog__title fs16 tajawalR ls1">Matricula: </span>
                     <div class="mdl-textfield mdl-js-textfield ">
-                        <input class="mdl-textfield__input" type="text" name="matricula" value=" <?php echo $mostrar->matricula;?>">
+                        <input class="mdl-textfield__input" type="text" name="matricula" value="<?php echo $mostrar->matricula;?>">
                     </div>
                 <?php }?>
             </div>
