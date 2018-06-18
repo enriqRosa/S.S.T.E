@@ -90,7 +90,6 @@ class Modelo_registrar_usuarios extends CI_Model{
         $this->db->update('coordinador', $data);
         return true;
     }
-<<<<<<< HEAD
     //INSERTAR EL TUTOR EN LA TABLA 'tutorado'
     function FKtutor($tutor,$mat){
         $data=array(
@@ -111,9 +110,6 @@ class Modelo_registrar_usuarios extends CI_Model{
         }
         return $results;
     }
-=======
-    /*****************************************TRAER A LOS TUTORES PARA MOSTRARSE EN EL COMBOBOX EN MODAL********************************/
->>>>>>> parent of bb09a51... modal asignar tutor muestra matricula del tutorado
 }
 
 ?>  

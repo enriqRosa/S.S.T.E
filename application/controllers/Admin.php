@@ -251,10 +251,11 @@ Class Admin extends CI_Controller{
     }
     function mostrarTutores(){
         $this->load->view('temps/header_modal');
+        $matricula=$this->input->get('matricula');
         $this->data['mostrarTutores']=$this->modelo_registrar_usuarios->mostrardatosTutor(); 
+        $this->data['mostrardatosTutorado']=$this->modelo_registrar_usuarios->traerdatosTutorado($matricula);
         $this->load->view('interfaces/modal_asignarTutor',$this->data);
     }
-<<<<<<< HEAD
     function asignarFkTutor(){
         $mat = $this->input->post('matricula');
         $tutor=$this->input->post('FK_tutor');
@@ -272,8 +273,6 @@ Class Admin extends CI_Controller{
         $this->data['vernombreTutor']=$this->modelo_registrar_usuarios->selectnombreTutor($matricula); 
         $this->load->view('interfaces/modal_cambiarTutor',$this->data);
     }      
-=======
->>>>>>> parent of bb09a51... modal asignar tutor muestra matricula del tutorado
     /********************************************************************************************************************************/
     function verificacionSeguimiento(){
         $this->load->view('interfaces/verificacion_seguimiento');
