@@ -25,12 +25,19 @@
                     <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14 mdl-color--black white">Nombre</td>
                     <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14 mdl-color--black white">Apellido Paterno</td>
                     <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14 mdl-color--black white">Apellido Materno</td>
-                    <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14 mdl-color--black white">Nombre</td>
                     <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14 mdl-color--black white">Semestre</td>
-                    <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14 mdl-color--black white">Grupo</td>
-                    <td>
+                </tr>
+            </thead>
+            <?php foreach ($mostrardatosTutorado as $row) {?>
+            <tr>
+                <td class="tajawalL fs16 "><?php echo $row->matricula; ?></td>
+                <td class="tajawalL fs16 "><?php echo $row->nombre; ?></td>
+                <td class="tajawalL fs16 "><?php echo $row->ap_paterno; ?></td>
+                <td class="tajawalL fs16 "><?php echo $row->ap_materno; ?></td>
+                <td class="tajawalL fs16 "><?php echo $row->semestre; ?></td>
+                <td>
                         <button 
-                            class="mdl-button mdl-js-button mdl-color--green-700 mdl-js-ripple-effect mdl-color-text--white mdl-color--orange-500 btn-registar"><i class="fas fa-user-plus"></i>Agregar
+                            class="mdl-button mdl-js-button mdl-color--green-700 mdl-js-ripple-effect mdl-color-text--white mdl-color--orange-500 btn-pass"><i class="fas fa-user-plus"></i>Agregar
                         </button>
                     </td>
                     <td>
@@ -41,12 +48,11 @@
                             </button>
                         </a>
                     </td>
-                </tr>
-            </thead>
+            <?php } ?>
     </table>
 </div>
 <!-- MODAL PARA REGISTRO DE SEGUIMIENTO TUTORIAL-->
-<div class="registar-modal fancy ">
+<div class="pass-modal fancy ">
     <div class="modal-info-3">
         <span class="mdl-dialog__title fs25 tajawalL ls1">Registro de Seguimiento Tutorial</span>
             <form>

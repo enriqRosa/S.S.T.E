@@ -25,7 +25,8 @@ Class C_academico extends CI_Controller{
     }
     
     function verificacionSeguimiento(){
-        $this->load->view('interfaces/verificacion_seguimiento');
+        $this->data['mostrardatosTutorado']=$this->modelo_registrar_usuarios->mostrardatosTutorado();
+        $this->load->view('interfaces/verificacion_seguimiento',$this->data);
     }
     //FUNCIÓN PARA CAMBIAR LA CONTRASEÑA DEL ADMINISTRADOR PARA LA TABLA 'usuarios'
     function cambiarPassword(){
