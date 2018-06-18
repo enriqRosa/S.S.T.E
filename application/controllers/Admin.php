@@ -264,7 +264,6 @@ Class Admin extends CI_Controller{
             'matricula' => $mat,
             'FK_tutor'  => $tutor
         );
-
         if($this->modelo_registrar_usuarios->FKtutor($mat,$data)){
             $this->tutoresTutorados();
         }
@@ -272,11 +271,23 @@ Class Admin extends CI_Controller{
     function cambiarTutor(){
         $this->load->view('temps/header_modal');
         $matricula=$this->input->get('matricula');
-        //$FK_tutor=$this->input->get('FK_tutor');
+        
         $this->data['mostrardatosTutorado']=$this->modelo_registrar_usuarios->traerdatosTutorado($matricula);
         $this->data['mostrarTutores']=$this->modelo_registrar_usuarios->mostrardatosTutor(); 
         $this->data['vernombreTutor']=$this->modelo_registrar_usuarios->selectnombreTutor($matricula); 
-        $this->load->view('interfaces/modal_cambiarTutor',$this->data);
+        $this->load->view('interfaces/modal_cambiarTutor',$this->data);       
+    }
+    function renovarTutor(){
+        $mat=$this->input->post('matricula');
+        $tutor=$this->input->post('FK_tutor');
+
+        $data = array(
+            'matricula' => $mat,
+            'FK_tutor'  => $tutor
+        );
+        if($this->modelo_registrar_usuarios->cambiarasignaciontutor($mat,$data)){
+            $this->tutoresTutorados();
+        }
     }      
     /********************************************************************************************************************************/
     function verificacionSeguimiento(){

@@ -1,9 +1,9 @@
-<?php echo form_open("Admin/cambiarTutor"); ?>      
+<?php echo form_open("Admin/renovarTutor"); ?>      
     <div class="editar-modal">
         <div class="modal-info-5">
             <span class="mdl-dialog__title fs25 tajawalL ls1">Editar Tutor</span>
             <div class="c-inputs-4" >
-                <span class="mdl-dialog__title fs19 tajawalR ls1">Matricula Tutorado:</span>
+                <span class="mdl-dialog__title tajawalR ls1">Matricula Tutorado:</span>
             </div>
             <div class="c-inputs-4" >
                 <?php foreach ($mostrardatosTutorado as $mostrar) { ?>
@@ -13,7 +13,7 @@
                 <?php }?>
             </div>
             <div class="c-inputs-4">
-                <span class="fs19 ls2 tajawalR">Tutor:</span>                                             
+                <span class="ls2 tajawalR">Tutor:</span>                                             
             </div> 
             <div class="c-inputs-4" >
                 <?php 
@@ -23,10 +23,9 @@
                 <?php }?>
             </div>
             <div class="c-inputs-4" >
-                <span class="fs19 ls2 tajawalR">Cambiar a:</span> 
+                <span class="ls2 tajawalR">Cambiar a:</span> 
             </div>
             <div class="c-inputs-4" >
-                <div class="form-icons"><i class="fas fa-user"></i></div>
                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select">
                     <input type="text" value="" class="mdl-textfield__input mdl-color-text--black" id="">
                     <input type="hidden" value="" name="FK_tutor">
@@ -45,9 +44,10 @@
             </div>
             <div class="c-inputs-4" >  
                 <div class="status">
+                
                     <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-1">
-                        <input type="checkbox" id="checkbox-1" class="mdl-checkbox__input">
-                        <span class="mdl-checkbox__label fs19 ls2 tajawalR">No cambiar</span>
+                        <input type="checkbox" id="checkbox-1" class="mdl-checkbox__input" name="FK_tutor" value="<?php echo $mostrar->matricula; ?>">
+                        <span class="mdl-checkbox__label ls2 tajawalR">No cambiar</span>
                     </label>
                 </div>
             </div>
