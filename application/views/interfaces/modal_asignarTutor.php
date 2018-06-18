@@ -1,21 +1,14 @@
-<?php echo form_open("Admin/actualizarTutorado"); ?> 
 <?php echo form_open("Admin/asignarFkTutor"); ?>  
-    <div class="pass-modal">
-        <div class="modal-info-5">
-            <span class="mdl-dialog__title fs25 tajawalL ls1">Asignar Tutor</span>
+        <div class="pass-modal">
+            <div class="modal-info-5">
+                <span class="mdl-dialog__title fs25 tajawalL ls1">Asignar Tutor</span>
             <div class="c-inputs-4" >
-                
-               
-                    <?php foreach ($mostrardatosTutorado as $mostrar) { ?>
-                    <div class="c-inputs-4">
-                        <span class="mdl-dialog__title fs16 tajawalR ls1">Matricula: </span>
+                <?php foreach ($mostrardatosTutorado as $mostrar) { ?>
+                    <span class="mdl-dialog__title fs16 tajawalR ls1">Matricula: </span>
                     <div class="mdl-textfield mdl-js-textfield ">
-                            <input class="mdl-textfield__input" type="text" name="matricula" value=" <?php echo $mostrar->matricula;?>">
-                            <label class="mdl-textfield__label tajawalL" required="required">matricula</label>
-                        </div>
-                        </div>
+                        <input class="mdl-textfield__input" type="text" name="matricula" value=" <?php echo $mostrar->matricula;?>">
+                    </div>
                 <?php }?>
-                
             </div>
             <div class="c-inputs-4" >
                 <div class="form-icons"><i class="fas fa-user"></i></div>
@@ -25,11 +18,9 @@
                         <label for="" class="mdl-textfield__label">Tutor</label>
                         <ul for=""class="mdl-menu mdl-menu--bottom-left mdl-js-menu">
                             <?php 
-                                if(isset($mostrarTutores)){
-                                    foreach($mostrarTutores as $mostrar){ ?>
-                                    <li class="mdl-menu__item fs14 tajawalR ls1" data-val="<?php echo $mostrar->matricula; ?>"><?php echo $mostrar->nombre;?><?php echo " " ?>
-                                    <?php echo " " ?><?php echo $mostrar->ap_paterno; ?><?php echo " " ?><?php echo $mostrar->ap_materno; ?></li>
-                            <?php  }
+                                foreach($mostrarTutores as $mostrar){ ?>
+                                <li class="mdl-menu__item fs14 tajawalR ls1" data-val="<?php echo $mostrar->matricula; ?>"><?php echo $mostrar->nombre;?> <?php echo $mostrar->ap_paterno; ?> <?php echo $mostrar->ap_materno; ?></li>
+                            <?php  
                                 }
                              ?>
                         </ul>

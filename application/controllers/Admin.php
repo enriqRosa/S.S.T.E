@@ -245,9 +245,9 @@ Class Admin extends CI_Controller{
         }
     }
     /**************************************ASIGNACION DE TUTORES A TUTORADOS FUNCIONES***********************************************/
-    function tutoresTutorados(){
+    function tutoresTutorados(){       
         $this->data['mostrardatosTutorado']=$this->modelo_registrar_usuarios->mostrardatosTutorado();
-        $this->load->view('interfaces/gestion_tutores_tutorados',$this->data);
+        $this->load->view('interfaces/gestion_tutores_tutorados',$this->data);   
     }
     function mostrarTutores(){
         $this->load->view('temps/header_modal');
@@ -255,7 +255,6 @@ Class Admin extends CI_Controller{
         $this->data['mostrarTutores']=$this->modelo_registrar_usuarios->mostrardatosTutor(); 
         $this->data['mostrardatosTutorado']=$this->modelo_registrar_usuarios->traerdatosTutorado($matricula);
         $this->load->view('interfaces/modal_asignarTutor',$this->data);
-        
     }
     function asignarFkTutor(){
         $mat = $this->input->post('matricula');
@@ -264,7 +263,16 @@ Class Admin extends CI_Controller{
         if($this->modelo_registrar_usuarios->FKtutor($mat,$tutor)){
             $this->tutoresTutorados();
         }
-    }
+    } 
+    function cambiarTutor(){
+        $this->load->view('temps/header_modal');
+        $matricula=$this->input->get('matricula');
+        //$FK_tutor=$this->input->get('FK_tutor');
+        $this->data['mostrardatosTutorado']=$this->modelo_registrar_usuarios->traerdatosTutorado($matricula);
+        $this->data['mostrarTutores']=$this->modelo_registrar_usuarios->mostrardatosTutor(); 
+        $this->data['vernombreTutor']=$this->modelo_registrar_usuarios->selectnombreTutor($matricula); 
+        $this->load->view('interfaces/modal_cambiarTutor',$this->data);
+    }      
     /********************************************************************************************************************************/
     function verificacionSeguimiento(){
         $this->load->view('interfaces/verificacion_seguimiento');

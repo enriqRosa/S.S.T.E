@@ -92,11 +92,24 @@ class Modelo_registrar_usuarios extends CI_Model{
     }
     //INSERTAR EL TUTOR EN LA TABLA 'tutorado'
     function FKtutor($tutor,$mat){
-        $mostrardatosTutorado;
+        $data=array(
+            'FK_tutor' => $tutor
+        );
         $this->db->where('matricula',$mat);
-        $this->db->update('tutorado', $tutor);
+        $this->db->update('tutorado', $data);
         return true;
         
     }
+    function selectnombreTutor($matricula){
+        $this->db->select('*');
+        $this->db->from('tutor_tutorado');
+        $this->db->where('matriculaTutorado',$matricula);
+        $query = $this->db->get();
+        if($query->num_rows() > 0) {
+            $results = $query->result();
+        }
+        return $results;
+    }
 }
-?>
+
+?>  
