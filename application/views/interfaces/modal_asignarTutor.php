@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php echo form_open("Admin/asignarFkTutor"); ?>  
         <div class="pass-modal">
             <div class="modal-info-5">
@@ -11,6 +12,13 @@
                 <?php }?>
             </div>
             <div class="c-inputs-4" >
+=======
+<?php echo form_open(""); ?>  
+    <div class="pass-modal">
+        <div class="modal-info-5">
+            <span class="mdl-dialog__title fs25 tajawalL ls1">Asignar Tutor</span>
+            <div class="c-inputs-4" >
+>>>>>>> parent of bb09a51... modal asignar tutor muestra matricula del tutorado
                 <div class="form-icons"><i class="fas fa-user"></i></div>
                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select">
                     <input type="text" value="" class="mdl-textfield__input mdl-color-text--black" id="">
@@ -18,9 +26,17 @@
                         <label for="" class="mdl-textfield__label">Tutor</label>
                         <ul for=""class="mdl-menu mdl-menu--bottom-left mdl-js-menu">
                             <?php 
+<<<<<<< HEAD
                                 foreach($mostrarTutores as $mostrar){ ?>
                                 <li class="mdl-menu__item fs14 tajawalR ls1" data-val="<?php echo $mostrar->matricula; ?>"><?php echo $mostrar->nombre;?> <?php echo $mostrar->ap_paterno; ?> <?php echo $mostrar->ap_materno; ?></li>
                             <?php  
+=======
+                                if(isset($mostrarTutores)){
+                                    foreach($mostrarTutores as $mostrar){ ?>
+                                    <li class="mdl-menu__item fs14 tajawalR ls1" value="<?php echo $mostrar->matricula; ?>"><?php echo $mostrar->nombre;?><?php echo " " ?>
+                                    <?php echo " " ?><?php echo $mostrar->ap_paterno; ?><?php echo " " ?><?php echo $mostrar->ap_materno; ?></li>
+                            <?php  }
+>>>>>>> parent of bb09a51... modal asignar tutor muestra matricula del tutorado
                                 }
                              ?>
                         </ul>

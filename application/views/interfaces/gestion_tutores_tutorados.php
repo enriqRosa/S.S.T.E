@@ -22,9 +22,14 @@
                 <td class="tajawalL fs16 "><?php echo $row->nombre; ?></td>
                 <td class="tajawalL fs16 "><?php echo $row->ap_paterno; ?></td>
                 <td class="tajawalL fs16 "><?php echo $row->ap_materno; ?></td>
+<<<<<<< HEAD
                     
                 <td class="tajawalL fs16 "><?php echo $row->FK_tutor; ?></td>
                  
+=======
+                <td></td>
+                <td></td>
+>>>>>>> parent of bb09a51... modal asignar tutor muestra matricula del tutorado
                 <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14 ">
                     <a href="<?= base_url() ?>Admin/mostrarTutores/?matricula=<?php echo $row->matricula; ?>">
                         <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--white mdl-color--orange-500 btn-pass">
