@@ -103,25 +103,23 @@
                     </div>
                     <div class="c-inputs-4">
                         <div class="form-icons"><i class="fas fa-question"></i></div>
-                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select">
-                            <input type="text" value="" class="mdl-textfield__input mdl-color-text--black" id="">
-                            <input type="hidden" value="" name="semestre">
-                                <label for="" class="mdl-textfield__label">Semestre</label>
-                                    <ul for=""class="mdl-menu mdl-menu--bottom-left mdl-js-menu">
-                                        <li class="mdl-menu__item" data-val="PRIMERO">PRIMERO</li>
-                                        <li class="mdl-menu__item" data-val="SEGUNDO">SEGUNDO</li>
-                                        <li class="mdl-menu__item" data-val="TERCERO">TERCERO</li>
-                                        <li class="mdl-menu__item" data-val="CUARTO">CUARTO</li>
-                                        <li class="mdl-menu__item" data-val="QUINTO">QUINTO</li>
-                                        <li class="mdl-menu__item" data-val="SEXTO">SEXTO</li>
-                                        <li class="mdl-menu__item" data-val="SEPTIMO">SEPTIMO</li>
-                                        <li class="mdl-menu__item" data-val="OCTAVO">OCTAVO</li>
-                                        <li class="mdl-menu__item" data-val="NOVENO">NOVENO</li>
-                                        <li class="mdl-menu__item" data-val="DECIMO">DECIMO</li>
-                                        <li class="mdl-menu__item" data-val="ONCIAVO">ONCIAVO</li>
-                                        <li class="mdl-menu__item" data-val="DECIMO">DECIMO</li>
-                                    </ul>
-                        </div>
+                            <select class="mdl-textfield " id="dropdown" width="300" name="semestre">
+                                <option  value="PRIMERO">PRIMERO</option>
+                                <option  value="SEGUNDO">SEGUNDO</option>
+                                <option  value="TERCERO">TERCERO</option>
+                                <option  value="PRIMERO">PRIMERO</option>
+                                <option  value="PRIMERO">PRIMERO</option>
+                                <option  value="PRIMERO">PRIMERO</option>
+                                <option  value="PRIMERO">PRIMERO</option>
+                                <option  value="PRIMERO">PRIMERO</option>
+                                <option  value="PRIMERO">PRIMERO</option>
+                                <option  value="PRIMERO">PRIMERO</option>
+                                <option  value="PRIMERO">PRIMERO</option>
+                                <option  value="PRIMERO">PRIMERO</option>
+                            </select>
+                            <script>
+                                $('#dropdown').dropdown();
+                            </script>
                     </div> 
                     <div class="c-inputs-4">
                         <div class="form-icons"><i class="fas fa-book"></i></div>

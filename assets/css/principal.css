@@ -192,6 +192,15 @@ nav{
     padding: 50px;
     background:#fff;
 }
+.seguimiento_2{
+    width: 70%;
+    margin: 0 auto;
+    box-shadow: 0 0 10px 1px #B0BEC5;
+    margin-top:30px;
+    margin-bottom:100px;
+    padding: 50px;
+    background:#fff;
+}
 .formato{
     display:flex;
     justify-content:space-around;
@@ -201,7 +210,8 @@ nav{
     margin-top:10px;
     margin-bottom:40px;
 }
-.seguimiento .c-inputs-4{
+.seguimiento .c-inputs-4,
+.seguimiento_2 .c-inputs-4{
     display:flex;
     justify-content:space-around;
 }
@@ -218,7 +228,8 @@ nav{
 .seguimiento .info-1{
     width:40%;
 }
-.seguimiento .c-inputs-4 .mdl-textfield{
+.seguimiento .c-inputs-4 .mdl-textfield,
+.seguimiento_2 .c-inputs-4 .mdl-textfield{
     width:40%!important;
     padding: 5px 0!important;
 } 
@@ -403,8 +414,14 @@ nav{
     justify-content: space-between;
 }
 .c-inputs-3{
+    margin-top:20px; 
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;   
+}
+.matricula{
+    padding: 0 0 0 15px;
+    margin-top:30px;
+    margin-bottom:30px;
 }
 .info .c-inputs-2{
     display:flex;
@@ -431,19 +448,6 @@ nav{
 }
 .c-inputs-2 .mdl-textfield {
     width: 20%!important;
-}
-.c-inputs-3 .mdl-textfield__input {
-    border-bottom: 2px solid #B0BEC5 !important;
-    border-radius: 2px;
-    color: #B0BEC5 !important;
-    min-width: 20%!important;
-}
-.c-inputs-3 .mdl-textfield__label{
-    min-width: 20%!important;
-    color: #B0BEC5!important;
-}
-.c-inputs-3 .mdl-textfield {
-    width: 25%!important;
 }
 .mdl-button:hover {
     background-color: #546E7A !important;
