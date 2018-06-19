@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 16, 2018 at 04:09 AM
+-- Generation Time: Jun 19, 2018 at 05:26 PM
 -- Server version: 10.1.32-MariaDB
 -- PHP Version: 7.2.5
 
@@ -42,7 +42,7 @@ CREATE TABLE `administrador` (
 --
 
 INSERT INTO `administrador` (`matricula`, `nombre`, `ap_paterno`, `ap_materno`, `pass`, `tipo_usuario`) VALUES
-(201424101, 'ROBERTO CARLOS', 'GARDUÑO', 'ROMO', 'hola1234', 'AD');
+(201224100, 'ROBERTO CARLOS', 'GARDUÑO', 'ROMO', 'roberto123', 'AD');
 
 --
 -- Triggers `administrador`
@@ -115,25 +115,24 @@ CREATE TABLE `bitacora_mensual` (
 --
 
 CREATE TABLE `coordinador` (
-  `matricula` int(11) NOT NULL,
+  `matricula` int(10) NOT NULL,
   `nombre` varchar(25) DEFAULT NULL,
   `ap_paterno` varchar(25) DEFAULT NULL,
   `ap_materno` varchar(25) DEFAULT NULL,
   `correo` varchar(50) DEFAULT NULL,
   `telefono` varchar(10) DEFAULT NULL,
-  `pass` varchar(100) DEFAULT NULL,
-  `tipo_usuario` varchar(2) DEFAULT NULL,
-  `status` varchar(8) DEFAULT NULL
+  `pass` varchar(100) NOT NULL,
+  `status` varchar(8) DEFAULT NULL,
+  `tipo_usuario` varchar(2) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `coordinador`
 --
 
-INSERT INTO `coordinador` (`matricula`, `nombre`, `ap_paterno`, `ap_materno`, `correo`, `telefono`, `pass`, `tipo_usuario`, `status`) VALUES
-(123123, 'ROSA', 'BKVJBK', '', 'bkvjdb', '5537678608', '123', 'CA', NULL),
-(201424103, '    YAHILT', 'HERNANDEZ', '  HERNANDEZ', 'yahilt@gmail.com', '5537678608', '123', 'CA', 'ACTIVO'),
-(201424104, ' MARIA', 'SANCHEZ', '', 'maria@gmail.com', '5537678608', '123', 'CI', 'INACTIVO');
+INSERT INTO `coordinador` (`matricula`, `nombre`, `ap_paterno`, `ap_materno`, `correo`, `telefono`, `pass`, `status`, `tipo_usuario`) VALUES
+(201224103, 'YAHILT', 'HERNANDEZ', 'HERNANDEZ', 'yahilt@gmail.com', '5537678608', 'yahilt1212', 'ACTIVO', 'CA'),
+(201424102, 'MARIA', 'SANCHEZ', 'PEREZ', 'maria@gmail.com', '5512345678', '12345', 'ACTIVO', 'CI');
 
 --
 -- Triggers `coordinador`
@@ -247,6 +246,50 @@ CREATE TABLE `materia` (
   `credito` varchar(2) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Dumping data for table `materia`
+--
+
+INSERT INTO `materia` (`idclave`, `nombre`, `credito`) VALUES
+(41788, 'TALLER DE ETICA', '4'),
+(41789, 'FUNDAMENTOS DE INVESTIGACION', '4'),
+(41790, 'CALCULO DIFERENCIAL', '5'),
+(41791, 'FUNDAMENTOS DE PROGRAMACION', '5'),
+(41792, 'MATEMATICAS DISCRETAS', '5'),
+(41793, 'TALLER DE ADMINISTRACION', '4'),
+(42794, 'PROGRAMACION ORIENTADA A OBJETOS', '5'),
+(42795, 'CALCULO INTEGRAL', '5'),
+(42796, 'CONTABILIDAD FINANCIERA', '4'),
+(42797, 'QUIMICA', '4'),
+(42798, 'ALGEBRA LINEAL', '5'),
+(42799, 'PROBABILIDAD Y ESTADISTICA', '5'),
+(43061, 'CULTURA EMPRESARIAL', '4'),
+(43064, 'FISICA GENERAL', '5'),
+(43559, 'CALCULO VECTORIAL', '5'),
+(43560, 'ESTRUCTURA DE DATOS', '5'),
+(43562, 'INVESTIGACION DE OPERACIONES', '4'),
+(43563, 'SISTEMAS OPERATIVOS', '4'),
+(44067, 'TOPICOS AVANZADOS DE PROGRAMACION', '5'),
+(44069, 'TALLER DE SISTEMAS OPERATIVOS', '4'),
+(44565, 'ECUACIONES DIFERENCIALES', '5'),
+(44566, 'METODOS NUMERICOS', '4'),
+(44568, 'FUNDAMENTOS DE BASES DE DATOS', '5'),
+(44570, 'PRINCIPIOS ELECTRICOS Y APLICACIONES DIGITALES', '5'),
+(45073, 'TALLER DE BASES DE DATOS', '4'),
+(45074, 'SIMULACION', '5'),
+(45075, 'FUNDAMENTOS DE INGENIERIA DE SOFTWARE', '4'),
+(45076, 'ARQUITECTURA DE COMPUTADORAS', '5'),
+(45571, 'DESARROLLO SUSTENTABLE', '5'),
+(45572, 'FUNDAMENTOS DE TELECOMUNICACIONES', '4'),
+(46077, 'LENGUAJES Y AUTOMATAZ I', '5'),
+(46078, 'REDES DE COMPUTADORAS', '5'),
+(46079, 'ADMINISTRACION DE BASES DE DATOS', '5'),
+(46080, 'GRAFICACION', '4'),
+(46081, 'INGENIERIA DE SOFTWARE', '5'),
+(46082, 'LENGUAJES DE INTERFAZ', '4'),
+(47083, 'LENGUAJES Y AUTOMATAZ II', '5'),
+(47084, 'CONMUTACION Y ENRUTAMIENTO DE REDES DE DATOS', '5');
+
 -- --------------------------------------------------------
 
 --
@@ -313,12 +356,18 @@ CREATE TABLE `tutor` (
 --
 
 INSERT INTO `tutor` (`matricula`, `nombre`, `ap_paterno`, `ap_materno`, `correo`, `telefono`, `status`, `pass`, `tipo_usuario`) VALUES
-(12345678, 'ROSA', 'ENRIQUEZ', 'SANTILLAN ', 'cgchg', '5537678608', 'ACTIVO', '123', 'TU'),
-(201424105, 'JOSE ADAN', 'LOPEZ', 'SANCHEZ', 'adan@gmail.com', '5537678608', 'INACTIVO', '123', 'TU');
+(201224101, 'JOSE ADAN', 'LOPEZ', 'SANCHEZ', 'adan@gmail.com', '5537678608', 'INACTIVO', '123', 'TU'),
+(201224106, 'CONSUELO', 'CERON', 'RODRIGUEZ', 'consuelo@gmail.com', '5537678608', 'ACTIVO', '123', 'TU'),
+(201224107, 'MARCO ANTONIO', 'ACOSTA', 'MEDIZABAL', 'acosta@gmail.com', '5512345678', 'ACTIVO', '123', 'TU'),
+(201224108, 'IVAN', 'AZAMAR', 'PALMA', 'azamar@gmail.com', '5537678608', 'ACTIVO', '123', 'TU');
 
 --
 -- Triggers `tutor`
 --
+DELIMITER $$
+CREATE TRIGGER `UpdateTutorPass` AFTER UPDATE ON `tutor` FOR EACH ROW update usuarios set pass=new.pass where matricula=new.matricula
+$$
+DELIMITER ;
 DELIMITER $$
 CREATE TRIGGER `newTutor` AFTER INSERT ON `tutor` FOR EACH ROW insert into usuarios(matricula,pass, tipo_usuario)
 values (new.matricula, new.pass, new.tipo_usuario)
@@ -338,13 +387,13 @@ CREATE TABLE `tutorado` (
   `ap_materno` varchar(25) DEFAULT NULL,
   `carrera` varchar(50) DEFAULT NULL,
   `semestre` varchar(20) DEFAULT NULL,
-  `programa` varchar(8) DEFAULT NULL,
+  `programa` varchar(30) DEFAULT NULL,
   `correo` varchar(40) DEFAULT NULL,
   `telefono` varchar(10) DEFAULT NULL,
-  `tipo_tutoria` varchar(18) NOT NULL,
+  `tipo_tutoria` varchar(18) DEFAULT NULL,
   `pass` varchar(100) DEFAULT NULL,
   `tipo_usuario` varchar(2) DEFAULT NULL,
-  `status` varchar(8) NOT NULL,
+  `status` varchar(8) DEFAULT NULL,
   `FK_tutor` int(10) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -353,20 +402,39 @@ CREATE TABLE `tutorado` (
 --
 
 INSERT INTO `tutorado` (`matricula`, `nombre`, `ap_paterno`, `ap_materno`, `carrera`, `semestre`, `programa`, `correo`, `telefono`, `tipo_tutoria`, `pass`, `tipo_usuario`, `status`, `FK_tutor`) VALUES
-(123, 'BVKJB', 'BCKJWEB', 'JBCWEKJB', 'ISC', '', 'TUTORÍA ', 'cndskjn@yahoo.com', '5537678608', '', '123', 'TO', '', NULL),
-(1231, 'VNDLNL', 'NVLDK', 'NVL', 'ISC', '', 'TUTORÍA ', NULL, NULL, '', '123', 'TO', '', NULL),
-(201424106, 'ROSAICELA', 'ENRIQUEZ', 'SANTILLAN', 'ISC', 'OCTAVO', 'TUTORÍA ', 'rosa@gmail.com', '5537678608', '', '123', 'TO', 'ACTIVO', NULL),
-(201424107, 'ISAAC', 'PAREDES', 'PAREDES', 'ISC', '', 'TUTORÍA ', 'isaac.yahoo.com', '5537678608', '', '123', 'TO', 'ACTIVO', NULL),
-(201424110, 'OSIELO', 'GARCIA', 'GUERREO', 'ISC', '', 'ESPECIAL', NULL, NULL, 'TUTORÍA INDIVIDUAL', '123', 'TO', '', NULL);
+(201424100, 'ABEL', 'SANCHEZ', 'MEDIZABAL', 'ISC', 'TERCERO', 'ESPECIAL', NULL, NULL, 'TUTORÍA INDIVIDUAL', '123', 'TO', 'ACTIVO', NULL),
+(201424101, 'ROSAICELA', 'ENRIQUEZ', 'SANTILLAN', 'ISC', 'OCTAVO', 'ESPECIAL', 'enriq.rosa@yahoo.com', '5537678608', 'TUTORÍA INDIVIDUAL', '1234', 'TO', 'ACTIVO', 201224106),
+(201424102, 'ADAN ISAAC', 'CEDEñO', 'PAREDES', 'ISC', 'SEXTO', 'ESPECIAL', NULL, NULL, 'TUTORÍA INDIVIDUAL', '1234', 'TO', 'ACTIVO', 201224101),
+(201424103, 'JORDANI', 'VALENCIA', 'ROSAS', 'ISC', 'SEXTO', 'ESPECIAL', NULL, NULL, 'TUTORÍA INDIVIDUAL', '1234', 'TO', 'ACTIVO', 201224107),
+(201424104, 'GUSTAVO DANIEL', 'CRUZ', 'VAZQUEZ', 'ISC', 'QUINTO', 'ESPECIAL', NULL, NULL, 'TUTORÍA INDIVIDUAL', '1234', 'TO', 'ACTIVO', 201224108),
+(201424105, 'VERONICA', 'SANCHEZ', 'FLORES', 'ISC', 'TERCERO', 'ESPECIAL', NULL, NULL, 'TUTORIA INDIVIDUAL', '1234', 'TO', 'INACTIVO', 201224101);
 
 --
 -- Triggers `tutorado`
 --
 DELIMITER $$
+CREATE TRIGGER `UpdateTutoradoPass` AFTER UPDATE ON `tutorado` FOR EACH ROW update usuarios set pass=new.pass where matricula=new.matricula
+$$
+DELIMITER ;
+DELIMITER $$
 CREATE TRIGGER `newTutorado` AFTER INSERT ON `tutorado` FOR EACH ROW insert into usuarios(matricula,pass, tipo_usuario)
 values (new.matricula, new.pass, new.tipo_usuario)
 $$
 DELIMITER ;
+
+-- --------------------------------------------------------
+
+--
+-- Stand-in structure for view `tutor_tutorado`
+-- (See below for the actual view)
+--
+CREATE TABLE `tutor_tutorado` (
+`matricula` int(10)
+,`matriculaTutorado` int(10)
+,`nombre` varchar(25)
+,`ap_paterno` varchar(25)
+,`ap_materno` varchar(25)
+);
 
 -- --------------------------------------------------------
 
@@ -386,26 +454,29 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`idusuarios`, `matricula`, `pass`, `tipo_usuario`) VALUES
-(1, 201424101, 'hola1234', 'AD'),
-(2, 201424102, '123', 'TU'),
-(3, 201424103, '123', 'CA'),
-(4, 201424104, '123', 'CI'),
-(7, 201424107, '123', 'TO'),
-(8, 201424108, '123', 'TU'),
-(9, 201424105, '123', 'TU'),
-(10, 201424106, '123', 'TO'),
-(11, 123, '123', 'TO'),
-(12, 123, '123456', 'TU'),
-(13, 1234, '123123', 'TU'),
-(14, 12345, 'qwerty', 'TU'),
-(15, 1234567, 'qawsedrf', 'TU'),
-(16, 201224101, '123', 'TU'),
-(17, 5555, '123', 'TU'),
-(18, 12345678, '123', 'TU'),
-(19, 1231, '123', 'TO'),
-(20, 123123, '123', 'CA'),
-(21, 201424110, '123', 'TO'),
-(22, 201424110, '123', 'TO');
+(1, 201224100, 'roberto123', 'AD'),
+(7, 201424101, '1234', 'TO'),
+(8, 201424102, '1234', 'TO'),
+(9, 201424103, '1234', 'TO'),
+(10, 201424104, '1234', 'TO'),
+(11, 201224103, 'yahilt1212', 'CA'),
+(12, 201424102, '1234', 'CI'),
+(19, 201224101, '123', 'TU'),
+(20, 201424106, '123', 'TU'),
+(21, 201224107, '123', 'TU'),
+(22, 201224108, '123', 'TU'),
+(23, 201424106, '123', 'TO'),
+(24, 201424100, '123', 'TO'),
+(25, 201424100, '123', 'TO');
+
+-- --------------------------------------------------------
+
+--
+-- Structure for view `tutor_tutorado`
+--
+DROP TABLE IF EXISTS `tutor_tutorado`;
+
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `tutor_tutorado`  AS  (select `tutor`.`matricula` AS `matricula`,`tutorado`.`matricula` AS `matriculaTutorado`,`tutor`.`nombre` AS `nombre`,`tutor`.`ap_paterno` AS `ap_paterno`,`tutor`.`ap_materno` AS `ap_materno` from (`tutor` join `tutorado` on((`tutorado`.`FK_tutor` = `tutor`.`matricula`)))) ;
 
 --
 -- Indexes for dumped tables
@@ -620,7 +691,7 @@ ALTER TABLE `reporte_especial`
 -- AUTO_INCREMENT for table `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `idusuarios` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `idusuarios` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- Constraints for dumped tables
