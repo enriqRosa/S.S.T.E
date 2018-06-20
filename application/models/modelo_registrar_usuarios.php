@@ -125,6 +125,14 @@ class Modelo_registrar_usuarios extends CI_Model{
         $data=$this->db->get('area');
         return $data->result();
     }
+    function insertarFormato($data){
+        $count=$this->db->insert('formato_individual',$data);        
+        if($count>0){
+            return true;
+        }else{
+            return false;
+        }
+    }
 }
 
 ?>  

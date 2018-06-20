@@ -25,7 +25,7 @@
             </div>
             <div class="c-inputs-4"> 
 
-                <select class="mdl-textfield" id="dropdown" width="300" name="FK_salon">
+                <select class="mdl-textfield" id="dropdown" width="300" name="FK_lugar">
                 <?php foreach($mostrarsalon as $salon){?>
                     <option value="<?php echo $salon->idlugar;?>"><?php echo $salon->salon;?></option>
                 <?php } ?>
@@ -36,7 +36,7 @@
             <div class="mat-input-flex mat-form-field-flex" >
                 <div class="mat-input-infix mat-form-field-infix" >
                     <label class="fs16 ls2 tajawalL">Problematica</label>
-                    <textarea class="mat-input-element mat-form-field-autofill-control fs12 ls2 tajawalL ng-dirty ng-valid ng-touched" name="detecto_problematica"></textarea>
+                    <textarea class="mat-input-element mat-form-field-autofill-control fs12 ls2 tajawalL ng-dirty ng-valid ng-touched" name="detecto_problema"></textarea>
                 </div>
             </div>  
             </div>    
@@ -46,19 +46,19 @@
             <div class="c-inputs-3">
                 <div class="status">
                     <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-1">
-                        <input type="checkbox" id="checkbox-1" class="mdl-checkbox__input" name="pa" value="PROBLEMAS ACADEMICOS">
+                        <input type="checkbox" id="checkbox-1" class="mdl-checkbox__input" name="pa">
                         <span class="mdl-checkbox__label">PA</span>
                     </label>     
                 </div>
                 <div class="status">
                     <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-2">
-                        <input type="checkbox" id="checkbox-2" class="mdl-checkbox__input" name="pe" value="PROBLEMAS EMOCIONALES">
+                        <input type="checkbox" id="checkbox-2" class="mdl-checkbox__input" name="pe">
                         <span class="mdl-checkbox__label">PE</span>
                     </label>
                 </div>
                 <div class="status">
                     <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-3">
-                        <input type="checkbox" id="checkbox-3" class="mdl-checkbox__input" name="c" value="CANALIZACION">
+                        <input type="checkbox" id="checkbox-3" class="mdl-checkbox__input" name="c">
                         <span class="mdl-checkbox__label">C</span>
                     </label>
                 </div>
@@ -66,19 +66,19 @@
             <div class="c-inputs-3">
                 <div class="status">
                     <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-4">
-                        <input type="checkbox" id="checkbox-4" class="mdl-checkbox__input" value="ig" value="INFORMACION GENERAL">
+                        <input type="checkbox" id="checkbox-4" class="mdl-checkbox__input" name="ig">
                         <span class="mdl-checkbox__label">IG</span>
                     </label>
                 </div>
                 <div class="status">
                     <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-5">
-                        <input type="checkbox" id="checkbox-5" class="mdl-checkbox__input" value="aa" value="ASESORIA ACADEMICA">
+                        <input type="checkbox" id="checkbox-5" class="mdl-checkbox__input" name="aa">
                         <span class="mdl-checkbox__label">AA</span>
                     </label>
                 </div>
                 <div class="status">
                     <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-6">
-                        <input type="checkbox" id="checkbox-6" class="mdl-checkbox__input" value="pi" value="PROBLEMAS INTERPERSONALES">
+                        <input type="checkbox" id="checkbox-6" class="mdl-checkbox__input" name="pi">
                         <span class="mdl-checkbox__label">PI</span>
                     </label>
                 </div>
