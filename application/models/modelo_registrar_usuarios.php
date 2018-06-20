@@ -96,6 +96,11 @@ class Modelo_registrar_usuarios extends CI_Model{
         $this->db->update('tutorado',$data);
         return true;
     }
+    function tutoresActivos(){
+        $this->db->where('status','ACTIVO');
+        $data=$this->db->get('tutor');
+        return $data->result();
+    }
     function selectnombreTutor($matricula){
         $this->db->select('*');
         $this->db->from('tutor_tutorado');

@@ -15,7 +15,7 @@
                 <span class="mdl-dialog__title fs16 tajawalR ls1">Tutor:</span>
                     <select class="mdl-textfield mdl-js-textfield mdl-textfield__input" id="dropdown" width="300" name="FK_tutor">
                     <?php 
-                    foreach($mostrarTutores as $mostrar){ ?>
+                    foreach($tutoresActivos as $mostrar){ ?>
                         <option value="<?php echo $mostrar->matricula; ?>"><?php echo $mostrar->nombre;?> <?php echo $mostrar->ap_paterno; ?> <?php echo $mostrar->ap_materno; ?></option>
                         <?php  
                                 }

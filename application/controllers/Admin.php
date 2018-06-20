@@ -256,7 +256,7 @@ Class Admin extends CI_Controller{
     function mostrarTutores(){
         $this->load->view('temps/header_modal');
         $matricula=$this->input->get('matricula');
-        $this->data['mostrarTutores']=$this->modelo_registrar_usuarios->mostrardatosTutor(); 
+        $this->data['tutoresActivos']=$this->modelo_registrar_usuarios->tutoresActivos(); 
         $this->data['mostrardatosTutorado']=$this->modelo_registrar_usuarios->traerdatosTutorado($matricula);
         $this->load->view('interfaces/modal_asignarTutor',$this->data);
     }
@@ -277,11 +277,11 @@ Class Admin extends CI_Controller{
         $matricula=$this->input->get('matricula');
         
         $this->data['mostrardatosTutorado']=$this->modelo_registrar_usuarios->traerdatosTutorado($matricula);
-        $this->data['mostrarTutores']=$this->modelo_registrar_usuarios->mostrardatosTutor(); 
+        $this->data['tutoresActivos']=$this->modelo_registrar_usuarios->tutoresActivos();
         $this->data['vernombreTutor']=$this->modelo_registrar_usuarios->selectnombreTutor($matricula); 
         $this->load->view('interfaces/modal_cambiarTutor',$this->data);       
     }
-    function renovarTutor(){
+    function renovarTutor(){      
         $mat=$this->input->post('matricula');
         $tutor=$this->input->post('FK_tutor');
 
@@ -289,6 +289,7 @@ Class Admin extends CI_Controller{
             'matricula' => $mat,
             'FK_tutor'  => $tutor
         );
+        
         if($this->modelo_registrar_usuarios->cambiarasignaciontutor($mat,$data)){
             $this->tutoresTutorados();
         }
