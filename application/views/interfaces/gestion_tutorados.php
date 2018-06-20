@@ -24,6 +24,7 @@
                     <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14 mdl-color--black white">Semestre</td>
                     <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14 mdl-color--black white">Programa</td>
                     <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14 mdl-color--black white">Tutoría</td>
+                    <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14 mdl-color--black white">Grupo</td>
                     <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14 mdl-color--black white">Correo</td>
                     <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14 mdl-color--black white">Telefono</td>
                     <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14 mdl-color--black white">Status</td>
@@ -43,6 +44,7 @@
                     <td class="tajawalL fs16 "><?php echo $row->semestre; ?></td>
                     <td class="tajawalL fs16 "><?php echo $row->programa; ?></td>
                     <td class="tajawalL fs16 "><?php echo $row->tipo_tutoria; ?></td>
+                    <td class="tajawalL fs16 "><?php echo $row->grupo; ?></td>
                     <td class="tajawalL fs16 "><?php echo $row->correo; ?></td>
                     <td class="tajawalL fs16 "><?php echo $row->telefono; ?></td>
                     <td class="tajawalL fs16 "><?php echo $row->status; ?></td>
@@ -103,7 +105,7 @@
                     </div>
                     <div class="c-inputs-4">
                         <div class="form-icons"><i class="fas fa-question"></i></div>
-                            <select class="mdl-textfield " id="dropdown" width="300" name="semestre">
+                            <select class="mdl-textfield mdl-textfield__input" id="dropdown" width="300" name="semestre">
                                 <option value="PRIMERO">PRIMERO</option>
                                 <option value="SEGUNDO">SEGUNDO</option>
                                 <option value="TERCERO">TERCERO</option>
@@ -136,6 +138,38 @@
                         </div>
                     </div>
                     <div class="c-inputs-4">
+                        <div class="form-icons"><i class="fas fa-question"></i></div>
+                            <select class="mdl-textfield mdl-textfield__input" id="dropdown" name="grupo">
+                                <option value="4101">4101</option>
+                                <option value="4201">4201</option>
+                                <option value="4202">4202</option>
+                                <option value="4251">4251</option>
+                                <option value="4271">4271</option>
+                                <option value="4301">4301</option>
+                                <option value="4401">4401</option>
+                                <option value="4402">4402</option>
+                                <option value="4451">4451</option>
+                                <option value="4471">4471</option>
+                                <option value="4501">4501</option>
+                                <option value="4571">4571</option>
+                                <option value="4601">4601</option>
+                                <option value="4602">4602</option>
+                                <option value="4651">4651</option>
+                                <option value="4652">4652</option>
+                                <option value="4671">4671</option>
+                                <option value="4751">4751</option>
+                                <option value="4771">4771</option>
+                                <option value="4851">4851</option>
+                                <option value="4852">4852</option>
+                                <option value="4853">4853</option>
+                                <option value="4871">4871</option>
+                                <option value="4951">4951</option>  
+                        </select>
+                            <script>
+                                $('#dropdown').dropdown();
+                            </script>
+                    </div>
+                    <div class="c-inputs-4">
                         <div class="form-icons"><i class="fas fa-key"></i></div>
                         <div class="mdl-textfield mdl-js-textfield">
                             <input class="mdl-textfield__input" type="password" name="pass">
@@ -151,14 +185,10 @@
                     </div>
                     <div class="c-inputs-4">
                     <div class="form-icons"><i class="fas fa-question"></i></div>
-                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select">
-                        <input type="text" value="" class="mdl-textfield__input mdl-color-text--black" id="">
-                        <input type="hidden" value="" name="tipo_usuario">
-                            <label for="" class="mdl-textfield__label">Tipo Usuario</label>
-                                <ul for="" class="mdl-menu mdl-menu--bottom-left mdl-js-menu">
-                                    <li class="mdl-menu__item" data-val="TO">TUTORADO</li>
-                                </ul>
-                    </div> 
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <input class="mdl-textfield__input" type="text" value="TO" name="tipo_usuario">
+                                <label class="mdl-textfield__label tajawalL" required="text">Tipo usuario</label>
+                        </div>
                 </div>
                     <div class="c-inputs-4">
                         <span class="fs19 ls2 tajawalR">Status</span>

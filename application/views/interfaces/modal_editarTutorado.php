@@ -41,7 +41,7 @@
                     <div class="c-inputs-4">
                         <div class="form-icons"><i class="fas fa-question"></i></div>
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select">
-                            <input type="text" value="" class="mdl-textfield__input mdl-color-text--black" id="">
+                            <input type="text" value="<?php echo $mostrardatosTutorado[0]->semestre;?>" class="mdl-textfield__input mdl-color-text--black" id="">
                             <input type="hidden" value="" name="semestre">
                                 <label for="" class="mdl-textfield__label">Semestre</label>
                                     <ul for="" class="mdl-menu mdl-menu--bottom-left mdl-js-menu">
@@ -73,7 +73,40 @@
                             <input class="mdl-textfield__input" type="text" value="<?php echo $mostrardatosTutorado[0]->tipo_tutoria;?>" name="tipo_tutoria">
                                 <label class="mdl-textfield__label tajawalL" required="text">Tutoría</label>
                         </div>
-                    </div>       
+                    </div>  
+                    <div class="c-inputs-4">
+                        <div class="form-icons"><i class="fas fa-question"></i></div>
+                            <select class="mdl-textfield mdl-textfield__input" id="dropdown" name="grupo">
+                                <option value="<?php echo $mostrardatosTutorado[0]->grupo;?>"><?php echo $mostrardatosTutorado[0]->grupo;?></option>
+                                <option value="4101">4101</option>
+                                <option value="4201">4201</option>
+                                <option value="4202">4202</option>
+                                <option value="4251">4251</option>
+                                <option value="4271">4271</option>
+                                <option value="4301">4301</option>
+                                <option value="4401">4401</option>
+                                <option value="4402">4402</option>
+                                <option value="4451">4451</option>
+                                <option value="4471">4471</option>
+                                <option value="4501">4501</option>
+                                <option value="4571">4571</option>
+                                <option value="4601">4601</option>
+                                <option value="4602">4602</option>
+                                <option value="4651">4651</option>
+                                <option value="4652">4652</option>
+                                <option value="4671">4671</option>
+                                <option value="4751">4751</option>
+                                <option value="4771">4771</option>
+                                <option value="4851">4851</option>
+                                <option value="4852">4852</option>
+                                <option value="4853">4853</option>
+                                <option value="4871">4871</option>
+                                <option value="4951">4951</option>  
+                            </select>
+                            <script>
+                                $('#dropdown').dropdown();
+                            </script>
+                    </div>     
             <div class="c-inputs-4">
                 <span class="fs19 ls2 tajawalR">Status</span>
                     <?php if($mostrardatosTutorado[0]->status=='ACTIVO'){

@@ -113,6 +113,7 @@ Class Admin extends CI_Controller{
         $semestre = strtoupper($semestre);
         $prog = $this->input->post('programa');
         $tutoria = $this->input->post('tipo_tutoria');
+        $grupo = $this->input->post('grupo');
         $pass = $this->input->post('pass');
         $tipo = $this->input->post('tipo_usuario');
         $status = $this->input->post('status');
@@ -126,6 +127,7 @@ Class Admin extends CI_Controller{
             'semestre' => $semestre,
             'programa' => $prog,
             'tipo_tutoria' => $tutoria,
+            'grupo' => $grupo,
             'pass' => $pass,
             'tipo_usuario' => $tipo,
             'status' => $status
@@ -155,6 +157,7 @@ Class Admin extends CI_Controller{
         $semestre = $this->input->post('semestre');
         $semestre = strtoupper($semestre);
         $prog = $this->input->post('programa');
+        $grupo = $this->input->post('grupo');
         $tutoria = $this->input->post('tipo_tutoria');
         $status = $this->input->post('status');
         
@@ -166,6 +169,7 @@ Class Admin extends CI_Controller{
             'carrera' => $carrera,
             'semestre' => $semestre,
             'programa' => $prog,
+            'grupo' => $grupo,
             'tipo_tutoria' => $tutoria,
             'status' => $status
         );
@@ -303,7 +307,7 @@ Class Admin extends CI_Controller{
     }
     function registraralumnosFormato(){
         $mat=$this->input->post('matricula');
-        
+
     }
     /************************************************************************************************************************************** */
     //FUNCIÓN PARA CAMBIAR LA CONTRASEÑA DEL ADMINISTRADOR PARA LA TABLA 'usuarios'
