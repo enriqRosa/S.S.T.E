@@ -289,7 +289,7 @@ Class Admin extends CI_Controller{
             'matricula' => $mat,
             'FK_tutor'  => $tutor
         );
-        
+
         if($this->modelo_registrar_usuarios->cambiarasignaciontutor($mat,$data)){
             $this->tutoresTutorados();
         }
@@ -304,11 +304,11 @@ Class Admin extends CI_Controller{
         $matricula=$this->input->get('matricula');
         $this->data['mostrardatosTutorado']=$this->modelo_registrar_usuarios->traerdatosTutorado($matricula);
         $this->data['mostrarsalon']=$this->modelo_registrar_usuarios->traersalon();
+        $this->data['FK_area']=$this->modelo_registrar_usuarios->traerArea();
         $this->load->view('interfaces/modal_registrarFormato',$this->data);
     }
     function registraralumnosFormato(){
         $mat=$this->input->post('matricula');
-
     }
     /************************************************************************************************************************************** */
     //FUNCIÓN PARA CAMBIAR LA CONTRASEÑA DEL ADMINISTRADOR PARA LA TABLA 'usuarios'

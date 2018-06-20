@@ -116,8 +116,13 @@ class Modelo_registrar_usuarios extends CI_Model{
         $this->db->update('tutorado',$data);
         return true;
     }
+    //FUNCIONES PARA EL REGISTRO DEL FORMATO
     function traersalon(){
         $data=$this->db->get('lugar');
+        return $data->result();
+    }
+    function traerArea(){
+        $data=$this->db->get('area');
         return $data->result();
     }
 }
