@@ -298,8 +298,14 @@ Class Admin extends CI_Controller{
         $this->load->view('temps/header_modal');
         $matricula=$this->input->get('matricula');
         $this->data['mostrardatosTutorado']=$this->modelo_registrar_usuarios->traerdatosTutorado($matricula);
+        $this->data['mostrarsalon']=$this->modelo_registrar_usuarios->traersalon();
         $this->load->view('interfaces/modal_registrarFormato',$this->data);
     }
+    function registraralumnosFormato(){
+        $mat=$this->input->post('matricula');
+        
+    }
+    /************************************************************************************************************************************** */
     //FUNCIÓN PARA CAMBIAR LA CONTRASEÑA DEL ADMINISTRADOR PARA LA TABLA 'usuarios'
     function cambiarPassword(){
         $this->form_validation->set_rules('actual_pswd','Ingresa tu contraseña actual','required');

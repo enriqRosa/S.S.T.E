@@ -33,22 +33,12 @@
                         <ul for=""class="mdl-menu mdl-menu--bottom-left mdl-js-menu">
                             <?php 
                                 foreach($mostrarTutores as $mostrar){ ?>
-                                <li class="mdl-menu__item fs14 tajawalR ls1" data-val="<?php echo $mostrar->matricula; ?>"><?php echo $mostrar->nombre;?><?php echo " " ?>
-                                <?php echo " " ?><?php echo $mostrar->ap_paterno; ?><?php echo " " ?><?php echo $mostrar->ap_materno; ?></li>
+                                <li class="mdl-menu__item fs14 tajawalR ls1" data-val="<?php echo $mostrar->matricula; ?>"> <?php echo $mostrar->nombre;?><?php echo $mostrar->ap_paterno; ?> <?php echo $mostrar->ap_materno; ?></li>
                             <?php  
                                 }
                             }
                              ?>
                         </ul>
-                </div>
-            </div>
-            <div class="c-inputs-4" >  
-                <div class="status">
-                
-                    <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-1">
-                        <input type="checkbox" id="checkbox-1" class="mdl-checkbox__input" name="FK_tutor" value="<?php echo $mostrar->matricula; ?>">
-                        <span class="mdl-checkbox__label ls2 tajawalR">No cambiar</span>
-                    </label>
                 </div>
             </div>
             <div class="modals">

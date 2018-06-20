@@ -104,18 +104,18 @@
                     <div class="c-inputs-4">
                         <div class="form-icons"><i class="fas fa-question"></i></div>
                             <select class="mdl-textfield " id="dropdown" width="300" name="semestre">
-                                <option  value="PRIMERO">PRIMERO</option>
-                                <option  value="SEGUNDO">SEGUNDO</option>
-                                <option  value="TERCERO">TERCERO</option>
-                                <option  value="PRIMERO">PRIMERO</option>
-                                <option  value="PRIMERO">PRIMERO</option>
-                                <option  value="PRIMERO">PRIMERO</option>
-                                <option  value="PRIMERO">PRIMERO</option>
-                                <option  value="PRIMERO">PRIMERO</option>
-                                <option  value="PRIMERO">PRIMERO</option>
-                                <option  value="PRIMERO">PRIMERO</option>
-                                <option  value="PRIMERO">PRIMERO</option>
-                                <option  value="PRIMERO">PRIMERO</option>
+                                <option value="PRIMERO">PRIMERO</option>
+                                <option value="SEGUNDO">SEGUNDO</option>
+                                <option value="TERCERO">TERCERO</option>
+                                <option value="CUARTO">CUARTO</option>
+                                <option value="QUINTO">QUINTO</option>
+                                <option value="SEXTO">SEXTO</option>
+                                <option value="SEPTIMO">SEPTIMO</option>
+                                <option value="OCTAVO">OCTAVO</option>
+                                <option value="NOVENO">NOVENO</option>
+                                <option value="DECIMO">DECIMO</option>
+                                <option value="ONCIAVO">ONCIAVO</option>
+                                <option value="DOCIAVO">DOCIAVO</option>
                             </select>
                             <script>
                                 $('#dropdown').dropdown();
