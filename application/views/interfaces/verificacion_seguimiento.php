@@ -31,7 +31,7 @@
                     </a>
                     </td>
                     <td>
-                        <a href="<?= base_url() ?>Seguimiento/index">
+                        <a href="<?= base_url() ?>Seguimiento/index/?matricula=<?php echo $row->matricula; ?>">
                             <button 
                                 class="mdl-button mdl-js-button mdl-color--grey-700 mdl-js-ripple-effect mdl-color-text--white">
                                 <i class="fas fa-eye"></i>Seguimiento

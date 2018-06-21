@@ -12,49 +12,58 @@
         <div class="info-2">
             <span class="fs16 ls2 tajawalR mdl-color-text--white">Mtro. Tutor:</span>         
         </div>
-        <input class="c-formato" type="text" disabled> 
+        <?php foreach ($vernombreTutor as $mostrarnombre) { ?>
+            <input class="c-formato" type="text" value="<?php echo $mostrarnombre->nombre;?> <?php echo $mostrarnombre->ap_paterno;?> <?php echo $mostrarnombre->ap_materno;?>" disabled> 
+        <?php } ?>
     </div>    
     <div class="formato">
         <div class="info-2">
             <span class="fs16 ls2 tajawalR mdl-color-text--white">Nombre del alumno (a): </span> 
         </div>
-        <input class="c-formato" type="text" disabled> 
+        <?php foreach ($mostrardatosTutorado as $mostrar) { ?>
+            <input class="c-formato" type="text" value="<?php echo $mostrar->nombre;?> <?php echo $mostrar->ap_paterno;?> <?php echo $mostrar->ap_materno;?>" disabled> 
+        <?php } ?>
     </div>
     <div class="formato">
         <div class="info-2">
             <span class="fs16 ls2 tajawalR mdl-color-text--white">Matrícula: </span>          
         </div>
         <div class="tutorado-inputs">
-            <input class="c-formato" type="text" disabled>
+        <?php foreach ($mostrardatosTutorado as $mostrar) { ?>
+            <input class="c-formato" type="text" name="matricula" value="<?php echo $mostrar->matricula;?>" disabled>
+       
                 <span class="fs16 ls2 tajawalR mdl-color-text--white">Grupo:</span>          
-            <input class="c-formato" type="text" disabled>
+            <input class="c-formato" type="text"value="<?php echo $mostrar->grupo;?>" disabled>
         </div>
     </div>
     <div class="formato">
         <div class="info-2">
-            <span class="fs16 ls2 tajawalR mdl-color-text--white">Ingeniería</span>          
+            <span class="fs16 ls2 tajawalR mdl-color-text--white">Ingeniería:</span>          
         </div>
-        <input class="c-formato" type="text" disabled> 
+        <?php if($mostrar->carrera=='ISC'){
+            $carrera="INGENIERÍA EN SISTEMAS COMPUTACIONALES"; ?>
+        <input class="c-formato" type="text" value="<?php echo $carrera?>" disabled> 
+        <?php } ?>
     </div>
     <div class="formato">
         <div class="info-2">
             <span class="fs16 ls2 tajawalR mdl-color-text--white">Programa:</span>  
         </div>
-        <input class="c-formato" type="text" disabled>         
+        <input class="c-formato" type="text" value="<?php echo $mostrar->programa;?>" disabled>         
     </div>
     <div class="formato">
         <div class="info-2">
             <span class="fs16 ls2 tajawalR mdl-color-text--white">Correo electrónico: </span>          
         </div>
-        <input class="c-formato" type="text" disabled>         
+        <input class="c-formato" type="text" value="<?php echo $mostrar->correo;?>" disabled>         
     </div>
     <div class="formato">
         <div class="info-2">
             <span class="fs16 ls2 tajawalR mdl-color-text--white">Telefono:</span>          
         </div>
-        <input class="c-formato" type="text" disabled>         
+        <input class="c-formato" type="text" value="<?php echo $mostrar->telefono;?>" disabled>         
     </div>
-
+        <?php } ?>
     <div class="usuario">
         <span class="fs25 ls2 tajawalR  mdl-color-text--white">Registro de Actividades</span>
     </div>
@@ -71,7 +80,6 @@
                     <td class="mdl-data-table__cell--non-numeric tajawalB mdl-color--blue-grey-200  ls1 fs14">Avance</td>
                     <td class="mdl-data-table__cell--non-numeric tajawalB mdl-color--blue-grey-200  ls1 fs14">Firma Alumno</td>
                     <td class="mdl-data-table__cell--non-numeric tajawalB mdl-color--blue-grey-200  ls1 fs14">Firma Tutor</td>
-                    
                     <!--<td>
                         <button 
                             class="mdl-button mdl-js-button mdl-color--green-700 mdl-js-ripple-effect mdl-color-text--white mdl-color--orange-500 btn_editar_formato "><i class="fas fa-user-plus"></i>Editar

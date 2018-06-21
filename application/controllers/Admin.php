@@ -364,7 +364,7 @@ Class Admin extends CI_Controller{
             'aa' => $aa,
             'pi' => $pi,
             'detecto_problema' => $problema,
-            'avance' => $avance,
+            'avance' => $avance,    
             'FK_area' => $area,
             'FK_tutoradoindividual' => $mat,
             'FK_lugar' => $salon

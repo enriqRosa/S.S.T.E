@@ -9,11 +9,17 @@ Class Seguimiento extends CI_Controller{
         $this->load->view('temps/header');
         $this->load->helper('url');
         $this->load->helper('form');
+        $this->load->model('modelo_registrar_usuarios');
         $this->load->library('session');          
     }
     function index(){
+        $this->load->view('temps/header_modal');
         $this->load->view('temps/header_back');
-        $this->load->view('interfaces/seguimiento_tutorial');          
+        $matricula=$this->input->get('matricula');
+        
+        $this->data['mostrardatosTutorado']=$this->modelo_registrar_usuarios->traerdatosTutorado($matricula);
+        $this->data['vernombreTutor']=$this->modelo_registrar_usuarios->selectnombreTutor($matricula); 
+        $this->load->view('interfaces/seguimiento_tutorial',$this->data);       
     }
     function back(){        
         if($this->session->userdata('tipo_usuario')=="AD"){
