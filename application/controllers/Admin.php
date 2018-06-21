@@ -312,6 +312,7 @@ Class Admin extends CI_Controller{
         $hora=$this->input->post('hora');
         $salon=$this->input->post('FK_lugar');
         $problema=$this->input->post('detecto_problema');
+        $avance=$this->input->post('avance');
         $pa=$this->input->post('pa');
         $pe=$this->input->post('pe');
         $c=$this->input->post('c');
@@ -363,11 +364,14 @@ Class Admin extends CI_Controller{
             'aa' => $aa,
             'pi' => $pi,
             'detecto_problema' => $problema,
+            'avance' => $avance,
             'FK_area' => $area,
             'FK_tutoradoindividual' => $mat,
             'FK_lugar' => $salon
         ); 
-        $this->modelo_registrar_usuarios->insertarFormato($data);
+        if($this->modelo_registrar_usuarios->insertarFormato($data)){
+            $this->verificacionSeguimiento();
+        }
     }
     /************************************************************************************************************************************** */
     //FUNCIÓN PARA CAMBIAR LA CONTRASEÑA DEL ADMINISTRADOR PARA LA TABLA 'usuarios'

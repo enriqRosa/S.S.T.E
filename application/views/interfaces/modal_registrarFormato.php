@@ -7,15 +7,15 @@
             <span class="mdl-dialog__title fs25 tajawalB ls1">Registro de Seguimiento Tutorial</span>
         </div>
             <div class="matricula" >
-                <span class="mdl-dialog__title tajawalR ls1">Matricula Tutorado:</span>
+                <span class="tajawalR ls1 mdl-color-text--indigo-900">Matricula Tutorado:</span>
                     <?php foreach ($mostrardatosTutorado as $mostrar) { ?>
                         <input class="fs25 ls2 tajawalL" type="text" name="matricula" value="<?php echo $mostrar->matricula;?>">
                     <?php }?>
             </div>
             <div class="c-inputs-3" > 
-                <input id="datepicker" width="312"name="fecha" />
+                <input id="datepicker" width="312" name="fecha" />
                     <script>
-                       $('#datepicker').datepicker({ header: true, modal: true, footer: true });
+                       $('#datepicker').datepicker({ format: 'yyyy-mm-dd',footer: true , modal:true, header: true});
                     </script>
 
                 <input id="timepicker" width="312" name="hora" />
@@ -23,9 +23,8 @@
                         $('#timepicker').timepicker();
                     </script>
             </div>
-            <div class="c-inputs-4"> 
-
-                <select class="mdl-textfield" id="dropdown" width="300" name="FK_lugar">
+            <div class="c-inputs-4">
+                <select class="mdl-textfield" id="dropdown" width="310" name="FK_lugar">
                 <?php foreach($mostrarsalon as $salon){?>
                     <option value="<?php echo $salon->idlugar;?>"><?php echo $salon->salon;?></option>
                 <?php } ?>
@@ -33,15 +32,21 @@
                 <script>
                     $('#dropdown').dropdown();
                 </script>
-            <div class="mat-input-flex mat-form-field-flex" >
-                <div class="mat-input-infix mat-form-field-infix" >
-                    <label class="fs16 ls2 tajawalL">Problematica</label>
-                    <textarea class="mat-input-element mat-form-field-autofill-control fs12 ls2 tajawalL ng-dirty ng-valid ng-touched" name="detecto_problema"></textarea>
-                </div>
-            </div>  
+                <div class="mat-input-flex mat-form-field-flex" >
+                    <div class="mat-input-infix mat-form-field-infix" >
+                        <label class="fs16 ls2 tajawalR mdl-color-text--indigo-700">Problematica</label>
+                        <textarea class="mat-input-element mat-form-field-autofill-control fs8 ls2 tajawalL ng-dirty ng-valid ng-touched" name="detecto_problema"></textarea>
+                    </div>
+                </div>  
             </div>    
+            <div class="matricula">
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+					<input class="mdl-textfield__input" type="text" name="avance" required>
+						<label class="mdl-textfield__label fs12 ls2 tajawalR" for="tb-mail">Avance</label>
+				</div>
+            </div>
             <div class="c-inputs-3">
-                <label class="fs20 ls2 tajawalL">Motivo de la Tutoría (Problema Dectectado)</label>
+                <label class="fs20 ls2 tajawalR mdl-color-text--indigo-900">Motivo de la Tutoría (Problema Dectectado)</label>
             </div>
             <div class="c-inputs-3">
                 <div class="status">
@@ -84,7 +89,7 @@
                 </div>
             </div>
             <div class="c-inputs-3">
-                <label class="fs20 ls2 tajawalL">Área en la que fue canalizada</label>
+                <label class="fs20 ls2 tajawalR mdl-color-text--indigo-900">Área en la que fue canalizada</label>
             </div>
             <div class="c-inputs-4">
             <?php foreach ($FK_area as $area){ ?>
@@ -95,6 +100,16 @@
                     </label>
                 </div>
                 <?php }?>
+            </div>
+            <div class="c-inputs-3">
+                <span class="tajawalL fs12 ls1 mdl-color-text--grey-700">*PROBLEMAS ACADEMICOS</span>
+                <span class="tajawalL fs12 ls1 mdl-color-text--grey-700">*PROBLEMAS EMOCIONALES</span>
+                <span class="tajawalL fs12 ls1 mdl-color-text--grey-700">*CANALIZACION</span>
+                <span class="tajawalL fs12 ls1 mdl-color-text--grey-700">*INFORMACION GENERAL</span>
+                <span class="tajawalL fs12 ls1 mdl-color-text--grey-700">*ASESORIA ACADEMICA</span>
+            </div>
+            <div class="c-inputs-3">
+                <span class="tajawalL fs12 ls1 mdl-color-text--grey-700">*PROBLEMAS INTERPERSONALES</span>
             </div>
             <div class="modals">
             <a href="<?= base_url() ?>Admin/verificacionSeguimiento">
