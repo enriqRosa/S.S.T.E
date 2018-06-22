@@ -64,10 +64,11 @@
         <input class="c-formato" type="text" value="<?php echo $mostrar->telefono;?>" disabled>         
     </div>
         <?php } ?>
+    </section>
     <div class="usuario">
-        <span class="fs25 ls2 tajawalR  mdl-color-text--white">Registro de Actividades</span>
+        <span class="fs25 ls2 tajawalR">Registro de Actividades</span>
     </div>
-    <div class="table">
+    <div class="table2 overflow">
         <table class="mdl-data-table mdl-js-data-table  mdl-shadow--2dp">
             <thead>
                 <tr>
@@ -80,121 +81,134 @@
                     <td class="mdl-data-table__cell--non-numeric tajawalB mdl-color--blue-grey-200  ls1 fs14">Avance</td>
                     <td class="mdl-data-table__cell--non-numeric tajawalB mdl-color--blue-grey-200  ls1 fs14">Firma Alumno</td>
                     <td class="mdl-data-table__cell--non-numeric tajawalB mdl-color--blue-grey-200  ls1 fs14">Firma Tutor</td>
-                    <!--<td>
+                </tr>
+            </thead>
+            <?php foreach ($mostrardatosFormato as $row) {
+                    foreach ($mostrarsalonFormato as $salon){
+                        foreach ($mostrarareaFormato as $area){
+                            foreach ($mostrarmotivosFormato as $motivos){
+                            if($motivos->pa!='NULL'){
+                                $pa=$motivos->pa;
+                            }else{
+                                $pa="";
+                            }
+                            if ($motivos->pe!='NULL') {
+                                $pe=$motivos->pe;
+                            }else{
+                                $pe="";
+                            }
+                            if($motivos->c!='NULL'){
+                               $c=$motivos->c;
+                            }else{
+                                $c="";
+                            }
+                            if($motivos->ig!='NULL'){
+                                $ig=$motivos->ig;
+                            }else{
+                                $ig="";
+                            }
+                            if($motivos->aa!='NULL'){
+                               $aa=$motivos->aa;
+                            }else{
+                                $aa="";
+                            }
+                            if($motivos->pi!='NULL'){
+                                $pi=$motivos->pi;
+                            }else{
+                                $pi="";
+                            }    
+            ?>
+            <tr>
+                <td class="tajawalL fs16 "><?php echo $row->fecha; ?></td>
+                <td class="tajawalL fs16 "><?php echo $row->hora; ?></td>
+                <td class="tajawalL fs16 "><?php echo $salon->salon; ?></td>
+                <td class="tajawalL fs16 "><?php echo $pa; ?><br><?php echo $pe; ?><br><?php echo $c; ?><br><?php echo $ig; ?><br><?php echo $aa; ?><br><?php echo $pi; ?></td>
+                <td class="tajawalL fs16 "><?php echo $row->detecto_problema; ?></td>
+                <td class="tajawalL fs16 "><?php echo $area->nombre; ?></td>
+                <td class="tajawalL fs16 "><?php echo $row->avance; ?></td>
+                <td></td>
+                <td></td>
+                <td>
                         <button 
                             class="mdl-button mdl-js-button mdl-color--green-700 mdl-js-ripple-effect mdl-color-text--white mdl-color--orange-500 btn_editar_formato "><i class="fas fa-user-plus"></i>Editar
                         </button>
-                    </td>-->
-                </tr>
-            </thead>
+                    </td>
+            </tr>
+            <?php       
+                        }
+                    }
+                }
+            }?>
     </table>
     </div>
 </section>
 <!--MODAL PARA EDITAR FORMATO INDIVIDUAL-->
 <div class="editar_modal_formato fancy">
-    <div class="modal-info-3">
-        <span class="mdl-dialog__title fs25 tajawalL ls1">Registro de Seguimiento Tutorial</span>
-            <form>
-                <div class="c-inputs-4" > 
-                    <input id="datepicker" width="276"/>
-                        <script>
-                            $('#datepicker').datepicker({
-                                showOtherMonths: true
-                            });
-                        </script>
+    <div class="modal-info">
+    <span class="mdl-dialog__title fs25 tajawalL ls1">Editar Seguimiento</span>
+        <div class="mat-input-flex mat-form-field-flex">
+            <div class="mat-input-infix mat-form-field-infix">
+                <label class="fs20 ls2 tajawalL">Detecto Problemática</label>
+                <textarea class="mat-input-element mat-form-field-autofill-control mat-autosize ng-dirty ng-valid ng-touched"></textarea>
+            </div>
+        </div>      
+        <div class="c-inputs-4">
+            <label class="fs20 ls2 tajawalL">Motivo de la Tutoría (Problema Detectado)</label>
+        </div>
+        <div class="c-inputs-4">
+            <div class="status">
+                <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-1">
+                    <input type="checkbox" id="checkbox-1" class="mdl-checkbox__input" name="pa">
+                    <span class="mdl-checkbox__label">PA</span>
+                </label> 
+            </div>
+            <div class="status">
+                <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-2">
+                    <input type="checkbox" id="checkbox-2" class="mdl-checkbox__input" name="pe">
+                    <span class="mdl-checkbox__label">PE</span>
+                </label>
+            </div>
+            <div class="status">
+                <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-3">
+                    <input type="checkbox" id="checkbox-3" class="mdl-checkbox__input" name="c">
+                    <span class="mdl-checkbox__label">C</span>
+                </label>
+            </div>
+        </div>
+        <div class="c-inputs-4">
+            <div class="status">
+                <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-4">
+                    <input type="checkbox" id="checkbox-4" class="mdl-checkbox__input" name="ig">
+                    <span class="mdl-checkbox__label">IG</span>
+                </label>
+            </div>
+            <div class="status">
+                <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-5">
+                    <input type="checkbox" id="checkbox-5" class="mdl-checkbox__input" name="aa">
+                    <span class="mdl-checkbox__label">AA</span>
+                </label>
+            </div>
+            <div class="status">
+                <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-6">
+                    <input type="checkbox" id="checkbox-6" class="mdl-checkbox__input" name="pi">
+                    <span class="mdl-checkbox__label">PI</span>
+                </label>
+            </div>
+        </div>
+        <div class="c-inputs-4">
+            <label class="fs20 ls2 tajawalL">Área en la que fue canalizada</label>
+        </div>
+        <div class="c-inputs-4">
+        
+        <?php foreach ($FK_area as $area){ ?>
+                <div class="status">
+                    <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" >
+                        <input type="radio"  class="mdl-radio__button" name="FK_area" value="<?php echo $area->idarea;?>">
+                        <span class="mdl-radio__label tajawalR ls2"><?php echo $area->nombre;?></span>
+                    </label>
                 </div>
-                <div class="c-inputs-4">
-                   
-                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                        <input class="mdl-textfield__input" type="text">
-                            <label class="mdl-textfield__label fs20 ls2 tajawalL" for="tb-mail">Hora</label>
-                    </div>
-                </div>
-                <div class="c-inputs-4">
-                    
-                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                        <input class="mdl-textfield__input" type="text">
-                            <label class="mdl-textfield__label fs20 ls2 tajawalL" for="tb-mail">Lugar</label>
-                    </div>
-                </div>
-                
-                <div class="mat-input-flex mat-form-field-flex">
-                    <div class="mat-input-infix mat-form-field-infix">
-                        <label class="fs20 ls2 tajawalL">Detecto Problemática</label>
-                        <textarea class="mat-input-element mat-form-field-autofill-control mat-autosize ng-dirty ng-valid ng-touched"></textarea>
-                    </div>
-                </div>      
-                <div class="c-inputs-4">
-                    <label class="fs20 ls2 tajawalL">Motivo de la Tutoría (Problema Dectectado)</label>
-                </div>
-                <div class="c-inputs-4">
-                    <div class="status">
-                        <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="switch-1">
-                            <input type="checkbox" id="switch-1" class="mdl-switch__input">
-                            <span class="mdl-switch__label tajawalR ls2">PA</span>
-                        </label>
-                    </div>
-                    <div class="status">
-                        <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="switch-2">
-                            <input type="checkbox" id="switch-2" class="mdl-switch__input">
-                            <span class="mdl-switch__label tajawalR ls2">PE</span>
-                        </label>
-                    </div>
-                    <div class="status">
-                        <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="switch-3">
-                            <input type="checkbox" id="switch-3" class="mdl-switch__input">
-                            <span class="mdl-switch__label tajawalR ls2">C</span>
-                        </label>
-                    </div>
-                </div>
-                <div class="c-inputs-4">
-                    <div class="status">
-                        <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="switch-4">
-                            <input type="checkbox" id="switch-4" class="mdl-switch__input">
-                            <span class="mdl-switch__label tajawalR ls2">IG</span>
-                        </label>
-                    </div>
-                    <div class="status">
-                        <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="switch-5">
-                            <input type="checkbox" id="switch-5" class="mdl-switch__input">
-                            <span class="mdl-switch__label tajawalR ls2">AA</span>
-                        </label>
-                    </div>
-                    <div class="status">
-                        <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="switch-6">
-                            <input type="checkbox" id="switch-6" class="mdl-switch__input">
-                            <span class="mdl-switch__label tajawalR ls2">PI</span>
-                        </label>
-                    </div>
-                </div>
-                <div class="c-inputs-4">
-                    <label class="fs20 ls2 tajawalL">Área en la que fue canalizada</label>
-                </div>
-                <div class="c-inputs-4">
-                    <div class="status">
-                        <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="switch-7">
-                            <input type="checkbox" id="switch-7" class="mdl-switch__input">
-                            <span class="mdl-switch__label tajawalR ls2">Psicología</span>
-                        </label>
-                    </div>
-                </div>
-                <div class="c-inputs-4">
-                        <div class="status">
-                            <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="switch-8">
-                                <input type="checkbox" id="switch-8" class="mdl-switch__input">
-                                <span class="mdl-switch__label tajawalR ls2">Academico</span>
-                            </label>
-                        </div>
-                    </div>
-                    <div class="c-inputs-4">
-                        <div class="status">
-                            <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="switch-9">
-                                <input type="checkbox" id="switch-9" class="mdl-switch__input">
-                                <span class="mdl-switch__label tajawalR ls2">Juridico</span>
-                            </label>
-                        </div>
-                    </div>
-            </form>
+            <?php }?>
+        </div>
             <div class="modals">
                 <button class="close-fancy mdl-button mdl-js-button mdl-color--red-A200 mdl-js-ripple-effect mdl-color-text--blue-grey-100">Cancelar</button>
                 <button class="mdl-button mdl-js-button mdl-color--teal-700 mdl-js-ripple-effect mdl-color-text--blue-grey-100">Aceptar</button>

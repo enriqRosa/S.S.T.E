@@ -6,7 +6,7 @@ Class Seguimiento extends CI_Controller{
 
         parent::__construct();
 
-        $this->load->view('temps/header');
+        
         $this->load->helper('url');
         $this->load->helper('form');
         $this->load->model('modelo_registrar_usuarios');
@@ -19,6 +19,11 @@ Class Seguimiento extends CI_Controller{
         
         $this->data['mostrardatosTutorado']=$this->modelo_registrar_usuarios->traerdatosTutorado($matricula);
         $this->data['vernombreTutor']=$this->modelo_registrar_usuarios->selectnombreTutor($matricula); 
+        $this->data['mostrardatosFormato']=$this->modelo_registrar_usuarios->traerdatosFormato($matricula); 
+        $this->data['mostrarmotivosFormato']=$this->modelo_registrar_usuarios->traermotivosFormato($matricula); 
+        $this->data['mostrarsalonFormato']=$this->modelo_registrar_usuarios->traersalonFormato($matricula); 
+        $this->data['FK_area']=$this->modelo_registrar_usuarios->traerArea();
+        $this->data['mostrarareaFormato']=$this->modelo_registrar_usuarios->traerareaFormato($matricula); 
         $this->load->view('interfaces/seguimiento_tutorial',$this->data);       
     }
     function back(){        

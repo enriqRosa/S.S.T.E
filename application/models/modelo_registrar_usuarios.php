@@ -133,6 +133,41 @@ class Modelo_registrar_usuarios extends CI_Model{
             return false;
         }
     }
+    function traerdatosFormato($matricula){
+        $this->db->where('FK_tutoradoindividual',$matricula);
+        $data=$this->db->get('formato_individual');
+        return $data->result();
+    }
+    function traersalonFormato($matricula){
+        $this->db->select('*');
+        $this->db->from('nombreSalon');
+        $this->db->where('FK_tutoradoindividual',$matricula);
+        $query = $this->db->get();
+        if($query->num_rows() > 0) {
+            $results = $query->result();
+        }
+        return $results;
+    }
+    function traerareaFormato($matricula){
+        $this->db->select('*');
+        $this->db->from('nombrearea');
+        $this->db->where('FK_tutoradoindividual',$matricula);
+        $query = $this->db->get();
+        if($query->num_rows() > 0) {
+            $results = $query->result();
+        }
+        return $results;
+    }
+    function traermotivosFormato($matricula){
+        $this->db->select('*');
+        $this->db->from('varios_motivos');
+        $this->db->where('FK_tutoradoindividual',$matricula);
+        $query = $this->db->get();
+        if($query->num_rows() > 0) {
+            $results = $query->result();
+        }
+        return $results;
+    }
 }
 
 ?>  

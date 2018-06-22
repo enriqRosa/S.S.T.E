@@ -99,7 +99,7 @@
                         <span class="mdl-radio__label tajawalR ls2"><?php echo $area->nombre;?></span>
                     </label>
                 </div>
-                <?php }?>
+            <?php }?>
             </div>
             <div class="c-inputs-3">
                 <span class="tajawalL fs12 ls1 mdl-color-text--grey-700">*PROBLEMAS ACADEMICOS</span>
