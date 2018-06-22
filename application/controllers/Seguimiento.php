@@ -26,6 +26,17 @@ Class Seguimiento extends CI_Controller{
         $this->data['mostrarareaFormato']=$this->modelo_registrar_usuarios->traerareaFormato($matricula); 
         $this->load->view('interfaces/seguimiento_tutorial',$this->data);       
     }
+    function editarFormato(){
+        $problema=$this->input->post('detecto_problema');
+        $avance=$this->input->post('avance');
+        $pa=$this->input->post('pa');
+        $pe=$this->input->post('pe');
+        $c=$this->input->post('c');
+        $ig=$this->input->post('ig');
+        $aa=$this->input->post('aa');
+        $pi=$this->input->post('pi');
+        
+    }
     function back(){        
         if($this->session->userdata('tipo_usuario')=="AD"){
             redirect('admin/verificacionSeguimiento');
