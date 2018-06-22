@@ -16,6 +16,14 @@ nav{
 .menu-right a{
     color: rgb(0,105,92);
 }
+.menu-left {
+    display: flex;
+    justify-content:start;
+    padding: 7px;
+}
+.menu-left a{
+    color: rgb(0,105,92);
+}
 /*---------ICONS-------------*/
 .fa-bars,
 .fa-home,{

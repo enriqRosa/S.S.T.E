@@ -77,7 +77,7 @@
                                 </label>
                                 <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-4">
                                     <input type="radio" id="option-4" class="mdl-radio__button" name="status" value="INACTIVO">
-                                <span class="mdl-radio__label tajawalR ls2">No Cambiar</span>
+                                <span class="mdl-radio__label tajawalM ls2 ">No Cambiar</span>
                             </label> 
                             <?php } 
                             
