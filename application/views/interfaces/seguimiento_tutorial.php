@@ -1,16 +1,19 @@
 <section class="seguimiento">
     <div class="usuario">
-        <span class="fs30 ls2 tajawalR mdl-color-text--white">FORMATO DE SEGUIMIENTO TUTORIAL</span>
+        <img src="../../assets/images/Encabezado.png">
+    </div>
+    <div class="usuario">
+        <span class="fs30 ls2 tajawalR ">FORMATO DE SEGUIMIENTO TUTORIAL</span>
     </div>
     <div class="formato">
-        <span class="fs16 ls1 tajawalL mdl-color-text--grey-100">
+        <span class="fs16 ls1 tajawalR">
         El presente formato tiene la finalidad de dar seguimiento a las sesiones programadas con los estudiantes que se le 
         asignaron en el presente semestre.
         Así mismo es el comprobante de las sesiones para la evaluación del desempeño.</span>
     </div>
     <div class="formato">
         <div class="info-2">
-            <span class="fs16 ls2 tajawalR mdl-color-text--white">Mtro. Tutor:</span>         
+            <span class="fs16 ls2 tajawalR ">Mtro. Tutor:</span>         
         </div>
         <?php foreach ($vernombreTutor as $mostrarnombre) { ?>
             <input class="c-formato" type="text" value="<?php echo $mostrarnombre->nombre;?> <?php echo $mostrarnombre->ap_paterno;?> <?php echo $mostrarnombre->ap_materno;?>" disabled> 
@@ -18,7 +21,7 @@
     </div>    
     <div class="formato">
         <div class="info-2">
-            <span class="fs16 ls2 tajawalR mdl-color-text--white">Nombre del alumno (a): </span> 
+            <span class="fs16 ls2 tajawalR">Nombre del alumno (a): </span> 
         </div>
         <?php foreach ($mostrardatosTutorado as $mostrar) { ?>
             <input class="c-formato" type="text" value="<?php echo $mostrar->nombre;?> <?php echo $mostrar->ap_paterno;?> <?php echo $mostrar->ap_materno;?>" disabled> 
@@ -26,19 +29,19 @@
     </div>
     <div class="formato">
         <div class="info-2">
-            <span class="fs16 ls2 tajawalR mdl-color-text--white">Matrícula: </span>          
+            <span class="fs16 ls2 tajawalR">Matrícula: </span>          
         </div>
         <div class="tutorado-inputs">
         <?php foreach ($mostrardatosTutorado as $mostrar) { ?>
             <input class="c-formato" type="text" name="matricula" value="<?php echo $mostrar->matricula;?>" disabled>
        
-                <span class="fs16 ls2 tajawalR mdl-color-text--white">Grupo:</span>          
+                <span class="fs16 ls2 tajawalR">Grupo:</span>          
             <input class="c-formato" type="text"value="<?php echo $mostrar->grupo;?>" disabled>
         </div>
     </div>
     <div class="formato">
         <div class="info-2">
-            <span class="fs16 ls2 tajawalR mdl-color-text--white">Ingeniería:</span>          
+            <span class="fs16 ls2 tajawalR">Ingeniería:</span>          
         </div>
         <?php if($mostrar->carrera=='ISC'){
             $carrera="INGENIERÍA EN SISTEMAS COMPUTACIONALES"; ?>
@@ -47,19 +50,19 @@
     </div>
     <div class="formato">
         <div class="info-2">
-            <span class="fs16 ls2 tajawalR mdl-color-text--white">Programa:</span>  
+            <span class="fs16 ls2 tajawalR">Programa:</span>  
         </div>
         <input class="c-formato" type="text" value="<?php echo $mostrar->programa;?>" disabled>         
     </div>
     <div class="formato">
         <div class="info-2">
-            <span class="fs16 ls2 tajawalR mdl-color-text--white">Correo electrónico: </span>          
+            <span class="fs16 ls2 tajawalR">Correo electrónico: </span>          
         </div>
         <input class="c-formato" type="text" value="<?php echo $mostrar->correo;?>" disabled>         
     </div>
     <div class="formato">
         <div class="info-2">
-            <span class="fs16 ls2 tajawalR mdl-color-text--white">Telefono:</span>          
+            <span class="fs16 ls2 tajawalR">Telefono:</span>          
         </div>
         <input class="c-formato" type="text" value="<?php echo $mostrar->telefono;?>" disabled>         
     </div>
@@ -68,7 +71,7 @@
     <div class="usuario">
         <span class="fs25 ls2 tajawalR">Registro de Actividades</span>
     </div>
-    <div class="table2 overflow">
+    <div class="table">
         <table class="mdl-data-table mdl-js-data-table  mdl-shadow--2dp">
             <thead>
                 <tr>
@@ -76,7 +79,6 @@
                     <td class="mdl-data-table__cell--non-numeric tajawalB mdl-color--blue-grey-200  ls1 fs14">Fecha</td>
                     <td class="mdl-data-table__cell--non-numeric tajawalB mdl-color--blue-grey-200  ls1 fs14">Hora</td>
                     <td class="mdl-data-table__cell--non-numeric tajawalB mdl-color--blue-grey-200  ls1 fs14">Lugar</td>
-                    <td class="mdl-data-table__cell--non-numeric tajawalB mdl-color--blue-grey-200  ls1 fs14">Motivo</td>
                     <td class="mdl-data-table__cell--non-numeric tajawalB mdl-color--blue-grey-200  ls1 fs14">Problematica</td>
                     <td class="mdl-data-table__cell--non-numeric tajawalB mdl-color--blue-grey-200  ls1 fs14">Área</td>
                     <td class="mdl-data-table__cell--non-numeric tajawalB mdl-color--blue-grey-200  ls1 fs14">Avance</td>
@@ -122,12 +124,11 @@
                 <td class="tajawalL fs16 "><?php echo $row->fecha; ?></td>
                 <td class="tajawalL fs16 "><?php echo $row->hora; ?></td>
                 <td class="tajawalL fs16 "><?php echo $row->salon; ?></td>
-                <td class="tajawalL fs16 "><?php echo $pa; ?><br><?php echo $pe; ?><br><?php echo $c; ?><br><?php echo $ig; ?><br><?php echo $aa; ?><br><?php echo $pi; ?><br></td>
                 <td class="tajawalL fs16 "><?php echo $row->detecto_problema; ?></td>
                 <td class="tajawalL fs16 "><?php echo $row->nombre; ?></td>
                 <td class="tajawalL fs16 "><?php echo $row->avance; ?></td>
-                <td></td>
-                <td></td>
+                <td class="tajawalL fs16 "><?php echo $row->firma_alumno; ?></td>
+                <td class="tajawalL fs16 "><?php echo $row->firma_tutor; ?></td>
                 <td>
                     <a href="<?= base_url() ?>Seguimiento/actividadFormato/?idformato=<?php echo $row->idformato; ?>"> 
                         <button 

@@ -49,14 +49,65 @@ Class Seguimiento extends CI_Controller{
         $this->load->view('interfaces/modal_editarSeguimiento',$this->data);       
     }
     function editarFormato(){
+        $id=$this->input->post('idformato');
         $problema=$this->input->post('detecto_problema');
-        $avance=$this->input->post('avance');
         $pa=$this->input->post('pa');
         $pe=$this->input->post('pe');
         $c=$this->input->post('c');
         $ig=$this->input->post('ig');
         $aa=$this->input->post('aa');
         $pi=$this->input->post('pi');
+        $area=$this->input->post('FK_area');
+        $firma_t=$this->input->post('firma_tutor');
+        $firma_to=$this->input->post('firma_alumno');
+        $avance=$this->input->post('avance');
+
+        if($pa==NULL){
+            $pa="NULL";
+        }elseif($pa!=NULL){
+            $pa="PROBLEMAS ACADEMICOS";
+        }
+        if($pe==NULL){
+            $pe="NULL";
+        }elseif($pe!=NULL){
+            $pe="PROBLEMAS EMOCIONALES";
+        }
+        if($c==NULL){
+            $c="NULL";
+        }elseif($c!=NULL){
+            $c="CANALIZACION";
+        }
+        if($ig==NULL){
+            $ig="NULL";
+        }elseif($ig!=NULL){
+            $ig="INFORMACION GENERAL";
+        }
+        if($aa==NULL){
+            $aa="NULL";
+        }
+        elseif($aa!=NULL){
+            $aa="ASESORIA ACADEMICA";
+        if($pi==NULL){
+        }
+            $pi="NULL";
+        }elseif($pi!=NULL){
+            $pi="PROBLEMAS INTERPERSONALES";
+        }
         
+        $data = array(
+            'detecto_problema' => $problema,
+            'pa' => $pa,
+            'pe' => $pe,
+            'c' => $c,
+            'ig' => $ig,
+            'aa' => $aa,
+            'pi' => $pi,
+            'FK_area' => $area,
+            'avance' => $avance,
+            'firma_tutor' => $firma_t,
+            'firma_alumno' => $firma_to            
+        );
+        $this->modelo_registrar_usuarios->updateSeguimiento($id,$data);
+        
+        }
     }
-}
