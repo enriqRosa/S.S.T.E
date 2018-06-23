@@ -17,13 +17,13 @@
             <span class="fs15 ls2 tajawalR">Número de Seguro:</span>          
         </div>
         <div class="info-1">
+            <span class="fs15 ls2 tajawalR">Nombre(s):</span>          
+        </div>
+        <div class="info-1">
             <span class="fs15 ls2 tajawalR">Apellido Paterno:</span>          
         </div>
         <div class="info-1">
-            <span class="fs15 ls2 tajawalR">Apellido Materno:</span>          
-        </div>
-        <div class="info-1">
-            <span class="fs15 ls2 tajawalR">Nombre(s):</span> 
+            <span class="fs15 ls2 tajawalR">Apellido Materno:</span> 
         </div>  
         <div class="info-1">
             <span class="fs15 ls2 tajawalR">Correo</span> 

@@ -41,10 +41,11 @@ class Modelo_registrar_usuarios extends CI_Model{
     //FUNCIÓN QUE MUESTRA A LOS TUTORES REGISTRADOS EN LA TABLA
     function mostrardatosTutorado(){
         //select * from tutor
+        $this->db->where('status','ACTIVO');
         $data=$this->db->get('tutorado');
         return $data->result();  
-        $data->$this->db->get('tutores');
-        return $data->result();     
+        //$data->$this->db->get('tutores');
+        //return $data->result();     
     }
     function traerdatosTutorado($matricula){
         $this->db->where('matricula',$matricula);

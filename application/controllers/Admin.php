@@ -244,8 +244,7 @@ Class Admin extends CI_Controller{
             'status' => $status
         );
         if($this->modelo_registrar_usuarios->updateCoord($data,$mat)){
-            $this->data['mostrardatosCoord']=$this->modelo_registrar_usuarios->mostrardatosCoordinador();
-            $this->load->view('interfaces/gestion_coordinadores',$this->data);
+            $this->gestionCoordinadores();
         }
     }
     /**************************************ASIGNACION DE TUTORES A TUTORADOS FUNCIONES***********************************************/
