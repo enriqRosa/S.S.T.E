@@ -20,8 +20,11 @@ Class Tutor extends CI_Controller{
         $this->load->view('interfaces/interfaz_tutor',$this->data);
     }
     function verificacionSeguimiento(){
-        $this->data['mostrardatosTutorado']=$this->modelo_registrar_usuarios->mostrardatosTutorado();
-        $this->load->view('interfaces/verificacion_seguimiento',$this->data);
+        //$idTutor=$this->input->get('FK_tutor');
+        
+        $this->data['alumnosdeTutor']=$this->modelo_registrar_usuarios->traertutoresTutorados();
+       //$this->data['mostrardatosTutorado']=$this->modelo_registrar_usuarios->mostrardatosTutorado();
+       $this->load->view('interfaces/verificacion_seguimiento',$this->data);
     }
     //FUNCIÓN PARA CAMBIAR LA CONTRASEÑA DEL ADMINISTRADOR PARA LA TABLA 'usuarios'
     function cambiarPassword(){
