@@ -14,9 +14,8 @@
                 <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14 mdl-color--black white">Tutor</td>
             </tr>
         </thead>
-        <?php
-            foreach ($mostrardatosTutorado as $row) {
-        ?>
+        <?php if($this->session->userdata('tipo_usuario')=="AD"){
+                foreach ($mostrardatosTutorado as $row) {?>
             <tr>
                 <td class="tajawalL fs16 "><?php echo $row->matricula; ?></td>
                 <td class="tajawalL fs16 "><?php echo $row->nombre; ?></td>
@@ -41,13 +40,40 @@
                 </td>
             </tr>
         <?php
-                
-        }
+                }     
+            }
+        ?>
+        <?php if($this->session->userdata('tipo_usuario')=="CA"){
+                foreach ($mostrardatosTutorado as $row) {?>
+            <tr>
+                <td class="tajawalL fs16 "><?php echo $row->matricula; ?></td>
+                <td class="tajawalL fs16 "><?php echo $row->nombre; ?></td>
+                <td class="tajawalL fs16 "><?php echo $row->ap_paterno; ?></td>
+                <td class="tajawalL fs16 "><?php echo $row->ap_materno; ?></td>
+                    
+                <td class="tajawalL fs16 "><?php echo $row->FK_tutor; ?></td>
+                 
+                <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14 ">
+                    <a href="<?= base_url() ?>C_academico/mostrarTutores/?matricula=<?php echo $row->matricula; ?>">
+                        <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--white mdl-color--orange-500 btn-pass">
+                            <i class="fas fa-edit"></i>Asignar
+                        </button>
+                    </a>
+                </td>
+                <td class="mdl-data-table__cell--non-numeric tajawalM ls1 fs14 btn-editar">
+                    <a href="<?= base_url() ?>C_academico/cambiarTutor/?matricula=<?php echo $row->matricula; ?>">
+                        <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--white mdl-color--red-800">
+                            <i class="fas fa-edit"></i>Editar
+                        </button>
+                    </a>
+                </td>
+            </tr>
+        <?php
+                }     
+            }
         ?>
     </table>
-</div>
-    <!--MODAL EDITAR-->
-        
+</div>        
 <?php include_once 'footer.php' ?>
 
 

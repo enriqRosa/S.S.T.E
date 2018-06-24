@@ -86,38 +86,8 @@
                     <td class="mdl-data-table__cell--non-numeric tajawalB mdl-color--blue-grey-200  ls1 fs14">Firma Tutor</td>
                 </tr>
             </thead>
-            <?php if($this->session->userdata('tipo_usuario')=='TO'){
-                    foreach ($datoscompletosFormato as $row){
-                        if($row->pa!='NULL'){
-                            $pa=$row->pa;
-                        }else{
-                            $pa="";
-                        }
-                        if ($row->pe!='NULL') {
-                            $pe=$row->pe;
-                        }else{
-                            $pe="";
-                        }
-                        if($row->c!='NULL'){
-                           $c=$row->c;
-                        }else{
-                            $c="";
-                        }
-                        if($row->ig!='NULL'){
-                            $ig=$row->ig;
-                        }else{
-                            $ig="";
-                        }
-                        if($row->aa!='NULL'){
-                           $aa=$row->aa;
-                        }else{
-                            $aa="";
-                        }
-                        if($row->pi!='NULL'){
-                            $pi=$row->pi;
-                        }else{
-                            $pi="";
-                        }   ?>  
+            <?php if($this->session->userdata('tipo_usuario')=='TU'){
+                    foreach ($datoscompletosFormato as $row){ ?>
                         <tr>
                             <td class="tajawalL fs16 "><?php echo $row->idformato ?></td>
                             <td class="tajawalL fs16 "><?php echo $row->fecha; ?></td>
@@ -131,7 +101,7 @@
                             <td>
                                 <a href="<?= base_url() ?>Seguimiento/actividadFormato/?idformato=<?php echo $row->idformato; ?>"> 
                                     <button 
-                                        class="mdl-button mdl-js-button mdl-color--green-700 mdl-js-ripple-effect mdl-color-text--white mdl-color--orange-500 btn_editar_formato "><i class="fas fa-user-plus"></i>Editar
+                                        class="mdl-button mdl-js-button mdl-color--red-700 mdl-js-ripple-effect mdl-color-text--white btn_editar_formato "></i>Editar
                                     </button>
                                 </a>    
                             </td>

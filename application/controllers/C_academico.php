@@ -19,11 +19,53 @@ Class C_academico extends CI_Controller{
         $this->data['posts']=$this->Modelo_login->getCoordinador();
         $this->load->view('interfaces/interfaz_cacademico',$this->data);
     }
+    /**************************************ASIGNACION DE TUTORES A TUTORADOS FUNCIONES***********************************************/
     function tutoresTutorados(){
         $this->data['mostrardatosTutorado']=$this->modelo_registrar_usuarios->mostrardatosTutorado();
         $this->load->view('interfaces/gestion_tutores_tutorados',$this->data);
     }
-    
+    function mostrarTutores(){
+        $this->load->view('temps/header_modal');
+        $matricula=$this->input->get('matricula');
+        $this->data['tutoresActivos']=$this->modelo_registrar_usuarios->tutoresActivos(); 
+        $this->data['mostrardatosTutorado']=$this->modelo_registrar_usuarios->traerdatosTutorado($matricula);
+        $this->load->view('interfaces/modal_asignarTutor',$this->data);
+    }
+    function asignarTutor(){
+        $mat = $this->input->post('matricula');
+        $tutor=$this->input->post('FK_tutor');
+
+        $data = array(
+            'matricula' => $mat,
+            'FK_tutor'  => $tutor
+        );
+        if($this->modelo_registrar_usuarios->FKtutor($mat,$data)){
+            $this->tutoresTutorados();
+        }
+    } 
+    function cambiarTutor(){
+        $this->load->view('temps/header_modal');
+        $matricula=$this->input->get('matricula');
+        
+        $this->data['mostrardatosTutorado']=$this->modelo_registrar_usuarios->traerdatosTutorado($matricula);
+        $this->data['tutoresActivos']=$this->modelo_registrar_usuarios->tutoresActivos();
+        $this->data['vernombreTutor']=$this->modelo_registrar_usuarios->selectnombreTutor($matricula); 
+        $this->load->view('interfaces/modal_cambiarTutor',$this->data);       
+    }
+    function renovarTutor(){      
+        $mat=$this->input->post('matricula');
+        $tutor=$this->input->post('FK_tutor');
+
+        $data = array(
+            'matricula' => $mat,
+            'FK_tutor'  => $tutor
+        );
+
+        if($this->modelo_registrar_usuarios->cambiarasignaciontutor($mat,$data)){
+            $this->tutoresTutorados();
+        }
+    }      
+    /****************************************************************************************************************************************/
     function verificacionSeguimiento(){
         $this->data['mostrardatosTutorado']=$this->modelo_registrar_usuarios->mostrardatosTutorado();
         $this->load->view('interfaces/verificacion_seguimiento',$this->data);
