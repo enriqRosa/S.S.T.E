@@ -36,7 +36,7 @@ Class Seguimiento extends CI_Controller{
             redirect('tutor/verificacionSeguimiento');
         }
         elseif($this->session->userdata('tipo_usuario')=='TO'){
-            redirect('tutorado/verificacionSeguimiento');
+            redirect('tutorado/index');
         }
     }
     function actividadFormato(){

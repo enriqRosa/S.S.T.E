@@ -8,41 +8,6 @@
         </div>
     </div>
 </section>
-<!--MODAL PARA CAMBIAR CONTRASEÑA-->
-<?php echo form_open("tutorado/cambiarPassword"); ?>
-<div class="pass-modal fancy">
-    <div class="modal-info">
-        <span class="mdl-dialog__title fs25 tajawalL ls1">Modificar Contraseña</span>
-            <form>
-                <div class="c-inputs-4" >
-                    <div class="mdl-textfield mdl-js-textfield ">
-                        <input class="mdl-textfield__input" type="password" name="actual_pswd">
-                        <label class="mdl-textfield__label tajawalL" required="required">Ingresa tu contraseña actual</label>
-                        <?php form_error("actual_pswd"); ?>
-                    </div>
-                </div>
-                <div class="c-inputs-4">
-                    <div class="mdl-textfield mdl-js-textfield ">
-                        <input class="mdl-textfield__input" type="password" name="new_pswd">
-                            <label class="mdl-textfield__label tajawalL" required="required">Ingresa nueva contraseña</label>
-                            <?php form_error("new_pswd"); ?>
-                    </div>
-                </div>
-                <div class="c-inputs-4">
-                    <div class="mdl-textfield mdl-js-textfield">
-                        <input class="mdl-textfield__input" type="password" name="repeat_pswd">
-                            <label class="mdl-textfield__label tajawalL" required="required">Confirmar contraseña</label>
-                            <?php form_error("repeat_pswd"); ?>
-                    </div>
-                </div>
-            </form>
-        <div class="modals">
-            <button class="close-fancy mdl-button mdl-js-button mdl-color--red-A200 mdl-js-ripple-effect mdl-color-text--blue-grey-100">Cancelar</button>
-            <button class="mdl-button mdl-js-button mdl-color--teal-700 mdl-js-ripple-effect mdl-color-text--blue-grey-100">Aceptar</button>
-        </div>
-    </div>  
-</div>
-<?php echo form_close(); ?> 
 <section class="academico-info"> 
     <?php foreach($mostrardatosTutorado as $post){?>
         <div class="grupo-academico" >
@@ -106,6 +71,11 @@
 <div class="modals">
     <button class="close-fancy mdl-button mdl-js-button mdl-color--blue-900 mdl-js-ripple-effect mdl-color-text--white btn-editar">Editar Información</button>
     <button class="mdl-button mdl-js-button mdl-color--blue-900 mdl-js-ripple-effect mdl-color-text--white btn-pass">Cambiar Contraseña</button>
+    <?php foreach($mostrardatosTutorado as $post){?>
+    <a href="<?= base_url() ?>Seguimiento/index/?matricula=<?php echo $post->matricula; ?>">
+        <button class="mdl-button mdl-js-button mdl-color--blue-900 mdl-js-ripple-effect mdl-color-text--white"><i class="fas fa-eye"></i>Seguimiento</button>
+    </a>
+    <?php }?>
 </div>
 <!--MODAL PARA REGISTRAR CAMPOS FALTANTES DEL ALUMNO-->
 <?php echo form_open("Tutorado/editarInfo"); ?>
@@ -164,7 +134,7 @@
                 </div>
             </form>
         <div class="modals">
-            <button class="close-fancy mdl-button mdl-js-button mdl-color--red-A200 mdl-js-ripple-effect mdl-color-text--blue-grey-100">CANCELAR</button>
+            <button class="close-fancy mdl-button mdl-js-button mdl-color--red-A200 mdl-js-ripple-effect mdl-color-text--blue-grey-100">Cancelar</button>
             <button class="mdl-button mdl-js-button mdl-color--teal-700 mdl-js-ripple-effect mdl-color-text--blue-grey-100">Aceptar</button>
         </div>
     </div>  
