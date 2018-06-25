@@ -86,15 +86,15 @@
                     <div class="c-inputs-4">
                         <div class="form-icons"><i class="fas fa-envelope"></i></div>
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <input class="mdl-textfield__input" type="text" name="correo">
+                            <input class="mdl-textfield__input" type="text" name="correo" required>
                                 <label class="mdl-textfield__label tajawalL" required="text">Correo</label>
                         </div>
                     </div>
                     <div class="c-inputs-4">
                         <div class="form-icons"><i class="fas fa-mobile-alt"></i></div>
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <input class="mdl-textfield__input" type="text" name="telefono">
-                                <label class="mdl-textfield__label tajawalL" required="text">Telefono</label>
+                            <input class="mdl-textfield__input" type="text" name="telefono" required>
+                                <label class="mdl-textfield__label tajawalL" required="text"Telefono</label>
                         </div>
                     </div>
                 </form>
@@ -113,21 +113,21 @@
             <form>
                 <div class="c-inputs-4" >
                     <div class="mdl-textfield mdl-js-textfield ">
-                        <input class="mdl-textfield__input" type="password" name="actual_pswd">
+                        <input class="mdl-textfield__input" type="password" name="actual_pswd" required>
                         <label class="mdl-textfield__label tajawalL" required="required">Ingresa tu contraseña actual</label>
                         <?php form_error("actual_pswd"); ?>
                     </div>
                 </div>
                 <div class="c-inputs-4">
                     <div class="mdl-textfield mdl-js-textfield ">
-                        <input class="mdl-textfield__input" type="password" name="new_pswd">
+                        <input class="mdl-textfield__input" type="password" name="new_pswd" required>
                             <label class="mdl-textfield__label tajawalL" required="required">Ingresa nueva contraseña</label>
                             <?php form_error("new_pswd"); ?>
                     </div>
                 </div>
                 <div class="c-inputs-4">
                     <div class="mdl-textfield mdl-js-textfield">
-                        <input class="mdl-textfield__input" type="password" name="repeat_pswd">
+                        <input class="mdl-textfield__input" type="password" name="repeat_pswd" required>
                             <label class="mdl-textfield__label tajawalL" required="required">Confirmar contraseña</label>
                             <?php form_error("repeat_pswd"); ?>
                     </div>

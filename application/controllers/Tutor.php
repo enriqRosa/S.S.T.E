@@ -20,11 +20,83 @@ Class Tutor extends CI_Controller{
         $this->load->view('interfaces/interfaz_tutor',$this->data);
     }
     function verificacionSeguimiento(){
-        //$idTutor=$this->input->get('FK_tutor');
-        
         $this->data['alumnosdeTutor']=$this->modelo_registrar_usuarios->traertutoresTutorados();
-       //$this->data['mostrardatosTutorado']=$this->modelo_registrar_usuarios->mostrardatosTutorado();
        $this->load->view('interfaces/verificacion_seguimiento',$this->data);
+    }
+    //FUNCIONES PARA REGISTRAR ACTIVIDADES DEL FORMATI
+    function registrarFormato(){
+        $this->load->view('temps/header_modal');
+        $matricula=$this->input->get('matricula');
+        $this->data['mostrardatosTutorado']=$this->modelo_registrar_usuarios->traerdatosTutorado($matricula);
+        $this->data['mostrarsalon']=$this->modelo_registrar_usuarios->traersalon();
+        $this->data['FK_area']=$this->modelo_registrar_usuarios->traerArea();
+        $this->load->view('interfaces/modal_registrarFormato',$this->data);
+    }
+    function registraralumnosFormato(){
+        $fecha=$this->input->post('fecha');
+        $hora=$this->input->post('hora');
+        $salon=$this->input->post('FK_lugar');
+        $problema=$this->input->post('detecto_problema');
+        $avance=$this->input->post('avance');
+        $pa=$this->input->post('pa');
+        $pe=$this->input->post('pe');
+        $c=$this->input->post('c');
+        $ig=$this->input->post('ig');
+        $aa=$this->input->post('aa');
+        $pi=$this->input->post('pi');
+        $area=$this->input->post('FK_area');
+        $mat=$this->input->post('matricula');
+
+        if($pa==NULL){
+            $pa="NULL";
+        }elseif($pa!=NULL){
+            $pa="PROBLEMAS ACADEMICOS";
+        }
+        if($pe==NULL){
+            $pe="NULL";
+        }elseif($pe!=NULL){
+            $pe="PROBLEMAS EMOCIONALES";
+        }
+        if($c==NULL){
+            $c="NULL";
+        }elseif($c!=NULL){
+            $c="CANALIZACION";
+        }
+        if($ig==NULL){
+            $ig="NULL";
+        }elseif($ig!=NULL){
+            $ig="INFORMACION GENERAL";
+        }
+        if($aa==NULL){
+            $aa="NULL";
+        }
+        elseif($aa!=NULL){
+            $aa="ASESORIA ACADEMICA";
+        if($pi==NULL){
+        }
+            $pi="NULL";
+        }elseif($pi!=NULL){
+            $pi="PROBLEMAS INTERPERSONALES";
+        }
+        
+        $data = array(
+            'fecha'  => $fecha,
+            'hora' => $hora,
+            'pa' => $pa,
+            'pe' => $pe,
+            'c' => $c,
+            'ig' => $ig,
+            'aa' => $aa,
+            'pi' => $pi,
+            'detecto_problema' => $problema,
+            'avance' => $avance,    
+            'FK_area' => $area,
+            'FK_tutoradoindividual' => $mat,
+            'FK_lugar' => $salon
+        ); 
+        if($this->modelo_registrar_usuarios->insertarFormato($data)){
+            $this->verificacionSeguimiento();
+        }
     }
     //FUNCIÓN PARA CAMBIAR LA CONTRASEÑA DEL ADMINISTRADOR PARA LA TABLA 'usuarios'
     function cambiarPassword(){

@@ -22,6 +22,12 @@ Class Seguimiento extends CI_Controller{
         $this->data['datoscompletosFormato']=$this->modelo_registrar_usuarios->traerdatoscompletosFormato($matricula); 
         $this->load->view('interfaces/seguimiento_tutorial',$this->data);       
     }
+    function verificacionSeguimiento(){
+        $this->load->view('temps/header');
+        $this->load->view('temps/menu_tutor');
+        $this->data['alumnosdeTutor']=$this->modelo_registrar_usuarios->traertutoresTutorados();
+        $this->load->view('interfaces/verificacion_seguimiento',$this->data);
+    }
     function back(){        
         if($this->session->userdata('tipo_usuario')=="AD"){
             redirect('admin/verificacionSeguimiento');
@@ -107,7 +113,9 @@ Class Seguimiento extends CI_Controller{
             'firma_tutor' => $firma_t,
             'firma_alumno' => $firma_to            
         );
-        $this->modelo_registrar_usuarios->updateSeguimiento($id,$data);
-        
+        if($this->modelo_registrar_usuarios->updateSeguimiento($id,$data)){
+            $this->verificacionSeguimiento();
         }
-    }
+        }
+    
+}

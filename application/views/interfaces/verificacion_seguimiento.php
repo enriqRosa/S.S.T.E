@@ -94,15 +94,16 @@
                 <td class="tajawalL fs16 "><?php echo $row->semestre; ?></td>
                 <td class="tajawalL fs16 "><?php echo $row->grupo; ?></td>
                 <td>
-                    <a href="<?= base_url() ?>Admin/registrarFormato/?matricula=<?php echo $row->matricula; ?>">
-                        <?php if($this->session->userdata('tipo_usuario')=="TU"){?>
-                            <a href="<?= base_url() ?>Seguimiento/index/?matricula=<?php echo $row->matricula; ?>">
-                                <button 
-                                    class="mdl-button mdl-js-button mdl-color--grey-700 mdl-js-ripple-effect mdl-color-text--white">
-                                    <i class="fas fa-eye"></i>Seguimiento
-                                </button>
-                            </a>
-                        <?php }?>
+                    <a href="<?= base_url() ?>Tutor/registrarFormato/?matricula=<?php echo $row->matricula; ?>">
+                        <button 
+                            class="mdl-button mdl-js-button mdl-color--orange-500 mdl-js-ripple-effect mdl-color-text--white">Agregar
+                        </button>
+                    </a>
+                    <a href="<?= base_url() ?>Seguimiento/index/?matricula=<?php echo $row->matricula; ?>">
+                        <button 
+                            class="mdl-button mdl-js-button mdl-color--grey-700 mdl-js-ripple-effect mdl-color-text--white">
+                            <i class="fas fa-eye"></i>Seguimiento
+                        </button>
                     </a>
                 </td>
             <?php }

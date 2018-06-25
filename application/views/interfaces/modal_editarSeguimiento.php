@@ -12,7 +12,7 @@
                 <div class="mat-input-infix mat-form-field-infix">
                     <label class="fs20 ls2 tajawalM mdl-color-text--indigo-900">Detecto Problemática</label>
                         <?php foreach ($datosFormatoID as $mostrar) { ?> 
-                            <textarea class="mat-input-element mat-form-field-autofill-control mat-autosize ng-dirty ng-valid ng-touched" name="detecto_problema"><?php echo $mostrar->detecto_problema ?></textarea>
+                            <textarea class="mat-input-element mat-form-field-autofill-control mat-autosize ng-dirty ng-valid ng-touched" name="detecto_problema" required><?php echo $mostrar->detecto_problema ?></textarea>
                         <?php } ?>
                 </div>
             </div>
@@ -25,7 +25,7 @@
                 <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-1">
                 <?php foreach ($datosFormatoID as $mostrar) { 
                     if($mostrar->pa=='PROBLEMAS ACADEMICOS'){?> 
-                        <input type="checkbox" id="checkbox-1" class="mdl-checkbox__input" name="pa" checked>
+                        <input type="checkbox" id="checkbox-1" class="mdl-checkbox__input" name="pa" checked required>
                     <?php } else{?>
                         <input type="checkbox" id="checkbox-1" class="mdl-checkbox__input" name="pa">
                     <?php } ?>
@@ -35,7 +35,7 @@
             <div class="status">
                 <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-2">
                     <?php if($mostrar->pe=='PROBLEMAS EMOCIONALES'){?> 
-                        <input type="checkbox" id="checkbox-2" class="mdl-checkbox__input" name="pe" checked>
+                        <input type="checkbox" id="checkbox-2" class="mdl-checkbox__input" name="pe" checked required>
                     <?php } else{?>
                         <input type="checkbox" id="checkbox-2" class="mdl-checkbox__input" name="pe">
                     <?php } ?>
@@ -45,7 +45,7 @@
             <div class="status">
                 <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-3">
                 <?php if($mostrar->c=='CANALIZACION'){?> 
-                        <input type="checkbox" id="checkbox-3" class="mdl-checkbox__input" name="c" checked>
+                        <input type="checkbox" id="checkbox-3" class="mdl-checkbox__input" name="c" checked required>
                     <?php } else{?>
                         <input type="checkbox" id="checkbox-3" class="mdl-checkbox__input" name="c">
                     <?php } ?>
@@ -57,7 +57,7 @@
             <div class="status">
                 <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-4">
                 <?php if($mostrar->ig=='INFORMACION GENERAL'){?> 
-                        <input type="checkbox" id="checkbox-4" class="mdl-checkbox__input" name="ig" checked>
+                        <input type="checkbox" id="checkbox-4" class="mdl-checkbox__input" name="ig" checked required>
                     <?php } else{?>
                         <input type="checkbox" id="checkbox-4" class="mdl-checkbox__input" name="ig">
                     <?php } ?>
@@ -67,7 +67,7 @@
             <div class="status">
                 <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-5">
                 <?php if($mostrar->aa=='ASESORIA ACADEMICA'){?> 
-                        <input type="checkbox" id="checkbox-5" class="mdl-checkbox__input" name="aa" checked>
+                        <input type="checkbox" id="checkbox-5" class="mdl-checkbox__input" name="aa" checked required>
                     <?php } else{?>
                         <input type="checkbox" id="checkbox-5" class="mdl-checkbox__input" name="aa">
                     <?php } ?>
@@ -77,7 +77,7 @@
             <div class="status">
                 <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-6">
                 <?php if($mostrar->pi=='PROBLEMAS INTERPERSONALES'){?> 
-                        <input type="checkbox" id="checkbox-6" class="mdl-checkbox__input" name="pi" checked>
+                        <input type="checkbox" id="checkbox-6" class="mdl-checkbox__input" name="pi" checked required>
                     <?php } else{?>
                         <input type="checkbox" id="checkbox-6" class="mdl-checkbox__input" name="pi">
                     <?php 
@@ -96,7 +96,7 @@
                          <span class="fs19 ls2 tajawalB"><?php echo $mostrar->nombre; ?></span>  
                 <?php } ?>
                 <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-4">
-                    <input type="radio" id="option-4" class="mdl-radio__button" name="FK_area" value="<?php echo $mostrar->FK_area ?>">
+                    <input type="radio" id="option-4" class="mdl-radio__button" name="FK_area" value="<?php echo $mostrar->FK_area ?>" required>
                     <span class="mdl-radio__label tajawalM ls2 ">No Cambiar</span>
                      <?php } ?>
                 <?php if($datosFormatoID[0]->nombre=='ACADÉMICO'){
@@ -104,7 +104,7 @@
                          <span class="fs19 ls2 tajawalB"><?php echo $mostrar->nombre; ?></span>  
                 <?php } ?>
                 <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-4">
-                    <input type="radio" id="option-4" class="mdl-radio__button" name="FK_area" value="<?php echo $mostrar->FK_area ?>">
+                    <input type="radio" id="option-4" class="mdl-radio__button" name="FK_area" value="<?php echo $mostrar->FK_area ?>" required>
                     <span class="mdl-radio__label tajawalM ls2 ">No Cambiar</span>
                      <?php } ?>
                 <?php if($datosFormatoID[0]->nombre=='JURÍDOCO'){
@@ -112,7 +112,7 @@
                          <span class="fs19 ls2 tajawalB"><?php echo $mostrar->nombre; ?></span>  
                 <?php } ?>
                  <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-4">
-                    <input type="radio" id="option-4" class="mdl-radio__button" name="FK_area" value="<?php echo $mostrar->FK_area ?>">
+                    <input type="radio" id="option-4" class="mdl-radio__button" name="FK_area" value="<?php echo $mostrar->FK_area ?>" required>
                     <span class="mdl-radio__label tajawalM ls2 ">No Cambiar</span>
                      <?php } ?>
         </div>
@@ -123,7 +123,7 @@
             <?php foreach ($FK_area as $area){ ?>
                 <div class="status">
                     <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" >
-                        <input type="radio"  class="mdl-radio__button" name="FK_area" value="<?php echo $area->idarea;?>">
+                        <input type="radio"  class="mdl-radio__button" name="FK_area" value="<?php echo $area->idarea;?>" required>
                         <span class="mdl-radio__label tajawalR ls2"><?php echo $area->nombre;?></span>
                     </label>
                     
@@ -133,7 +133,7 @@
         <div class="c-inputs-4">
             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
              <?php foreach ($datosFormatoID as $mostrar) { ?>
-				<input class="mdl-textfield__input" type="text" name="avance" required value="<?php echo $mostrar->avance; ?>">
+				<input class="mdl-textfield__input" type="text" name="avance" required value="<?php echo $mostrar->avance; ?>" required>
 					<label class="mdl-textfield__label fs12 ls2 tajawalR" for="tb-mail">Avance</label>
              <?php } ?>
 			</div>
@@ -169,9 +169,7 @@
                 <a href="<?= base_url() ?>Seguimiento/index/?matricula=<?php echo $mostrar->FK_tutoradoindividual ?>">
                     <input type="button" class="close-fancy mdl-button mdl-js-button mdl-color--red-A200 mdl-js-ripple-effect mdl-color-text--blue-grey-100" value="Cancelar"></button>
                 </a>
-                <a href="<?= base_url() ?>Seguimiento/index/?matricula=<?php echo $mostrar->FK_tutoradoindividual ?>">
-                    <button class="mdl-button mdl-js-button mdl-color--teal-700 mdl-js-ripple-effect mdl-color-text--blue-grey-100">Aceptar</button>
-                </a>
+                <button class="mdl-button mdl-js-button mdl-color--teal-700 mdl-js-ripple-effect mdl-color-text--blue-grey-100">Aceptar</button>
             </div> 
         </div>          
     </div>  

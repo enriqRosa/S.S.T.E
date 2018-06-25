@@ -6,41 +6,41 @@
                     <div class="c-inputs-4" >
                         <div class="form-icons"><i class="fas fa-id-card"></i></div>
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <input class="mdl-textfield__input" type="text" name="matricula" value="<?php echo $mostrardatosTutorado[0]->matricula;?>">
+                            <input class="mdl-textfield__input" type="text" name="matricula" value="<?php echo $mostrardatosTutorado[0]->matricula;?>" required>
                             <label class="mdl-textfield__label tajawalL" required="required">Matricula</label>
                         </div>
                     </div>
                     <div class="c-inputs-4">
                         <div class="form-icons"><i class="fas fa-user"></i></div>
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <input class="mdl-textfield__input" type="text" name="nombre" value="<?php echo $mostrardatosTutorado[0]->nombre;?>">
+                            <input class="mdl-textfield__input" type="text" name="nombre" value="<?php echo $mostrardatosTutorado[0]->nombre;?>" required>
                                 <label class="mdl-textfield__label tajawalL" required="required">Nombre</label>
                         </div>
                     </div>
                     <div class="c-inputs-4">
                         <div class="form-icons"><i class="fas fa-user"></i></div>
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <input class="mdl-textfield__input" type="text" name="ap_paterno" value="<?php echo $mostrardatosTutorado[0]->ap_paterno;?>">
+                            <input class="mdl-textfield__input" type="text" name="ap_paterno" value="<?php echo $mostrardatosTutorado[0]->ap_paterno;?>" required>
                                 <label class="mdl-textfield__label tajawalL" required="text">Apellido Paterno</label>
                         </div>
                     </div>
                     <div class="c-inputs-4">
                         <div class="form-icons"><i class="fas fa-user"></i></div>
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <input class="mdl-textfield__input" type="text" name="ap_materno" value="<?php echo $mostrardatosTutorado[0]->ap_materno;?>">
+                            <input class="mdl-textfield__input" type="text" name="ap_materno" value="<?php echo $mostrardatosTutorado[0]->ap_materno;?>" required>
                                 <label class="mdl-textfield__label tajawalL" required="text">Apellido Materno</label>
                         </div>
                     </div>
                     <div class="c-inputs-4">
                         <div class="form-icons"><i class="fas fa-briefcase"></i></div>
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <input class="mdl-textfield__input" type="text" name="carrera" value="<?php echo $mostrardatosTutorado[0]->carrera;?>">
+                            <input class="mdl-textfield__input" type="text" name="carrera" value="<?php echo $mostrardatosTutorado[0]->carrera;?>" required>
                                 <label class="mdl-textfield__label tajawalL" required="text">Carrera</label>
                         </div>
                     </div>
                     <div class="c-inputs-4">
                         <div class="form-icons"><i class="fas fa-question"></i></div>
-                        <select class="mdl-textfield mdl-textfield__input" id="dropdown" name="semestre">
+                        <select class="mdl-textfield mdl-textfield__input" id="dropdown" name="semestre" required>
                                 <option value="<?php echo $mostrardatosTutorado[0]->semestre;?>"><?php echo $mostrardatosTutorado[0]->semestre;?></option>
                                 <option value="PRIMERO">PRIMERO</option>
                                 <option value="SEGUNDO">SEGUNDO</option>
@@ -62,20 +62,20 @@
                     <div class="c-inputs-4">
                         <div class="form-icons"><i class="fas fa-book"></i></div>
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <input class="mdl-textfield__input" type="text" value="<?php echo $mostrardatosTutorado[0]->programa;?>" name="programa">
+                            <input class="mdl-textfield__input" type="text" value="<?php echo $mostrardatosTutorado[0]->programa;?>" name="programa" required>
                                 <label class="mdl-textfield__label tajawalL" required="text">Programa</label>
                         </div>
                     </div>
                     <div class="c-inputs-4">
                         <div class="form-icons"><i class="fas fa-book"></i></div>
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <input class="mdl-textfield__input" type="text" value="<?php echo $mostrardatosTutorado[0]->tipo_tutoria;?>" name="tipo_tutoria">
+                            <input class="mdl-textfield__input" type="text" value="<?php echo $mostrardatosTutorado[0]->tipo_tutoria;?>" name="tipo_tutoria" required>
                                 <label class="mdl-textfield__label tajawalL" required="text">Tutoría</label>
                         </div>
                     </div>  
                     <div class="c-inputs-4">
                         <div class="form-icons"><i class="fas fa-question"></i></div>
-                            <select class="mdl-textfield mdl-textfield__input" id="dropdown" name="grupo">
+                            <select class="mdl-textfield mdl-textfield__input" id="dropdown" name="grupo" required required>
                                 <option value="<?php echo $mostrardatosTutorado[0]->grupo;?>"><?php echo $mostrardatosTutorado[0]->grupo;?></option>
                                 <option value="4101">4101</option>
                                 <option value="4201">4201</option>
@@ -116,11 +116,11 @@
                         <div class="c-inputs-4">         
                             <span class="fs19 ls2 tajawalR">Cambiar a:</span>
                             <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-1">
-                                <input type="radio" id="option-1" class="mdl-radio__button" name="status" value="INACTIVO">
+                                <input type="radio" id="option-1" class="mdl-radio__button" name="status" value="INACTIVO" required>
                                 <span class="mdl-radio__label tajawalR ls2">Inactivo</span>
                             </label> 
                             <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-2">
-                                <input type="radio" id="option-2" class="mdl-radio__button" name="status" value="ACTIVO">
+                                <input type="radio" id="option-2" class="mdl-radio__button" name="status" value="ACTIVO" required>
                                 <span class="mdl-radio__label tajawalR ls2">No Cambiar</span>
                             </label>         
                         </div>      
@@ -133,11 +133,11 @@
                         <div class="c-inputs-4">         
                             <span class="fs19 ls2 tajawalR">Cambiar a:</span>
                                 <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-3">
-                                      <input type="radio" id="option-3" class="mdl-radio__button" name="status" value="ACTIVO">
+                                      <input type="radio" id="option-3" class="mdl-radio__button" name="status" value="ACTIVO" required>
                                       <span class="mdl-radio__label tajawalR ls2">Activo</span>
                                 </label>
                                 <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-4">
-                                    <input type="radio" id="option-4" class="mdl-radio__button" name="status" value="INACTIVO">
+                                    <input type="radio" id="option-4" class="mdl-radio__button" name="status" value="INACTIVO" required>
                                 <span class="mdl-radio__label tajawalR ls2">No Cambiar</span>
                             </label> 
                             <?php }

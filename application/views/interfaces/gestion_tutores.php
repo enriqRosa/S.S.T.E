@@ -58,81 +58,77 @@
                 <div class="c-inputs-4" >
                     <div class="form-icons"><i class="fas fa-id-card"></i></div>
                     <div class="mdl-textfield mdl-js-textfield  mdl-textfield--floating-label">
-                        <input class="mdl-textfield__input" type="text" name="matricula">
-                        <label class="mdl-textfield__label tajawalL" required="required">Matricula</label>
+                        <input class="mdl-textfield__input" type="text" name="matricula" required>
+                        <label class="mdl-textfield__label tajawalL" required="required" required>Matricula</label>
                     </div>
                 </div>
                 <div class="c-inputs-4">
                     <div class="form-icons"><i class="fas fa-user"></i></div>
                     <div class="mdl-textfield mdl-js-textfield  mdl-textfield--floating-label  mdl-textfield--floating-label">
-                        <input class="mdl-textfield__input" type="text" name="nombre">
+                        <input class="mdl-textfield__input" type="text" name="nombre" required>
                             <label class="mdl-textfield__label tajawalL" required="required">Nombre</label>
                     </div>
                 </div>
                 <div class="c-inputs-4">
                     <div class="form-icons"><i class="fas fa-user"></i></div>
                     <div class="mdl-textfield mdl-js-textfield  mdl-textfield--floating-label">
-                        <input class="mdl-textfield__input" type="text" name="ap_paterno">
+                        <input class="mdl-textfield__input" type="text" name="ap_paterno" required>
                             <label class="mdl-textfield__label tajawalL" required="text">Apellido Paterno</label>
                     </div>
                 </div>
                 <div class="c-inputs-4">
                     <div class="form-icons"><i class="fas fa-user"></i></div>
                     <div class="mdl-textfield mdl-js-textfield  mdl-textfield--floating-label">
-                        <input class="mdl-textfield__input" type="text" name="ap_materno">
+                        <input class="mdl-textfield__input" type="text" name="ap_materno" required>
                             <label class="mdl-textfield__label tajawalL" required="text">Apellido Materno</label>
                     </div>
                 </div>
                 <div class="c-inputs-4">
                     <div class="form-icons"><i class="fas fa-envelope"></i></div>
                     <div class="mdl-textfield mdl-js-textfield  mdl-textfield--floating-label">
-                        <input class="mdl-textfield__input" type="text" name="correo">
+                        <input class="mdl-textfield__input" type="text" name="correo" required>
                             <label class="mdl-textfield__label tajawalL" required="text">Correo</label>
                     </div>
                 </div>
                 <div class="c-inputs-4">
                     <div class="form-icons"><i class="fas fa-mobile-alt"></i></div>
                     <div class="mdl-textfield mdl-js-textfield  mdl-textfield--floating-label">
-                        <input class="mdl-textfield__input" type="text" name="telefono">
+                        <input class="mdl-textfield__input" type="text" name="telefono" required>
                             <label class="mdl-textfield__label tajawalL" required="text">Telefono</label>
                     </div>
                 </div>
                 <div class="c-inputs-4">
                     <div class="form-icons"><i class="fas fa-key"></i></div>
                     <div class="mdl-textfield mdl-js-textfield  mdl-textfield--floating-label">
-                        <input class="mdl-textfield__input" type="password" name="pass">
+                        <input class="mdl-textfield__input" type="password" name="pass" required>
                             <label class="mdl-textfield__label tajawalL" required="password">Contraseña</label>
                     </div>
                 </div>
                 <div class="c-inputs-4">
                     <div class="form-icons"><i class="fas fa-key"></i></div>
                     <div class="mdl-textfield mdl-js-textfield  mdl-textfield--floating-label">
-                        <input class="mdl-textfield__input" type="password" name="repeat_pswd">
+                        <input class="mdl-textfield__input" type="password" name="repeat_pswd" required>
                             <label class="mdl-textfield__label tajawalL" required="text">Confirmar contraseña</label>
                     </div>
                 </div>
                 <div class="c-inputs-4">
-                    <div class="form-icons"><i class="fas fa-question"></i></div>
-                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select">
-                        <input type="text" value="" class="mdl-textfield__input mdl-color-text--black" id="">
-                        <input type="hidden" value="" name="tipo_usuario">
-                            <label for="" class="mdl-textfield__label">Tipo Usuario</label>
-                                <ul for="" class="mdl-menu mdl-menu--bottom-left mdl-js-menu">
-                                    <li class="mdl-menu__item" data-val="TU">Tutor</li>
-                                </ul>
-                    </div> 
+                    <div class="form-icons"><i class="fas fa-key"></i></div>
+                    <div class="mdl-textfield mdl-js-textfield  mdl-textfield--floating-label">
+                        <input class="mdl-textfield__input" type="text" name="tipo_usuario"value="TU" required>
+                            <label class="mdl-textfield__label tajawalL" required="text">Tipo usuario</label>
+                    </div>
                 </div>
                 <div class="c-inputs-4">
                     <span class="fs19 ls2 tajawalR">Status</span>
                     <div class="status">
                         <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-1">
-                            <input type="radio" id="option-1" class="mdl-radio__button" name="status" value="ACTIVO">
+                            <input type="radio" id="option-1" class="mdl-radio__button" name="status" value="ACTIVO" required>
                             <span class="mdl-radio__label tajawalR ls2">Activo</span>
                         </label>
                     </div>
                     <div class="status">
                         <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-2">
-                            <input type="radio" id="option-2" class="mdl-radio__button" name="status" value="INACTIVO">
+                            <input type="radio" id="option-2" class="mdl-radio__button" name="status" value="INACTIVO" required>
                             <span class="mdl-radio__label tajawalR ls2">Inactivo</span>
                         </label>
                     </div>

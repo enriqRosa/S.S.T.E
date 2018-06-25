@@ -9,7 +9,7 @@
                 <div class="c-inputs-4" >
                     <?php foreach ($mostrardatosTutorado as $mostrar) { ?>
                         <div class="mdl-textfield mdl-js-textfield ">
-                            <input class="mdl-textfield__input" type="text" name="matricula" value=" <?php echo $mostrar->matricula;?>">
+                            <input class="mdl-textfield__input" type="text" name="matricula" value=" <?php echo $mostrar->matricula;?>" required>
                         </div>
                     <?php }?>
                 </div>
@@ -27,7 +27,7 @@
                     <span class="ls2 tajawalR">Cambiar a:</span> 
                 </div>
                 <div class="c-inputs-4" >
-                    <select class="mdl-textfield mdl-js-textfield mdl-textfield__input" id="dropdown" width="300" name="FK_tutor">
+                    <select class="mdl-textfield mdl-js-textfield mdl-textfield__input" id="dropdown" width="300" name="FK_tutor" required>
                         <?php 
                         foreach($tutoresActivos as $mostrar){ ?>
                             <option value="<?php echo $mostrar->matricula; ?>"><?php echo $mostrar->nombre;?> <?php echo $mostrar->ap_paterno; ?> <?php echo $mostrar->ap_materno; ?></option>
@@ -61,7 +61,7 @@
                 <div class="c-inputs-4" >
                     <?php foreach ($mostrardatosTutorado as $mostrar) { ?>
                         <div class="mdl-textfield mdl-js-textfield ">
-                            <input class="mdl-textfield__input" type="text" name="matricula" value=" <?php echo $mostrar->matricula;?>">
+                            <input class="mdl-textfield__input" type="text" name="matricula" value=" <?php echo $mostrar->matricula;?>" required>
                         </div>
                     <?php }?>
                 </div>
@@ -79,7 +79,7 @@
                     <span class="ls2 tajawalR">Cambiar a:</span> 
                 </div>
                 <div class="c-inputs-4" >
-                    <select class="mdl-textfield mdl-js-textfield mdl-textfield__input" id="dropdown" width="300" name="FK_tutor">
+                    <select class="mdl-textfield mdl-js-textfield mdl-textfield__input" id="dropdown" width="300" name="FK_tutor" required>
                         <?php 
                         foreach($tutoresActivos as $mostrar){ ?>
                             <option value="<?php echo $mostrar->matricula; ?>"><?php echo $mostrar->nombre;?> <?php echo $mostrar->ap_paterno; ?> <?php echo $mostrar->ap_materno; ?></option>
