@@ -1,24 +1,109 @@
 <?php echo form_open("Seguimiento/editarFormato"); ?>
-<div class="editar_modal_formato">
-    <div class="modal-info">
-        <span class="mdl-dialog__title fs25 tajawalL ls1">Editar Seguimiento</span> 
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gijgo@1.9.6/js/gijgo.min.js" type="text/javascript"></script>
+    <link href="https://cdn.jsdelivr.net/npm/gijgo@1.9.6/css/gijgo.min.css" rel="stylesheet" type="text/css" />    
+    <div class="seguimiento_2">
+        <div class="usuario">
+        <span class="mdl-dialog__title fs25 tajawalL ls1">Editar Seguimiento</span>
+        </div> 
         <?php foreach ($datosFormatoID as $mostrar) { ?>
                 <input class="c-formato" type="hidden" name="matricula" value="<?php echo $mostrar->FK_tutoradoindividual;?>" disabled>
                 <input type="hidden" name="idformato" value="<?php echo $mostrar->idformato ?>">
             <?php  }?>
-       
         <div class="c-inputs-4">
-            <div class="mat-input-flex mat-form-field-flex">
-                <div class="mat-input-infix mat-form-field-infix">
-                    <label class="fs20 ls2 tajawalM mdl-color-text--indigo-900">Detecto Problemática</label>
-                        <?php foreach ($datosFormatoID as $mostrar) { ?> 
-                            <textarea class="mat-input-element mat-form-field-autofill-control mat-autosize ng-dirty ng-valid ng-touched" name="detecto_problema" required><?php echo $mostrar->detecto_problema ?></textarea>
-                        <?php } ?>
-                </div>
+            <label class="fs20 ls2 tajawalM mdl-color-text--amber-800">Fecha</label>
+            <label class="fs20 ls2 tajawalM mdl-color-text--amber-800">Hora</label>
+        </div>
+        <div class="c-inputs-3" > 
+                <input id="datepicker" width="312" name="fecha" required/>
+                    <script>
+                       $('#datepicker').datepicker({ format: 'yyyy-mm-dd',footer: true , modal:true, header: true});
+                    </script>
+                <input id="timepicker" width="312" name="hora" required/>
+                    <script>
+                        $('#timepicker').timepicker();
+                    </script>
             </div>
-        </div>      
+            
+        <div class="c-inputs-3">
+                <label class="fs20 ls2 tajawalM mdl-color-text--amber-800">Lugar</label>
+                <label class="fs20 ls2 tajawalM mdl-color-text--amber-800">Detecto Problemática</label>
+        </div>
         <div class="c-inputs-4">
-            <label class="fs20 ls2 tajawalM mdl-color-text--indigo-900">Motivo de la Tutoría (Problema Detectado)</label>
+        <select class="mdl-textfield" id="dropdown" width="310" name="FK_lugar" required>
+                <?php foreach($mostrarsalon as $salon){?>
+                    <option value="<?php echo $salon->idlugar;?>"><?php echo $salon->salon;?></option>
+                <?php } ?>
+                </select>
+                <script>
+                    $('#dropdown').dropdown();
+                </script>
+        
+            <?php if($datosFormatoID[0]->detecto_problema=='PSICOLOGÍA'){
+                foreach ($datosFormatoID as $mostrar) { ?> 
+                <label class="fs19 ls2 tajawalB"><?php echo $mostrar->detecto_problema ?></label>
+            <?php } ?>
+                <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-4">
+                <input type="radio" id="option-4" class="mdl-radio__button" name="FK_area" value="<?php echo $mostrar->FK_area ?>" required>
+                <span class="mdl-radio__label tajawalM ls2 ">No Cambiar</span>
+            <?php } ?>
+            <?php if($datosFormatoID[0]->detecto_problema=='ACADÉMICO'){
+                foreach ($datosFormatoID as $mostrar) { ?> 
+                <label class="fs19 ls2 tajawalB"><?php echo $mostrar->detecto_problema ?></label>
+            <?php } ?>
+            <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-4">
+                <input type="radio" id="option-4" class="mdl-radio__button" name="detecto_problema" value="<?php echo $mostrar->detecto_problema ?>" required>
+                <span class="mdl-radio__label tajawalM ls2 ">No Cambiar</span>
+            <?php } ?>
+            <?php if($datosFormatoID[0]->detecto_problema=='JURÍDICO'){
+                foreach ($datosFormatoID as $mostrar) { ?> 
+                <label class="fs19 ls2 tajawalB"><?php echo $mostrar->detecto_problema ?></label>
+            <?php } ?>
+            <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-4">
+                <input type="radio" id="option-4" class="mdl-radio__button" name="detecto_problema" value="<?php echo $mostrar->detecto_problema ?>" required>
+                <span class="mdl-radio__label tajawalM ls2 ">No Cambiar</span>
+            <?php } ?>
+            <?php if($datosFormatoID[0]->detecto_problema=='CONTROL ESCOLAR'){
+                foreach ($datosFormatoID as $mostrar) { ?> 
+                <label class="fs19 ls2 tajawalB"><?php echo $mostrar->detecto_problema ?></label>
+            <?php } ?>
+            <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-4">
+                <input type="radio" id="option-4" class="mdl-radio__button" name="detecto_problema" value="<?php echo $mostrar->detecto_problema ?>" required>
+                <span class="mdl-radio__label tajawalM ls2 ">No Cambiar</span>
+            <?php } ?>
+            <?php if($datosFormatoID[0]->detecto_problema=='FINANZAS'){
+                foreach ($datosFormatoID as $mostrar) { ?> 
+                <label class="fs19 ls2 tajawalB"><?php echo $mostrar->detecto_problema ?></label>
+            <?php } ?>
+            <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-4">
+                <input type="radio" id="option-4" class="mdl-radio__button" name="detecto_problema" value="<?php echo $mostrar->detecto_problema ?>" required>
+                <span class="mdl-radio__label tajawalM ls2 ">No Cambiar</span>
+            <?php } ?>
+            <?php if($datosFormatoID[0]->detecto_problema=='SERVICIO SOCIAL & RESIDENCIAS'){
+                foreach ($datosFormatoID as $mostrar) { ?> 
+                <label class="fs19 ls2 tajawalB"><?php echo $mostrar->detecto_problema ?></label>
+            <?php } ?>
+            <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-4">
+                <input type="radio" id="option-4" class="mdl-radio__button" name="detecto_problema" value="<?php echo $mostrar->detecto_problema ?>" required>
+                <span class="mdl-radio__label tajawalM ls2 ">No Cambiar</span>
+            <?php } ?>
+        </div>   
+        <div class="c-inputs-4">
+            <label class="fs20 ls2 tajawalM mdl-color-text--amber-900">Cambiar a:</label>
+        </div>   
+        <div class="c-inputs-4">
+            <?php foreach ($FK_area as $area){ ?>
+                <div class="status">
+                    <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" >
+                        <input type="radio"  class="mdl-radio__button" name="FK_area" value="<?php echo $area->idarea;?>" required>
+                        <span class="mdl-radio__label tajawalR ls2"><?php echo $area->nombre;?></span>
+                    </label>
+                    
+                </div>
+            <?php }?>
+        </div>
+        <div class="c-inputs-4">
+            <label class="fs20 ls2 tajawalM mdl-color-text--amber-900">Motivo de la Tutoría (Problema Detectado)</label>
         </div>
         <div class="c-inputs-4">
             <div class="status">
@@ -88,7 +173,7 @@
             </div>
         </div>
         <div class="c-inputs-4">
-            <label class="fs20 ls2 tajawalM mdl-color-text--indigo-900">Área en la que fue canalizada</label>
+            <label class="fs20 ls2 tajawalM mdl-color-text--amber-900">Área en la que fue canalizada</label>
         </div>
         <div class="c-inputs-4">
             <?php if($datosFormatoID[0]->nombre=='PSICOLOGÍA'){
@@ -117,7 +202,7 @@
                      <?php } ?>
         </div>
         <div class="c-inputs-4">
-            <label class="fs20 ls2 tajawalM mdl-color-text--indigo-900">Cambiar a:</label>
+            <label class="fs20 ls2 tajawalM mdl-color-text--amber-900">Cambiar a:</label>
         </div>
         <div class="c-inputs-4">
             <?php foreach ($FK_area as $area){ ?>
@@ -130,16 +215,9 @@
                 </div>
             <?php }?>
         </div>
+        
         <div class="c-inputs-4">
-            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-             <?php foreach ($datosFormatoID as $mostrar) { ?>
-				<input class="mdl-textfield__input" type="text" name="avance" required value="<?php echo $mostrar->avance; ?>" required>
-					<label class="mdl-textfield__label fs12 ls2 tajawalR" for="tb-mail">Avance</label>
-             <?php } ?>
-			</div>
-        </div>
-        <div class="c-inputs-4">
-            <label class="fs20 ls2 tajawalM mdl-color-text--indigo-900">Firmas</label>
+            <label class="fs20 ls2 tajawalM mdl-color-text--amber-900">Firmas</label>
         </div>
         <div class="c-inputs-4">
             <div class="status">
@@ -172,6 +250,6 @@
                 <button class="mdl-button mdl-js-button mdl-color--teal-700 mdl-js-ripple-effect mdl-color-text--blue-grey-100">Aceptar</button>
             </div> 
         </div>          
-    </div>  
+      
 </div>
 <?php echo form_close(); ?>

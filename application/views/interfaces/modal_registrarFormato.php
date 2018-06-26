@@ -17,13 +17,16 @@
                     <script>
                        $('#datepicker').datepicker({ format: 'yyyy-mm-dd',footer: true , modal:true, header: true});
                     </script>
-
                 <input id="timepicker" width="312" name="hora" required/>
                     <script>
                         $('#timepicker').timepicker();
                     </script>
             </div>
-            <div class="c-inputs-4">
+            <div class="c-inputs-3">
+                <span class="tajawalR ls1 mdl-color-text--indigo-900">Lugar:</span>
+                <span class="tajawalR ls1 mdl-color-text--indigo-900">Detecto problema:</span>
+            </div>
+            <div class="c-inputs-3">
                 <select class="mdl-textfield" id="dropdown" width="310" name="FK_lugar" required>
                 <?php foreach($mostrarsalon as $salon){?>
                     <option value="<?php echo $salon->idlugar;?>"><?php echo $salon->salon;?></option>
@@ -32,12 +35,14 @@
                 <script>
                     $('#dropdown').dropdown();
                 </script>
-                <div class="mat-input-flex mat-form-field-flex" >
-                    <div class="mat-input-infix mat-form-field-infix" >
-                        <label class="fs16 ls2 tajawalR mdl-color-text--indigo-700">Problematica</label>
-                        <textarea class="mat-input-element mat-form-field-autofill-control fs8 ls2 tajawalL ng-dirty ng-valid ng-touched" name="detecto_problema" required></textarea>
-                    </div>
-                </div>  
+                <select class="mdl-textfield" id="dropdown2" width="310" name="detecto_problema" required>
+                <?php foreach ($FK_area as $area){?>
+                    <option value="<?php echo $area->idarea;?>"><?php echo $area->nombre;?></option>
+                <?php } ?>
+                </select>
+                <script>
+                    $('#dropdown2').dropdown();
+                </script>
             </div>    
             <div class="matricula">
                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
@@ -107,12 +112,10 @@
                 <span class="tajawalL fs12 ls1 mdl-color-text--grey-700">*CANALIZACION</span>
                 <span class="tajawalL fs12 ls1 mdl-color-text--grey-700">*INFORMACION GENERAL</span>
                 <span class="tajawalL fs12 ls1 mdl-color-text--grey-700">*ASESORIA ACADEMICA</span>
-            </div>
-            <div class="c-inputs-3">
                 <span class="tajawalL fs12 ls1 mdl-color-text--grey-700">*PROBLEMAS INTERPERSONALES</span>
             </div>
             <div class="modals">
-            <a href="<?= base_url() ?>Admin/verificacionSeguimiento">
+            <a href="<?= base_url() ?>Tutor/verificacionSeguimiento">
                 <input type="button" class="close-fancy mdl-button mdl-js-button mdl-color--red-A200 mdl-js-ripple-effect mdl-color-text--white" value="CANCELAR"></input>
             </a>   
                 <button class="mdl-button mdl-js-button mdl-color--teal-700 mdl-js-ripple-effect mdl-color-text--white ">Aceptar</button>
@@ -121,3 +124,12 @@
     </div>
 <?php echo form_close(); ?>
 <?php include_once 'footer.php'?>
+
+
+
+<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+             <?php foreach ($datosFormatoID as $mostrar) { ?>
+				<input class="mdl-textfield__input" type="text" name="avance" required value="<?php echo $mostrar->avance; ?>" required>
+					<label class="mdl-textfield__label fs12 ls2 tajawalR" for="tb-mail">Avance</label>
+             <?php } ?>
+			</div>

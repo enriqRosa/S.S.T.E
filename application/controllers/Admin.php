@@ -307,6 +307,7 @@ Class Admin extends CI_Controller{
         if($this->form_validation->run()!=true){
             $this->data['posts']=$this->Modelo_login->getAdmin();
             $this->load->view('interfaces/interfaz_admin',$this->data);
+            echo "ERROR";
         }else {
             $sql=$this->db->select("*")->from("usuarios")->where("matricula",$this->session->userdata("matricula"))->get();
             foreach ($sql->result() as $my_pswd) {

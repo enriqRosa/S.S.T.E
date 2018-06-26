@@ -52,7 +52,7 @@
         <button 
             class="mdl-button mdl-js-button mdl-color--yellow-900 mdl-js-ripple-effect mdl-color-text--white btn-pass"><i class="fas fa-key"></i>Cambiar Contraseña
         </button> 
-    </div> required
+    </div>
 </section>
 <!--MODAL PARA CAMBIAR CONTRASEÑA-->
 <?php echo form_open("tutor/cambiarPassword"); ?>

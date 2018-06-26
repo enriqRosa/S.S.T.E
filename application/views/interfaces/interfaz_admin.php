@@ -51,21 +51,21 @@
         <span class="mdl-dialog__title fs25 tajawalL ls1">Modificar Contraseña</span>
             <form>
                 <div class="c-inputs-4" >
-                    <div class="mdl-textfield mdl-js-textfield ">
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                         <input class="mdl-textfield__input" type="password" name="actual_pswd" required>
                         <label class="mdl-textfield__label tajawalL" required>Ingresa tu contraseña actual</label>
                         <?php form_error("actual_pswd"); ?>
                     </div>
                 </div>
                 <div class="c-inputs-4">
-                    <div class="mdl-textfield mdl-js-textfield ">
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                         <input class="mdl-textfield__input" type="password" name="new_pswd" required>
                             <label class="mdl-textfield__label tajawalL" required>Ingresa nueva contraseña</label>
                             <?php form_error("new_pswd"); ?>
                     </div>
                 </div>
                 <div class="c-inputs-4">
-                    <div class="mdl-textfield mdl-js-textfield">
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                         <input class="mdl-textfield__input" type="password" name="repeat_pswd" required>
                             <label class="mdl-textfield__label tajawalL" required>Confirmar contraseña</label>
                             <?php form_error("repeat_pswd"); ?>
