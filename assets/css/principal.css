@@ -545,11 +545,16 @@ nav{
 @media only screen and (max-width: 800px) {
     .grupo-academico, .grupo-institucional{
         text-align: center;
-        flex-direction: column;
+        width: 1200px;
     }
     .grupo-academico > div, .grupo-institucional >div{
         width: 90%;
         margin: 10px auto;
+    }
+    .academico-info{
+        overflow-x: scroll;
+        position: relative;
+        white-space: nowrap;
     }
 }
 /* ----------------------------------------CAMBIO------------------------------ */
