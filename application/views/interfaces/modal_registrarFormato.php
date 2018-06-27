@@ -36,12 +36,12 @@
                     $('#dropdown').dropdown();
                 </script>
                 <select class="mdl-textfield" id="problema" width="310" name="detecto_problema" required>
-                        <option value="4101">PSICOLOGÍA</option>
-                        <option value="4201">ACADÉMICO</option>
-                        <option value="4202">JURÍDICO</option>
-                        <option value="4251">CONTROL ESCOLAR</option>
-                        <option value="4271">FINANZAS</option>
-                        <option value="4301">SERVICIO SOCIAL & RESIDENCIAS</option> 
+                        <option value="PSICOLOGÍA">PSICOLOGÍA</option>
+                        <option value="ACADÉMICO">ACADÉMICO</option>
+                        <option value="JURÍDICO">JURÍDICO</option>
+                        <option value="CONTROL ESCOLAR">CONTROL ESCOLAR</option>
+                        <option value="FINANZAS">FINANZAS</option>
+                        <option value="SERVICIO SOCIAL & RESIDENCIAS">SERVICIO SOCIAL & RESIDENCIAS</option> 
                 </select>
                 <script>
                     $('#problema').dropdown();
@@ -100,7 +100,7 @@
                 <label class="fs20 ls2 tajawalR mdl-color-text--amber-900">Área en la que fue canalizada</label>
             </div>
             <div class="c-inputs-4">
-                <select class="mdl-textfield" id="dropdown3" width="310" name="FK_lugar" required>
+                <select class="mdl-textfield" id="dropdown3" width="310" name="FK_area">
                 <?php foreach($FK_area as $area){?>
                     <option id="area" value="<?php echo $area->idarea;?>" disabled><?php echo $area->nombre;?></option>
                 <?php } ?>
@@ -166,13 +166,6 @@
                 }
                 </script>
             </div>
-            <script> 
-                
-                
-    
-               
-                
-            </script>
             <div class="c-inputs-3">
                 <span class="tajawalL fs12 ls1 mdl-color-text--grey-700">*PROBLEMAS ACADEMICOS</span>
                 <span class="tajawalL fs12 ls1 mdl-color-text--grey-700">*PROBLEMAS EMOCIONALES</span>

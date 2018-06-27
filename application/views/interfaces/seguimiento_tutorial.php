@@ -94,7 +94,33 @@
                             <td class="tajawalL fs16 "><?php echo $row->hora; ?></td>
                             <td class="tajawalL fs16 "><?php echo $row->salon; ?></td>
                             <td class="tajawalL fs16 "><?php echo $row->detecto_problema; ?></td>
-                            <td class="tajawalL fs16 "><?php echo $row->nombre; ?></td>
+                            <?php if($row->FK_area==NULL){ ?>
+                                    <td></td>
+                            <?php }?>
+                            <?php if($row->FK_area==1){ 
+                                    $area='PSICOLOGÍA';?>
+                            <td class="tajawalL fs16 "><?php echo $area; ?></td>
+                             <?php   } ?>
+                            <?php if($row->FK_area==2){ 
+                                    $area='ACADÉMICO';?>
+                            <td class="tajawalL fs16 "><?php echo $area; ?></td>
+                             <?php   } ?>
+                            <?php if($row->FK_area==3){ 
+                                    $area='JURÍDICO';?>
+                            <td class="tajawalL fs16 "><?php echo $area; ?></td>
+                             <?php   } ?>
+                            <?php if($row->FK_area==4){ 
+                                    $area='CONTROL ESCOLAR';?>
+                            <td class="tajawalL fs16 "><?php echo $area; ?></td>
+                             <?php   } ?>
+                            <?php if($row->FK_area==5){ 
+                                    $area='FINANZAS';?>
+                            <td class="tajawalL fs16 "><?php echo $area; ?></td>
+                             <?php   } ?>
+                             <?php if($row->FK_area==6){ 
+                                    $area='SERVICIO SOCIAL & RESIDENCIAS';?>
+                            <td class="tajawalL fs16 "><?php echo $area; ?></td>
+                             <?php   } ?>
                             <td class="tajawalL fs16 "><?php echo $row->avance; ?></td>
                             <td class="tajawalL fs16 "><?php echo $row->firma_alumno; ?></td>
                             <td class="tajawalL fs16 "><?php echo $row->firma_tutor; ?></td>

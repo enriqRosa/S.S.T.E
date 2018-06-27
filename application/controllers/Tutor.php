@@ -72,10 +72,11 @@ Class Tutor extends CI_Controller{
         }
         elseif($aa!=NULL){
             $aa="ASESORIA ACADEMICA";
-        if($pi==NULL){
         }
+        if($pi==NULL){
             $pi="NULL";
-        }elseif($pi!=NULL){
+        }
+        elseif($pi!=NULL){
             $pi="PROBLEMAS INTERPERSONALES";
         }
         
@@ -131,3 +132,5 @@ Class Tutor extends CI_Controller{
     }
 }
 ?>
+
+ 
