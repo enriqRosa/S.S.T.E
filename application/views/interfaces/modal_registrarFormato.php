@@ -7,7 +7,7 @@
             <span class="mdl-dialog__title fs25 tajawalB ls1">Registro de Seguimiento Tutorial</span>
         </div>
             <div class="matricula" >
-                <span class="tajawalR ls1 mdl-color-text--indigo-900">Matricula Tutorado:</span>
+                <span class="tajawalR ls1 mdl-color-text--amber-900">Matricula Tutorado:</span>
                     <?php foreach ($mostrardatosTutorado as $mostrar) { ?>
                         <input class="fs25 ls2 tajawalL" type="text" name="matricula" value="<?php echo $mostrar->matricula;?>" required>
                     <?php }?>
@@ -23,8 +23,8 @@
                     </script>
             </div>
             <div class="c-inputs-3">
-                <span class="tajawalR ls1 mdl-color-text--indigo-900">Lugar:</span>
-                <span class="tajawalR ls1 mdl-color-text--indigo-900">Detecto problema:</span>
+                <span class="tajawalR ls1 mdl-color-text--amber-900">Lugar:</span>
+                <span class="tajawalR ls1 mdl-color-text--amber-900">Detecto problema:</span>
             </div>
             <div class="c-inputs-3">
                 <select class="mdl-textfield" id="dropdown" width="310" name="FK_lugar" required>
@@ -47,18 +47,18 @@
             <div class="matricula">
                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
 					<input class="mdl-textfield__input" type="text" name="avance" required>
-						<label class="mdl-textfield__label fs12 ls2 tajawalR" for="tb-mail">Avance</label>
+						<label class="mdl-textfield__label fs12 ls2 tajawalR " for="tb-mail">Avance</label>
 				</div>
             </div>
             <div class="c-inputs-3">
-                <label class="fs20 ls2 tajawalR mdl-color-text--indigo-900">Motivo de la Tutoría (Problema Dectectado)</label>
+                <label class="fs20 ls2 tajawalR mdl-color-text--amber-900">Motivo de la Tutoría (Problema Dectectado)</label>
             </div>
             <div class="c-inputs-3">
                 <div class="status">
                     <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-1">
                         <input type="checkbox" id="checkbox-1" class="mdl-checkbox__input" name="pa">
                         <span class="mdl-checkbox__label">PA</span>
-                    </label>     
+                    </label> 
                 </div>
                 <div class="status">
                     <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-2">
@@ -94,18 +94,82 @@
                 </div>
             </div>
             <div class="c-inputs-3">
-                <label class="fs20 ls2 tajawalR mdl-color-text--indigo-900">Área en la que fue canalizada</label>
+                <label class="fs20 ls2 tajawalR mdl-color-text--amber-900">Área en la que fue canalizada</label>
             </div>
             <div class="c-inputs-4">
-            <?php foreach ($FK_area as $area){ ?>
-                <div class="status">
-                    <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" >
-                        <input type="radio"  class="mdl-radio__button" name="FK_area" value="<?php echo $area->idarea;?>" required>
-                        <span class="mdl-radio__label tajawalR ls2"><?php echo $area->nombre;?></span>
-                    </label>
-                </div>
-            <?php }?>
+                <select class="mdl-textfield" id="dropdown3" width="310" name="FK_lugar" required>
+                <?php foreach($FK_area as $area){?>
+                    <option id="area" value="<?php echo $area->idarea;?>" disabled><?php echo $area->nombre;?></option>
+                <?php } ?>
+                </select>
+                <script>
+                   var check = $("#checkbox-1");
+                    $("#checkbox-1").on('click',uno);
+                    function uno(){
+                        if(check.is(':checked')){
+                            $("#checkbox-3").prop('disabled', true); 
+                            $('#dropdown3').dropdown(disabled);
+                        }
+                    } 
+                    var check2 = $("#checkbox-2");
+                    $("#checkbox-2").on('click',dos);
+                    function dos(){
+                    if(check2.is(':checked')){
+                        $("#checkbox-3").prop('disabled', true);
+                        $('#dropdown3').dropdown(disabled);
+                    }
+                }
+                var check3 = $("#checkbox-3");
+                $("#checkbox-3").on('click',tres);
+                function tres(){
+                    if(check3.is(':checked')){
+                        $("#checkbox-1").prop('disabled', true);
+                        $("#checkbox-2").prop('disabled', true);
+                        $("#checkbox-4").prop('disabled', true);
+                        $("#checkbox-5").prop('disabled', true);
+                        $("#checkbox-6").prop('disabled', true);
+                        $('#dropdown3').dropdown();
+                    }else{
+                        $("#checkbox-1").prop('disabled', false);
+                        $("#checkbox-2").prop('disabled', false);
+                        $("#checkbox-4").prop('disabled', false);
+                        $("#checkbox-5").prop('disabled', false);
+                        $("#checkbox-6").prop('disabled', false);
+                        $('#dropdown3').dropdown(disabled);   
+                    }
+                }   
+                var check4 = $("#checkbox-4");
+                $("#checkbox-4").on('click',cuatro);
+                function cuatro(){
+                    if(check4.is(':checked')){
+                        $("#checkbox-3").prop('disabled', true);
+                    }
+                }
+                var check5= $("#checkbox-5");
+                $("#checkbox-5").on('click',cinco);
+                function cinco(){
+                    if(check5.is(':checked')){
+                        $("#checkbox-3").prop('disabled', true);
+                        $("#area").prop('disabled', true);
+                    }
+                }
+                var check6 = $("#checkbox-6");
+                $("#checkbox-6").on('click',seis);
+                function seis(){
+                    if(check6.is(':checked')){
+                        $("#checkbox-3").prop('disabled', true);
+                        $("#area").prop('disabled', true);
+                    }
+                }
+                </script>
             </div>
+            <script> 
+                
+                
+    
+               
+                
+            </script>
             <div class="c-inputs-3">
                 <span class="tajawalL fs12 ls1 mdl-color-text--grey-700">*PROBLEMAS ACADEMICOS</span>
                 <span class="tajawalL fs12 ls1 mdl-color-text--grey-700">*PROBLEMAS EMOCIONALES</span>
@@ -124,12 +188,3 @@
     </div>
 <?php echo form_close(); ?>
 <?php include_once 'footer.php'?>
-
-
-
-<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-             <?php foreach ($datosFormatoID as $mostrar) { ?>
-				<input class="mdl-textfield__input" type="text" name="avance" required value="<?php echo $mostrar->avance; ?>" required>
-					<label class="mdl-textfield__label fs12 ls2 tajawalR" for="tb-mail">Avance</label>
-             <?php } ?>
-			</div>

@@ -4,27 +4,24 @@
     <link href="https://cdn.jsdelivr.net/npm/gijgo@1.9.6/css/gijgo.min.css" rel="stylesheet" type="text/css" />    
     <div class="seguimiento_2">
         <div class="usuario">
-        <span class="mdl-dialog__title fs25 tajawalL ls1">Editar Seguimiento</span>
+        <span class="mdl-dialog__title fs25 tajawalB ls1">Editar Seguimiento</span>
         </div> 
         <?php foreach ($datosFormatoID as $mostrar) { ?>
                 <input class="c-formato" type="hidden" name="matricula" value="<?php echo $mostrar->FK_tutoradoindividual;?>" disabled>
                 <input type="hidden" name="idformato" value="<?php echo $mostrar->idformato ?>">
             <?php  }?>
-        <div class="c-inputs-4">
-            <label class="fs20 ls2 tajawalM mdl-color-text--amber-800">Fecha</label>
-            <label class="fs20 ls2 tajawalM mdl-color-text--amber-800">Hora</label>
-        </div>
         <div class="c-inputs-3" > 
-                <input id="datepicker" width="312" name="fecha" required/>
+            <?php foreach ($datosFormatoID as $mostrar) { ?>
+                <input id="datepicker" width="312" name="fecha"/>
                     <script>
-                       $('#datepicker').datepicker({ format: 'yyyy-mm-dd',footer: true , modal:true, header: true});
+                       $('#datepicker').datepicker({value: '<?php echo $mostrar->fecha;?>', format: 'yyyy-mm-dd',footer: true , modal:true, header: true});
                     </script>
                 <input id="timepicker" width="312" name="hora" required/>
                     <script>
-                        $('#timepicker').timepicker();
+                        $('#timepicker').timepicker({value: '<?php echo $mostrar->hora;?>'});
                     </script>
-            </div>
-            
+            <?php } ?>
+        </div>
         <div class="c-inputs-3">
                 <label class="fs20 ls2 tajawalM mdl-color-text--amber-800">Lugar</label>
                 <label class="fs20 ls2 tajawalM mdl-color-text--amber-800">Detecto Problemática</label>
@@ -88,8 +85,16 @@
                 <span class="mdl-radio__label tajawalM ls2 ">No Cambiar</span>
             <?php } ?>
         </div>   
+        <div class="matricula">
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <?php foreach ($datosFormatoID as $mostrar) { ?> 
+					<input class="mdl-textfield__input" type="text" name="avance" value="<?php echo $mostrar->avance ?>" required>
+						<label class="mdl-textfield__label fs12 ls2 tajawalR " for="tb-mail">Avance</label>
+                <?php } ?>
+			</div>
+        </div>
         <div class="c-inputs-4">
-            <label class="fs20 ls2 tajawalM mdl-color-text--amber-900">Cambiar a:</label>
+            <label class="fs20 ls2 tajawalM mdl-color-text--amber-900">Detecto  problematica cambiar a:</label>
         </div>   
         <div class="c-inputs-4">
             <?php foreach ($FK_area as $area){ ?>

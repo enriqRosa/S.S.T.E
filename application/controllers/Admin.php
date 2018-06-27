@@ -78,6 +78,7 @@ Class Admin extends CI_Controller{
         $correo = $this->input->post('correo');
         $telefono = $this->input->post('telefono');
         $status = $this->input->post('status');
+        $status = strtoupper($status);
 
         $data = array(
             'matricula' => $mat,
@@ -109,14 +110,19 @@ Class Admin extends CI_Controller{
         $materno = $this->input->post('ap_materno');
         $materno = strtoupper($materno);
         $carrera = $this->input->post('carrera');
+        $carrera = strtoupper($carrera);
         $semestre = $this->input->post('semestre');
         $semestre = strtoupper($semestre);
         $prog = $this->input->post('programa');
+        $prog = strtoupper($prog);
         $tutoria = $this->input->post('tipo_tutoria');
+        $tutoria = strtoupper($tutoria);
         $grupo = $this->input->post('grupo');
         $pass = $this->input->post('pass');
         $tipo = $this->input->post('tipo_usuario');
+        $tipo = strtoupper($tipo;
         $status = $this->input->post('status');
+        $status = strtoupper($status);
         
         $data = array(
             'matricula' => $mat,
