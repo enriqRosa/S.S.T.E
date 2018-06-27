@@ -120,7 +120,7 @@ Class Admin extends CI_Controller{
         $grupo = $this->input->post('grupo');
         $pass = $this->input->post('pass');
         $tipo = $this->input->post('tipo_usuario');
-        $tipo = strtoupper($tipo;
+        $tipo = strtoupper($tipo);
         $status = $this->input->post('status');
         $status = strtoupper($status);
         

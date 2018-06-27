@@ -35,13 +35,16 @@
                 <script>
                     $('#dropdown').dropdown();
                 </script>
-                <select class="mdl-textfield" id="dropdown2" width="310" name="detecto_problema" required>
-                <?php foreach ($FK_area as $area){?>
-                    <option value="<?php echo $area->idarea;?>"><?php echo $area->nombre;?></option>
-                <?php } ?>
+                <select class="mdl-textfield" id="problema" width="310" name="detecto_problema" required>
+                        <option value="4101">PSICOLOGÍA</option>
+                        <option value="4201">ACADÉMICO</option>
+                        <option value="4202">JURÍDICO</option>
+                        <option value="4251">CONTROL ESCOLAR</option>
+                        <option value="4271">FINANZAS</option>
+                        <option value="4301">SERVICIO SOCIAL & RESIDENCIAS</option> 
                 </select>
                 <script>
-                    $('#dropdown2').dropdown();
+                    $('#problema').dropdown();
                 </script>
             </div>    
             <div class="matricula">
