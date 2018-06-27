@@ -119,6 +119,7 @@ nav{
 .academico-info .c-inputs-4{
     display:flex; 
     justify-content: space-evenly;
+    width:1310px;
 }
 .academico-info .c-inputs-4 .mdl-textfield,
 .institucional-info .c-inputs-4 .mdl-textfield{
