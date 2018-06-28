@@ -51,6 +51,11 @@ Class Login extends CI_Controller{
                 }
         }
     }
+     //CERRAR SESIÒN
+     public function logout(){
+        $this->session->sess_destroy();
+        redirect(base_url());
+    }
 
 }
 
