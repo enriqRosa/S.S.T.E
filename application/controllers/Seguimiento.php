@@ -51,11 +51,16 @@ Class Seguimiento extends CI_Controller{
         $id=$this->input->get('idformato');
         $this->data['mostrardatosTutorado']=$this->modelo_registrar_usuarios->traerdatosTutorado($matricula);
         $this->data['datosFormatoID']=$this->modelo_registrar_usuarios->datoscompletosFormatoID($id); 
+        $this->data['mostrarsalon']=$this->modelo_registrar_usuarios->traersalon();
         $this->data['FK_area']=$this->modelo_registrar_usuarios->traerArea();
         $this->load->view('interfaces/modal_editarSeguimiento',$this->data);       
     }
     function editarFormato(){
         $id=$this->input->post('idformato');
+        $fecha=$this->input->post('fecha');
+        $hora=$this->input->post('hora');
+        $lugar=$this->input->post('FK_lugar');
+        $avance=$this->input->post('avance');
         $problema=$this->input->post('detecto_problema');
         $pa=$this->input->post('pa');
         $pe=$this->input->post('pe');
@@ -66,7 +71,6 @@ Class Seguimiento extends CI_Controller{
         $area=$this->input->post('FK_area');
         $firma_t=$this->input->post('firma_tutor');
         $firma_to=$this->input->post('firma_alumno');
-        $avance=$this->input->post('avance');
 
         if($pa==NULL){
             $pa="NULL";
@@ -101,6 +105,9 @@ Class Seguimiento extends CI_Controller{
         }
         
         $data = array(
+            'fecha' => $fecha,
+            'hora' => $hora,
+            'FK_lugar' => $lugar,
             'detecto_problema' => $problema,
             'pa' => $pa,
             'pe' => $pe,

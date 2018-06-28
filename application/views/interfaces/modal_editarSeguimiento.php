@@ -24,74 +24,70 @@
         </div>
         <div class="c-inputs-3">
                 <label class="fs20 ls2 tajawalM mdl-color-text--amber-800">Lugar</label>
-                <label class="fs20 ls2 tajawalM mdl-color-text--amber-800">Detecto Problemática</label>
+                <label class="fs20 ls2 tajawalM mdl-color-text--amber-800">Avance</label>
         </div>
         <div class="c-inputs-4">
-        <select class="mdl-textfield" id="dropdown" width="310" name="FK_lugar" required>
-                <?php foreach($mostrarsalon as $salon){?>
-                    <option value="<?php echo $salon->idlugar;?>"><?php echo $salon->salon;?></option>
-                <?php } ?>
+            <select class="mdl-textfield" id="dropdown" width="310" name="FK_lugar" required>
+                <?php {
+                    foreach ($datosFormatoID as $mostrar) { ?> 
+                    <option value="<?php echo $mostrar->FK_lugar;?>"><?php echo $mostrar->salon;?></option>
+                <?php }
+                } ?>
                 </select>
                 <script>
                     $('#dropdown').dropdown();
                 </script>
         
-            <?php if($datosFormatoID[0]->detecto_problema=='PSICOLOGÍA'){
-                foreach ($datosFormatoID as $mostrar) { ?> 
-                <label class="fs19 ls2 tajawalB"><?php echo $mostrar->detecto_problema ?></label>
-            <?php } ?>
-                <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-4">
-                <input type="radio" id="option-4" class="mdl-radio__button" name="FK_area" value="<?php echo $mostrar->FK_area ?>" required>
-                <span class="mdl-radio__label tajawalM ls2 ">No Cambiar</span>
-            <?php } ?>
-            <?php if($datosFormatoID[0]->detecto_problema=='ACADÉMICO'){
-                foreach ($datosFormatoID as $mostrar) { ?> 
-                <label class="fs19 ls2 tajawalB"><?php echo $mostrar->detecto_problema ?></label>
-            <?php } ?>
-            <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-4">
-                <input type="radio" id="option-4" class="mdl-radio__button" name="detecto_problema" value="<?php echo $mostrar->detecto_problema ?>" required>
-                <span class="mdl-radio__label tajawalM ls2 ">No Cambiar</span>
-            <?php } ?>
-            <?php if($datosFormatoID[0]->detecto_problema=='JURÍDICO'){
-                foreach ($datosFormatoID as $mostrar) { ?> 
-                <label class="fs19 ls2 tajawalB"><?php echo $mostrar->detecto_problema ?></label>
-            <?php } ?>
-            <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-4">
-                <input type="radio" id="option-4" class="mdl-radio__button" name="detecto_problema" value="<?php echo $mostrar->detecto_problema ?>" required>
-                <span class="mdl-radio__label tajawalM ls2 ">No Cambiar</span>
-            <?php } ?>
-            <?php if($datosFormatoID[0]->detecto_problema=='CONTROL ESCOLAR'){
-                foreach ($datosFormatoID as $mostrar) { ?> 
-                <label class="fs19 ls2 tajawalB"><?php echo $mostrar->detecto_problema ?></label>
-            <?php } ?>
-            <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-4">
-                <input type="radio" id="option-4" class="mdl-radio__button" name="detecto_problema" value="<?php echo $mostrar->detecto_problema ?>" required>
-                <span class="mdl-radio__label tajawalM ls2 ">No Cambiar</span>
-            <?php } ?>
-            <?php if($datosFormatoID[0]->detecto_problema=='FINANZAS'){
-                foreach ($datosFormatoID as $mostrar) { ?> 
-                <label class="fs19 ls2 tajawalB"><?php echo $mostrar->detecto_problema ?></label>
-            <?php } ?>
-            <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-4">
-                <input type="radio" id="option-4" class="mdl-radio__button" name="detecto_problema" value="<?php echo $mostrar->detecto_problema ?>" required>
-                <span class="mdl-radio__label tajawalM ls2 ">No Cambiar</span>
-            <?php } ?>
-            <?php if($datosFormatoID[0]->detecto_problema=='SERVICIO SOCIAL & RESIDENCIAS'){
-                foreach ($datosFormatoID as $mostrar) { ?> 
-                <label class="fs19 ls2 tajawalB"><?php echo $mostrar->detecto_problema ?></label>
-            <?php } ?>
-            <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-4">
-                <input type="radio" id="option-4" class="mdl-radio__button" name="detecto_problema" value="<?php echo $mostrar->detecto_problema ?>" required>
-                <span class="mdl-radio__label tajawalM ls2 ">No Cambiar</span>
-            <?php } ?>
-        </div>   
-        <div class="matricula">
             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                 <?php foreach ($datosFormatoID as $mostrar) { ?> 
 					<input class="mdl-textfield__input" type="text" name="avance" value="<?php echo $mostrar->avance ?>" required>
 						<label class="mdl-textfield__label fs12 ls2 tajawalR " for="tb-mail">Avance</label>
                 <?php } ?>
 			</div>
+        </div>   
+        <div class="matricula">
+            <?php if($datosFormatoID[0]->detecto_problema==1){
+                foreach ($datosFormatoID as $mostrar) { 
+                    $Problema='PSICOLOGÍA'?> 
+                <label class="fs20 ls2 tajawalM mdl-color-text--amber-800">Detecto Problema: </label>
+                <label class="fs19 ls2 tajawalB"> <?php echo $Problema ?></label>
+            <?php }
+            } ?>
+            <?php if($datosFormatoID[0]->detecto_problema==2){
+                foreach ($datosFormatoID as $mostrar) { 
+                    $Problema='ACADÉMICO'?> 
+                <label class="fs20 ls2 tajawalM mdl-color-text--amber-800">Detecto Problema: </label>
+                <label class="fs19 ls2 tajawalB"> <?php echo $Problema ?></label>
+            <?php }
+            } ?>
+            <?php if($datosFormatoID[0]->detecto_problema==3){
+                foreach ($datosFormatoID as $mostrar) { 
+                    $Problema='JURÍDICO'?> 
+                <label class="fs20 ls2 tajawalM mdl-color-text--amber-800">Detecto Problema: </label>
+                <label class="fs19 ls2 tajawalB"> <?php echo $Problema ?></label>
+            <?php }
+            } ?>
+            <?php if($datosFormatoID[0]->detecto_problema==4){
+                foreach ($datosFormatoID as $mostrar) { 
+                    $Problema='CONTROL ESCOLAR'?> 
+                <label class="fs20 ls2 tajawalM mdl-color-text--amber-800">Detecto Problema: </label>
+                <label class="fs19 ls2 tajawalB"> <?php echo $Problema ?></label>
+            <?php }
+            } ?>
+            <?php if($datosFormatoID[0]->detecto_problema==5){
+                foreach ($datosFormatoID as $mostrar) { 
+                    $Problema='FINANZAS'?> 
+                <label class="fs20 ls2 tajawalM mdl-color-text--amber-800">Detecto Problema: </label>
+                <label class="fs19 ls2 tajawalB"> <?php echo $Problema ?></label>
+            <?php }
+            } ?>
+            <?php if($datosFormatoID[0]->detecto_problema==6){
+                foreach ($datosFormatoID as $mostrar) { 
+                    $Problema='SERVICIO SOCIAL & RESIDENCIAS'?> 
+                <label class="fs20 ls2 tajawalM mdl-color-text--amber-800">Detecto Problema: </label>
+                <label class="fs19 ls2 tajawalB"> <?php echo $Problema ?></label>
+            <?php }
+            } ?>
         </div>
         <div class="c-inputs-4">
             <label class="fs20 ls2 tajawalM mdl-color-text--amber-900">Detecto  problematica cambiar a:</label>
@@ -100,12 +96,15 @@
             <?php foreach ($FK_area as $area){ ?>
                 <div class="status">
                     <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" >
-                        <input type="radio"  class="mdl-radio__button" name="FK_area" value="<?php echo $area->idarea;?>" required>
+                        <input type="radio"  class="mdl-radio__button" name="detecto_problema" value="<?php echo $area->idarea;?>" required>
                         <span class="mdl-radio__label tajawalR ls2"><?php echo $area->nombre;?></span>
                     </label>
-                    
                 </div>
             <?php }?>
+            <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" >
+                        <input type="radio"  class="mdl-radio__button" name="detecto_problema" value="<?php echo $area->idarea;?>" required>
+                        <span class="mdl-radio__label tajawalR ls2">NO CAMBIAR</span>
+                    </label>
         </div>
         <div class="c-inputs-4">
             <label class="fs20 ls2 tajawalM mdl-color-text--amber-900">Motivo de la Tutoría (Problema Detectado)</label>
@@ -181,46 +180,83 @@
             <label class="fs20 ls2 tajawalM mdl-color-text--amber-900">Área en la que fue canalizada</label>
         </div>
         <div class="c-inputs-4">
-            <?php if($datosFormatoID[0]->nombre=='PSICOLOGÍA'){
-                     foreach ($datosFormatoID as $mostrar) {  ?>       
-                         <span class="fs19 ls2 tajawalB"><?php echo $mostrar->nombre; ?></span>  
-                <?php } ?>
-                <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-4">
-                    <input type="radio" id="option-4" class="mdl-radio__button" name="FK_area" value="<?php echo $mostrar->FK_area ?>" required>
-                    <span class="mdl-radio__label tajawalM ls2 ">No Cambiar</span>
-                     <?php } ?>
-                <?php if($datosFormatoID[0]->nombre=='ACADÉMICO'){
-                     foreach ($datosFormatoID as $mostrar) {  ?>       
-                         <span class="fs19 ls2 tajawalB"><?php echo $mostrar->nombre; ?></span>  
-                <?php } ?>
-                <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-4">
-                    <input type="radio" id="option-4" class="mdl-radio__button" name="FK_area" value="<?php echo $mostrar->FK_area ?>" required>
-                    <span class="mdl-radio__label tajawalM ls2 ">No Cambiar</span>
-                     <?php } ?>
-                <?php if($datosFormatoID[0]->nombre=='JURÍDOCO'){
-                     foreach ($datosFormatoID as $mostrar) {  ?>       
-                         <span class="fs19 ls2 tajawalB"><?php echo $mostrar->nombre; ?></span>  
-                <?php } ?>
-                 <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-4">
-                    <input type="radio" id="option-4" class="mdl-radio__button" name="FK_area" value="<?php echo $mostrar->FK_area ?>" required>
-                    <span class="mdl-radio__label tajawalM ls2 ">No Cambiar</span>
-                     <?php } ?>
+            <?php if($datosFormatoID[0]->FK_area==NULL){?>
+                    <span class="fs19 ls2 tajawalB">NINGUNA</span>
+            <?php } ?>
+            <?php foreach ($datosFormatoID as $mostrar) { 
+                    if($datosFormatoID[0]->FK_area==1){ 
+                        $area='PSICOLOGÍA';?>       
+                        <span class="fs19 ls2 tajawalB"><?php echo $area; ?></span>  
+                        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-5">
+                        <input type="radio" id="option-5" class="mdl-radio__button" name="FK_area" value="<?php echo $mostrar->FK_area ?>" required>
+                        <span class="mdl-radio__label tajawalM ls2 ">No Cambiar</span>
+            <?php }
+            } ?>
+            <?php foreach ($datosFormatoID as $mostrar) { 
+                    if($datosFormatoID[0]->FK_area==2){ 
+                        $area='ACADÉMICO';?>       
+                        <span class="fs19 ls2 tajawalB"><?php echo $area; ?></span>  
+                        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-5">
+                        <input type="radio" id="option-5" class="mdl-radio__button" name="FK_area" value="<?php echo $mostrar->FK_area ?>" required>
+                        <span class="mdl-radio__label tajawalM ls2 ">No Cambiar</span>
+            <?php }
+            } ?>        
+            <?php foreach ($datosFormatoID as $mostrar) { 
+                    if($datosFormatoID[0]->FK_area==3){ 
+                        $area='JURÍDICO';?>       
+                        <span class="fs19 ls2 tajawalB"><?php echo $area; ?></span>  
+                        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-5">
+                        <input type="radio" id="option-5" class="mdl-radio__button" name="FK_area" value="<?php echo $mostrar->FK_area ?>" required>
+                        <span class="mdl-radio__label tajawalM ls2 ">No Cambiar</span>
+            <?php }
+            } ?> 
+            <?php foreach ($datosFormatoID as $mostrar) { 
+                    if($datosFormatoID[0]->FK_area==4){ 
+                        $area='CONTROL ESCOLAR';?>       
+                        <span class="fs19 ls2 tajawalB"><?php echo $area; ?></span>  
+                        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-5">
+                        <input type="radio" id="option-5" class="mdl-radio__button" name="FK_area" value="<?php echo $mostrar->FK_area ?>" required>
+                        <span class="mdl-radio__label tajawalM ls2 ">No Cambiar</span>
+            <?php }
+            } ?>        
+            <?php foreach ($datosFormatoID as $mostrar) { 
+                    if($datosFormatoID[0]->FK_area==5){ 
+                        $area='FINANZAS';?>       
+                        <span class="fs19 ls2 tajawalB"><?php echo $area; ?></span>  
+                        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-5">
+                        <input type="radio" id="option-5" class="mdl-radio__button" name="FK_area" value="<?php echo $mostrar->FK_area ?>" required>
+                        <span class="mdl-radio__label tajawalM ls2 ">No Cambiar</span>
+            <?php }
+            } ?> 
+            <?php foreach ($datosFormatoID as $mostrar) { 
+                    if($datosFormatoID[0]->FK_area==6){ 
+                        $area='SERVICIO SOCIAL & RESIDENCIAS';?>       
+                        <span class="fs19 ls2 tajawalB"><?php echo $area; ?></span>  
+                        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-5">
+                        <input type="radio" id="option-5" class="mdl-radio__button" name="FK_area" value="<?php echo $Problema ?>" required>
+                        <span class="mdl-radio__label tajawalM ls2 ">No Cambiar</span>
+            <?php }
+            } ?>       
         </div>
         <div class="c-inputs-4">
-            <label class="fs20 ls2 tajawalM mdl-color-text--amber-900">Cambiar a:</label>
+            <label class="fs20 ls2 tajawalM mdl-color-text--amber-900">Si el motivo fue cambiado a 'Canalización' llenar lo suiguiente:</label>
         </div>
         <div class="c-inputs-4">
-            <?php foreach ($FK_area as $area){ ?>
-                <div class="status">
-                    <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" >
-                        <input type="radio"  class="mdl-radio__button" name="FK_area" value="<?php echo $area->idarea;?>" required>
-                        <span class="mdl-radio__label tajawalR ls2"><?php echo $area->nombre;?></span>
-                    </label>
-                    
-                </div>
-            <?php }?>
-        </div>
-        
+                <select class="mdl-textfield" id="dropdown3" width="310" name="FK_area">
+                <?php foreach($FK_area as $area){?>
+                    <option id="area" value="<?php echo $area->idarea;?>" disabled><?php echo $area->nombre;?></option>
+                <?php } ?>
+                </select>
+                <script>
+                var check3 = $("#checkbox-3");
+                $("#checkbox-3").on('click',tres);
+                function tres(){
+                    if(check3.is(':checked')){
+                        $('#dropdown3').dropdown();
+                    }
+                }   
+                </script>
+            </div>
         <div class="c-inputs-4">
             <label class="fs20 ls2 tajawalM mdl-color-text--amber-900">Firmas</label>
         </div>
@@ -255,6 +291,6 @@
                 <button class="mdl-button mdl-js-button mdl-color--teal-700 mdl-js-ripple-effect mdl-color-text--blue-grey-100">Aceptar</button>
             </div> 
         </div>          
-      
 </div>
 <?php echo form_close(); ?>
+<?php include_once 'footer.php' ?>

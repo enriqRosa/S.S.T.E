@@ -39,4 +39,7 @@
                     <span class="tajawalL fs14 grey ls1">Estado de Méx.</span>
                 </div>
             </div>
+            <div class="c-copyright">
+               <span class="tajawalM fs14 ls1">&copy 2018 Sistema de Seguimiento de Tutorías Individuales - All rights reserved</span>
+            </div>
         </footer>

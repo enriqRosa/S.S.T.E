@@ -163,3 +163,4 @@ class Modelo_registrar_usuarios extends CI_Model{
 }
 
 ?>  
+

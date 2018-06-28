@@ -35,16 +35,13 @@
                 <script>
                     $('#dropdown').dropdown();
                 </script>
-                <select class="mdl-textfield" id="problema" width="310" name="detecto_problema" required>
-                        <option value="PSICOLOGÍA">PSICOLOGÍA</option>
-                        <option value="ACADÉMICO">ACADÉMICO</option>
-                        <option value="JURÍDICO">JURÍDICO</option>
-                        <option value="CONTROL ESCOLAR">CONTROL ESCOLAR</option>
-                        <option value="FINANZAS">FINANZAS</option>
-                        <option value="SERVICIO SOCIAL & RESIDENCIAS">SERVICIO SOCIAL & RESIDENCIAS</option> 
+                <select class="mdl-textfield" id="detectoP" width="310" name="FK_lugar" required>
+                <?php foreach($FK_area as $area){?>
+                    <option value="<?php echo $area->idarea;?>"><?php echo $area->nombre;?></option>
+                <?php } ?>
                 </select>
                 <script>
-                    $('#problema').dropdown();
+                    $('#detectoP').dropdown();
                 </script>
             </div>    
             <div class="matricula">
@@ -106,64 +103,13 @@
                 <?php } ?>
                 </select>
                 <script>
-                   var check = $("#checkbox-1");
-                    $("#checkbox-1").on('click',uno);
-                    function uno(){
-                        if(check.is(':checked')){
-                            $("#checkbox-3").prop('disabled', true); 
-                            $('#dropdown3').dropdown(disabled);
-                        }
-                    } 
-                    var check2 = $("#checkbox-2");
-                    $("#checkbox-2").on('click',dos);
-                    function dos(){
-                    if(check2.is(':checked')){
-                        $("#checkbox-3").prop('disabled', true);
-                        $('#dropdown3').dropdown(disabled);
-                    }
-                }
                 var check3 = $("#checkbox-3");
                 $("#checkbox-3").on('click',tres);
                 function tres(){
                     if(check3.is(':checked')){
-                        $("#checkbox-1").prop('disabled', true);
-                        $("#checkbox-2").prop('disabled', true);
-                        $("#checkbox-4").prop('disabled', true);
-                        $("#checkbox-5").prop('disabled', true);
-                        $("#checkbox-6").prop('disabled', true);
                         $('#dropdown3').dropdown();
-                    }else{
-                        $("#checkbox-1").prop('disabled', false);
-                        $("#checkbox-2").prop('disabled', false);
-                        $("#checkbox-4").prop('disabled', false);
-                        $("#checkbox-5").prop('disabled', false);
-                        $("#checkbox-6").prop('disabled', false);
-                        $('#dropdown3').dropdown(disabled);   
                     }
                 }   
-                var check4 = $("#checkbox-4");
-                $("#checkbox-4").on('click',cuatro);
-                function cuatro(){
-                    if(check4.is(':checked')){
-                        $("#checkbox-3").prop('disabled', true);
-                    }
-                }
-                var check5= $("#checkbox-5");
-                $("#checkbox-5").on('click',cinco);
-                function cinco(){
-                    if(check5.is(':checked')){
-                        $("#checkbox-3").prop('disabled', true);
-                        $("#area").prop('disabled', true);
-                    }
-                }
-                var check6 = $("#checkbox-6");
-                $("#checkbox-6").on('click',seis);
-                function seis(){
-                    if(check6.is(':checked')){
-                        $("#checkbox-3").prop('disabled', true);
-                        $("#area").prop('disabled', true);
-                    }
-                }
                 </script>
             </div>
             <div class="c-inputs-3">
