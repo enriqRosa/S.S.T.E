@@ -10,7 +10,7 @@
                 <input class="c-formato" type="hidden" name="matricula" value="<?php echo $mostrar->FK_tutoradoindividual;?>" disabled>
                 <input type="hidden" name="idformato" value="<?php echo $mostrar->idformato ?>">
             <?php  }?>
-        <div class="c-inputs-3" > 
+        <div class="c-inputs-4" > 
             <?php foreach ($datosFormatoID as $mostrar) { ?>
                 <input id="datepicker" width="312" name="fecha"/>
                     <script>
@@ -22,7 +22,7 @@
                     </script>
             <?php } ?>
         </div>
-        <div class="c-inputs-3">
+        <div class="c-inputs-4">
                 <label class="fs20 ls2 tajawalM mdl-color-text--amber-800">Lugar</label>
                 <label class="fs20 ls2 tajawalM mdl-color-text--amber-800">Avance</label>
         </div>
@@ -37,7 +37,6 @@
                 <script>
                     $('#dropdown').dropdown();
                 </script>
-        
             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                 <?php foreach ($datosFormatoID as $mostrar) { ?> 
 					<input class="mdl-textfield__input" type="text" name="avance" value="<?php echo $mostrar->avance ?>" required>
@@ -45,7 +44,10 @@
                 <?php } ?>
 			</div>
         </div>   
-        <div class="matricula">
+        <div class="c-inputs-3">
+            <label class="fs20 ls2 tajawalM mdl-color-text--amber-800">Detecto Problema: </label>
+        </div>
+        <div class="c-inputs-3">
             <?php if($datosFormatoID[0]->detecto_problema==1){
                 foreach ($datosFormatoID as $mostrar) { 
                     $Problema='PSICOLOGÍA'?> 
@@ -56,10 +58,14 @@
             <?php if($datosFormatoID[0]->detecto_problema==2){
                 foreach ($datosFormatoID as $mostrar) { 
                     $Problema='ACADÉMICO'?> 
-                <label class="fs20 ls2 tajawalM mdl-color-text--amber-800">Detecto Problema: </label>
                 <label class="fs19 ls2 tajawalB"> <?php echo $Problema ?></label>
-            <?php }
-            } ?>
+            <?php } ?>
+                
+                    <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" >
+                        <input type="radio"  class="mdl-radio__button" name="detecto_problema" value="<?php echo $mostrar->detecto_problema;?>" required>
+                        <span class="mdl-radio__label tajawalR ls2">NO CAMBIAR</span>
+                    </label>
+                <?php } ?>
             <?php if($datosFormatoID[0]->detecto_problema==3){
                 foreach ($datosFormatoID as $mostrar) { 
                     $Problema='JURÍDICO'?> 
@@ -100,11 +106,7 @@
                         <span class="mdl-radio__label tajawalR ls2"><?php echo $area->nombre;?></span>
                     </label>
                 </div>
-            <?php }?>
-            <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" >
-                        <input type="radio"  class="mdl-radio__button" name="detecto_problema" value="<?php echo $area->idarea;?>" required>
-                        <span class="mdl-radio__label tajawalR ls2">NO CAMBIAR</span>
-                    </label>
+            <?php }?>            
         </div>
         <div class="c-inputs-4">
             <label class="fs20 ls2 tajawalM mdl-color-text--amber-900">Motivo de la Tutoría (Problema Detectado)</label>
@@ -242,21 +244,15 @@
             <label class="fs20 ls2 tajawalM mdl-color-text--amber-900">Si el motivo fue cambiado a 'Canalización' llenar lo suiguiente:</label>
         </div>
         <div class="c-inputs-4">
-                <select class="mdl-textfield" id="dropdown3" width="310" name="FK_area">
-                <?php foreach($FK_area as $area){?>
-                    <option id="area" value="<?php echo $area->idarea;?>" disabled><?php echo $area->nombre;?></option>
-                <?php } ?>
-                </select>
-                <script>
-                var check3 = $("#checkbox-3");
-                $("#checkbox-3").on('click',tres);
-                function tres(){
-                    if(check3.is(':checked')){
-                        $('#dropdown3').dropdown();
-                    }
-                }   
-                </script>
-            </div>
+        <?php foreach ($FK_area as $area){ ?>
+                <div class="status">
+                    <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" >
+                        <input type="radio"  class="mdl-radio__button" name="FK_area" value="<?php echo $area->idarea;?>" required>
+                        <span class="mdl-radio__label tajawalR ls2"><?php echo $area->nombre;?></span>
+                    </label>
+                </div>
+            <?php }?>       
+        </div>
         <div class="c-inputs-4">
             <label class="fs20 ls2 tajawalM mdl-color-text--amber-900">Firmas</label>
         </div>

@@ -35,7 +35,7 @@
                 <script>
                     $('#dropdown').dropdown();
                 </script>
-                <select class="mdl-textfield" id="detectoP" width="310" name="FK_lugar" required>
+                <select class="mdl-textfield" id="detectoP" width="310" name="detecto_problema" required>
                 <?php foreach($FK_area as $area){?>
                     <option value="<?php echo $area->idarea;?>"><?php echo $area->nombre;?></option>
                 <?php } ?>

@@ -93,7 +93,6 @@
                             <td class="tajawalL fs16 "><?php echo $row->fecha; ?></td>
                             <td class="tajawalL fs16 "><?php echo $row->hora; ?></td>
                             <td class="tajawalL fs16 "><?php echo $row->salon; ?></td>
-                            
                             <?php if($row->detecto_problema==7){
                                         $detecto=""; ?>
                                     <td><?php echo $detecto; ?></td>
@@ -170,7 +169,34 @@
                             <td class="tajawalL fs16 "><?php echo $row->fecha; ?></td>
                             <td class="tajawalL fs16 "><?php echo $row->hora; ?></td>
                             <td class="tajawalL fs16 "><?php echo $row->salon; ?></td>
-                            <td class="tajawalL fs16 "><?php echo $row->detecto_problema; ?></td>
+                            <?php if($row->detecto_problema==7){
+                                        $detecto=""; ?>
+                                    <td><?php echo $detecto; ?></td>
+                            <?php }?>
+                            <?php if($row->detecto_problema==1){ 
+                                    $detecto='PSICOLOGÍA';?>
+                            <td class="tajawalL fs16 "><?php echo $detecto; ?></td>
+                             <?php   } ?>
+                            <?php if($row->detecto_problema==2){ 
+                                    $detecto='ACADÉMICO';?>
+                            <td class="tajawalL fs16 "><?php echo $detecto; ?></td>
+                             <?php   } ?>
+                            <?php if($row->detecto_problema==3){ 
+                                    $detecto='JURÍDICO';?>
+                            <td class="tajawalL fs16 "><?php echo $detecto; ?></td>
+                             <?php   } ?>
+                            <?php if($row->detecto_problema==4){ 
+                                    $detecto='CONTROL ESCOLAR';?>
+                            <td class="tajawalL fs16 "><?php echo $detecto; ?></td>
+                             <?php   } ?>
+                            <?php if($row->detecto_problema==5){ 
+                                    $detecto='FINANZAS';?>
+                            <td class="tajawalL fs16 "><?php echo $detecto; ?></td>
+                             <?php   } ?>
+                             <?php if($row->detecto_problema==6){ 
+                                    $detecto='SERVICIO SOCIAL & RESIDENCIAS';?>
+                            <td class="tajawalL fs16 "><?php echo $detecto; ?></td>
+                             <?php   } ?>
                             <?php if($row->FK_area==NULL){ ?>
                                     <td></td>
                             <?php }?>
@@ -210,7 +236,34 @@
                             <td class="tajawalL fs16 "><?php echo $row->fecha; ?></td>
                             <td class="tajawalL fs16 "><?php echo $row->hora; ?></td>
                             <td class="tajawalL fs16 "><?php echo $row->salon; ?></td>
-                            <td class="tajawalL fs16 "><?php echo $row->detecto_problema; ?></td>
+                            <?php if($row->detecto_problema==7){
+                                        $detecto=""; ?>
+                                    <td><?php echo $detecto; ?></td>
+                            <?php }?>
+                            <?php if($row->detecto_problema==1){ 
+                                    $detecto='PSICOLOGÍA';?>
+                            <td class="tajawalL fs16 "><?php echo $detecto; ?></td>
+                             <?php   } ?>
+                            <?php if($row->detecto_problema==2){ 
+                                    $detecto='ACADÉMICO';?>
+                            <td class="tajawalL fs16 "><?php echo $detecto; ?></td>
+                             <?php   } ?>
+                            <?php if($row->detecto_problema==3){ 
+                                    $detecto='JURÍDICO';?>
+                            <td class="tajawalL fs16 "><?php echo $detecto; ?></td>
+                             <?php   } ?>
+                            <?php if($row->detecto_problema==4){ 
+                                    $detecto='CONTROL ESCOLAR';?>
+                            <td class="tajawalL fs16 "><?php echo $detecto; ?></td>
+                             <?php   } ?>
+                            <?php if($row->detecto_problema==5){ 
+                                    $detecto='FINANZAS';?>
+                            <td class="tajawalL fs16 "><?php echo $detecto; ?></td>
+                             <?php   } ?>
+                             <?php if($row->detecto_problema==6){ 
+                                    $detecto='SERVICIO SOCIAL & RESIDENCIAS';?>
+                            <td class="tajawalL fs16 "><?php echo $detecto; ?></td>
+                             <?php   } ?>
                             <?php if($row->FK_area==NULL){ ?>
                                     <td></td>
                             <?php }?>
@@ -250,7 +303,34 @@
                             <td class="tajawalL fs16 "><?php echo $row->fecha; ?></td>
                             <td class="tajawalL fs16 "><?php echo $row->hora; ?></td>
                             <td class="tajawalL fs16 "><?php echo $row->salon; ?></td>
-                            <td class="tajawalL fs16 "><?php echo $row->detecto_problema; ?></td>
+                            <?php if($row->detecto_problema==7){
+                                        $detecto=""; ?>
+                                    <td><?php echo $detecto; ?></td>
+                            <?php }?>
+                            <?php if($row->detecto_problema==1){ 
+                                    $detecto='PSICOLOGÍA';?>
+                            <td class="tajawalL fs16 "><?php echo $detecto; ?></td>
+                             <?php   } ?>
+                            <?php if($row->detecto_problema==2){ 
+                                    $detecto='ACADÉMICO';?>
+                            <td class="tajawalL fs16 "><?php echo $detecto; ?></td>
+                             <?php   } ?>
+                            <?php if($row->detecto_problema==3){ 
+                                    $detecto='JURÍDICO';?>
+                            <td class="tajawalL fs16 "><?php echo $detecto; ?></td>
+                             <?php   } ?>
+                            <?php if($row->detecto_problema==4){ 
+                                    $detecto='CONTROL ESCOLAR';?>
+                            <td class="tajawalL fs16 "><?php echo $detecto; ?></td>
+                             <?php   } ?>
+                            <?php if($row->detecto_problema==5){ 
+                                    $detecto='FINANZAS';?>
+                            <td class="tajawalL fs16 "><?php echo $detecto; ?></td>
+                             <?php   } ?>
+                             <?php if($row->detecto_problema==6){ 
+                                    $detecto='SERVICIO SOCIAL & RESIDENCIAS';?>
+                            <td class="tajawalL fs16 "><?php echo $detecto; ?></td>
+                             <?php   } ?>
                             <?php if($row->FK_area==NULL){ ?>
                                     <td></td>
                             <?php }?>
@@ -290,7 +370,34 @@
                             <td class="tajawalL fs16 "><?php echo $row->fecha; ?></td>
                             <td class="tajawalL fs16 "><?php echo $row->hora; ?></td>
                             <td class="tajawalL fs16 "><?php echo $row->salon; ?></td>
-                            <td class="tajawalL fs16 "><?php echo $row->detecto_problema; ?></td>
+                            <?php if($row->detecto_problema==7){
+                                        $detecto=""; ?>
+                                    <td><?php echo $detecto; ?></td>
+                            <?php }?>
+                            <?php if($row->detecto_problema==1){ 
+                                    $detecto='PSICOLOGÍA';?>
+                            <td class="tajawalL fs16 "><?php echo $detecto; ?></td>
+                             <?php   } ?>
+                            <?php if($row->detecto_problema==2){ 
+                                    $detecto='ACADÉMICO';?>
+                            <td class="tajawalL fs16 "><?php echo $detecto; ?></td>
+                             <?php   } ?>
+                            <?php if($row->detecto_problema==3){ 
+                                    $detecto='JURÍDICO';?>
+                            <td class="tajawalL fs16 "><?php echo $detecto; ?></td>
+                             <?php   } ?>
+                            <?php if($row->detecto_problema==4){ 
+                                    $detecto='CONTROL ESCOLAR';?>
+                            <td class="tajawalL fs16 "><?php echo $detecto; ?></td>
+                             <?php   } ?>
+                            <?php if($row->detecto_problema==5){ 
+                                    $detecto='FINANZAS';?>
+                            <td class="tajawalL fs16 "><?php echo $detecto; ?></td>
+                             <?php   } ?>
+                             <?php if($row->detecto_problema==6){ 
+                                    $detecto='SERVICIO SOCIAL & RESIDENCIAS';?>
+                            <td class="tajawalL fs16 "><?php echo $detecto; ?></td>
+                             <?php   } ?>
                             <?php if($row->FK_area==NULL){ ?>
                                     <td></td>
                             <?php }?>

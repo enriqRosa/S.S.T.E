@@ -523,12 +523,8 @@ nav{
     margin-top:30px;
     flex-wrap:wrap;
 }
-.seguimiento_2 div:nth-child(11),
-.seguimiento_2 div:nth-child(13),
-.seguimiento_2 div:nth-child(14),
-.seguimiento_2 div:nth-child(16),
 .seguimiento_2 div:nth-child(17),
-.seguimiento_2 div:nth-child(9){ 
+.seguimiento_2 div:nth-child(10){ 
     flex-wrap: wrap;
 }
 
