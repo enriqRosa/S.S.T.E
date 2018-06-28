@@ -1,4 +1,4 @@
- 
+
 	<body id="page">
 
 		<ul class="cb-slideshow">
@@ -17,21 +17,25 @@
 		</ul>
 		<div id="main-section">
 			<div class="c-formulario">
-            <?php $this->load->helper('form'); ?>
+				
 			<!--SE LLAMA LA FUNCIÓN 'proceso_login' DEL CONTROLADOR 'Login'-->
-			<?php echo form_open("login/proceso_login",'class="main-form"'); ?>
+			
+			
+				<?php echo form_open("Login/proceso_login",'class="main-form"'); ?>
 				<!--<form class="main-form">-->
 					<div class="c-login-title">
 						<span class="fa fa-user-circle"></span>
 					</div>
 					<div class="c-inputs">
+					
 						<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+						<?php echo validation_errors(); ?>
 							<input
 								class="mdl-textfield__input"
 								type="text"
 								name="matricula"
 								id="tb-user"
-								required>
+							>
 							<label class="mdl-textfield__label fs20 ls2" for="tb-mail">Usuario</label>
 						</div>
 						<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
@@ -40,7 +44,7 @@
 								type="password"
 								name="pass"
 								id="tb-password-1"
-								required>
+								>
 							<label class="mdl-textfield__label fs20 ls2" for="tb-password-1">Contraseña</label>
 						 </div>
 					</div>                
