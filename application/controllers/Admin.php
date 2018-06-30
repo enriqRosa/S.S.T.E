@@ -22,6 +22,21 @@ Class Admin extends CI_Controller{
         $this->data['posts']=$this->Modelo_login->getAdmin();
         $this->load->view('interfaces/interfaz_admin',$this->data);
     }
+    /****************************************************************VALIDACIONES*******************************************************/
+    function validacionesRegistrarUsuarios(){
+        $this->form_validation->set_rules('matricula', 'Matricula', 'required|min_length[9]|is_unique[usuarios.matricula]|is_numeric');
+        $this->form_validation->set_rules('nombre', 'Nombre', 'required|alpha');
+        $this->form_validation->set_rules('ap_paterno', 'Apellido Paterno', 'required|alpha');
+        $this->form_validation->set_rules('ap_materno', 'Apellido Materno', 'required|alpha');
+        $this->form_validation->set_rules('pass', 'Contraseña', 'required|min_length[6]');
+        $this->form_validation->set_rules('repeat_pswd', 'Confirmar Contraseña', 'required|min_length[6]|matches[pass]');
+        $this->form_validation->set_rules('tipo_usuario', 'Tipo Usuario', 'required|exact_length[2]|alpha');
+        $this->form_validation->set_rules('status', 'Status', 'required');
+    }
+    function validacionesCorreoTelefono(){
+        $this->form_validation->set_rules('correo', 'Correo', 'required|valid_email');
+        $this->form_validation->set_rules('telefono', 'Telefono', 'required|exact_length[10]|is_numeric');
+    }
     /*************************************************FUNCIONES PARA TUTOR**************************************************************** */
     //FUNCION PARA (redireccionar) EN EL MENÚ DEL ADMIN
     function gestionTutores(){
@@ -32,16 +47,8 @@ Class Admin extends CI_Controller{
     //FUNCIÓN PARA AGREGAR UN NUEVO TUTOR
     function nuevoTutor(){
         //VALIDACIONES
-        $this->form_validation->set_rules('matricula', 'Matricula', 'required|min_length[9]|is_unique[usuarios.matricula]|is_numeric');
-        $this->form_validation->set_rules('nombre', 'Nombre', 'required|alpha');
-        $this->form_validation->set_rules('ap_paterno', 'Apellido Paterno', 'required|alpha');
-        $this->form_validation->set_rules('ap_materno', 'Apellido Materno', 'required|alpha');
-        $this->form_validation->set_rules('correo', 'Correo', 'required|valid_email');
-        $this->form_validation->set_rules('telefono', 'Telefono', 'required|exact_length[10]|is_numeric');
-        $this->form_validation->set_rules('pass', 'Contraseña', 'required|min_length[6]');
-        $this->form_validation->set_rules('repeat_pswd', 'Confirmar Contraseña', 'required|min_length[6]|matches[pass]');
-        $this->form_validation->set_rules('tipo_usuario', 'Tipo Usuario', 'required|exact_length[2]|alpha');
-        $this->form_validation->set_rules('status', 'Status', 'required');
+        $this->validacionesRegistrarUsuarios();
+        $this->validacionesCorreoTelefono();
             
         if($this->form_validation->run() == FALSE){
            
@@ -59,7 +66,9 @@ Class Admin extends CI_Controller{
             $telefono = $this->input->post('telefono');
             $pass = $this->input->post('pass');
             $status = $this->input->post('status');
+            $status = strtoupper($status);
             $tipo = $this->input->post('tipo_usuario');
+            $tipo = strtoupper($tipo);
 
             $data = array(
                 'matricula' => $mat,
@@ -72,12 +81,13 @@ Class Admin extends CI_Controller{
                 'status' => $status,
                 'tipo_usuario' => $tipo
             );
-        if ($this->modelo_registrar_usuarios->registrarTutores($data)){
-            //SE LLAMA A LA FUNCIÓN PRINCIPAL 'function gestion_tutores'
-            $this->session->set_flashdata('registro','El tutor se ha registrado exitosamente'); 
-            $this->gestionTutores();
-        }else{
-            echo "no registrado";
+            if ($this->modelo_registrar_usuarios->registrarTutores($data)){
+                //SE LLAMA A LA FUNCIÓN PRINCIPAL 'function gestion_tutores'
+                $this->session->set_flashdata('registro','El tutor se ha registrado exitosamente'); 
+                $this->gestionTutores();
+            }else{
+                echo "no registrado";
+            }
         }
     }
     function editar(){
@@ -112,11 +122,6 @@ Class Admin extends CI_Controller{
             $this->data['mostrardatosTutor']=$this->modelo_registrar_usuarios->mostrardatosTutor();
             $this->load->view('interfaces/gestion_tutores',$this->data);
         }
-        }
-
-
-
-        
     }
     /*************************************************FUNCIONES PARA TUTORADOS*************************************************************** */
     //FUNCION PARA (redireccionar) EN EL MENÚ DEL ADMIN
@@ -126,48 +131,63 @@ Class Admin extends CI_Controller{
         $this->load->view('interfaces/gestion_tutorados',$this->data);
     }
     function nuevoTutorado(){
-        $mat = $this->input->post('matricula');
-        $nom = $this->input->post('nombre');
-        $nom = strtoupper($nom);
-        $paterno = $this->input->post('ap_paterno');
-        $paterno = strtoupper($paterno);
-        $materno = $this->input->post('ap_materno');
-        $materno = strtoupper($materno);
-        $carrera = $this->input->post('carrera');
-        $carrera = strtoupper($carrera);
-        $semestre = $this->input->post('semestre');
-        $semestre = strtoupper($semestre);
-        $prog = $this->input->post('programa');
-        $prog = strtoupper($prog);
-        $tutoria = $this->input->post('tipo_tutoria');
-        $tutoria = strtoupper($tutoria);
-        $grupo = $this->input->post('grupo');
-        $pass = $this->input->post('pass');
-        $tipo = $this->input->post('tipo_usuario');
-        $tipo = strtoupper($tipo);
-        $status = $this->input->post('status');
-        $status = strtoupper($status);
-        
-        $data = array(
-            'matricula' => $mat,
-            'nombre' => $nom,
-            'ap_paterno' => $paterno,
-            'ap_materno' => $materno,
-            'carrera' => $carrera,
-            'semestre' => $semestre,
-            'programa' => $prog,
-            'tipo_tutoria' => $tutoria,
-            'grupo' => $grupo,
-            'pass' => $pass,
-            'tipo_usuario' => $tipo,
-            'status' => $status
-        );
-        if ($this->modelo_registrar_usuarios->registrarTutorado($data)){
-            //SE LLAMA A LA FUNCIÓN PRINCIPAL 'function gestion_tutores'
+        //VALIDACIONES
+        $this->validacionesRegistrarUsuarios();
+        $this->form_validation->set_rules('carrera', 'Carrera', 'required|alpha|exact_length[3]');
+        $this->form_validation->set_rules('semestre', 'Semestre', 'required');
+        $this->form_validation->set_rules('programa', 'Programa', 'required|alpha|exact_length[8]');
+        $this->form_validation->set_rules('tipo_tutoria', 'Tipo Tutoria', 'required|exact_length[18]');
+        $this->form_validation->set_rules('grupo', 'Grupo', 'required');
+
+        if($this->form_validation->run() == FALSE){
+
             $this->gestionTutorados();
+            
         }else{
-            echo "no registrado";
-        }
+            $mat = $this->input->post('matricula');
+            $nom = $this->input->post('nombre');
+            $nom = strtoupper($nom);
+            $paterno = $this->input->post('ap_paterno');
+            $paterno = strtoupper($paterno);
+            $materno = $this->input->post('ap_materno');
+            $materno = strtoupper($materno);
+            $carrera = $this->input->post('carrera');
+            $carrera = strtoupper($carrera);
+            $semestre = $this->input->post('semestre');
+            $semestre = strtoupper($semestre);
+            $prog = $this->input->post('programa');
+            $prog = strtoupper($prog);
+            $tutoria = $this->input->post('tipo_tutoria');
+            $tutoria = strtoupper($tutoria);
+            $grupo = $this->input->post('grupo');
+            $pass = $this->input->post('pass');
+            $tipo = $this->input->post('tipo_usuario');
+            $tipo = strtoupper($tipo);
+            $status = $this->input->post('status');
+            $status = strtoupper($status);
+            
+            $data = array(
+                'matricula' => $mat,
+                'nombre' => $nom,
+                'ap_paterno' => $paterno,
+                'ap_materno' => $materno,
+                'carrera' => $carrera,
+                'semestre' => $semestre,
+                'programa' => $prog,
+                'tipo_tutoria' => $tutoria,
+                'grupo' => $grupo,
+                'pass' => $pass,
+                'tipo_usuario' => $tipo,
+                'status' => $status
+            );
+            if ($this->modelo_registrar_usuarios->registrarTutorado($data)){
+                //SE LLAMA A LA FUNCIÓN PRINCIPAL 'function gestion_tutores'
+                $this->session->set_flashdata('registro','El Tutorado se ha registrado exitosamente'); 
+                $this->gestionTutorados();
+            }else{
+                echo "no registrado";
+            }
+        }    
     }
     function editarTutorado(){
         $this->load->view('temps/header_modal');

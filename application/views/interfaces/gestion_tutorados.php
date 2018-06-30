@@ -12,6 +12,10 @@
     <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--white mdl-color--orange-500 btn-pass">
     <i class="fas fa-user-plus"></i>Registrar nuevo Tutorado</button>
 </div>
+<!--MUESTRA EL MENSAJE DE REGISTRO EXITOSO-->
+<div class="success tajawalR ls1"><?php echo $this->session->flashdata('registro'); ?></div> 
+<!--MUESTRA EL MENSAJE DE ERROR DE LAS VALIDACIONES-->
+<?php echo validation_errors('<div class="error tajawalR ls1">', '</div>'); ?>
 <div class="table2 overflow">
     <table class="mdl-data-table mdl-js-data-table  mdl-shadow--2dp ">
             <thead>
@@ -71,41 +75,41 @@
                     <div class="c-inputs-4" >
                         <div class="form-icons"><i class="fas fa-id-card"></i></div>
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <input class="mdl-textfield__input" type="text" name="matricula" required>
+                            <input class="mdl-textfield__input" type="text" name="matricula">
                             <label class="mdl-textfield__label tajawalL" required="required">Matricula</label>
                         </div>
                     </div>
                     <div class="c-inputs-4">
                         <div class="form-icons"><i class="fas fa-user"></i></div>
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <input class="mdl-textfield__input" type="text" name="nombre" required>
+                            <input class="mdl-textfield__input" type="text" name="nombre">
                                 <label class="mdl-textfield__label tajawalL" required="required">Nombre</label>
                         </div>
                     </div>
                     <div class="c-inputs-4">
                         <div class="form-icons"><i class="fas fa-user"></i></div>
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <input class="mdl-textfield__input" type="text" name="ap_paterno" required>
+                            <input class="mdl-textfield__input" type="text" name="ap_paterno">
                                 <label class="mdl-textfield__label tajawalL" required="text">Apellido Paterno</label>
                         </div>
                     </div>
                     <div class="c-inputs-4">
                         <div class="form-icons"><i class="fas fa-user"></i></div>
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <input class="mdl-textfield__input" type="text" name="ap_materno" required>
+                            <input class="mdl-textfield__input" type="text" name="ap_materno">
                                 <label class="mdl-textfield__label tajawalL" required="text">Apellido Materno</label>
                         </div>
                     </div>
                     <div class="c-inputs-4">
                         <div class="form-icons"><i class="fas fa-briefcase"></i></div>
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <input class="mdl-textfield__input" type="text" name="carrera" value="ISC" required>
+                            <input class="mdl-textfield__input" type="text" name="carrera" value="ISC">
                                 <label class="mdl-textfield__label tajawalL" required="text">Carrera</label>
                         </div>
                     </div>
                     <div class="c-inputs-4">
                         <div class="form-icons"><i class="fas fa-question"></i></div>
-                            <select class="mdl-textfield mdl-textfield__input" id="dropdown" width="300" name="semestre" required>
+                            <select class="mdl-textfield mdl-textfield__input" id="dropdown" width="300" name="semestre">
                                 <option value="PRIMERO">PRIMERO</option>
                                 <option value="SEGUNDO">SEGUNDO</option>
                                 <option value="TERCERO">TERCERO</option>
@@ -126,20 +130,20 @@
                     <div class="c-inputs-4">
                         <div class="form-icons"><i class="fas fa-book"></i></div>
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <input class="mdl-textfield__input" type="text" value="ESPECIAL" name="programa" required>
+                            <input class="mdl-textfield__input" type="text" value="ESPECIAL" name="programa">
                                 <label class="mdl-textfield__label tajawalL" required="text">Programa</label>
                         </div>
                     </div>
                     <div class="c-inputs-4">
                         <div class="form-icons"><i class="fas fa-book"></i></div>
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <input class="mdl-textfield__input" type="text" value="TUTORÍA INDIVIDUAL" name="tipo_tutoria" required>
+                            <input class="mdl-textfield__input" type="text" value="TUTORIA INDIVIDUAL" name="tipo_tutoria">
                                 <label class="mdl-textfield__label tajawalL" required="text">Tutoría</label>
                         </div>
                     </div>
                     <div class="c-inputs-4">
                         <div class="form-icons"><i class="fas fa-question"></i></div>
-                            <select class="mdl-textfield mdl-textfield__input" id="dropdown" name="grupo" required>
+                            <select class="mdl-textfield mdl-textfield__input" id="dropdown" name="grupo">
                                 <option value="4101">4101</option>
                                 <option value="4201">4201</option>
                                 <option value="4202">4202</option>
@@ -172,21 +176,21 @@
                     <div class="c-inputs-4">
                         <div class="form-icons"><i class="fas fa-key"></i></div>
                         <div class="mdl-textfield mdl-js-textfield">
-                            <input class="mdl-textfield__input" type="password" name="pass" required>
+                            <input class="mdl-textfield__input" type="password" name="pass">
                                 <label class="mdl-textfield__label tajawalL" required="text">contraseña</label>
                         </div>
                     </div>
                     <div class="c-inputs-4">
                         <div class="form-icons"><i class="fas fa-key"></i></div>
                         <div class="mdl-textfield mdl-js-textfield">
-                            <input class="mdl-textfield__input" type="password" name="" required>
+                            <input class="mdl-textfield__input" type="password" name="repeat_pswd">
                                 <label class="mdl-textfield__label tajawalL" required="text">Confirmar contraseña</label>
                         </div>
                     </div>
                     <div class="c-inputs-4">
                     <div class="form-icons"><i class="fas fa-question"></i></div>
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <input class="mdl-textfield__input" type="text" value="TO" name="tipo_usuario" required>
+                            <input class="mdl-textfield__input" type="text" value="TO" name="tipo_usuario">
                                 <label class="mdl-textfield__label tajawalL" required="text">Tipo usuario</label>
                         </div>
                 </div>
@@ -194,13 +198,13 @@
                         <span class="fs19 ls2 tajawalR">Status</span>
                         <div class="status">
                             <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-1">
-                                <input type="radio" id="option-1" class="mdl-radio__button" name="status" value="ACTIVO" required>
+                                <input type="radio" id="option-1" class="mdl-radio__button" name="status" value="ACTIVO">
                                 <span class="mdl-radio__label tajawalR ls2">Activo</span>
                             </label>
                         </div>
                         <div class="status">
                             <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-2">
-                                <input type="radio" id="option-2" class="mdl-radio__button" name="status" value="INACTIVO" required>
+                                <input type="radio" id="option-2" class="mdl-radio__button" name="status" value="INACTIVO">
                                 <span class="mdl-radio__label tajawalR ls2">Inactivo</span>
                             </label>
                         </div>
