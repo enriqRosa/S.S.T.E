@@ -13,7 +13,8 @@ Class Admin extends CI_Controller{
         $this->load->helper('form');
         $this->load->model('Modelo_login');
         $this->load->model('modelo_registrar_usuarios');
-        $this->load->library('session');          
+        $this->load->library('session');  
+        $this->load->library('form_validation');        
     }
     function index(){
         /*TRAE SUS DATOS COMO EL 'nombre, apPaterno, apMaterno' DE SU TABLA PARA MOSTRARSE
@@ -30,32 +31,50 @@ Class Admin extends CI_Controller{
     }
     //FUNCIÓN PARA AGREGAR UN NUEVO TUTOR
     function nuevoTutor(){
-        $mat = $this->input->post('matricula');
-        $nom = $this->input->post('nombre');
-        $nom = strtoupper($nom);//INSERTA VALORES EN MAYÙSCULAS
-        $paterno = $this->input->post('ap_paterno');
-        $paterno = strtoupper($paterno);
-        $materno = $this->input->post('ap_materno');
-        $materno = strtoupper($materno);
-        $correo = $this->input->post('correo');
-        $telefono = $this->input->post('telefono');
-        $pass = $this->input->post('pass');
-        $status = $this->input->post('status');
-        $tipo = $this->input->post('tipo_usuario');
+        //VALIDACIONES
+        $this->form_validation->set_rules('matricula', 'Matricula', 'required|min_length[9]|is_unique[usuarios.matricula]|is_numeric');
+        $this->form_validation->set_rules('nombre', 'Nombre', 'required|alpha');
+        $this->form_validation->set_rules('ap_paterno', 'Apellido Paterno', 'required|alpha');
+        $this->form_validation->set_rules('ap_materno', 'Apellido Materno', 'required|alpha');
+        $this->form_validation->set_rules('correo', 'Correo', 'required|valid_email');
+        $this->form_validation->set_rules('telefono', 'Telefono', 'required|exact_length[10]|is_numeric');
+        $this->form_validation->set_rules('pass', 'Contraseña', 'required|min_length[6]');
+        $this->form_validation->set_rules('repeat_pswd', 'Confirmar Contraseña', 'required|min_length[6]|matches[pass]');
+        $this->form_validation->set_rules('tipo_usuario', 'Tipo Usuario', 'required|exact_length[2]|alpha');
+        $this->form_validation->set_rules('status', 'Status', 'required');
+            
+        if($this->form_validation->run() == FALSE){
+           
+            $this->gestionTutores();
 
-        $data = array(
-            'matricula' => $mat,
-            'nombre' => $nom,
-            'ap_paterno' => $paterno,
-            'ap_materno' => $materno,
-            'correo' => $correo,
-            'telefono' => $telefono,
-            'pass' => $pass,
-            'status' => $status,
-            'tipo_usuario' => $tipo
-        );
+        }else{
+            $mat = $this->input->post('matricula');
+            $nom = $this->input->post('nombre');
+            $nom = strtoupper($nom);//INSERTA VALORES EN MAYÙSCULAS
+            $paterno = $this->input->post('ap_paterno');
+            $paterno = strtoupper($paterno);
+            $materno = $this->input->post('ap_materno');
+            $materno = strtoupper($materno);
+            $correo = $this->input->post('correo');
+            $telefono = $this->input->post('telefono');
+            $pass = $this->input->post('pass');
+            $status = $this->input->post('status');
+            $tipo = $this->input->post('tipo_usuario');
+
+            $data = array(
+                'matricula' => $mat,
+                'nombre' => $nom,
+                'ap_paterno' => $paterno,
+                'ap_materno' => $materno,
+                'correo' => $correo,
+                'telefono' => $telefono,
+                'pass' => $pass,
+                'status' => $status,
+                'tipo_usuario' => $tipo
+            );
         if ($this->modelo_registrar_usuarios->registrarTutores($data)){
             //SE LLAMA A LA FUNCIÓN PRINCIPAL 'function gestion_tutores'
+            $this->session->set_flashdata('registro','El tutor se ha registrado exitosamente'); 
             $this->gestionTutores();
         }else{
             echo "no registrado";
@@ -93,6 +112,11 @@ Class Admin extends CI_Controller{
             $this->data['mostrardatosTutor']=$this->modelo_registrar_usuarios->mostrardatosTutor();
             $this->load->view('interfaces/gestion_tutores',$this->data);
         }
+        }
+
+
+
+        
     }
     /*************************************************FUNCIONES PARA TUTORADOS*************************************************************** */
     //FUNCION PARA (redireccionar) EN EL MENÚ DEL ADMIN

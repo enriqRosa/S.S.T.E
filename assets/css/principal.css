@@ -527,5 +527,22 @@ nav{
 .seguimiento_2 div:nth-child(10){ 
     flex-wrap: wrap;
 }
+/*VALIDACIÓN*/
+.error{
+    border: solid 1px #d893a1!important;
+    padding: 10px 0px;
+    margin: 40px auto;
+    width:50%;
+    background:#fbe6f2;
+    text-align: center;
+}
+.success{
+    border: solid 1px #4CAF50!important;
+    padding: 10px 0px;
+    margin: 40px auto;
+    width:50%;
+    background:#DCEDC8;
+    text-align: center;
+}
 
 
