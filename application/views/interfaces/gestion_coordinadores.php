@@ -12,8 +12,9 @@
     <button class="mdl-button mdl-js-button mdl-color--orange-500 mdl-js-ripple-effect mdl-color-text--white btn-pass">
     <i class="fas fa-user-plus"></i>Registrar nuevo Coordinador</button>
 </div>
-<!--MUESTRA EL MENSAJE DE REGISTRO EXITOSO-->
+<!--MUESTRA EL MENSAJE DE REGISTRO EXITOSO Y REGISTRO MODIFICADO-->
 <div class="success fs18 ls1 tajawalM mdl-color-text--green-900"><?php echo $this->session->flashdata('registro'); ?></div> 
+<div class="success fs18 ls1 tajawalM mdl-color-text--green-900"><?php echo $this->session->flashdata('editar'); ?></div> 
 <!--MUESTRA EL MENSAJE DE ERROR DE LAS VALIDACIONES-->
 <?php echo validation_errors('<div class="error tajawalR ls1">', '</div>'); ?>
 <div class="table">
@@ -69,9 +70,9 @@
                 </div>
                 <div class="c-inputs-4">
                     <div class="form-icons"><i class="fas fa-user"></i></div>
-                    <div class="mdl-textfield mdl-js-textfield ">
+                    <div class="mdl-textfield mdl-js-textfield">
                         <input class="mdl-textfield__input" type="text" name="nombre">
-                            <label class="mdl-textfield__label tajawalL" required="required">Nombre</label>
+                            <label class="mdl-textfield__label tajawalL" required="text">Nombre</label>
                     </div>
                 </div>
                 <div class="c-inputs-4">
@@ -82,7 +83,7 @@
                     </div>
                 </div>
                 <div class="c-inputs-4">
-                    <div class="form-icons"><i class="fas fa-user"></i></div>
+                <div class="form-icons"><i class="fas fa-user"></i></div>
                     <div class="mdl-textfield mdl-js-textfield">
                         <input class="mdl-textfield__input" type="text" name="ap_materno">
                             <label class="mdl-textfield__label tajawalL" required="text">Apellido Materno</label>

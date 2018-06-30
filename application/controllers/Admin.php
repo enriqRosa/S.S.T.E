@@ -38,6 +38,7 @@ Class Admin extends CI_Controller{
         $this->form_validation->set_rules('telefono', 'Telefono', 'required|exact_length[10]|is_numeric');
     }
     function validacionesEditarUsuarios(){
+        $this->form_validation->set_rules('nombre', 'Nombre', 'required|alpha');
         $this->form_validation->set_rules('ap_paterno', 'Apellido Paterno', 'required|alpha');
         $this->form_validation->set_rules('ap_materno', 'Apellido Materno', 'required|alpha');
         $this->form_validation->set_rules('correo', 'Correo', 'required|valid_email');
@@ -225,7 +226,7 @@ Class Admin extends CI_Controller{
         if($this->form_validation->run() == FALSE){
             
             $this->gestionTutorados();
-            
+
         }else{
             $mat = $this->input->post('matricula');
             $nom = $this->input->post('nombre');
@@ -305,7 +306,7 @@ Class Admin extends CI_Controller{
 
             if ($this->modelo_registrar_usuarios->registrarCoordinador($data)){
                 //SE LLAMA A LA FUNCIÓN PRINCIPAL 'function gestionCoordinadores'
-                $this->session->set_flashdata('registro','El coordinador se ha registrado exitosamente'); 
+                $this->session->set_flashdata('registro','EL COORDINADOR SE HA REGISTRADO CORRECTAMENTE'); 
                 $this->gestionCoordinadores();
             }else{
                 echo "no registrado";
@@ -319,28 +320,39 @@ Class Admin extends CI_Controller{
         $this->load->view('interfaces/modal_editarCoordinador',$this->data);
     }
     function actualizarCoord(){
-        $mat = $this->input->post('matricula');
-        $nom = $this->input->post('nombre');
-        $nom = strtoupper($nom);
-        $paterno = $this->input->post('ap_paterno');
-        $paterno = strtoupper($paterno);
-        $materno = $this->input->post('ap_materno');
-        $materno= strtoupper($materno);
-        $correo = $this->input->post('correo');
-        $telefono = $this->input->post('telefono');
-        $status = $this->input->post('status');
-        
-        $data = array(
-            'matricula' => $mat,
-            'nombre' => $nom,
-            'ap_paterno' => $paterno,
-            'ap_materno' => $materno,
-            'correo' => $correo,
-            'telefono' => $telefono,
-            'status' => $status
-        );
-        if($this->modelo_registrar_usuarios->updateCoord($data,$mat)){
+        //VALIDACIONES
+        $this->validacionesEditarUsuarios();
+
+        if($this->form_validation->run() == FALSE){
+
             $this->gestionCoordinadores();
+        
+        }else{
+            $mat = $this->input->post('matricula');
+            $nom = $this->input->post('nombre');
+            $nom = strtoupper($nom);
+            $paterno = $this->input->post('ap_paterno');
+            $paterno = strtoupper($paterno);
+            $materno = $this->input->post('ap_materno');
+            $materno= strtoupper($materno);
+            $correo = $this->input->post('correo');
+            $telefono = $this->input->post('telefono');
+            $status = $this->input->post('status');
+            $status = strtoupper($status);
+            
+            $data = array(
+                'matricula' => $mat,
+                'nombre' => $nom,
+                'ap_paterno' => $paterno,
+                'ap_materno' => $materno,
+                'correo' => $correo,
+                'telefono' => $telefono,
+                'status' => $status
+            );
+            if($this->modelo_registrar_usuarios->updateCoord($data,$mat)){
+                $this->session->set_flashdata('editar','EL COORDINADOR SE HA MODIFICADO CORRECTAMENTE'); 
+                $this->gestionCoordinadores();
+            }
         }
     }
     /**************************************ASIGNACION DE TUTORES A TUTORADOS FUNCIONES***********************************************/
