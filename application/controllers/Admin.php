@@ -212,36 +212,53 @@ Class Admin extends CI_Controller{
         $this->load->view('interfaces/modal_editarTutorado',$this->data);
     }
     function actualizarTutorado(){
-        $mat = $this->input->post('matricula');
-        $nom = $this->input->post('nombre');
-        $nom = strtoupper($nom);
-        $paterno = $this->input->post('ap_paterno');
-        $paterno = strtoupper($paterno);
-        $materno = $this->input->post('ap_materno');
-        $materno = strtoupper($materno);
-        $carrera = $this->input->post('carrera');
-        $semestre = $this->input->post('semestre');
-        $semestre = strtoupper($semestre);
-        $prog = $this->input->post('programa');
-        $grupo = $this->input->post('grupo');
-        $tutoria = $this->input->post('tipo_tutoria');
-        $status = $this->input->post('status');
-        
-        $data = array(
-            'matricula' => $mat,
-            'nombre' => $nom,
-            'ap_paterno' => $paterno,
-            'ap_materno' => $materno,
-            'carrera' => $carrera,
-            'semestre' => $semestre,
-            'programa' => $prog,
-            'grupo' => $grupo,
-            'tipo_tutoria' => $tutoria,
-            'status' => $status
-        );
-        if($this->modelo_registrar_usuarios->updateTutorado($data,$mat)){
-            $this->data['mostrardatosTutorado']=$this->modelo_registrar_usuarios->mostrardatosTutorado();
-            $this->load->view('interfaces/gestion_tutorados',$this->data);
+        $this->form_validation->set_rules('nombre', 'Nombre', 'required|alpha');
+        $this->form_validation->set_rules('ap_paterno', 'Apellido Paterno', 'required|alpha');
+        $this->form_validation->set_rules('ap_materno', 'Apellido Materno', 'required|alpha');
+        $this->form_validation->set_rules('carrera', 'Carrera', 'required|alpha|exact_length[3]');
+        $this->form_validation->set_rules('semestre', 'Semestre', 'required');
+        $this->form_validation->set_rules('programa', 'Programa', 'required|alpha|exact_length[8]');
+        $this->form_validation->set_rules('tipo_tutoria', 'Tipo Tutoria', 'required|exact_length[18]');
+        $this->form_validation->set_rules('grupo', 'Grupo', 'required');
+        $this->form_validation->set_rules('status', 'Status', 'required');
+
+        if($this->form_validation->run() == FALSE){
+            
+            $this->gestionTutorados();
+            
+        }else{
+            $mat = $this->input->post('matricula');
+            $nom = $this->input->post('nombre');
+            $nom = strtoupper($nom);
+            $paterno = $this->input->post('ap_paterno');
+            $paterno = strtoupper($paterno);
+            $materno = $this->input->post('ap_materno');
+            $materno = strtoupper($materno);
+            $carrera = $this->input->post('carrera');
+            $semestre = $this->input->post('semestre');
+            $semestre = strtoupper($semestre);
+            $prog = $this->input->post('programa');
+            $grupo = $this->input->post('grupo');
+            $tutoria = $this->input->post('tipo_tutoria');
+            $status = $this->input->post('status');
+            
+            $data = array(
+                'matricula' => $mat,
+                'nombre' => $nom,
+                'ap_paterno' => $paterno,
+                'ap_materno' => $materno,
+                'carrera' => $carrera,
+                'semestre' => $semestre,
+                'programa' => $prog,
+                'grupo' => $grupo,
+                'tipo_tutoria' => $tutoria,
+                'status' => $status
+            );
+            if($this->modelo_registrar_usuarios->updateTutorado($data,$mat)){
+                $this->session->set_flashdata('editar','EL TUTOR SE HA MODIFICADO CORRECTAMENTE'); 
+                $this->data['mostrardatosTutorado']=$this->modelo_registrar_usuarios->mostrardatosTutorado();
+                $this->load->view('interfaces/gestion_tutorados',$this->data);
+            }
         }
     }
     /*************************************************FUNCIONES PARA COORDINADORES************************************************************* */

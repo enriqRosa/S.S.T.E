@@ -12,8 +12,9 @@
     <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--white mdl-color--orange-500 btn-pass">
     <i class="fas fa-user-plus"></i>Registrar nuevo Tutorado</button>
 </div>
-<!--MUESTRA EL MENSAJE DE REGISTRO EXITOSO-->
+<!--MUESTRA EL MENSAJE DE REGISTRO EXITOSO Y DE REGISTRO MODIFICADO-->
 <div class="success fs18 ls1 tajawalM mdl-color-text--green-900"><?php echo $this->session->flashdata('registro'); ?></div> 
+<div class="success fs18 ls1 tajawalM mdl-color-text--green-900"><?php echo $this->session->flashdata('editar'); ?></div> 
 <!--MUESTRA EL MENSAJE DE ERROR DE LAS VALIDACIONES-->
 <?php echo validation_errors('<div class="error tajawalR ls1">', '</div>'); ?>
 <div class="table2 overflow">
