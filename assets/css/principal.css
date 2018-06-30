@@ -537,11 +537,9 @@ nav{
     text-align: center;
 }
 .success{
-    border: solid 1px #4CAF50!important;
-    padding: 10px 0px;
-    margin: 40px auto;
-    width:50%;
-    background:#DCEDC8;
+    margin: 20px auto;
+    display: flex;
+    justify-content:center;
     text-align: center;
 }
 

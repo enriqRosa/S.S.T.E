@@ -13,7 +13,8 @@
         <i class="fas fa-user-plus"></i>Registrar nuevo Tutor</button>
     </div>
     <!--MUESTRA EL MENSAJE DE REGISTRO EXITOSO-->
-    <div class="success"><?php echo $this->session->flashdata('registro'); ?></div> 
+    <div class="success fs18 ls1 tajawalM mdl-color-text--green-900"><?php echo $this->session->flashdata('registro'); ?></div> 
+    <div class="success fs18 ls1 tajawalM mdl-color-text--green-900"><?php echo $this->session->flashdata('editar'); ?></div> 
     <!--MUESTRA EL MENSAJE DE ERROR DE LAS VALIDACIONES-->
     <?php echo validation_errors('<div class="error tajawalR ls1">', '</div>'); ?>
     <section class="table">
