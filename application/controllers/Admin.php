@@ -142,7 +142,7 @@ Class Admin extends CI_Controller{
         if($this->form_validation->run() == FALSE){
 
             $this->gestionTutorados();
-            
+
         }else{
             $mat = $this->input->post('matricula');
             $nom = $this->input->post('nombre');
@@ -234,36 +234,49 @@ Class Admin extends CI_Controller{
         $this->load->view('interfaces/gestion_coordinadores',$this->data);
     }
     function nuevoCoordinador(){
-        $mat = $this->input->post('matricula');
-        $nom = $this->input->post('nombre');
-        $nom = strtoupper($nom);
-        $paterno = $this->input->post('ap_paterno');
-        $paterno = strtoupper($paterno);
-        $materno = $this->input->post('ap_materno');
-        $materno= strtoupper($materno);
-        $correo = $this->input->post('correo');
-        $telefono = $this->input->post('telefono');
-        $pass = $this->input->post('pass');
-        $tipo = $this->input->post('tipo_usuario');
-        $status = $this->input->post('status');
-        
-        $data = array(
-            'matricula' => $mat,
-            'nombre' => $nom,
-            'ap_paterno' => $paterno,
-            'ap_materno' => $materno,
-            'correo' => $correo,
-            'telefono' => $telefono,
-            'pass' =>$pass,
-            'tipo_usuario' => $tipo,
-            'status' => $status
-        );
+        //VALIDACIONES
+        $this->validacionesRegistrarUsuarios();
+        $this->validacionesCorreoTelefono();
 
-        if ($this->modelo_registrar_usuarios->registrarCoordinador($data)){
-            //SE LLAMA A LA FUNCIÓN PRINCIPAL 'function gestionCoordinadores'
+        if($this->form_validation->run() == FALSE){
+
             $this->gestionCoordinadores();
-        }else{
-            echo "no registrado";
+
+        }else{       
+            $mat = $this->input->post('matricula');
+            $nom = $this->input->post('nombre');
+            $nom = strtoupper($nom);
+            $paterno = $this->input->post('ap_paterno');
+            $paterno = strtoupper($paterno);
+            $materno = $this->input->post('ap_materno');
+            $materno= strtoupper($materno);
+            $correo = $this->input->post('correo');
+            $telefono = $this->input->post('telefono');
+            $pass = $this->input->post('pass');
+            $tipo = $this->input->post('tipo_usuario');
+            $tipo = strtoupper($tipo);
+            $status = $this->input->post('status');
+            $status = strtoupper($status);
+            
+            $data = array(
+                'matricula' => $mat,
+                'nombre' => $nom,
+                'ap_paterno' => $paterno,
+                'ap_materno' => $materno,
+                'correo' => $correo,
+                'telefono' => $telefono,
+                'pass' =>$pass,
+                'tipo_usuario' => $tipo,
+                'status' => $status
+            );
+
+            if ($this->modelo_registrar_usuarios->registrarCoordinador($data)){
+                //SE LLAMA A LA FUNCIÓN PRINCIPAL 'function gestionCoordinadores'
+                $this->session->set_flashdata('registro','El coordinador se ha registrado exitosamente'); 
+                $this->gestionCoordinadores();
+            }else{
+                echo "no registrado";
+            }
         }
     }
     function editarCoordinador(){
