@@ -3,6 +3,8 @@
         <span class="text-dir fs40 ls2 tajawalR white">Asignación de Tutores</span><br>
     </div>
 </section>
+<div class="success fs18 ls1 tajawalM mdl-color-text--green-900"><?php echo $this->session->flashdata('registro'); ?></div> 
+<div class="success fs18 ls1 tajawalM mdl-color-text--green-900"><?php echo $this->session->flashdata('editar'); ?></div> 
 <div class="table">
     <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
         <thead>
