@@ -72,10 +72,12 @@ Class C_academico extends CI_Controller{
     }
     //FUNCIÓN PARA CAMBIAR LA CONTRASEÑA DEL ADMINISTRADOR PARA LA TABLA 'usuarios'
     function cambiarPassword(){
+        //VALIDACIONES
         $this->form_validation->set_rules('actual_pswd','Ingresa tu contraseña actual','required');
         $this->form_validation->set_rules('new_pswd','Ingresa nueva contraseña','required|max_length[20]|min_length[6]');
         $this->form_validation->set_rules('repeat_pswd','Confirmar contraseña','required|matches[new_pswd]');
-        if($this->form_validation->run()!=true){
+        
+        if($this->form_validation->run()==FALSE){
             $this->data['posts']=$this->Modelo_login->getCoordinador();
             $this->load->view('interfaces/interfaz_cacademico',$this->data);
         }else {
@@ -83,15 +85,11 @@ Class C_academico extends CI_Controller{
             foreach ($sql->result() as $my_pswd) {
                 $db_password=$my_pswd->pass;
                 $db_matricula=$my_pswd->matricula;
-            }
-            if($this->input->post("actual_pswd")==$db_password){
+                $this->session->set_flashdata('pass', 'LA CONTRASEÑA SE HA CAMBIADO EXITOSAMENTE');
                 $fixed_pw=$this->input->post("new_pswd");
                 $update=$this->db->query("UPDATE coordinador SET pass='$fixed_pw' WHERE matricula='$db_matricula'")or die(mysqli_error());
-                redirect('C_academico/index');
-                $this->session->set_flashdata('notification', 'User has been saved');
-            }else{
-                echo "ERROR";
-                $this->load->view("interfaces/interfaz_cacademico");
+                $this->data['posts']=$this->Modelo_login->getCoordinador();
+                $this->load->view('interfaces/interfaz_cacademico',$this->data);
             }
         }        
     }

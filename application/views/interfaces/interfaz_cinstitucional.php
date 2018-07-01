@@ -11,6 +11,9 @@
         </div>  
     </div>
 </section>
+<!--MUESTRA EL MENSAJE DE ERROR DE LAS VALIDACIONES-->
+<?php echo validation_errors('<div class="error tajawalR ls1">', '</div>'); ?>
+<div class="success fs18 ls1 tajawalM mdl-color-text--green-900"><?php echo $this->session->flashdata('pass'); ?></div> 
 <section class="institucional-info">
     <div class="grupo-institucional">
     <div class="info-1">
@@ -57,26 +60,26 @@
 <!--MODAL PARA CAMBIAR CONTRASEÑA-->
 <?php echo form_open("C_institucional/cambiarPassword"); ?>
 <div class="pass-modal fancy">
-    <div class="modal-info">
+    <div class="modal-info-5">
         <span class="mdl-dialog__title fs25 tajawalL ls1">Modificar Contraseña</span>
             <form>
                 <div class="c-inputs-4" >
                     <div class="mdl-textfield mdl-js-textfield ">
-                        <input class="mdl-textfield__input" type="password" name="actual_pswd" required>
+                        <input class="mdl-textfield__input" type="password" name="actual_pswd">
                         <label class="mdl-textfield__label tajawalL" required="required">Ingresa tu contraseña actual</label>
                         <?php form_error("actual_pswd"); ?>
                     </div>
                 </div>
                 <div class="c-inputs-4">
                     <div class="mdl-textfield mdl-js-textfield ">
-                        <input class="mdl-textfield__input" type="password" name="new_pswd" required>
+                        <input class="mdl-textfield__input" type="password" name="new_pswd">
                             <label class="mdl-textfield__label tajawalL" required="required">Ingresa nueva contraseña</label>
                             <?php form_error("new_pswd"); ?>
                     </div>
                 </div>
                 <div class="c-inputs-4">
                     <div class="mdl-textfield mdl-js-textfield">
-                        <input class="mdl-textfield__input" type="password" name="repeat_pswd" required>
+                        <input class="mdl-textfield__input" type="password" name="repeat_pswd">
                             <label class="mdl-textfield__label tajawalL" required="required">Confirmar contraseña</label>
                             <?php form_error("repeat_pswd"); ?>
                     </div>
