@@ -11,6 +11,10 @@
         </div>    
     </div>
 </section>
+<!--MUESTRA EL MENSAJE DE ERROR DE LAS VALIDACIONES-->
+<?php echo validation_errors('<div class="error tajawalR ls1">', '</div>'); ?>
+<div class="success fs18 ls1 tajawalM mdl-color-text--green-900"><?php echo $this->session->flashdata('pass'); ?></div> 
+<div class="success fs18 ls1 tajawalM mdl-color-text--green-900"><?php echo $this->session->flashdata('passError'); ?></div> 
 <section class="academico-info"> 
     <div class="grupo-academico">
         <div class="info-1">
@@ -57,7 +61,7 @@
 <!--MODAL PARA CAMBIAR CONTRASEÑA-->
 <?php echo form_open("tutor/cambiarPassword"); ?>
 <div class="pass-modal fancy">
-    <div class="modal-info">
+    <div class="modal-info-5">
         <span class="mdl-dialog__title fs25 tajawalL ls1">Modificar Contraseña</span>
             <form>
                 <div class="c-inputs-4" >

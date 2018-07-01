@@ -445,8 +445,8 @@ Class Admin extends CI_Controller{
                 $this->data['posts']=$this->Modelo_login->getAdmin();
                 $this->load->view('interfaces/interfaz_admin',$this->data);
             
-        } 
-    }       
+            } 
+        }       
     }
 }
 ?>      
