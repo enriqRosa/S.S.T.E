@@ -9,15 +9,15 @@
             <div class="matricula" >
                 <span class="tajawalR ls1 mdl-color-text--amber-900">Matricula Tutorado:</span>
                     <?php foreach ($mostrardatosTutorado as $mostrar) { ?>
-                        <input class="fs25 ls2 tajawalL" type="text" name="matricula" value="<?php echo $mostrar->matricula;?>" required>
+                        <input class="fs25 ls2 tajawalL" type="text" name="matricula" value="<?php echo $mostrar->matricula;?>">
                     <?php }?>
             </div>
             <div class="c-inputs-3" > 
-                <input id="datepicker" width="312" name="fecha" required/>
+                <input id="datepicker" width="312" name="fecha"/>
                     <script>
                        $('#datepicker').datepicker({ format: 'yyyy-mm-dd',footer: true , modal:true, header: true});
                     </script>
-                <input id="timepicker" width="312" name="hora" required/>
+                <input id="timepicker" width="312" name="hora"/>
                     <script>
                         $('#timepicker').timepicker();
                     </script>
@@ -27,7 +27,7 @@
                 <span class="tajawalR ls1 mdl-color-text--amber-900">Detecto problema:</span>
             </div>
             <div class="c-inputs-3">
-                <select class="mdl-textfield" id="dropdown" width="310" name="FK_lugar" required>
+                <select class="mdl-textfield" id="dropdown" width="310" name="FK_lugar">
                 <?php foreach($mostrarsalon as $salon){?>
                     <option value="<?php echo $salon->idlugar;?>"><?php echo $salon->salon;?></option>
                 <?php } ?>
@@ -35,7 +35,7 @@
                 <script>
                     $('#dropdown').dropdown();
                 </script>
-                <select class="mdl-textfield" id="detectoP" width="310" name="detecto_problema" required>
+                <select class="mdl-textfield" id="detectoP" width="310" name="detecto_problema">
                 <?php foreach($FK_area as $area){?>
                     <option value="<?php echo $area->idarea;?>"><?php echo $area->nombre;?></option>
                 <?php } ?>
@@ -46,7 +46,7 @@
             </div>    
             <div class="matricula">
                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-					<input class="mdl-textfield__input" type="text" name="avance" required>
+					<input class="mdl-textfield__input" type="text" name="avance">
 						<label class="mdl-textfield__label fs12 ls2 tajawalR " for="tb-mail">Avance</label>
 				</div>
             </div>

@@ -3,6 +3,10 @@
          <span class="text-dir fs40 ls2 tajawalR white"></i>Verificación de Seguimiento</i></span><br>
      </div>
 </main>
+<!--MUESTRA EL MENSAJE DE ERROR DE LAS VALIDACIONES COMO REGISTRO EXITOSO Y REGISTROS MODIFICADOS -->
+<?php echo validation_errors('<div class="error tajawalR ls1">', '</div>'); ?>
+<div class="success fs18 ls1 tajawalM mdl-color-text--green-900"><?php echo $this->session->flashdata('registro'); ?></div> 
+<div class="success fs18 ls1 tajawalM mdl-color-text--green-900"><?php echo $this->session->flashdata('passError'); ?></div> 
 <div class="table">
         <table class="mdl-data-table mdl-js-data-table  mdl-shadow--2dp">
             <thead>
