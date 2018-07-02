@@ -7,7 +7,7 @@
         <span class="mdl-dialog__title fs25 tajawalB ls1">Editar Seguimiento</span>
         </div> 
         <?php foreach ($datosFormatoID as $mostrar) { ?>
-                <input class="c-formato" type="hidden" name="matricula" value="<?php echo $mostrar->FK_tutoradoindividual;?>" disabled>
+                <input class="c-formato" type="hidden" name="matricula" value="<?php echo $mostrar->FK_tutoradoindividual;?>">
                 <input type="hidden" name="idformato" value="<?php echo $mostrar->idformato ?>">
             <?php  }?>
         <div class="c-inputs-4" > 
@@ -27,7 +27,7 @@
                 <label class="fs20 ls2 tajawalM mdl-color-text--amber-800">Avance</label>
         </div>
         <div class="c-inputs-4">
-            <select class="mdl-textfield" id="dropdown" width="310" name="FK_lugar" required>
+            <select class="mdl-textfield" id="dropdown" width="310" name="FK_lugar">
                 <?php {
                     foreach ($datosFormatoID as $mostrar) { ?> 
                     <option value="<?php echo $mostrar->FK_lugar;?>"><?php echo $mostrar->salon;?></option>
@@ -39,7 +39,7 @@
                 </script>
             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                 <?php foreach ($datosFormatoID as $mostrar) { ?> 
-					<input class="mdl-textfield__input" type="text" name="avance" value="<?php echo $mostrar->avance ?>" required>
+					<input class="mdl-textfield__input" type="text" name="avance" value="<?php echo $mostrar->avance ?>">
 						<label class="mdl-textfield__label fs12 ls2 tajawalR " for="tb-mail">Avance</label>
                 <?php } ?>
 			</div>
@@ -51,49 +51,67 @@
             <?php if($datosFormatoID[0]->detecto_problema==1){
                 foreach ($datosFormatoID as $mostrar) { 
                     $Problema='PSICOLOGÍA'?> 
-                <label class="fs20 ls2 tajawalM mdl-color-text--amber-800">Detecto Problema: </label>
                 <label class="fs19 ls2 tajawalB"> <?php echo $Problema ?></label>
-            <?php }
-            } ?>
+                <?php } ?>
+                <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" >
+                    <input type="radio"  class="mdl-radio__button" name="detecto_problema" value="<?php echo $mostrar->detecto_problema;?>">
+                    <span class="mdl-radio__label tajawalR ls2">NO CAMBIAR</span>
+                </label>
+            <?php } ?>
             <?php if($datosFormatoID[0]->detecto_problema==2){
                 foreach ($datosFormatoID as $mostrar) { 
                     $Problema='ACADÉMICO'?> 
                 <label class="fs19 ls2 tajawalB"> <?php echo $Problema ?></label>
             <?php } ?>
-                
                     <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" >
-                        <input type="radio"  class="mdl-radio__button" name="detecto_problema" value="<?php echo $mostrar->detecto_problema;?>" required>
+                        <input type="radio"  class="mdl-radio__button" name="detecto_problema" value="<?php echo $mostrar->detecto_problema;?>">
                         <span class="mdl-radio__label tajawalR ls2">NO CAMBIAR</span>
                     </label>
                 <?php } ?>
             <?php if($datosFormatoID[0]->detecto_problema==3){
                 foreach ($datosFormatoID as $mostrar) { 
                     $Problema='JURÍDICO'?> 
-                <label class="fs20 ls2 tajawalM mdl-color-text--amber-800">Detecto Problema: </label>
                 <label class="fs19 ls2 tajawalB"> <?php echo $Problema ?></label>
-            <?php }
-            } ?>
+                <?php } ?>
+                
+                <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" >
+                    <input type="radio"  class="mdl-radio__button" name="detecto_problema" value="<?php echo $mostrar->detecto_problema;?>">
+                    <span class="mdl-radio__label tajawalR ls2">NO CAMBIAR</span>
+                </label>
+            <?php } ?>
             <?php if($datosFormatoID[0]->detecto_problema==4){
                 foreach ($datosFormatoID as $mostrar) { 
                     $Problema='CONTROL ESCOLAR'?> 
-                <label class="fs20 ls2 tajawalM mdl-color-text--amber-800">Detecto Problema: </label>
                 <label class="fs19 ls2 tajawalB"> <?php echo $Problema ?></label>
-            <?php }
-            } ?>
+                <?php } ?>
+                
+                <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" >
+                    <input type="radio"  class="mdl-radio__button" name="detecto_problema" value="<?php echo $mostrar->detecto_problema;?>">
+                    <span class="mdl-radio__label tajawalR ls2">NO CAMBIAR</span>
+                </label>
+            <?php } ?>
             <?php if($datosFormatoID[0]->detecto_problema==5){
                 foreach ($datosFormatoID as $mostrar) { 
                     $Problema='FINANZAS'?> 
-                <label class="fs20 ls2 tajawalM mdl-color-text--amber-800">Detecto Problema: </label>
                 <label class="fs19 ls2 tajawalB"> <?php echo $Problema ?></label>
-            <?php }
-            } ?>
+                <?php } ?>
+                
+                <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" >
+                    <input type="radio"  class="mdl-radio__button" name="detecto_problema" value="<?php echo $mostrar->detecto_problema;?>">
+                    <span class="mdl-radio__label tajawalR ls2">NO CAMBIAR</span>
+                </label>
+            <?php } ?>
             <?php if($datosFormatoID[0]->detecto_problema==6){
                 foreach ($datosFormatoID as $mostrar) { 
                     $Problema='SERVICIO SOCIAL & RESIDENCIAS'?> 
-                <label class="fs20 ls2 tajawalM mdl-color-text--amber-800">Detecto Problema: </label>
                 <label class="fs19 ls2 tajawalB"> <?php echo $Problema ?></label>
-            <?php }
-            } ?>
+                <?php } ?>
+                
+                <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" >
+                    <input type="radio"  class="mdl-radio__button" name="detecto_problema" value="<?php echo $mostrar->detecto_problema;?>">
+                    <span class="mdl-radio__label tajawalR ls2">NO CAMBIAR</span>
+                </label>
+            <?php } ?>
         </div>
         <div class="c-inputs-4">
             <label class="fs20 ls2 tajawalM mdl-color-text--amber-900">Detecto  problematica cambiar a:</label>
@@ -102,7 +120,7 @@
             <?php foreach ($FK_area as $area){ ?>
                 <div class="status">
                     <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" >
-                        <input type="radio"  class="mdl-radio__button" name="detecto_problema" value="<?php echo $area->idarea;?>" required>
+                        <input type="radio"  class="mdl-radio__button" name="detecto_problema" value="<?php echo $area->idarea;?>">
                         <span class="mdl-radio__label tajawalR ls2"><?php echo $area->nombre;?></span>
                     </label>
                 </div>
@@ -116,7 +134,7 @@
                 <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-1">
                 <?php foreach ($datosFormatoID as $mostrar) { 
                     if($mostrar->pa=='PROBLEMAS ACADEMICOS'){?> 
-                        <input type="checkbox" id="checkbox-1" class="mdl-checkbox__input" name="pa" checked required>
+                        <input type="checkbox" id="checkbox-1" class="mdl-checkbox__input" name="pa" checked>
                     <?php } else{?>
                         <input type="checkbox" id="checkbox-1" class="mdl-checkbox__input" name="pa">
                     <?php } ?>
@@ -126,7 +144,7 @@
             <div class="status">
                 <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-2">
                     <?php if($mostrar->pe=='PROBLEMAS EMOCIONALES'){?> 
-                        <input type="checkbox" id="checkbox-2" class="mdl-checkbox__input" name="pe" checked required>
+                        <input type="checkbox" id="checkbox-2" class="mdl-checkbox__input" name="pe" checked>
                     <?php } else{?>
                         <input type="checkbox" id="checkbox-2" class="mdl-checkbox__input" name="pe">
                     <?php } ?>
@@ -136,7 +154,7 @@
             <div class="status">
                 <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-3">
                 <?php if($mostrar->c=='CANALIZACION'){?> 
-                        <input type="checkbox" id="checkbox-3" class="mdl-checkbox__input" name="c" checked required>
+                        <input type="checkbox" id="checkbox-3" class="mdl-checkbox__input" name="c" checked>
                     <?php } else{?>
                         <input type="checkbox" id="checkbox-3" class="mdl-checkbox__input" name="c">
                     <?php } ?>
@@ -148,7 +166,7 @@
             <div class="status">
                 <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-4">
                 <?php if($mostrar->ig=='INFORMACION GENERAL'){?> 
-                        <input type="checkbox" id="checkbox-4" class="mdl-checkbox__input" name="ig" checked required>
+                        <input type="checkbox" id="checkbox-4" class="mdl-checkbox__input" name="ig" checked>
                     <?php } else{?>
                         <input type="checkbox" id="checkbox-4" class="mdl-checkbox__input" name="ig">
                     <?php } ?>
@@ -158,7 +176,7 @@
             <div class="status">
                 <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-5">
                 <?php if($mostrar->aa=='ASESORIA ACADEMICA'){?> 
-                        <input type="checkbox" id="checkbox-5" class="mdl-checkbox__input" name="aa" checked required>
+                        <input type="checkbox" id="checkbox-5" class="mdl-checkbox__input" name="aa" checked>
                     <?php } else{?>
                         <input type="checkbox" id="checkbox-5" class="mdl-checkbox__input" name="aa">
                     <?php } ?>
@@ -168,7 +186,7 @@
             <div class="status">
                 <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-6">
                 <?php if($mostrar->pi=='PROBLEMAS INTERPERSONALES'){?> 
-                        <input type="checkbox" id="checkbox-6" class="mdl-checkbox__input" name="pi" checked required>
+                        <input type="checkbox" id="checkbox-6" class="mdl-checkbox__input" name="pi" checked>
                     <?php } else{?>
                         <input type="checkbox" id="checkbox-6" class="mdl-checkbox__input" name="pi">
                     <?php 
@@ -190,7 +208,7 @@
                         $area='PSICOLOGÍA';?>       
                         <span class="fs19 ls2 tajawalB"><?php echo $area; ?></span>  
                         <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-5">
-                        <input type="radio" id="option-5" class="mdl-radio__button" name="FK_area" value="<?php echo $mostrar->FK_area ?>" required>
+                        <input type="radio" id="option-5" class="mdl-radio__button" name="FK_area" value="<?php echo $mostrar->FK_area ?>">
                         <span class="mdl-radio__label tajawalM ls2 ">No Cambiar</span>
             <?php }
             } ?>
@@ -199,7 +217,7 @@
                         $area='ACADÉMICO';?>       
                         <span class="fs19 ls2 tajawalB"><?php echo $area; ?></span>  
                         <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-5">
-                        <input type="radio" id="option-5" class="mdl-radio__button" name="FK_area" value="<?php echo $mostrar->FK_area ?>" required>
+                        <input type="radio" id="option-5" class="mdl-radio__button" name="FK_area" value="<?php echo $mostrar->FK_area ?>">
                         <span class="mdl-radio__label tajawalM ls2 ">No Cambiar</span>
             <?php }
             } ?>        
@@ -208,7 +226,7 @@
                         $area='JURÍDICO';?>       
                         <span class="fs19 ls2 tajawalB"><?php echo $area; ?></span>  
                         <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-5">
-                        <input type="radio" id="option-5" class="mdl-radio__button" name="FK_area" value="<?php echo $mostrar->FK_area ?>" required>
+                        <input type="radio" id="option-5" class="mdl-radio__button" name="FK_area" value="<?php echo $mostrar->FK_area ?>">
                         <span class="mdl-radio__label tajawalM ls2 ">No Cambiar</span>
             <?php }
             } ?> 
@@ -217,7 +235,7 @@
                         $area='CONTROL ESCOLAR';?>       
                         <span class="fs19 ls2 tajawalB"><?php echo $area; ?></span>  
                         <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-5">
-                        <input type="radio" id="option-5" class="mdl-radio__button" name="FK_area" value="<?php echo $mostrar->FK_area ?>" required>
+                        <input type="radio" id="option-5" class="mdl-radio__button" name="FK_area" value="<?php echo $mostrar->FK_area ?>">
                         <span class="mdl-radio__label tajawalM ls2 ">No Cambiar</span>
             <?php }
             } ?>        
@@ -226,7 +244,7 @@
                         $area='FINANZAS';?>       
                         <span class="fs19 ls2 tajawalB"><?php echo $area; ?></span>  
                         <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-5">
-                        <input type="radio" id="option-5" class="mdl-radio__button" name="FK_area" value="<?php echo $mostrar->FK_area ?>" required>
+                        <input type="radio" id="option-5" class="mdl-radio__button" name="FK_area" value="<?php echo $mostrar->FK_area ?>">
                         <span class="mdl-radio__label tajawalM ls2 ">No Cambiar</span>
             <?php }
             } ?> 
@@ -235,7 +253,7 @@
                         $area='SERVICIO SOCIAL & RESIDENCIAS';?>       
                         <span class="fs19 ls2 tajawalB"><?php echo $area; ?></span>  
                         <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-5">
-                        <input type="radio" id="option-5" class="mdl-radio__button" name="FK_area" value="<?php echo $Problema ?>" required>
+                        <input type="radio" id="option-5" class="mdl-radio__button" name="FK_area" value="<?php echo $Problema ?>">
                         <span class="mdl-radio__label tajawalM ls2 ">No Cambiar</span>
             <?php }
             } ?>       
@@ -247,7 +265,7 @@
         <?php foreach ($FK_area as $area){ ?>
                 <div class="status">
                     <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" >
-                        <input type="radio"  class="mdl-radio__button" name="FK_area" value="<?php echo $area->idarea;?>" required>
+                        <input type="radio"  class="mdl-radio__button" name="FK_area" value="<?php echo $area->idarea;?>">
                         <span class="mdl-radio__label tajawalR ls2"><?php echo $area->nombre;?></span>
                     </label>
                 </div>
