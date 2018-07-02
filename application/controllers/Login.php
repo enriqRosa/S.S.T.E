@@ -32,14 +32,14 @@ Class Login extends CI_Controller{
         $this->form_validation->set_rules('pass', 'Contraseña', 'required');
 
         if($this->form_validation->run()==FALSE){
-            redirect(base_url());
+            $this->index();
         }else{
             $checklogin=$this->Modelo_login->login($mat,$pass);
         if($checklogin){
             foreach ($checklogin as $row);
                 $this->session->set_userdata('matricula',$row->matricula);
                 $this->session->set_userdata('tipo_usuario',$row->tipo_usuario);
-                //USARIO ADMINISTRADOR
+                //USUARIO ADMINISTRADOR
                 if($this->session->userdata('tipo_usuario')=="AD"){
                     redirect('admin/index');
                 }
@@ -56,13 +56,13 @@ Class Login extends CI_Controller{
                 }
                 elseif($this->session->userdata('tipo_usuario')=='TO'){
                     redirect('tutorado/index');
-                }
-               
+                }               
+        }
+        else{
+            $this->session->set_flashdata('error','USUARIO O CONTRASEÑA INCORRECTOS'); 
+            $this->index();
         }
         }
-
-
-
     }
      //CERRAR SESIÒN
      public function logout(){

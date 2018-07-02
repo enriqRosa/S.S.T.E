@@ -528,6 +528,13 @@ nav{
     flex-wrap: wrap;
 }
 /*VALIDACIÓN*/
+.error-login{
+    border: solid 1px #d893a1!important;
+    padding: 1px 0px;
+    margin: 2px 0;
+    background:#fbe6f2;
+    text-align: center;
+}
 .error{
     border: solid 1px #d893a1!important;
     padding: 10px 0px;
