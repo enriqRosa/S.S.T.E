@@ -21,12 +21,21 @@ Class Tutorado extends CI_Controller{
     }
     //FUNCIÓN PARA QUE PUEDA LLENAR LOS CAMPOS 'correo' y 'telefono' DEL MODAL 'editar información'
     function editarInfo(){
-        $correo = $this->input->post('correo');
-        $telefono = $this->input->post('telefono');
-        $insertTutor = $this->modelo_registrar_usuarios->actualizarTutorado($correo,$telefono);
+        //VALIDACIONES
+        $this->form_validation->set_rules('correo', 'Correo', 'required|valid_email');
+        $this->form_validation->set_rules('telefono', 'Telefono', 'required|exact_length[10]|is_numeric');
 
-        $this->data['mostrardatosTutorado']=$this->Modelo_login->getTutorado();
-        $this->load->view('interfaces/interfaz_tutorado',$this->data);
+        if($this->form_validation->run() == FALSE){
+           
+            $this->index();
+
+        }else{
+            $correo = $this->input->post('correo');
+            $telefono = $this->input->post('telefono');
+            $insertTutor = $this->modelo_registrar_usuarios->actualizarTutorado($correo,$telefono);
+            $this->session->set_flashdata('registro','EL CORREO Y TELEFONO SE HAN REGISTRADO EXITOSAMENTE'); 
+           $this->index();
+        }
     }
     function seguimientoTutorial(){
         $this->load->view('interfaces/seguimiento_tutorial');

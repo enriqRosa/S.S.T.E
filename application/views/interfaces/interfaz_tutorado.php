@@ -11,6 +11,7 @@
 <!--MUESTRA EL MENSAJE DE ERROR DE LAS VALIDACIONES-->
 <?php echo validation_errors('<div class="error tajawalR ls1">', '</div>'); ?>
 <div class="success fs18 ls1 tajawalM mdl-color-text--green-900"><?php echo $this->session->flashdata('pass'); ?></div> 
+<div class="success fs18 ls1 tajawalM mdl-color-text--green-900"><?php echo $this->session->flashdata('registro'); ?></div> 
 <section class="academico-info"> 
     <?php foreach($mostrardatosTutorado as $post){?>
         <div class="grupo-academico" >
@@ -83,21 +84,21 @@
 <!--MODAL PARA REGISTRAR CAMPOS FALTANTES DEL ALUMNO-->
 <?php echo form_open("Tutorado/editarInfo"); ?>
     <div class="editar-modal fancy ">
-        <div class="modal-info">
+        <div class="modal-info-5">
             <span class="fs25 tajawalL ls1">Editar Información</span>
                 <form>
                     <div class="c-inputs-4">
                         <div class="form-icons"><i class="fas fa-envelope"></i></div>
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <input class="mdl-textfield__input" type="text" name="correo" required>
+                            <input class="mdl-textfield__input" type="text" name="correo">
                                 <label class="mdl-textfield__label tajawalL" required="text">Correo</label>
                         </div>
                     </div>
                     <div class="c-inputs-4">
                         <div class="form-icons"><i class="fas fa-mobile-alt"></i></div>
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <input class="mdl-textfield__input" type="text" name="telefono" required>
-                                <label class="mdl-textfield__label tajawalL" required="text"Telefono</label>
+                            <input class="mdl-textfield__input" type="text" name="telefono">
+                                <label class="mdl-textfield__label tajawalL" required="text">Telefono</label>
                         </div>
                     </div>
                 </form>
@@ -115,21 +116,21 @@
         <span class="mdl-dialog__title fs25 tajawalL ls1">Modificar Contraseña</span>
             <form>
                 <div class="c-inputs-4" >
-                    <div class="mdl-textfield mdl-js-textfield ">
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                         <input class="mdl-textfield__input" type="password" name="actual_pswd">
                         <label class="mdl-textfield__label tajawalL" required="required">Ingresa tu contraseña actual</label>
                         <?php form_error("actual_pswd"); ?>
                     </div>
                 </div>
                 <div class="c-inputs-4">
-                    <div class="mdl-textfield mdl-js-textfield ">
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                         <input class="mdl-textfield__input" type="password" name="new_pswd">
                             <label class="mdl-textfield__label tajawalL" required="required">Ingresa nueva contraseña</label>
                             <?php form_error("new_pswd"); ?>
                     </div>
                 </div>
                 <div class="c-inputs-4">
-                    <div class="mdl-textfield mdl-js-textfield">
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                         <input class="mdl-textfield__input" type="password" name="repeat_pswd">
                             <label class="mdl-textfield__label tajawalL" required="required">Confirmar contraseña</label>
                             <?php form_error("repeat_pswd"); ?>
