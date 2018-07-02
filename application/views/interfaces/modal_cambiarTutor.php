@@ -4,15 +4,11 @@
             <div class="modal-info-5">
                 <span class="mdl-dialog__title fs25 tajawalL ls1">Editar Tutor</span>
                 <div class="c-inputs-4" >
-                    <span class="mdl-dialog__title tajawalR ls1">Matricula Tutorado:</span>
-                </div>
-                <div class="c-inputs-4" >
                     <?php foreach ($mostrardatosTutorado as $mostrar) { ?>
-                        <div class="mdl-textfield mdl-js-textfield ">
-                            <input class="mdl-textfield__input" type="text" name="matricula" value=" <?php echo $mostrar->matricula;?>" required>
-                        </div>
+                        <span class="mdl-dialog__title tajawalR ls1">Matricula Tutorado:</span>
+                            <input class="fs16 tajawalB ls" type="text" name="matricula" value=" <?php echo $mostrar->matricula;?>" required>
                     <?php }?>
-                </div>
+               </div>
                 <div class="c-inputs-4">
                     <span class="ls2 tajawalR">Tutor:</span>                                             
                 </div> 
@@ -56,13 +52,9 @@
             <div class="modal-info-5">
                 <span class="mdl-dialog__title fs25 tajawalL ls1">Editar Tutor</span>
                 <div class="c-inputs-4" >
-                    <span class="mdl-dialog__title tajawalR ls1">Matricula Tutorado:</span>
-                </div>
-                <div class="c-inputs-4" >
                     <?php foreach ($mostrardatosTutorado as $mostrar) { ?>
-                        <div class="mdl-textfield mdl-js-textfield ">
-                            <input class="mdl-textfield__input" type="text" name="matricula" value=" <?php echo $mostrar->matricula;?>" required>
-                        </div>
+                        <span class="mdl-dialog__title tajawalR ls1">Matricula Tutorado:</span>
+                            <input class="fs16 tajawalB ls" type="text" name="matricula" value=" <?php echo $mostrar->matricula;?>" required>
                     <?php }?>
                 </div>
                 <div class="c-inputs-4">

@@ -41,16 +41,16 @@
                 <span class="mdl-dialog__title fs25 tajawalL ls1">Asignar Tutor</span>
             <div class="c-inputs-4" >
                 <?php foreach ($mostrardatosTutorado as $mostrar) { ?>
-                    <span class="mdl-dialog__title fs16 tajawalR ls1">Matricula: </span>
-                    <div class="mdl-textfield mdl-js-textfield">
-                        <input class="mdl-textfield__input" type="text" name="matricula" value="<?php echo $mostrar->matricula;?>" required>
-                    </div>
+                    <span class="mdl-dialog__title fs18 tajawalR ls1">Matricula: </span>
+                        <input class="fs16 tajawalB ls1" type="text" name="matricula" value="<?php echo $mostrar->matricula;?>" required>
                 <?php }?>
             </div>
             <div class="c-inputs-4" >
-                <span class="mdl-dialog__title fs16 tajawalR ls1">Tutor:</span>
-                    <select class="mdl-textfield mdl-js-textfield mdl-textfield__input" id="dropdown" width="300" name="FK_tutor" required>
-                    <?php 
+                <span class="fs16 tajawalR ls1">Tutor:</span>
+            </div>
+            <div class="c-inputs-4" >
+                 <select class="mdl-textfield mdl-js-textfield mdl-textfield__input" id="dropdown" width="300" name="FK_tutor" required>
+                 <?php 
                     foreach($tutoresActivos as $mostrar){ ?>
                         <option value="<?php echo $mostrar->matricula; ?>"><?php echo $mostrar->nombre;?> <?php echo $mostrar->ap_paterno; ?> <?php echo $mostrar->ap_materno; ?></option>
                         <?php  

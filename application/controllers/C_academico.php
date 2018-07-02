@@ -32,15 +32,25 @@ Class C_academico extends CI_Controller{
         $this->load->view('interfaces/modal_asignarTutor',$this->data);
     }
     function asignarTutor(){
-        $mat = $this->input->post('matricula');
-        $tutor=$this->input->post('FK_tutor');
+        //VALIDACIÓN
+        $this->form_validation->set_rules('FK_tutor', 'Asignar Tutor', 'required');
 
-        $data = array(
-            'matricula' => $mat,
-            'FK_tutor'  => $tutor
-        );
-        if($this->modelo_registrar_usuarios->FKtutor($mat,$data)){
+        if($this->form_validation->run() == FALSE){
+
             $this->tutoresTutorados();
+
+        }else{
+            $mat = $this->input->post('matricula');
+            $tutor=$this->input->post('FK_tutor');
+
+            $data = array(
+                'matricula' => $mat,
+                'FK_tutor'  => $tutor
+            );
+            if($this->modelo_registrar_usuarios->FKtutor($mat,$data)){
+                $this->session->set_flashdata('registro','SE HA ASIGNADO EL TUTOR EXITOSAMENTE'); 
+                $this->tutoresTutorados();
+            }
         }
     } 
     function cambiarTutor(){
@@ -52,17 +62,26 @@ Class C_academico extends CI_Controller{
         $this->data['vernombreTutor']=$this->modelo_registrar_usuarios->selectnombreTutor($matricula); 
         $this->load->view('interfaces/modal_cambiarTutor',$this->data);       
     }
-    function renovarTutor(){      
-        $mat=$this->input->post('matricula');
-        $tutor=$this->input->post('FK_tutor');
+    function renovarTutor(){    
+        //VALIDACIÓN  
+        $this->form_validation->set_rules('FK_tutor', 'Asignar Tutor', 'required');
 
-        $data = array(
-            'matricula' => $mat,
-            'FK_tutor'  => $tutor
-        );
+        if($this->form_validation->run() == FALSE){
 
-        if($this->modelo_registrar_usuarios->cambiarasignaciontutor($mat,$data)){
-            $this->tutoresTutorados();
+            $this->renovarTutor();
+        }else{
+            $mat=$this->input->post('matricula');
+            $tutor=$this->input->post('FK_tutor');
+
+            $data = array(
+                'matricula' => $mat,
+                'FK_tutor'  => $tutor
+            );
+
+            if($this->modelo_registrar_usuarios->cambiarasignaciontutor($mat,$data)){
+                $this->session->set_flashdata('editar','SE HA CAMBIADO EL TUTOR CORRECTAMENTE'); 
+                $this->tutoresTutorados();
+            }
         }
     }      
     /****************************************************************************************************************************************/

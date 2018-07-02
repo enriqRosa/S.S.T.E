@@ -413,7 +413,7 @@ Class Admin extends CI_Controller{
             );
 
             if($this->modelo_registrar_usuarios->cambiarasignaciontutor($mat,$data)){
-                $this->session->set_flashdata('registro','SE HA CAMBIADO EL TUTOR CORRECTAMENTE'); 
+                $this->session->set_flashdata('editar','SE HA CAMBIADO EL TUTOR CORRECTAMENTE'); 
                 $this->tutoresTutorados();
             }
         }
