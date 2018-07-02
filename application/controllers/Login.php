@@ -26,7 +26,7 @@ Class Login extends CI_Controller{
         $this->load->library('form_validation');
         
         $mat=$this->input->post('matricula');
-        $pass=$this->input->post('pass');
+        md5($pass=$this->input->post('pass'));
 
         $this->form_validation->set_rules('matricula', 'Usuario', 'required');
         $this->form_validation->set_rules('pass', 'Contraseña', 'required');

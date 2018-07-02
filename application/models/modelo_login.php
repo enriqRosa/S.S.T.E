@@ -6,7 +6,7 @@ class Modelo_login extends CI_Model{
         $this->db->select('matricula, pass, tipo_usuario');
         $this->db->from('usuarios');
         $this->db->where('matricula',$mat);
-        $this->db->where('pass',$pass);
+        $this->db->where('pass',md5($pass));
         $this->db->limit(1);
         $query=$this->db->get();
         if($query->num_rows()==1){

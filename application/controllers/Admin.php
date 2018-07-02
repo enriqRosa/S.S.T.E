@@ -85,7 +85,7 @@ Class Admin extends CI_Controller{
                 'ap_materno' => $materno,
                 'correo' => $correo,
                 'telefono' => $telefono,
-                'pass' => $pass,
+                'pass' => md5($pass),
                 'status' => $status,
                 'tipo_usuario' => $tipo
             );
@@ -193,7 +193,7 @@ Class Admin extends CI_Controller{
                 'programa' => $prog,
                 'tipo_tutoria' => $tutoria,
                 'grupo' => $grupo,
-                'pass' => $pass,
+                'pass' => md5($pass),
                 'tipo_usuario' => $tipo,
                 'status' => $status
             );
@@ -299,7 +299,7 @@ Class Admin extends CI_Controller{
                 'ap_materno' => $materno,
                 'correo' => $correo,
                 'telefono' => $telefono,
-                'pass' =>$pass,
+                'pass' => md5($pass),
                 'tipo_usuario' => $tipo,
                 'status' => $status
             );
