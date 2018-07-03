@@ -124,14 +124,6 @@ class Modelo_registrar_usuarios extends CI_Model{
         return true;
     }
     /******************************************FUNCIONES PARA EL REGISTRO DEL FORMATO**********************************************************/
-    function traersalon(){
-        $data=$this->db->get('lugar');
-        return $data->result();
-    }
-    function traerArea(){
-        $data=$this->db->get('area');
-        return $data->result();
-    }
     function insertarFormato($data){
         $count=$this->db->insert('formato_individual',$data);        
         if($count>0){
@@ -147,17 +139,17 @@ class Modelo_registrar_usuarios extends CI_Model{
     }    
     function traerdatoscompletosFormato($matricula){
         $this->db->where('FK_tutoradoindividual',$matricula);
-       $data=$this->db->get('seguimiento_datos');
+       $data=$this->db->get('formato_individual');
        return $data->result();
-   }
+    }
    function datoscompletosFormatoID($id){
         $this->db->where('idformato',$id);
-        $data=$this->db->get('seguimiento_datos');
+        $data=$this->db->get('formato_individual');
         return $data->result();
    }
    function updateSeguimiento($id,$data){
         $this->db->where('idformato',$id);
-        $this->db->update('seguimiento_datos',$data);
+        $this->db->update('formato_individual',$data);
         return true;
    }
 }

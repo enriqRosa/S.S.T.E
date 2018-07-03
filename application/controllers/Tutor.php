@@ -28,15 +28,14 @@ Class Tutor extends CI_Controller{
         $this->load->view('temps/header_modal');
         $matricula=$this->input->get('matricula');
         $this->data['mostrardatosTutorado']=$this->modelo_registrar_usuarios->traerdatosTutorado($matricula);
-        $this->data['mostrarsalon']=$this->modelo_registrar_usuarios->traersalon();
-        $this->data['FK_area']=$this->modelo_registrar_usuarios->traerArea();
         $this->load->view('interfaces/modal_registrarFormato',$this->data);
     }
     function registraralumnosFormato(){
         //VALIDACIONES
         $this->form_validation->set_rules('fecha', 'Fecha', 'required');
         $this->form_validation->set_rules('hora', 'Hora', 'required');
-        $this->form_validation->set_rules('FK_lugar', 'Lugar', 'required');
+        $this->form_validation->set_rules('lugar', 'Lugar', 'required');
+        $this->form_validation->set_rules('area', 'Area', 'required');
         $this->form_validation->set_rules('detecto_problema', 'Detecto Problena', 'required');
         $this->form_validation->set_rules('avance', 'Avance', 'required|is_numeric');
 
@@ -47,7 +46,7 @@ Class Tutor extends CI_Controller{
         }else{
             $fecha=$this->input->post('fecha');
             $hora=$this->input->post('hora');
-            $salon=$this->input->post('FK_lugar');
+            $salon=$this->input->post('lugar');
             $problema=$this->input->post('detecto_problema');
             $avance=$this->input->post('avance');
             $pa=$this->input->post('pa');
@@ -56,7 +55,7 @@ Class Tutor extends CI_Controller{
             $ig=$this->input->post('ig');
             $aa=$this->input->post('aa');
             $pi=$this->input->post('pi');
-            $area=$this->input->post('FK_area');
+            $area=$this->input->post('area');
             $mat=$this->input->post('matricula');
 
             if($pa==NULL){
@@ -72,7 +71,7 @@ Class Tutor extends CI_Controller{
             if($c==NULL){
                 $c="NULL";
             }elseif($c!=NULL){
-                $c="CANALIZACION";
+                $c="CANALIZACIÓN";
             }
             if($ig==NULL){
                 $ig="NULL";
@@ -95,17 +94,18 @@ Class Tutor extends CI_Controller{
             $data = array(
                 'fecha'  => $fecha,
                 'hora' => $hora,
+                'detecto_problema' => $problema,
+                'area' => $area,
+                'lugar' => $salon,
+                'avance' => $avance,    
                 'pa' => $pa,
                 'pe' => $pe,
                 'c' => $c,
                 'ig' => $ig,
                 'aa' => $aa,
-                'pi' => $pi,
-                'detecto_problema' => $problema,
-                'avance' => $avance,    
-                'FK_area' => $area,
+                'pi' => $pi,            
                 'FK_tutoradoindividual' => $mat,
-                'FK_lugar' => $salon
+                
             ); 
             if($this->modelo_registrar_usuarios->insertarFormato($data)){
                 $this->session->set_flashdata('registro','FORMATO DE SEGUIMIENTO TUTORÍAL REGISTRADO EXITOSAMENTE'); 

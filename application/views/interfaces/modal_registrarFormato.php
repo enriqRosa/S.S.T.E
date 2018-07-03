@@ -27,21 +27,31 @@
                 <span class="tajawalR ls1 mdl-color-text--amber-900">Detecto problema:</span>
             </div>
             <div class="c-inputs-3">
-                <select class="mdl-textfield" id="dropdown" width="310" name="FK_lugar">
-                <?php foreach($mostrarsalon as $salon){?>
-                    <option value="<?php echo $salon->idlugar;?>"><?php echo $salon->salon;?></option>
-                <?php } ?>
+                <select class="mdl-textfield mdl-textfield__input" id="dropdown" width="300" name="lugar">
+                    <option value="A1">A1</option>
+                    <option value="A6">A6</option>
+                    <option value="A7">A7</option>
+                    <option value="D1">D1</option>
+                    <option value="D2">D2</option>
+                    <option value="E1">E1</option>
+                    <option value="E10">E10</option>
+                    <option value="F1">F1</option>
+                    <option value="G1">G1</option>
+                    <option value="G2">G2</option>                    
                 </select>
                 <script>
                     $('#dropdown').dropdown();
                 </script>
-                <select class="mdl-textfield" id="detectoP" width="310" name="detecto_problema">
-                <?php foreach($FK_area as $area){?>
-                    <option value="<?php echo $area->idarea;?>"><?php echo $area->nombre;?></option>
-                <?php } ?>
-                </select>
+                 <select class="mdl-textfield mdl-textfield__input" id="problema" width="300" name="detecto_problema">
+                    <option value="PSICOLOGÍA">PSICOLOGÍA</option>
+                    <option value="ACADÉMICO">ACADÉMICO</option>
+                    <option value="JURÍDICO">JURÍDICO</option>
+                    <option value="CONTROL ESCOLAR">CONTROL ESCOLAR</option>
+                    <option value="FINANZAS">FINANZAS</option>
+                    <option value="SERVICIO SOCIAL & RESIDENCIAS">SERVICIO SOCIAL & RESIDENCIAS</option>
+                   </select>
                 <script>
-                    $('#detectoP').dropdown();
+                    $('#problema').dropdown();
                 </script>
             </div>    
             <div class="matricula">
@@ -95,21 +105,22 @@
             </div>
             <div class="c-inputs-3">
                 <label class="fs20 ls2 tajawalR mdl-color-text--amber-900">Área en la que fue canalizada</label>
+                <span class="tajawalL fs12 ls1 mdl-color-text--grey-700">*Este espacio será llenado únicamente cuando el motivo de la Tutoría sea la canalización, especificando el área a la que 
+                    se canalizó. Por lo contrario eliga *Ninguno</span>
             </div>
-            <div class="c-inputs-4">
-                <select class="mdl-textfield" id="dropdown3" width="310" name="FK_area">
-                <?php foreach($FK_area as $area){?>
-                    <option id="area" value="<?php echo $area->idarea;?>" disabled><?php echo $area->nombre;?></option>
-                <?php } ?>
-                </select>
+            
+            <div class="c-inputs-3">
+                <select class="mdl-textfield mdl-textfield__input" id="area" width="300" name="area">
+                    <option value="NINGUNO">NINGUNO</option>
+                    <option value="PSICOLOGÍA">PSICOLOGÍA</option>
+                    <option value="ACADÉMICO">ACADÉMICO</option>
+                    <option value="JURÍDICO">JURÍDICO</option>
+                    <option value="CONTROL ESCOLAR">CONTROL ESCOLAR</option>
+                    <option value="FINANZAS">FINANZAS</option>
+                    <option value="SERVICIO SOCIAL & RESIDENCIAS">SERVICIO SOCIAL & RESIDENCIAS</option>
+                   </select>
                 <script>
-                var check3 = $("#checkbox-3");
-                $("#checkbox-3").on('click',tres);
-                function tres(){
-                    if(check3.is(':checked')){
-                        $('#dropdown3').dropdown();
-                    }
-                }   
+                    $('#area').dropdown();
                 </script>
             </div>
             <div class="c-inputs-3">

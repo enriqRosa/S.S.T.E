@@ -51,18 +51,16 @@ Class Seguimiento extends CI_Controller{
         $id=$this->input->get('idformato');
         $this->data['mostrardatosTutorado']=$this->modelo_registrar_usuarios->traerdatosTutorado($matricula);
         $this->data['datosFormatoID']=$this->modelo_registrar_usuarios->datoscompletosFormatoID($id); 
-        $this->data['mostrarsalon']=$this->modelo_registrar_usuarios->traersalon();
-        $this->data['FK_area']=$this->modelo_registrar_usuarios->traerArea();
         $this->load->view('interfaces/modal_editarSeguimiento',$this->data);       
     }
     function editarFormato(){
          //VALIDACIONES
         $this->form_validation->set_rules('fecha', 'Fecha', 'required');
         $this->form_validation->set_rules('hora', 'Hora', 'required');
-        $this->form_validation->set_rules('FK_lugar', 'Lugar', 'required');
-        $this->form_validation->set_rules('detecto_problema', 'Detecto Problena', 'required');
+        $this->form_validation->set_rules('lugar', 'Lugar', 'required');
+        $this->form_validation->set_rules('detecto_problema', 'Detecto Problema', 'required');
         $this->form_validation->set_rules('avance', 'Avance', 'required|is_numeric');
-        $this->form_validation->set_rules('FK_area', 'Area', 'required');
+        
 
         if($this->form_validation->run() == FALSE){
 
@@ -72,7 +70,8 @@ Class Seguimiento extends CI_Controller{
             $id=$this->input->post('idformato');
             $fecha=$this->input->post('fecha');
             $hora=$this->input->post('hora');
-            $lugar=$this->input->post('FK_lugar');
+            $lugar=$this->input->post('lugar');
+            $area=$this->input->post('area');
             $avance=$this->input->post('avance');
             $problema=$this->input->post('detecto_problema');
             $pa=$this->input->post('pa');
@@ -81,7 +80,6 @@ Class Seguimiento extends CI_Controller{
             $ig=$this->input->post('ig');
             $aa=$this->input->post('aa');
             $pi=$this->input->post('pi');
-            $area=$this->input->post('FK_area');
             $firma_t=$this->input->post('firma_tutor');
             $firma_to=$this->input->post('firma_alumno');
 
@@ -120,7 +118,8 @@ Class Seguimiento extends CI_Controller{
             $data = array(
                 'fecha' => $fecha,
                 'hora' => $hora,
-                'FK_lugar' => $lugar,
+                'lugar' => $lugar,
+                'area' => $area,
                 'detecto_problema' => $problema,
                 'pa' => $pa,
                 'pe' => $pe,
@@ -128,7 +127,6 @@ Class Seguimiento extends CI_Controller{
                 'ig' => $ig,
                 'aa' => $aa,
                 'pi' => $pi,
-                'FK_area' => $area,
                 'avance' => $avance,
                 'firma_tutor' => $firma_t,
                 'firma_alumno' => $firma_to            
