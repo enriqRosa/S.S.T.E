@@ -91,7 +91,6 @@ nav{
 .grupo-admin{
     display:flex; 
     justify-content: space-around;
-    padding:40px 0px 0px 0px;
 }
 .admin-info .c-inputs-4 .mdl-textfield{
     width:15%!important;
@@ -338,12 +337,11 @@ nav{
 }
 .table{
     display: flex;
-    justify-content:center;
-    margin-top: 40px;  
+    justify-content:center; 
 }
 .table2{        
     width:85%;
-    margin: 40px auto;
+    margin: 0 auto;
 }
 
 /*---------MODALES----------*/
@@ -553,8 +551,25 @@ nav{
 .mdl-dialog__title{
     padding: 24px 0px!important;
 }
-
+/*RESPONSIVE DESIGN*/
 @media only screen and (max-width: 320px) {
+    .user-circle-admin i{
+        font-size: 50px;
+    }
+    .usuario span{
+        font-size: 30px;
+    }
+    .gestion_tutores .usuario span,
+    .gestion_tutorados .usuario span,
+    .gestion_coordinadores .usuario span,
+    .tutor_tutorado .usuario span,
+    .principales .usuario span{
+        text-align:center;
+    }
+    .table{
+        overflow-x: scroll;       
+        margin: 0 auto;
+    }
     .c-direccion span{
        text-align: center;
     }
@@ -562,20 +577,61 @@ nav{
         flex-direction: column;
     }
 }
-@media only screen and (max-width: 410px) {}
+@media only screen and (max-width: 410px) {
+    .user-circle-admin i{
+        font-size: 70px;
+    }
+    .usuario span{
+        font-size: 40px;
+    }
+    .gestion_tutores .usuario span,
+    .gestion_coordinadores .usuario span,
+    .tutor_tutorado .usuario span,
+    .principales .usuario span{
+        text-align:center;
+    }
+    .table{
+        overflow-x: scroll;       
+        margin: 0 auto;
+    }
+}
 @media only screen and (max-width: 480px) {
+    .user-circle-admin i{
+        font-size: 80px;
+    }
+    .usuario span{
+        font-size: 40px;
+    }
+     .gestion_tutores .usuario span,
+     .principales .usuario span{
+        text-align:center;
+    }
+    .table{
+        overflow-x: scroll;       
+        margin: 0 auto;
+    }
     .registro_tutorial, .modal-info-2, .modal-info-3, .modal-info{
         width: 90%;
     }
 }
 /* ----------------------------------------CAMBIO DEL TAMAÑO DE FUENTES------------------------------ */
 @media only screen and (max-width: 680px) {
+    .table{
+        width:90%;
+        overflow-x: scroll;       
+        margin: 0 auto;
+    }
     .footer-tel{       
         display:flex;
         justify-content:center;
     }   
 }
 @media only screen and (max-width: 800px) {
+     .table{
+        width:90%;
+        overflow-x: scroll;       
+        margin: 0 auto;
+    }
     .grupo-academico, .grupo-institucional{
         text-align: center;
         width: 1200px;
@@ -609,7 +665,13 @@ nav{
     }
 }
 /* ----------------------------------------CAMBIO------------------------------ */
-@media only screen and (max-width: 1025px) {}
+@media only screen and (max-width: 1025px) {
+     .table{
+        width:90%;
+        overflow-x: scroll;       
+        margin: 0 auto;
+    }
+}
 @media only screen and (max-width: 1200px) {}
 
 @media only screen and (max-width: 1440px) {}

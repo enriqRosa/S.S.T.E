@@ -1,6 +1,6 @@
 <section class="tutor_tutorado">
     <div class="usuario">
-        <span class="text-dir fs40 ls2 tajawalR white">Asignación de Tutores</span><br>
+        <span class="text-dir fs40 ls2 tajawalR">Asignación de Tutores</span><br>
     </div>
 </section>
 <div class="success fs18 ls1 tajawalM mdl-color-text--green-900"><?php echo $this->session->flashdata('registro'); ?></div> 
