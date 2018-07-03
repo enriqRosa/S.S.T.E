@@ -7,6 +7,7 @@
         <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
         <link rel="stylesheet" type="text/css" href="../assets/css/bgr.css">
         <link rel="stylesheet" type="text/css" href="../assets/css/principal.css">
+        <link rel="stylesheet" href="../assets/css/resde.css">
         <link rel="stylesheet" type="text/css" href="../assets/libs/mdl/material.css">
         <link rel="stylesheet" type="text/css" href="../assets/libs/fontawesome/css/fa-solid.css">
         <link rel="stylesheet" type="text/css" href="../assets/libs/fontawesome/css/fontawesome.css">

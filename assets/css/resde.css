@@ -6,7 +6,8 @@
 @media only screen and (max-width: 480px) {}
 /* ----------------------------------------CAMBIO DEL TAMAÑO DE FUENTES------------------------------ */
 @media only screen and (max-width: 680px) {
-    .c-inputs {
+    .c-inputs,
+    .error-login {
         flex-direction: column;
     }
     .main-form {
@@ -16,12 +17,10 @@
     }
     .c-formulario {
         width: 100%;
-
     }
     .mdl-textfield {
         width: 100%!important;
     }
-
 }
 @media only screen and (max-width: 800px) {
 }

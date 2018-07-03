@@ -528,12 +528,10 @@ nav{
 .seguimiento_2 div:nth-child(10){ 
     flex-wrap: wrap;
 }
-<<<<<<< HEAD
 /*VALIDACIÓN*/
 .error-login{
     border: solid 1px #d893a1!important;
-    padding: 1px 0px;
-    margin: 2px 0;
+    margin: 12px 0;
     background:#fbe6f2;
     text-align: center;
 }
@@ -550,13 +548,20 @@ nav{
     display: flex;
     justify-content:center;
     text-align: center;
-=======
-.mdl-dialog__title{
-    padding: 24px 0px!important;
->>>>>>> resde
 }
 
-@media only screen and (max-width: 320px) {}
+.mdl-dialog__title{
+    padding: 24px 0px!important;
+}
+
+@media only screen and (max-width: 320px) {
+    .c-direccion span{
+       text-align: center;
+    }
+    .footer-tel{       
+        flex-direction: column;
+    }
+}
 @media only screen and (max-width: 410px) {}
 @media only screen and (max-width: 480px) {
     .registro_tutorial, .modal-info-2, .modal-info-3, .modal-info{
@@ -564,7 +569,12 @@ nav{
     }
 }
 /* ----------------------------------------CAMBIO DEL TAMAÑO DE FUENTES------------------------------ */
-@media only screen and (max-width: 680px) {}
+@media only screen and (max-width: 680px) {
+    .footer-tel{       
+        display:flex;
+        justify-content:center;
+    }   
+}
 @media only screen and (max-width: 800px) {
     .grupo-academico, .grupo-institucional{
         text-align: center;
@@ -578,6 +588,24 @@ nav{
         overflow-x: scroll;
         position: relative;
         white-space: nowrap;
+    }
+    .footer-tel{       
+        display:flex;
+        justify-content:center;
+    }  
+    .text-tel,
+    .c-logos,
+    .c-correo,
+     {
+         flex-direction: column;
+    }
+    .c-correo{
+        text-align:center;
+    }
+    .text-dir,
+    .text-tel{
+        display:flex;
+        justify-content:center;
     }
 }
 /* ----------------------------------------CAMBIO------------------------------ */

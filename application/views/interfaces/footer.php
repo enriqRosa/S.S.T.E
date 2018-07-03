@@ -1,7 +1,7 @@
 <footer>
             <div class="info-right">
                 <div class="c-correo">
-                    <ol class="tajawalL fs14 grey ls1 footer-mail">
+                    <ol class="tajawalL fs14 grey ls1">
                         <span class="text-tel fs16 tajawalB">
                             <i class="fa fa-envelope"></i>Contacto Digital</span>
                         <li>
