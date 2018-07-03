@@ -588,7 +588,6 @@ nav{
         margin-top:10px;
         min-width: 90%!important;
         font-size: 10px!important;
-        background:red;
     }
     /**/
     .seguimiento_2 .usuario span{
@@ -607,15 +606,22 @@ nav{
         background:orange;
     }
     .matricula input{
-       background:yellow;
        font-size: 15px!important;
     }
     .c-inputs-3{
-        background:brown;
         flex-direction: column; 
     }
+    .c-inputs-4{
+        align-items:self-start;
+        flex-direction: column; 
+    }
+    .c-inputs-4 label{
+        margin-top:10px;
+    }
+    .status{
+       padding: 5px 0px;
+    }
      .modals{
-        background:red;
         align-items:center;
         flex-direction: column;
     }
@@ -686,6 +692,22 @@ nav{
     .c-inputs-3{
         flex-direction: column; 
     }
+    .status{
+       padding: 5px 0px;
+    }
+    .c-inputs-4{
+        align-items:self-start;
+        flex-direction: column; 
+    }
+    .seguimiento_2 .c-inputs-4 .mdl-textfield{
+         margin-top:10px;
+        width: 100%!important;
+        font-size: 10px!important;
+    }
+    
+    .c-inputs-4 label{
+        margin-top:10px;
+    }
      .modals{
         align-items:center;
         flex-direction: column;
@@ -736,22 +758,33 @@ nav{
     }
     /**/
     .seguimiento_2 .usuario span{
-        font-size:30px;
+        font-size:25px;
         text-align:center;
     }
-    .matricula {
-        display:flex;
-        text-align:center;
-        padding: 0px;
-        flex-direction: column;
-        font-size:20px;
+    .seguimiento_2 .matricula .mdl-textfield {    
+      flex-direction: column;
+     width:100%;
     }
-    .matricula .mdl-textfield{
+    .matricula input{
        font-size: 15px!important;
-        width: 100%!important;
     }
     .c-inputs-3{
         flex-direction: column; 
+    }
+    .status{
+       padding: 5px 0px;
+    }
+    .c-inputs-4{
+        align-items:self-start;
+        flex-direction: column; 
+    }
+    .seguimiento_2 .c-inputs-4 .mdl-textfield{
+        margin-top:10px;
+        width: 100%!important;
+        font-size: 10px!important;
+    }    
+    .c-inputs-4 label{
+        margin-top:10px;
     }
     /**/
     .table{
@@ -771,23 +804,39 @@ nav{
     }
     /**/
     .seguimiento_2 .usuario span{
-        font-size:30px;
+        font-size:25px;
         text-align:center;
     }
-    .matricula {
-        display:flex;
-        text-align:center;
-        padding: 0px;
-        flex-direction: column;
-        font-size:20px;
+    .seguimiento_2 .matricula .mdl-textfield {    
+      flex-direction: column;
+     width:100%;
     }
-    .matricula .mdl-textfield{
+    .matricula input{
        font-size: 15px!important;
-        width: 100%!important;
     }
     .c-inputs-3{
         flex-direction: column; 
+    }
+    .status{
+       padding: 5px 0px;
+    }
+    .c-inputs-4{
+        flex-direction: column; 
         align-items:center;
+    }
+    .seguimiento_2 .c-inputs-4 .mdl-textfield{
+         margin-top:10px;
+        width: 100%!important;
+        font-size: 10px!important;
+    }
+    
+    .c-inputs-4 label{
+        margin-top:10px;
+        align-items:center;
+    }
+     .modals{
+        align-items:center;
+        flex-direction: column;
     }
     /**/
     .table{
