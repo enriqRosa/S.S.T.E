@@ -17,7 +17,7 @@
                     <script>
                        $('#datepicker').datepicker({ format: 'yyyy-mm-dd',footer: true , modal:true, header: true});
                     </script>
-                <input id="timepicker" width="312" name="hora"/>
+                <input  id="timepicker" width="312" name="hora"/>
                     <script>
                         $('#timepicker').timepicker();
                     </script>

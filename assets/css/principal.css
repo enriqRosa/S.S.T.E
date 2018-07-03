@@ -503,9 +503,6 @@ nav{
 .editar-status .c-inputs-4 {
     margin-top:30px;
 }
-.textarea.mat-autosize{
-    resize:none;
-}
 .mat-input-element{
     width:90%;
     border: solid 2px #B0BEC5!important;
@@ -547,7 +544,6 @@ nav{
     justify-content:center;
     text-align: center;
 }
-
 .mdl-dialog__title{
     padding: 24px 0px!important;
 }
@@ -594,6 +590,36 @@ nav{
         font-size: 10px!important;
         background:red;
     }
+    /**/
+    .seguimiento_2 .usuario span{
+        font-size:20px;
+        text-align:center;
+    }
+    .matricula {
+        background:red;
+        display:flex;
+        text-align:center;
+        padding: 0px;
+        flex-direction: column;
+        font-size:20px;
+    }
+    .matricula span{
+        background:orange;
+    }
+    .matricula input{
+       background:yellow;
+       font-size: 15px!important;
+    }
+    .c-inputs-3{
+        background:brown;
+        flex-direction: column; 
+    }
+     .modals{
+        background:red;
+        align-items:center;
+        flex-direction: column;
+    }
+    /**/
     .table{
         overflow-x: scroll;       
         margin: 0 auto;
@@ -645,6 +671,26 @@ nav{
          width: 100%!important;
          font-size: 15px!important;
     }
+    /**/
+    .seguimiento_2 .usuario span{
+        font-size:25px;
+        text-align:center;
+    }
+    .seguimiento_2 .matricula .mdl-textfield {    
+      flex-direction: column;
+     width:100%;
+    }
+    .matricula input{
+       font-size: 15px!important;
+    }
+    .c-inputs-3{
+        flex-direction: column; 
+    }
+     .modals{
+        align-items:center;
+        flex-direction: column;
+    }
+    /**/
     .table{
         overflow-x: scroll;       
         margin: 0 auto;
@@ -688,6 +734,26 @@ nav{
         width: 100%!important;
         font-size: 15px!important;
     }
+    /**/
+    .seguimiento_2 .usuario span{
+        font-size:30px;
+        text-align:center;
+    }
+    .matricula {
+        display:flex;
+        text-align:center;
+        padding: 0px;
+        flex-direction: column;
+        font-size:20px;
+    }
+    .matricula .mdl-textfield{
+       font-size: 15px!important;
+        width: 100%!important;
+    }
+    .c-inputs-3{
+        flex-direction: column; 
+    }
+    /**/
     .table{
         overflow-x: scroll;       
         margin: 0 auto;
@@ -703,6 +769,27 @@ nav{
         width: 100%!important;
         font-size: 15px!important;
     }
+    /**/
+    .seguimiento_2 .usuario span{
+        font-size:30px;
+        text-align:center;
+    }
+    .matricula {
+        display:flex;
+        text-align:center;
+        padding: 0px;
+        flex-direction: column;
+        font-size:20px;
+    }
+    .matricula .mdl-textfield{
+       font-size: 15px!important;
+        width: 100%!important;
+    }
+    .c-inputs-3{
+        flex-direction: column; 
+        align-items:center;
+    }
+    /**/
     .table{
         width:90%;
         overflow-x: scroll;       
@@ -745,6 +832,23 @@ nav{
         width:90%;
         overflow-x: scroll;       
         margin: 0 auto;
+    }
+    .seguimiento_2 .usuario span{
+        font-size:30px;
+        text-align:center;
+    }
+    .matricula {
+        display:flex;
+        text-align:center; 
+        font-size:20px;
+    }
+    .matricula .mdl-textfield{
+       font-size: 15px!important;
+        width: 100%!important;
+    }
+    .c-inputs-3{
+        flex-direction: column; 
+        align-items:center;
     }
     .grupo-academico, .grupo-institucional{
         text-align: center;
