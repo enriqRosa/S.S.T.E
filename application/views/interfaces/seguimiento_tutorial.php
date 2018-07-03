@@ -34,7 +34,6 @@
         <div class="tutorado-inputs">
         <?php foreach ($mostrardatosTutorado as $mostrar) { ?>
             <input class="c-formato" type="text" name="matricula" value="<?php echo $mostrar->matricula;?>" disabled>
-       
                 <span class="fs16 ls2 tajawalR">Grupo:</span>          
             <input class="c-formato" type="text"value="<?php echo $mostrar->grupo;?>" disabled>
         </div>

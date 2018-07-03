@@ -566,6 +566,34 @@ nav{
     .principales .usuario span{
         text-align:center;
     }
+    .seguimiento .usuario span{
+        font-size:20px;
+        text-align:center;
+    }
+    .formato{
+        flex-direction: column;
+        align-items:center;
+        width:110%;
+        margin: auto auto;
+    }
+    .formato span{
+         font-size:12px;
+         align-items:center;
+    }
+    .info-2{
+        width:90px;
+        display:flex;
+        justify-content:center;
+    }
+    .tutorado-inputs{
+        flex-direction: column;
+    }
+    .c-formato{
+        margin-top:10px;
+        min-width: 90%!important;
+        font-size: 10px!important;
+        background:red;
+    }
     .table{
         overflow-x: scroll;       
         margin: 0 auto;
@@ -590,6 +618,33 @@ nav{
     .principales .usuario span{
         text-align:center;
     }
+    .seguimiento .usuario span{
+        font-size:30px;
+        text-align:center;
+    }
+    .formato{
+        flex-direction: column;
+        align-items:center;
+        width:110%;
+        margin: auto auto;
+    }
+    .formato span{
+         font-size:12px;
+         align-items:center;
+    }
+    .info-2{
+        width:200px;
+        display:flex;
+        justify-content:center;
+    }
+    .tutorado-inputs{
+        flex-direction: column;
+    }
+    .c-formato{
+        margin-top:10px;
+         width: 100%!important;
+         font-size: 15px!important;
+    }
     .table{
         overflow-x: scroll;       
         margin: 0 auto;
@@ -606,6 +661,33 @@ nav{
      .principales .usuario span{
         text-align:center;
     }
+    .seguimiento .usuario span{
+        font-size:30px;
+        text-align:center;
+    }
+    .formato{
+        flex-direction: column;
+        align-items:center;
+        width:110%;
+        margin: auto auto;
+    }
+    .formato span{
+        font-size:15px;
+        align-items:center;
+    }
+    .info-2{
+        width:200px;
+        display:flex;
+        justify-content:center;
+    }
+    .tutorado-inputs{
+        flex-direction: column;
+    }
+    .c-formato{
+        margin-top:10px;
+        width: 100%!important;
+        font-size: 15px!important;
+    }
     .table{
         overflow-x: scroll;       
         margin: 0 auto;
@@ -616,6 +698,11 @@ nav{
 }
 /* ----------------------------------------CAMBIO DEL TAMAÑO DE FUENTES------------------------------ */
 @media only screen and (max-width: 680px) {
+    .c-formato{
+        margin-top:10px;
+        width: 100%!important;
+        font-size: 15px!important;
+    }
     .table{
         width:90%;
         overflow-x: scroll;       
@@ -627,6 +714,33 @@ nav{
     }   
 }
 @media only screen and (max-width: 800px) {
+    .seguimiento .usuario span{
+        font-size:30px;
+        text-align:center;
+    }
+    .formato{
+        flex-direction: column;
+        align-items:center;
+        width:100%;
+        margin: auto auto;
+    }
+    .formato span{
+         font-size:14px;
+         align-items:center;
+    }
+    .info-2{
+        width:200px;
+        display:flex;
+        justify-content:center;
+    }
+    .tutorado-inputs{
+        flex-direction: column;
+    }
+    .c-formato{
+        margin-top:10px;
+        width: 100%!important;
+        font-size: 15px!important;
+    }
      .table{
         width:90%;
         overflow-x: scroll;       
