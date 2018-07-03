@@ -1,0 +1,33 @@
+@media only screen and (max-width: 320px) {}
+.c-login-title span {
+    font-size: 70px;
+}
+@media only screen and (max-width: 410px) {}
+@media only screen and (max-width: 480px) {}
+/* ----------------------------------------CAMBIO DEL TAMAÑO DE FUENTES------------------------------ */
+@media only screen and (max-width: 680px) {
+    .c-inputs {
+        flex-direction: column;
+    }
+    .main-form {
+        padding: 20px;
+        width: 90%;
+        margin: 0 auto;
+    }
+    .c-formulario {
+        width: 100%;
+
+    }
+    .mdl-textfield {
+        width: 100%!important;
+    }
+
+}
+@media only screen and (max-width: 800px) {
+}
+/* ----------------------------------------CAMBIO------------------------------ */
+@media only screen and (max-width: 1025px) {}
+@media only screen and (max-width: 1200px) {}
+
+@media only screen and (max-width: 1440px) {}
+@media only screen and (max-width: 1920px) {}

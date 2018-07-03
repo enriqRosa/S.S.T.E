@@ -119,6 +119,7 @@ nav{
 .academico-info .c-inputs-4{
     display:flex; 
     justify-content: space-evenly;
+    width:1310px;
 }
 .academico-info .c-inputs-4 .mdl-textfield,
 .institucional-info .c-inputs-4 .mdl-textfield{
@@ -139,8 +140,8 @@ nav{
 }
 /*------TUTOR-----*/
 .tutor_principal{
-     width: 100%;
-    height: 40vh;
+    width: 100%;
+    min-height: 40vh;
     background-image: url('../images/tutor.jpg');
     background-size: cover;
     background-position: center;
@@ -527,6 +528,7 @@ nav{
 .seguimiento_2 div:nth-child(10){ 
     flex-wrap: wrap;
 }
+<<<<<<< HEAD
 /*VALIDACIÓN*/
 .error-login{
     border: solid 1px #d893a1!important;
@@ -548,6 +550,39 @@ nav{
     display: flex;
     justify-content:center;
     text-align: center;
+=======
+.mdl-dialog__title{
+    padding: 24px 0px!important;
+>>>>>>> resde
 }
 
+@media only screen and (max-width: 320px) {}
+@media only screen and (max-width: 410px) {}
+@media only screen and (max-width: 480px) {
+    .registro_tutorial, .modal-info-2, .modal-info-3, .modal-info{
+        width: 90%;
+    }
+}
+/* ----------------------------------------CAMBIO DEL TAMAÑO DE FUENTES------------------------------ */
+@media only screen and (max-width: 680px) {}
+@media only screen and (max-width: 800px) {
+    .grupo-academico, .grupo-institucional{
+        text-align: center;
+        width: 1200px;
+    }
+    .grupo-academico > div, .grupo-institucional >div{
+        width: 90%;
+        margin: 10px auto;
+    }
+    .academico-info{
+        overflow-x: scroll;
+        position: relative;
+        white-space: nowrap;
+    }
+}
+/* ----------------------------------------CAMBIO------------------------------ */
+@media only screen and (max-width: 1025px) {}
+@media only screen and (max-width: 1200px) {}
 
+@media only screen and (max-width: 1440px) {}
+@media only screen and (max-width: 1920px) {}
