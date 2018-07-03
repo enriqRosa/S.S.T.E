@@ -25,7 +25,7 @@ Class Admin extends CI_Controller{
     /****************************************************************VALIDACIONES*******************************************************/
     function validacionesRegistrarUsuarios(){
         $this->form_validation->set_rules('matricula', 'Matricula', 'required|min_length[9]|is_unique[usuarios.matricula]|is_numeric');
-        $this->form_validation->set_rules('nombre', 'Nombre', 'required|alpha');
+        //$this->form_validation->set_rules('nombre', 'Nombre', 'required|alpha');
         $this->form_validation->set_rules('ap_paterno', 'Apellido Paterno', 'required|alpha');
         $this->form_validation->set_rules('ap_materno', 'Apellido Materno', 'required|alpha');
         $this->form_validation->set_rules('pass', 'Contraseña', 'required|min_length[6]');

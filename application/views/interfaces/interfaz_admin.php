@@ -1,9 +1,4 @@
-<?php
-session_start();
-    if(empty($_SESSION["usuario"])){
-    echo "<script> document.location.href = \"../index.php\" </script>";
-    }
-?>
+
 <main class="admin_principal">
     <section class="admin">
         <div class="user-circle-admin">
