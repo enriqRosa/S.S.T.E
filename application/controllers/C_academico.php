@@ -102,10 +102,10 @@ Class C_academico extends CI_Controller{
         }else {
             $sql=$this->db->select("*")->from("usuarios")->where("matricula",$this->session->userdata("matricula"))->get();
             foreach ($sql->result() as $my_pswd) {
-                $db_password=$my_pswd->pass;
+                md5($db_password=$my_pswd->pass);
                 $db_matricula=$my_pswd->matricula;
                 $this->session->set_flashdata('pass', 'LA CONTRASEÑA SE HA CAMBIADO EXITOSAMENTE');
-                $fixed_pw=$this->input->post("new_pswd");
+                $fixed_pw=md5($this->input->post("new_pswd"));
                 $update=$this->db->query("UPDATE coordinador SET pass='$fixed_pw' WHERE matricula='$db_matricula'")or die(mysqli_error());
                 $this->data['posts']=$this->Modelo_login->getCoordinador();
                 $this->load->view('interfaces/interfaz_cacademico',$this->data);
